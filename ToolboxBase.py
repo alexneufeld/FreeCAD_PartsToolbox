@@ -20,46 +20,56 @@
 # *   USA                                                                   *
 # *                                                                         *
 # ***************************************************************************
+#
+# helper functions etc
+#
 
 import FreeCAD
 import os
+import time
 from PySide import QtUiTools
 
-# command to add a standard part
-# note that defining a FreeCAD command like this requires some weird
-# workarounds - we have to import stuff inside methods
+# make the directories that relevant files are stored in
+# available to the rest of the workbench
+__dir__ = os.path.dirname(__file__)
+iconPath = os.path.join(__dir__, "Icons")
+objpath = os.path.join(__dir__, "ObjModels")
+UIPath = os.path.join(__dir__, "UI")
 
 
-class FCToolboxAddCmd:
-    def __init__(self):
-        # parse the ObjModels directory for available parts
-        import ToolboxBase
-        self.iconPath = ToolboxBase.iconPath
-        pass
-
-    def GetResources(self):
-        return {
-            "Pixmap": os.path.join(self.iconPath, "toolbox.png"),
-            "MenuText": "add a parts library object",
-            "ToolTip": "add a configurable object from the parts database",
-        }
-
-    def IsActive(self):
-        if FreeCAD.ActiveDocument:
-            return True
-        return False
-
-    def Activated(self):
-        import ToolboxBase
-        # show the UI and allow the user to select an object
-        # grab the current doc so we can add our object to it
-        ToolboxBase.runAddObjCmd()
+def InsertParamObj(doc, objname):
+    st = time.time()
+    # copy the Part from the source to destination document
+    fpath = os.path.join(objpath, objname)
+    # hidden should be set to True, but that caused errors...
+    importdoc = FreeCAD.openDocument(fpath, hidden=False)
+    # doc must have an object called Part
+    top_obj = importdoc.Part
+    objlist = [top_obj] + top_obj.OutListRecursive
+    FreeCAD.Gui.Selection.clearSelection()
+    for x in objlist:
+        FreeCAD.Gui.Selection.addSelection(x)
+    FreeCAD.Gui.runCommand("Std_Copy")
+    FreeCAD.Gui.Selection.clearSelection()
+    FreeCAD.setActiveDocument(doc.Name)
+    FreeCAD.Gui.runCommand("Std_Paste", 0)
+    FreeCAD.closeDocument(importdoc.Name)
+    FreeCAD.ActiveDocument.recompute()
+    FreeCAD.Console.PrintMessage(
+        f"imported {objname} in {time.time()-st:.3f} s")
 
 
-def InsertParamObj(thedoc, astr):
-    print(astr)
-    return
-
-
-FreeCAD.Gui.addCommand("ToolBox_AddObject", FCToolboxAddCmd())
-print("Loaded Parts Toolbox")
+def runAddObjCmd():
+    thedoc = FreeCAD.ActiveDocument
+    # import the UI structure from disc
+    UIFilePath = os.path.join(UIPath, "AddObject.ui")
+    UI = QtUiTools.QUiLoader().load(UIFilePath)
+    # configure the UI with our data and functions
+    for f in os.listdir(objpath):
+        if f[-6:] == ".FCStd":
+            UI.comboBox.addItem(f)
+    UI.accepted.connect(
+        lambda: InsertParamObj(
+            thedoc, UI.comboBox.currentText())
+    )
+    UI.show()

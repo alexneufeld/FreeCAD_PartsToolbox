@@ -13,7 +13,7 @@ git clone $THISREPO$
 
 You'll then have to use the [customization tool](https://wiki.freecadweb.org/Customize_Toolbars) to add the partsToolBox commands to a custom toolbar.
 
-### Methods
+### How it Works
 
 Parts are provided as `.FCStd` files. We use FreeCAD's existing 
 ability to create parametric objects to our advantage.
