@@ -22,15 +22,27 @@
 # ***************************************************************************
 
 import FreeCAD
+import os
+import WB_locator
 
-# simple test function
-class testCommand:
+# these have to be global variables or 
+# the FCToolboxAddCmd class members can't access them
+global ToolboxIconPath
+ToolboxIconPath = os.path.join(os.path.dirname(WB_locator.__file__), "Icons")
+global ToolboxDataPath
+ToolboxDataPath = os.path.join(os.path.dirname(WB_locator.__file__), "Icons")
+
+
+# command to add a standard part
+class FCToolboxAddCmd:
     def __init__(self):
+        # parse the ObjModels directory for available parts
+        # TODO
         pass
 
     def GetResources(self):
         return {
-            "Pixmap": "/home/alex/Projects/FreeCAD_MechanicalComponents/Icons/toolbox.png",
+            "Pixmap": os.path.join(ToolboxIconPath, "toolbox.png"),
             "MenuText": "add a parts library object",
             "ToolTip": "add a configurable object from the parts database",
         }
@@ -41,13 +53,8 @@ class testCommand:
         return False
 
     def Activated(self):
+        # show the Ui and allow the user to select an object
         print("the command works!")
 
 
-# create the command toolbar 
-# as we would for a normal python workbench:
-FreeCAD.Gui.addCommand("ToolBox_AddObject", testCommand())
-#toolbar_cmd_list = ["ToolBox_AddObject"]
-# try to add the custom tool-bar to the part design WB:
-#pdwb = FreeCAD.Gui.listWorkbenches()["PartDesignWorkbench"]
-#pdwb.appendToolbar("Parts Toolbox",toolbar_cmd_list)
+FreeCAD.Gui.addCommand("ToolBox_AddObject", FCToolboxAddCmd())
