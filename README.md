@@ -4,6 +4,8 @@ Copies standardized parts into your FreeCAD projects.
 Conceptually similar to utilities with the same name 
 available for other closed-source CAD software
 
+![](Resources/add_part_screencast.gif)
+
 ### Installing
 
 The library uses features of FreeCAD's expression engine that aren't available in the 0.19.1 release. Go grab a recent version of the Realthunder branch [here](https://github.com/realthunder/FreeCAD_assembly3/releases).  
