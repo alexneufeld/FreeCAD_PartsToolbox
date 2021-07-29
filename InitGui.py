@@ -33,8 +33,8 @@ from PySide import QtUiTools
 class FCToolboxAddCmd:
     def __init__(self):
         # parse the ObjModels directory for available parts
-        import ToolboxBase
-        self.iconPath = ToolboxBase.iconPath
+        import Toolbox
+        self.iconPath = Toolbox.iconPath
         pass
 
     def GetResources(self):
@@ -50,10 +50,9 @@ class FCToolboxAddCmd:
         return False
 
     def Activated(self):
-        import ToolboxBase
+        import Toolbox
         # show the UI and allow the user to select an object
-        # grab the current doc so we can add our object to it
-        ToolboxBase.runAddObjCmd()
+        Toolbox.runAddObjCmd()
 
 
 def InsertParamObj(thedoc, astr):

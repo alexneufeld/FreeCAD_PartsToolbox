@@ -21,13 +21,13 @@
 # *                                                                         *
 # ***************************************************************************
 #
-# helper functions etc
+# Most of the important stuff happens here
 #
 
 import FreeCAD
 import os
 import time
-from PySide import QtUiTools
+from PySide import QtGui, QtUiTools
 
 # make the directories that relevant files are stored in
 # available to the rest of the workbench
@@ -56,10 +56,10 @@ def InsertParamObj(doc, objname):
     FreeCAD.closeDocument(importdoc.Name)
     FreeCAD.ActiveDocument.recompute()
     FreeCAD.Console.PrintMessage(
-        f"imported {objname} in {time.time()-st:.3f} s")
+        f"imported {objname} in {time.time()-st:.3f} s\n")
 
 
-def runAddObjCmd():
+def runAddObjCmdOld():
     thedoc = FreeCAD.ActiveDocument
     # import the UI structure from disc
     UIFilePath = os.path.join(UIPath, "AddObject.ui")
@@ -73,3 +73,52 @@ def runAddObjCmd():
             thedoc, UI.comboBox.currentText())
     )
     UI.show()
+
+
+def runAddObjCmd():
+    thedoc = FreeCAD.ActiveDocument
+    # import the UI structure from disc
+    UIFilePath = "/home/alex/Projects/FreeCAD_PartsToolbox/UI/ToolboxBrowser.ui"
+    UI = QtUiTools.QUiLoader().load(UIFilePath)
+    # configure the UI with our data and functions
+    '''
+    for f in os.listdir("/home/alex/Projects/FreeCAD_PartsToolbox/ObjModels"):
+        if f[-6:] == ".FCStd":
+            UI.comboBox.addItem(f)
+    '''
+    # setup tree view
+    # https://srinikom.github.io/pyside-docs/PySide/QtGui/QTreeView.html
+    model = QtGui.QFileSystemModel()
+    model.setRootPath("/")
+    UI.treeView.setModel(model)
+    UI.treeView.setRootIndex(model.index(
+        "/home/alex/Projects/FreeCAD_PartsToolbox/ObjModels/"))
+    # hide extra columns (size, dataModified, etc.) that aren't useful here
+    UI.treeView.hideColumn(1)
+    UI.treeView.hideColumn(2)
+    UI.treeView.hideColumn(3)
+    UI.treeView.setHeaderHidden(True)
+    UI.treeView.setExpandsOnDoubleClick(True)
+    UI.accepted.connect(
+        lambda: InsertParamObj(
+            thedoc, getSelectedFile(UI.treeView))
+    )
+    # filter out unwanted files
+    model.setNameFilters(["*.FCStd"])
+    # TODO filtered files will still appear, they just won't be selectable
+    # hide their rows to completely remove them
+    #UI.treeView.setRowHidden(row, parent, True)
+    UI.show()
+
+
+def getSelectedFile(tree):
+    # the tree has a list of selected items, but the GUI only allows
+    # one item to be selected -> just grab index 0
+    SelectedItem = tree.selectedIndexes()[0]
+    path = SelectedItem.data()
+    # to handle items in folder: work up the tree to get the full path
+    # from below the ObjModels folder
+    while SelectedItem.parent().data() != "ObjModels":
+        path = os.path.join(SelectedItem.parent().data(), path)
+        SelectedItem = SelectedItem.parent()
+    return path
