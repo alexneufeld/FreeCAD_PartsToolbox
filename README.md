@@ -6,9 +6,13 @@ available for other closed-source CAD software
 
 ### Installing
 
+The library uses features of FreeCAD's expression engine that aren't available in the 0.19.1 release. Go grab a recent version of the Realthunder branch [here](https://github.com/realthunder/FreeCAD_assembly3/releases).  
+
+Clone this repository to the appropriate directory:
+
 ```
 cd ~/.FreeCAD/Mod
-git clone $THISREPO$
+git clone git@github.com:alexneufeld/FreeCAD_PartsToolbox.git
 ```
 
 You'll then have to use the [customization tool](https://wiki.freecadweb.org/Customize_Toolbars) to add the partsToolBox commands to a custom toolbar.
