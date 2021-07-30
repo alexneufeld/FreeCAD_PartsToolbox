@@ -21,48 +21,44 @@
 # *                                                                         *
 # ***************************************************************************
 #
-# normally we would define an entire workbench here
-# since we just want one GUI command, this file has
-# less than ususal
+# WIP - code to generate thumbnails from FreeCAD files
+# not sure how I want to use this functionality yet
 
 import FreeCAD
+#import Toolbox
 import os
-from PySide import QtUiTools
 
-# command to add a standard part
-# note that defining a FreeCAD command like this requires some weird
-# workarounds - we have to import stuff inside methods
-
-
-class FCToolboxAddCmd:
-    def __init__(self):
-        # parse the ObjModels directory for available parts
-        import Toolbox
-        self.iconPath = Toolbox.iconPath
-        pass
-
-    def GetResources(self):
-        return {
-            "Pixmap": os.path.join(self.iconPath, "toolbox.png"),
-            "MenuText": "add a parts library object",
-            "ToolTip": "add a configurable object from the parts database",
-        }
-
-    def IsActive(self):
-        if FreeCAD.ActiveDocument:
-            return True
-        return False
-
-    def Activated(self):
-        import Toolbox
-        # show the UI and allow the user to select an object
-        Toolbox.OpenToolboxDock()
+__dir__ = os.path.dirname(__file__)
+iconPath = os.path.join(__dir__, "Icons")
+objpath = os.path.join(__dir__, "ObjModels")
+UIPath = os.path.join(__dir__, "UI")
 
 
-def InsertParamObj(thedoc, astr):
-    print(astr)
-    return
+def generate_thumbnails(Dry_run=False):
+    # get full path to each .FCStd file in the toolbox
+    filepaths = [os.path.join(dp, f) for dp, dn, fn in os.walk(
+        os.path.expanduser(objpath)) for f in fn]
+    # open each on and generate a thumbnail
+    # 300x300 png
+    for file in filepaths:
+        # make directories until there's a place for the image
+        filedir = os.path.dirname(file)
+        imgfilename = os.path.basename(file)[:-6]+".png"
+        while os.path.basename(filedir) != "ObjModels":
+            imgfilename = os.path.join(os.path.basename(filedir), imgfilename)
+            filedir = os.path.dirname(filedir)
+        imgfilename = os.path.join(__dir__, "Thumbnails", imgfilename)
+        os.makedirs(os.path.dirname(imgfilename), exist_ok=True)
+        if Dry_run:
+            print(f"write {imgfilename}")
+        else:
+            FreeCAD.openDocument(file)
+            # FreeCAD.setActiveDocument(doc)
+            FreeCAD.Gui.SendMsgToActiveView("ViewFit")
+            FreeCAD.Gui.ActiveDocument.activeView().viewIsometric()
+            FreeCAD.Gui.activeDocument().activeView().saveImage(
+                imgfilename, 300, 300, "Transparent")
 
 
-FreeCAD.Gui.addCommand("ToolBox_AddObject", FCToolboxAddCmd())
-print("Loaded Parts Toolbox")
+if __name__ == "__main__":
+    generate_thumbnails()
