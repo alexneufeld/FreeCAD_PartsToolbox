@@ -51,7 +51,6 @@ class PropEditor(QtGui.QDockWidget):
         UIFilePath = os.path.join(UIPath, "ToolboxBrowserWidget.ui")
         UI = QtUiTools.QUiLoader().load(UIFilePath)
         self.setWidget(UI)
-        thedoc = FreeCAD.ActiveDocument
         # configure the UI with our data and functions
         # setup tree view
         # https://srinikom.github.io/pyside-docs/PySide/QtGui/QTreeView.html
@@ -72,9 +71,7 @@ class PropEditor(QtGui.QDockWidget):
         UI.treeView.clicked.connect(lambda: selectionChanged(
             UI.buttonBox.button(QtGui.QDialogButtonBox.Ok), UI.label, getSelectedFile(UI.treeView)))
         UI.buttonBox.accepted.connect(
-            lambda: InsertParamObj(
-                thedoc, getSelectedFile(UI.treeView))
-        )
+            lambda: InsertParamObj(getSelectedFile(UI.treeView)))
         # filter out unwanted files
         model.setNameFilters(["*.FCStd"])
         # TODO filtered files will still appear, they just won't be selectable
@@ -136,23 +133,35 @@ def getSelectedFile(tree):
 # open the selected part and copy it into the active freecad document
 
 
-def InsertParamObj(doc, objname):
+def InsertParamObj(objname):
+    doc = FreeCAD.ActiveDocument
+    if not doc:
+        FreeCAD.Console.PrintMessage("Can't add part - No active document found!")
+        return
     st = time.time()
     # copy the Part from the source to destination document
     fpath = os.path.join(objpath, objname)
     # hidden should be set to True, but that caused errors...
     importdoc = FreeCAD.openDocument(fpath, hidden=False)
-    # doc must have an object called Part
-    top_obj = importdoc.Part
-    objlist = [top_obj] + top_obj.OutListRecursive
-    FreeCAD.Gui.Selection.clearSelection()
-    for x in objlist:
-        FreeCAD.Gui.Selection.addSelection(x)
-    FreeCAD.Gui.runCommand("Std_Copy")
-    FreeCAD.Gui.Selection.clearSelection()
-    FreeCAD.setActiveDocument(doc.Name)
-    FreeCAD.Gui.runCommand("Std_Paste", 0)
-    FreeCAD.closeDocument(importdoc.Name)
-    FreeCAD.ActiveDocument.recompute()
-    FreeCAD.Console.PrintMessage(
-        f"imported {objname} in {time.time()-st:.3f} s\n")
+    # we allow for a few different importable objects:
+    if hasattr(importdoc,"Part"):
+        top_obj = importdoc.Part
+    elif hasattr(importdoc,"Body"):
+        top_obj = importdoc.Body
+    else: 
+        top_obj = None
+    if top_obj:
+        objlist = [top_obj] + top_obj.OutListRecursive
+        FreeCAD.Gui.Selection.clearSelection()
+        for x in objlist:
+            FreeCAD.Gui.Selection.addSelection(x)
+        FreeCAD.Gui.runCommand("Std_Copy")
+        FreeCAD.Gui.Selection.clearSelection()
+        FreeCAD.setActiveDocument(doc.Name)
+        FreeCAD.Gui.runCommand("Std_Paste", 0)
+        FreeCAD.closeDocument(importdoc.Name)
+        FreeCAD.ActiveDocument.recompute()
+        FreeCAD.Console.PrintMessage(
+            f"imported {objname} in {time.time()-st:.3f} s\n")
+    else:
+        print(f"no suitable object to import in file {objname}")

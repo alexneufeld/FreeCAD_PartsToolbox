@@ -6,6 +6,7 @@ available for other closed-source CAD software
 
 ![](Resources/add_part_screencast.gif)
 
+![](Resources/dockwidget.png)
 ### Installing
 
 The library uses features of FreeCAD's expression engine that aren't available in the 0.19.1 release. Go grab a recent version of the Realthunder branch [here](https://github.com/realthunder/FreeCAD_assembly3/releases).  
@@ -23,8 +24,8 @@ You'll then have to use the [customization tool](https://wiki.freecadweb.org/Cus
 
 Parts are provided as `.FCStd` files. We use FreeCAD's existing 
 ability to create parametric objects to our advantage.
-The user facing command provided by this toolbox just copy
-The correct document objects from files in the `ObjModels` directory
+The user facing command provided by this toolbox just copies
+document objects from files in the `ObjModels` directory to
 the active document. This approach has the advantage that no python 
 code is required to add a new part to the library, which allows for 
 faster growth of the toolbox.
@@ -34,6 +35,6 @@ For a better understanding of how parametric parts are implemented here, take a 
 ### Acknowledgements
 
 Much of the dimensional data on objects provided by the toolbox
-is based on the FreeCAD FastenersWB and BOLTS projects. 
+is based on the [FreeCAD_FastenersWB](https://github.com/shaise/FreeCAD_FastenersWB) and [BOLTS](https://github.com/boltsparts/BOLTS) projects. 
 
 Toolbox icon: [Adib Sulthon](https://www.flaticon.com/authors/adib-sulthon) - [www.flaticon.com](https://www.flaticon.com/)
