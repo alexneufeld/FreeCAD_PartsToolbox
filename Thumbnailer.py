@@ -33,13 +33,27 @@ iconPath = os.path.join(__dir__, "Icons")
 objpath = os.path.join(__dir__, "ObjModels")
 UIPath = os.path.join(__dir__, "UI")
 
-
+# IMPORTANT:
+# the option "prompt recomputation after loading legacy document"
+# must be OFF for this script to run. otherwise, 
+# the recompute prompt will interrupt our code and FreeCAD segfaults :\
 def generate_thumbnails(Dry_run=False):
+    # remove old thumbnails:
+    if not Dry_run:
+        try:
+            print("removing old thumbnails...")
+            os.rmdir(os.path.join(__dir__, "Thumbnails"))
+            print("Done.")
+        except:
+            print("no old thumbnails removed. They probably didn't exist.")
     # get full path to each .FCStd file in the toolbox
     filepaths = [os.path.join(dp, f) for dp, dn, fn in os.walk(
         os.path.expanduser(objpath)) for f in fn]
     # open each on and generate a thumbnail
     # 300x300 png
+    # TODO: filename parsing is incorrect
+    # TODO: image generation depends on the size of the FC viewport in UI
+    # generate images so they are always zoomed nicely
     for file in filepaths:
         # make directories until there's a place for the image
         filedir = os.path.dirname(file)
@@ -57,7 +71,8 @@ def generate_thumbnails(Dry_run=False):
             FreeCAD.Gui.SendMsgToActiveView("ViewFit")
             FreeCAD.Gui.ActiveDocument.activeView().viewIsometric()
             FreeCAD.Gui.activeDocument().activeView().saveImage(
-                imgfilename, 300, 300, "Transparent")
+                imgfilename, 600, 600)#, "Transparent")
+    FreeCAD.Gui.runCommand('Std_CloseAllWindows',0)
 
 
 if __name__ == "__main__":

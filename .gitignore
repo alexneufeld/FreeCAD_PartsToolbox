@@ -2,3 +2,4 @@ __pycache__/
 *.FCStd1
 *.FCBak
 ignore/
+Thumbnails/*
