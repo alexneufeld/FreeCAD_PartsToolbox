@@ -28,6 +28,7 @@ import FreeCAD
 import os
 import time
 from PySide import QtGui, QtUiTools, QtCore
+import shutil
 
 # make the directories that relevant files are stored in
 # available to the rest of the workbench
@@ -38,13 +39,13 @@ UIPath = os.path.join(__dir__, "UI")
 ThumbPath = os.path.join(__dir__, "Thumbnails")
 
 # class that defines the dock widget
-# adapted from here: https://wiki.freecadweb.org/Macro_SplitPropEditor
+# adapted from here: https://wiki.freecadweb.org/Macro_SplitToolboxDock
 
 
-class PropEditor(QtGui.QDockWidget):
+class ToolboxDock(QtGui.QDockWidget):
     def __init__(self) -> None:
         mw = FreeCAD.Gui.getMainWindow()
-        super(PropEditor, self).__init__()  # run inherited class constructor
+        super(ToolboxDock, self).__init__()  # run inherited class constructor
         self.setParent(mw)
         self.setObjectName("ToolboxBrowser")
         self.setWindowTitle("Toolbox Browser")
@@ -71,7 +72,7 @@ class PropEditor(QtGui.QDockWidget):
         UI.treeView.clicked.connect(lambda: selectionChanged(
             UI.buttonBox.button(QtGui.QDialogButtonBox.Ok), UI.label, getSelectedFile(UI.treeView)))
         UI.buttonBox.accepted.connect(
-            lambda: InsertParamObj(getSelectedFile(UI.treeView)))
+            lambda: InsertParamObjBind(getSelectedFile(UI.treeView)))
         # filter out unwanted files
         model.setNameFilters(["*.FCStd"])
         # TODO filtered files will still appear, they just won't be selectable
@@ -89,7 +90,7 @@ def OpenToolboxDock():
     # initialize if needed, otherwise just toggle visibility
     if not pe:
         FreeCAD.Gui.getMainWindow().addDockWidget(
-            QtCore.Qt.RightDockWidgetArea, PropEditor())
+            QtCore.Qt.RightDockWidgetArea, ToolboxDock())
     else:
         pe.setVisible(pe.isHidden())
 
@@ -115,10 +116,9 @@ def selectionChanged(OKbutton, thumbnailBox, selectedobj):
     else:
         OKbutton.setEnabled(False)
 
-# when the user confirms their choice, parse out the selected file
-
 
 def getSelectedFile(tree):
+    # when the user confirms their choice, parse out the selected file
     # the tree has a list of selected items, but the GUI only allows
     # one item to be selected -> just grab index 0
     SelectedItem = tree.selectedIndexes()[0]
@@ -130,38 +130,62 @@ def getSelectedFile(tree):
         SelectedItem = SelectedItem.parent()
     return path
 
-# open the selected part and copy it into the active freecad document
 
-
-def InsertParamObj(objname):
+def InsertParamObjBind(objname):
+    # This version of object insert uses a shape binder to refer to part
+    # subobject shapebinders do a lot of work for us, such as abstracting
+    # the parts model hierarchy out of view of the user
+    # we need an active document to put a part in
     doc = FreeCAD.ActiveDocument
+    path_to_doc = os.path.dirname(doc.FileName)
     if not doc:
-        FreeCAD.Console.PrintMessage("Can't add part - No active document found!")
+        FreeCAD.Console.PrintError(
+            "Can't add Part - No active document found!\n")
         return
-    st = time.time()
-    # copy the Part from the source to destination document
-    fpath = os.path.join(objpath, objname)
-    # hidden should be set to True, but that caused errors...
-    importdoc = FreeCAD.openDocument(fpath, hidden=False)
-    # we allow for a few different importable objects:
-    if hasattr(importdoc,"Part"):
-        top_obj = importdoc.Part
-    elif hasattr(importdoc,"Body"):
-        top_obj = importdoc.Body
-    else: 
+    if path_to_doc == "":
+        FreeCAD.Console.PrintError(
+            "Can't add Part - Active Document must be saved to a file!\n")
+        return
+    #  TODO: fix terrible variable names here
+    objfilepath = os.path.join(
+        path_to_doc, "ToolboxParts", os.path.basename(objname))
+    # place a "ToolboxParts" directory next to the open document:
+    os.makedirs(os.path.dirname(objfilepath), exist_ok=True)
+    sourcefilepath = os.path.join(objpath, objname)
+    # copy the parts document to the users project folder if it
+    # isn't already there:
+    if not os.path.exists(objfilepath):
+        shutil.copyfile(sourcefilepath, objfilepath)
+    # open the local copy of the part file se we can get an obj from it
+    part_doc = FreeCAD.openDocument(objfilepath, hidden=True)
+    # grab either a part or a body to link to with a shapebinder:
+    if hasattr(part_doc, "Part"):
+        top_obj = part_doc.Part
+    elif hasattr(part_doc, "Body"):
+        top_obj = part_doc.Body
+    else:
         top_obj = None
     if top_obj:
-        objlist = [top_obj] + top_obj.OutListRecursive
-        FreeCAD.Gui.Selection.clearSelection()
-        for x in objlist:
-            FreeCAD.Gui.Selection.addSelection(x)
-        FreeCAD.Gui.runCommand("Std_Copy")
-        FreeCAD.Gui.Selection.clearSelection()
-        FreeCAD.setActiveDocument(doc.Name)
-        FreeCAD.Gui.runCommand("Std_Paste", 0)
-        FreeCAD.closeDocument(importdoc.Name)
-        FreeCAD.ActiveDocument.recompute()
+        # keep track of how long this all takes
+        st = time.time()
+        # add a shapebinder and assign an object to link
+        binder = doc.addObject('PartDesign::SubShapeBinder', 'ToolboxPart')
+        binder.Support = top_obj
         FreeCAD.Console.PrintMessage(
             f"imported {objname} in {time.time()-st:.3f} s\n")
-    else:
-        print(f"no suitable object to import in file {objname}")
+        # modify the shapebinders properties so it behaves correctly
+        binder.BindCopyOnChange = 'Enabled'
+        # binder renders transparent w. yellow lines if this is True.
+        # perhaps a desirable effect? TODO make this a config option
+        binder.ViewObject.UseBinderStyle = False
+        # this probably won't work very well...
+        # getExpression returns a tuple (propname, extressionStr)
+        binder.setExpression("Label", top_obj.getExpression("Label")[1])
+    # can't close the import document, it must stay opened in the background
+    # or the part will error on recompute
+    # FreeCAD.closeDocument(part_doc.Name)
+    # set the active document back to the users project:
+    # note: FreeCAD.setActiveDocument(x) != FreeCAD.Gui.setActiveDocument(x)
+    FreeCAD.setActiveDocument(doc.Name)
+    FreeCAD.ActiveDocument.recompute()
+    return
