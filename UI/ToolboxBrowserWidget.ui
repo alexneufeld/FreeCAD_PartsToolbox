@@ -28,8 +28,14 @@
        <height>300</height>
       </size>
      </property>
-     <attribute name="headerVisible">
+     <property name="rootIsDecorated">
       <bool>true</bool>
+     </property>
+     <property name="columnCount">
+      <number>1</number>
+     </property>
+     <attribute name="headerVisible">
+      <bool>false</bool>
      </attribute>
      <column>
       <property name="text">
@@ -85,7 +91,7 @@
       <enum>Qt::Horizontal</enum>
      </property>
      <property name="standardButtons">
-      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+      <set>QDialogButtonBox::Ok</set>
      </property>
     </widget>
    </item>

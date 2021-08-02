@@ -38,7 +38,9 @@ iconPath = os.path.join(__dir__, "Icons")
 objpath = os.path.join(__dir__, "ObjModels")
 UIPath = os.path.join(__dir__, "UI")
 ThumbPath = os.path.join(__dir__, "Thumbnails")
-
+# set up some icons
+PartIcon = QtGui.QIcon(os.path.join(iconPath,"PartsToolbox_Part.svg"))
+FolderIcon = QtGui.QIcon(os.path.join(iconPath,"Group.svg"))
 # class that defines the dock widget
 # adapted from here: https://wiki.freecadweb.org/Macro_SplitToolboxDock
 
@@ -68,7 +70,7 @@ class ToolboxDock(QtGui.QDockWidget):
                 QtGui.QDialogButtonBox.Ok), UI.label, UI.treeWidget.currentItem()
         ))
         UI.buttonBox.accepted.connect(
-            lambda: InsertParamObjBind(UI.treeWidget.currentItem().text(0)))
+            lambda: InsertParamObjBind(UI.treeWidget.currentItem().text(0)+".FCStd"))
         # TODO filtered files will still appear, they just won't be selectable
         # hide their rows to completely remove them
         #UI.treeView.setRowHidden(row, parent, True)
@@ -92,11 +94,15 @@ def populate_tree(top_level_obj, items):
     for i in items:
         # constructor takes parent as an argument
         subobj = QtGui.QTreeWidgetItem(top_level_obj)
+        # part
         if type(i) == str:
             # setText(colum#, string)
-            subobj.setText(0, i)
+            subobj.setIcon(0,PartIcon)
+            subobj.setText(0, i[:-6])
+        # folder
         elif type(i) == dict:
             k = list(i.keys())[0]
+            subobj.setIcon(0,FolderIcon)
             subobj.setText(0, k)
             populate_tree(subobj, i[k])
 
