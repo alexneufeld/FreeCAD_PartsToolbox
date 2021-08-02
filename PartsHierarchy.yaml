@@ -1,0 +1,67 @@
+- Fasteners:
+    - Nuts:
+      - Flanged hexagon nut - EN 1661.FCStd
+      - Hexagon thin nut - ISO 4035.FCStd
+      - Hexagon thin nut - ISO 4036.FCStd
+      - Hex nut - ISO 4032.FCStd
+      - Machine screw nut - ASME B18.2.2.FCStd
+      - Prevailing torque type hexagon regular nut - ISO 7040.FCStd
+      - Square Nut - DIN 557.FCStd
+      - Square Nut - DIN 562.FCStd
+    - Other:
+      - HexalobularRecess.FCStd
+      - HexSocketRecess.FCStd
+      - TypeH_CrossRecess.FCStd
+    - Pins:
+        - Parallel pin - ISO 2388.FCStd
+    - Retaining Rings:
+        - External retaining rings - E type - DIN 471.FCStd
+        - Internal retaining rings - J type - DIN 471.FCStd
+    - Screws:
+        - Cross Recessed Head
+        - Cheese head screw with cross recess - ISO 7048.FCStd
+        - Countersunk flat head screw with cross recess - ISO 7046.FCStd
+        -  Pan head screw with cross recess - ISO 7045.FCStd
+        - Hexagon Head:
+            - Flanged hexagon head screw - EN 1662.FCStd
+            - Hexagon head screw - ASME B18.2.1.FCStd
+            - Hexagon head screw - ISO 4017.FCStd
+        - Hexagonal Socketed Head:
+            - Countersunk flat head screw with hexagonal recess - ISO 10642.FCStd
+            - Flanged hexagon socket button head cap screw - ISO 7380-2.FCStd
+            - Hexagon socket button head cap screw - ASME B18.3.FCStd
+            - Hexagon socket button head cap screw - ISO 7380-1.FCStd
+            - Hexagon socket head cap screw - ISO 4762.FCStd
+            - Hexagon socket head shoulder screw - ISO 7379.FCStd
+        - Hexalobular Recessed Head:
+            - Countersunk flat head screw with hexalobular recess - ISO 14582.FCStd
+            - Hexalobular socket cheese head screw - ISO 14580.FCStd
+            - Hexalobular socket head cap screw - ISO 14579.FCStd
+            - Pan head screw with hexalobular recess - ISO 14583.FCStd
+            - Raised countersunk head screw with hexalobular recess - ISO 1458.FCStd
+        - Other head:
+            - Round head square neck bolt - ASME B18.5.FCStd
+        - Slotted Head:
+            - Slotted cheese head screw - ISO 1207.FCStd
+            - Slotted countersunk flat head screw - ISO 2009.FCStd
+            - Slotted Pan head screw - ISO 1580.FCStd
+    - Washers:
+        - Chamfered normal plain washer - ISO 7090.FCStd
+        - Extra large washer - ISO 7094.FCStd
+        - Large washer - ISO 7093.FCStd
+        - Normal plain washer - ISO 7089.FCStd
+        - Normal plain washer - ISO 7091.FCStd
+        - Small plain washer - ISO 7092.FCStd
+- Lifting Components:
+    - bowshackles.FCStd
+- Materials:
+    - UAP profile, metric european standard c-beam profile.FCStd
+    - UPE profile, metric european standard c-beam profile.FCStd
+    - UPN profile, metric european standard c-beam profile.FCStd
+- Mechanical Components:
+    - Bearings:
+        - Single row radial ball bearing.FCStd
+        - SinteredCylindricalBearings.FCStd
+        - sinteredsphericalbushings.FCStd
+    - Shaft collars:
+        - shaft_collar_test.FCStd

@@ -98,3 +98,10 @@ Sliptonic has some possibly relevant notes [here.](https://github.com/FreeCAD/Fr
 - [ ] coupling nuts
 - [ ] DIN 976
 - [ ] ISO 888 might provide a clean solution to fastener lengths
+
+
+### Purge FreeCAD backup files recursively
+
+```
+find . -name "*.FCStd1" -type f -delete
+```

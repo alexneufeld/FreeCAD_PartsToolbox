@@ -29,6 +29,7 @@ import os
 import time
 from PySide import QtGui, QtUiTools, QtCore
 import shutil
+import yaml
 
 # make the directories that relevant files are stored in
 # available to the rest of the workbench
@@ -53,38 +54,30 @@ class ToolboxDock(QtGui.QDockWidget):
         UI = QtUiTools.QUiLoader().load(UIFilePath)
         self.setWidget(UI)
         # configure the UI with our data and functions
-        # setup tree view
-        # https://srinikom.github.io/pyside-docs/PySide/QtGui/QTreeView.html
-        model = QtGui.QFileSystemModel()
-        model.setRootPath("/")
-        UI.treeView.setModel(model)
-        UI.treeView.setRootIndex(model.index(objpath))
-        # hide extra columns (size, dataModified, etc.) that aren't useful here
-        UI.treeView.hideColumn(1)
-        UI.treeView.hideColumn(2)
-        UI.treeView.hideColumn(3)
-        UI.treeView.setHeaderHidden(True)
-        UI.treeView.setExpandsOnDoubleClick(True)
+        # import object hierarchy from yaml
+        ydata = yaml.safe_load(
+            open(os.path.join(__dir__, "PartsHierarchy.yaml")))
+        # recursive function to parse the nested list
+        populate_tree(UI.treeWidget, ydata)
         # disable ok button initially
         # (it can't do anything until the user selects a part to add)
         UI.buttonBox.button(QtGui.QDialogButtonBox.Ok).setEnabled(False)
         # connect signals
-        UI.treeView.clicked.connect(lambda: selectionChanged(
-            UI.buttonBox.button(QtGui.QDialogButtonBox.Ok), UI.label, getSelectedFile(UI.treeView)))
+        UI.treeWidget.clicked.connect(lambda: selectionChanged(
+            UI.buttonBox.button(
+                QtGui.QDialogButtonBox.Ok), UI.label, UI.treeWidget.currentItem()
+        ))
         UI.buttonBox.accepted.connect(
-            lambda: InsertParamObjBind(getSelectedFile(UI.treeView)))
-        # filter out unwanted files
-        model.setNameFilters(["*.FCStd"])
+            lambda: InsertParamObjBind(UI.treeWidget.currentItem().text(0)))
         # TODO filtered files will still appear, they just won't be selectable
         # hide their rows to completely remove them
         #UI.treeView.setRowHidden(row, parent, True)
         UI.show()
 
-# start an instance of our custom dock
-# this is what the GUI command actually does
-
 
 def OpenToolboxDock():
+    # start an instance of our custom dock
+    # this is what the GUI command actually does
     # check if the dock already exists (and is just hidden)
     pe = FreeCAD.Gui.getMainWindow().findChild(QtGui.QWidget, 'ToolboxBrowser')
     # initialize if needed, otherwise just toggle visibility
@@ -94,44 +87,42 @@ def OpenToolboxDock():
     else:
         pe.setVisible(pe.isHidden())
 
-# some helper functions to react to UI signals
-#
-# this one runs every time the user selects a different part in the tree view
+
+def populate_tree(top_level_obj, items):
+    for i in items:
+        # constructor takes parent as an argument
+        subobj = QtGui.QTreeWidgetItem(top_level_obj)
+        if type(i) == str:
+            # setText(colum#, string)
+            subobj.setText(0, i)
+        elif type(i) == dict:
+            k = list(i.keys())[0]
+            subobj.setText(0, k)
+            populate_tree(subobj, i[k])
 
 
-def selectionChanged(OKbutton, thumbnailBox, selectedobj):
-    # we need to do a couple of things here:
-    # - update the preview thumbnail if a file was selected
-    # - enable/disable the OK button
-    # print(selectedobj)
-    if selectedobj[-6:] == ".FCStd":
-        OKbutton.setEnabled(True)
-        # update thumbnail
-        imgpath = os.path.join(ThumbPath, selectedobj[:-6]+".png")
-        try:
-            pixmap = QtGui.QPixmap(imgpath)
-            thumbnailBox.setPixmap(pixmap)
-        except Exception as E:
-            print(f"failed to set thumbnail - {E}")
+def selectionChanged(OKbutton, thumbnailBox, selectedTreeItem):
+    # this runs every time the user selects a different part in the tree view
+    if selectedTreeItem:
+        # if a category is selected, disable the add button:
+        if selectedTreeItem.childCount() > 0:
+            OKbutton.setEnabled(False)
+        else:
+            OKbutton.setEnabled(True)
+            '''
+            # update thumbnail
+            imgpath = os.path.join(ThumbPath, selectedobj[:-6]+".png")
+            try:
+                pixmap = QtGui.QPixmap(imgpath)
+                thumbnailBox.setPixmap(pixmap)
+            except Exception as E:
+                print(f"failed to set thumbnail - {E}")
+            '''
     else:
-        OKbutton.setEnabled(False)
+        OKbutton.setEnabled(True)
 
 
-def getSelectedFile(tree):
-    # when the user confirms their choice, parse out the selected file
-    # the tree has a list of selected items, but the GUI only allows
-    # one item to be selected -> just grab index 0
-    SelectedItem = tree.selectedIndexes()[0]
-    path = SelectedItem.data()
-    # to handle items in folder: work up the tree to get the full path
-    # from below the ObjModels folder
-    while SelectedItem.parent().data() != "ObjModels":
-        path = os.path.join(SelectedItem.parent().data(), path)
-        SelectedItem = SelectedItem.parent()
-    return path
-
-
-def InsertParamObjBind(objname):
+def InsertParamObjBind(partFileName):
     # This version of object insert uses a shape binder to refer to part
     # subobject shapebinders do a lot of work for us, such as abstracting
     # the parts model hierarchy out of view of the user
@@ -148,10 +139,10 @@ def InsertParamObjBind(objname):
         return
     #  TODO: fix terrible variable names here
     objfilepath = os.path.join(
-        path_to_doc, "ToolboxParts", os.path.basename(objname))
+        path_to_doc, "ToolboxParts", partFileName)
     # place a "ToolboxParts" directory next to the open document:
     os.makedirs(os.path.dirname(objfilepath), exist_ok=True)
-    sourcefilepath = os.path.join(objpath, objname)
+    sourcefilepath = os.path.join(objpath, partFileName)
     # copy the parts document to the users project folder if it
     # isn't already there:
     if not os.path.exists(objfilepath):
@@ -172,7 +163,7 @@ def InsertParamObjBind(objname):
         binder = doc.addObject('PartDesign::SubShapeBinder', 'ToolboxPart')
         binder.Support = top_obj
         FreeCAD.Console.PrintMessage(
-            f"imported {objname} in {time.time()-st:.3f} s\n")
+            f"imported {partFileName} in {time.time()-st:.3f} s\n")
         # modify the shapebinders properties so it behaves correctly
         binder.BindCopyOnChange = 'Enabled'
         # binder renders transparent w. yellow lines if this is True.

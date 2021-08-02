@@ -32,6 +32,8 @@ faster growth of the toolbox.
 
 For a better understanding of how parametric parts are implemented here, take a look at `ObjModels/DIN557.FCStd`. Also check out [This FreeCAD forum post.](https://forum.freecadweb.org/viewtopic.php?f=17&t=42183)
 
+![](Resources/object_import_structure.png)
+
 ### Acknowledgements
 
 Much of the dimensional data on objects provided by the toolbox
