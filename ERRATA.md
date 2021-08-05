@@ -2,6 +2,8 @@
 
 Pile of experiments and notes related to FreeCAD, python, etc.
 
+**Important:** no guarantees are made about the factual correctness of anything in this file. Don't assume I know what I'm doing.
+
 ### Effects of .FCStd file compression on load times
 
 I saved two versions of the same file and tried importing them with the **AddObject** command. before importing, I changed the [file compression level](https://wiki.freecadweb.org/File%20Format%20FCStd) in each file: one file was set to max compression, the other to min. This change seems to make no difference in the time it takes to execute the following code:
@@ -35,7 +37,7 @@ Some functionality is not directly available, though. Let's say we want to inclu
 
 `<<A part with length>> + Part.dim1`
 
-This behaviour is due to the fact that the expression engine doesn't cast the quantity to a string. the fix is as follows:
+This behavior is due to the fact that the expression engine doesn't cast the quantity to a string. the fix is as follows:
 
 `<<A part with length>> + Part.dim1.UserString`
 
@@ -56,7 +58,8 @@ very important.
 
 - [list of interchangeable standards for fasteners](https://fullerfasteners.com/tech/din-iso-en-crossover-chart/)
 
-### Ref image of FreeCAD's object heirarchy
+### Ref image of FreeCAD's object hierarchy
+
 ![](https://wiki.freecadweb.org/images/0/01/FreeCAD_core_objects.svg)
 
 ### Pulling thumbnail images from .FCStd files
@@ -105,3 +108,48 @@ Sliptonic has some possibly relevant notes [here.](https://github.com/FreeCAD/Fr
 ```
 find . -name "*.FCStd1" -type f -delete
 ```
+
+### Convert .FCStd files to be saved as directory
+
+Only works when running a link branch FreeCAD instance (or any FreeCAD version that supports saving as a directory).
+
+``` python
+# fileConverter.py
+# save .FCStd files as unzipped folders using the
+# link branches capabilities
+
+import os
+import FreeCAD
+
+srcDir = os.path.join(os.path.dirname(__file__), "ObjModels")
+outDir = os.path.join(os.path.dirname(__file__), "ObjModelsDir")
+
+# converts everything in srcDir to 'saved as directory'
+# files, and places them in outDir
+# Note: do rm srcDir/*.FCStd1 first, otherwise this script 
+# creates duplicates using those backup files
+def convert_files():
+    os.makedirs(outDir, exist_ok=True)
+    for file in os.listdir(srcDir):
+        doc = FreeCAD.openDocument(os.path.join(srcDir,file),hidden=True)
+        fileName = os.path.basename(doc.FileName)
+        dirName = fileName.split(".")[0]
+        fullDirPath = os.path.join(outDir, dirName)
+        os.makedirs(fullDirPath, exist_ok=True)
+        doc.saveAs(fullDirPath)
+        FreeCAD.closeDocument(doc.Name)
+        #FreeCAD.Gui.runCommand('Std_CloseAllWindows',0)
+
+
+if __name__ == "__main__":
+    convert_files()
+```
+
+### Why use the save as Directory feature
+
+Reasons:
+- non-compressed folder format should work much better with git. Really, a parts library probably doesn't need model files under strict version control. However, since the addonManager is based around git, using it is essentially a predefined constraint on this project. We'll work with what we've got.  
+- Saving as directory gives us easy access to `Document.xml` files, as well as thumbnails. (IE we can access them without actually involving the FreeCAD application) - I have ambitions of getting some basic metadata out of files quickly with `xml.etree`
+
+Drawbacks:
+- size on disk is ~4x? that of default compressed files. But not doing binary git diffs probably makes up for that.

@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--
+ FreeCAD Document, see http://www.freecadweb.org for more information...
+-->
+<Document SchemaVersion="4" ProgramVersion="2021.717R24301 +3627 (Git)" FileVersion="2" Uid="ec22e3f0-0773-48fd-a545-10456f08c46f" StringHasher="1">
+  <StringHasher saveall="0" threshold="0" count="0"></StringHasher>
+  <Properties Count="19" TransientCount="3">
+    <_Property name="FileName" type="App::PropertyString" status="50331649"/>
+    <_Property name="Tip" type="App::PropertyLink" status="33554433"/>
+    <_Property name="TransientDir" type="App::PropertyString" status="50331649"/>
+    <Property name="Comment" type="App::PropertyString">
+      <String value=""/>
+    </Property>
+    <Property name="Company" type="App::PropertyString">
+      <String value=""/>
+    </Property>
+    <Property name="CreatedBy" type="App::PropertyString" status="1">
+      <String value="Alex Neufeld"/>
+    </Property>
+    <Property name="CreationDate" type="App::PropertyString" status="16777217">
+      <String value="2021-07-23T23:05:33Z"/>
+    </Property>
+    <Property name="ForceXML" type="App::PropertyInteger" status="1">
+      <Integer value="3"/>
+    </Property>
+    <Property name="Id" type="App::PropertyString">
+      <String value=""/>
+    </Property>
+    <Property name="Label" type="App::PropertyString" status="1">
+      <String value="Square Nut - DIN 562"/>
+    </Property>
+    <Property name="LastModifiedBy" type="App::PropertyString" status="1">
+      <String value="Alex Neufeld"/>
+    </Property>
+    <Property name="LastModifiedDate" type="App::PropertyString" status="16777217">
+      <String value="2021-08-05T16:11:31Z"/>
+    </Property>
+    <Property name="License" type="App::PropertyString" status="1">
+      <String value="All rights reserved"/>
+    </Property>
+    <Property name="LicenseURL" type="App::PropertyString" status="1">
+      <String value="http://en.wikipedia.org/wiki/All_rights_reserved"/>
+    </Property>
+    <Property name="Material" type="App::PropertyMap" status="1">
+      <Map count="0">
+      </Map>
+    </Property>
+    <Property name="Meta" type="App::PropertyMap" status="1">
+      <Map count="0">
+      </Map>
+    </Property>
+    <Property name="PreferBinary" type="App::PropertyBool" status="1">
+      <Bool value="false"/>
+    </Property>
+    <Property name="ShowHidden" type="App::PropertyBool" status="1">
+      <Bool value="false"/>
+    </Property>
+    <Property name="SplitXML" type="App::PropertyBool" status="1">
+      <Bool value="true"/>
+    </Property>
+    <Property name="TipName" type="App::PropertyString" status="83886081">
+      <String value="Part"/>
+    </Property>
+    <Property name="Uid" type="App::PropertyUUID" status="16777217">
+      <Uuid value="ec22e3f0-0773-48fd-a545-10456f08c46f"/>
+    </Property>
+    <Property name="UseHasher" type="App::PropertyBool" status="1">
+      <Bool value="true"/>
+    </Property>
+  </Properties>
+  <Objects Count="19" Dependencies="1">
+    <ObjectDeps Name="Body" Count="9">
+      <Dep Name="Cylinder"/>
+      <Dep Name="Sketch"/>
+      <Dep Name="Origin"/>
+      <Dep Name="Box"/>
+      <Dep Name="SubtractiveHelix"/>
+      <Dep Name="Groove"/>
+      <Dep Name="DatumPlane"/>
+      <Dep Name="Sketch001"/>
+      <Dep Name="Mirrored"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Origin" Count="6">
+      <Dep Name="YZ_Plane"/>
+      <Dep Name="XY_Plane"/>
+      <Dep Name="Z_Axis"/>
+      <Dep Name="XZ_Plane"/>
+      <Dep Name="X_Axis"/>
+      <Dep Name="Y_Axis"/>
+    </ObjectDeps>
+    <ObjectDeps Name="X_Axis" Count="0"/>
+    <ObjectDeps Name="Y_Axis" Count="0"/>
+    <ObjectDeps Name="Z_Axis" Count="0"/>
+    <ObjectDeps Name="XY_Plane" Count="0"/>
+    <ObjectDeps Name="XZ_Plane" Count="0"/>
+    <ObjectDeps Name="YZ_Plane" Count="0"/>
+    <ObjectDeps Name="DatumPlane" Count="2">
+      <Dep Name="Box"/>
+      <Dep Name="XY_Plane"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Part" Count="3">
+      <Dep Name="Spreadsheet"/>
+      <Dep Name="Body"/>
+      <Dep Name="Origin001"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Origin001" Count="0"/>
+    <ObjectDeps Name="Cylinder" Count="4">
+      <Dep Name="Spreadsheet"/>
+      <Dep Name="Box"/>
+      <Dep Name="XY_Plane"/>
+      <Dep Name="Body"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Sketch" Count="2">
+      <Dep Name="Spreadsheet"/>
+      <Dep Name="XZ_Plane"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Groove" Count="3">
+      <Dep Name="Cylinder"/>
+      <Dep Name="Sketch"/>
+      <Dep Name="Body"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Mirrored" Count="3">
+      <Dep Name="Body"/>
+      <Dep Name="Groove"/>
+      <Dep Name="DatumPlane"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Sketch001" Count="3">
+      <Dep Name="Cylinder"/>
+      <Dep Name="Spreadsheet"/>
+      <Dep Name="XZ_Plane"/>
+    </ObjectDeps>
+    <ObjectDeps Name="SubtractiveHelix" Count="5">
+      <Dep Name="Spreadsheet"/>
+      <Dep Name="Part"/>
+      <Dep Name="Body"/>
+      <Dep Name="Sketch001"/>
+      <Dep Name="Mirrored"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Spreadsheet" Count="1">
+      <Dep Name="Part"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Box" Count="3">
+      <Dep Name="Spreadsheet"/>
+      <Dep Name="XY_Plane"/>
+      <Dep Name="Body"/>
+    </ObjectDeps>
+    <Object type="PartDesign::Body" name="Body" id="3979" revision="1151" Touched="1" file="Body.xml" />
+    <Object type="App::Origin" name="Origin" id="3980" revision="0" file="Origin.xml" />
+    <Object type="App::Line" name="X_Axis" id="3981" revision="1" file="X_Axis.xml" />
+    <Object type="App::Line" name="Y_Axis" id="3982" revision="2" file="Y_Axis.xml" />
+    <Object type="App::Line" name="Z_Axis" id="3983" revision="2" file="Z_Axis.xml" />
+    <Object type="App::Plane" name="XY_Plane" id="3984" revision="1" file="XY_Plane.xml" />
+    <Object type="App::Plane" name="XZ_Plane" id="3985" revision="2" file="XZ_Plane.xml" />
+    <Object type="App::Plane" name="YZ_Plane" id="3986" revision="2" file="YZ_Plane.xml" />
+    <Object type="PartDesign::Plane" name="DatumPlane" id="3989" revision="172" file="DatumPlane.xml" />
+    <Object type="App::Part" name="Part" id="3994" revision="857" file="Part.xml" />
+    <Object type="App::Origin" name="Origin001" id="3995" revision="0" file="Origin001.xml" />
+    <Object type="PartDesign::SubtractiveCylinder" name="Cylinder" id="4000" revision="568" Touched="1" file="Cylinder.xml" />
+    <Object type="Sketcher::SketchObject" name="Sketch" id="4001" revision="546" Touched="1" file="Sketch.xml" />
+    <Object type="PartDesign::Groove" name="Groove" id="4002" revision="536" Touched="1" file="Groove.xml" />
+    <Object type="PartDesign::Mirrored" name="Mirrored" id="4003" revision="652" Touched="1" file="Mirrored.xml" />
+    <Object type="Sketcher::SketchObject" name="Sketch001" id="4020" revision="399" Touched="1" file="Sketch001.xml" />
+    <Object type="PartDesign::SubtractiveHelix" name="SubtractiveHelix" id="4022" revision="448" Touched="1" file="SubtractiveHelix.xml" />
+    <Object type="Spreadsheet::Sheet" name="Spreadsheet" id="4025" revision="0" file="Spreadsheet.xml" />
+    <Object type="PartDesign::AdditiveBox" name="Box" id="4027" revision="96" Touched="1" file="Box.xml" />
+  </Objects>
+  <ObjectData Count="0">
+  </ObjectData>
+</Document>

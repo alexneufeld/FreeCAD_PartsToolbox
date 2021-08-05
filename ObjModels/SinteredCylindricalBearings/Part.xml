@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- FreeCAD DocumentObject -->
+<Document SchemaVersion="4" FileVersion="2">
+<Object name="Part" Extensions="True">
+  <Extensions Count="1">
+    <Extension type="App::OriginGroupExtension" name="OriginGroupExtension">
+    </Extension>
+  </Extensions>
+  <Properties Count="21" TransientCount="2">
+    <_Property name="_ElementMapVersion" type="App::PropertyString" status="234881024"/>
+    <_Property name="_GroupTouched" type="App::PropertyBool" status="100663296"/>
+    <Property name="ColoredElements" type="App::PropertyLinkSubHidden" status="83886080">
+      <LinkSub value="" count="0">
+      </LinkSub>
+    </Property>
+    <Property name="ExportMode" type="App::PropertyEnumeration">
+      <Integer value="1"/>
+    </Property>
+    <Property name="ExpressionEngine" type="App::PropertyExpressionEngine" status="67108864">
+      <ExpressionEngine count="4" cdata="1">
+        <Expressions><![CDATA[
+0:.InnerDiameter.Enum
+0:Spreadsheet.cells[<<A3:|>>]
+0:
+
+0:.Length.Enum
+0:Spreadsheet004.cells[Spreadsheet.vars]
+0:
+
+0:.OuterDiameter.Enum
+0:Spreadsheet003.cells[Spreadsheet.vars]
+0:
+
+0:Label
+0:<<Plain sintered bushing - %s IDx%s ODx%s Lg>> % (.InnerDiameter.Enum[.InnerDiameter], .OuterDiameter.Enum[.OuterDiameter], .Length.Enum[.Length])
+0:
+
+]]>
+        </Expressions>
+      </ExpressionEngine>
+    </Property>
+    <Property name="Group" type="App::PropertyLinkList">
+      <LinkList count="6">
+        <Link value="Body"/>
+        <Link value="Spreadsheet"/>
+        <Link value="Spreadsheet001"/>
+        <Link value="Spreadsheet002"/>
+        <Link value="Spreadsheet003"/>
+        <Link value="Spreadsheet004"/>
+      </LinkList>
+    </Property>
+    <Property name="Id" type="App::PropertyString">
+      <String value="???"/>
+    </Property>
+    <Property name="InnerDiameter" type="App::PropertyEnumeration" group="Parameters" attr="0" ro="0" hide="0" doc="" status="2162688">
+      <Integer value="11" CustomEnum="true"/>
+      <CustomEnumList count="32">
+<Enum value="1​mm"/>
+<Enum value="1.5​mm"/>
+<Enum value="2​mm"/>
+<Enum value="2.5​mm"/>
+<Enum value="3​mm"/>
+<Enum value="4​mm"/>
+<Enum value="5​mm"/>
+<Enum value="6​mm"/>
+<Enum value="7​mm"/>
+<Enum value="8​mm"/>
+<Enum value="9​mm"/>
+<Enum value="10​mm"/>
+<Enum value="12​mm"/>
+<Enum value="14​mm"/>
+<Enum value="15​mm"/>
+<Enum value="16​mm"/>
+<Enum value="18​mm"/>
+<Enum value="20​mm"/>
+<Enum value="22​mm"/>
+<Enum value="25​mm"/>
+<Enum value="28​mm"/>
+<Enum value="30​mm"/>
+<Enum value="32​mm"/>
+<Enum value="35​mm"/>
+<Enum value="38​mm"/>
+<Enum value="40​mm"/>
+<Enum value="42​mm"/>
+<Enum value="45​mm"/>
+<Enum value="48​mm"/>
+<Enum value="50​mm"/>
+<Enum value="55​mm"/>
+<Enum value="60​mm"/>
+      </CustomEnumList>
+    </Property>
+    <Property name="Label" type="App::PropertyString" status="134217728">
+      <String value="Plain sintered bushing - 10​mm IDx16​mm ODx16​mm Lg"/>
+    </Property>
+    <Property name="Label2" type="App::PropertyString" status="128">
+      <String value=""/>
+    </Property>
+    <Property name="Length" type="App::PropertyEnumeration" group="Parameters" attr="0" ro="0" hide="0" doc="" status="2162688">
+      <Integer value="2" CustomEnum="true"/>
+      <CustomEnumList count="3">
+<Enum value="8​mm"/>
+<Enum value="10​mm"/>
+<Enum value="16​mm"/>
+      </CustomEnumList>
+    </Property>
+    <Property name="License" type="App::PropertyString">
+      <String value="LGPL-3.0-or-later"/>
+    </Property>
+    <Property name="LicenseURL" type="App::PropertyString">
+      <String value="https://www.gnu.org/licenses/lgpl-3.0-standalone.html"/>
+    </Property>
+    <Property name="Material" type="App::PropertyMap">
+      <Map count="0">
+      </Map>
+    </Property>
+    <Property name="Meta" type="App::PropertyMap">
+      <Map count="0">
+      </Map>
+    </Property>
+    <Property name="Origin" type="App::PropertyLink" status="67108864">
+      <Link value="Origin"/>
+    </Property>
+    <Property name="OuterDiameter" type="App::PropertyEnumeration" group="Parameters" attr="0" ro="0" hide="0" doc="" status="2162688">
+      <Integer value="0" CustomEnum="true"/>
+      <CustomEnumList count="2">
+<Enum value="16​mm"/>
+<Enum value="14​mm"/>
+      </CustomEnumList>
+    </Property>
+    <Property name="Placement" type="App::PropertyPlacement" status="8388608">
+      <PropertyPlacement Px="0" Py="0" Pz="0" Q0="0" Q1="0" Q2="0" Q3="1" A="0" Ox="0" Oy="0" Oz="1"/>
+    </Property>
+    <Property name="Type" type="App::PropertyString">
+      <String value="Standard Part"/>
+    </Property>
+    <Property name="Uid" type="App::PropertyUUID">
+      <Uuid value="2ae202a9-1401-443b-add5-c2a70534a379"/>
+    </Property>
+    <Property name="Visibility" type="App::PropertyBool" status="648">
+      <Bool value="true"/>
+    </Property>
+    <Property name="_ExportChildren" type="App::PropertyLinkList" status="218104320">
+      <LinkList count="6">
+        <Link value="Body"/>
+        <Link value="Spreadsheet"/>
+        <Link value="Spreadsheet001"/>
+        <Link value="Spreadsheet002"/>
+        <Link value="Spreadsheet003"/>
+        <Link value="Spreadsheet004"/>
+      </LinkList>
+    </Property>
+    <Property name="_GroupVersion" type="App::PropertyInteger" status="218103808">
+      <Integer value="1"/>
+    </Property>
+  </Properties>
+</Object>
+</Document>

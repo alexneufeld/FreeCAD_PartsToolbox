@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--
+ FreeCAD Document, see http://www.freecadweb.org for more information...
+-->
+<Document SchemaVersion="4" ProgramVersion="2021.717R24301 +3627 (Git)" FileVersion="2" Uid="8502f3eb-25f5-472e-99f2-55bf0216a1b9" StringHasher="1">
+  <StringHasher saveall="0" threshold="0" count="0"></StringHasher>
+  <Properties Count="19" TransientCount="3">
+    <_Property name="FileName" type="App::PropertyString" status="50331649"/>
+    <_Property name="Tip" type="App::PropertyLink" status="33554433"/>
+    <_Property name="TransientDir" type="App::PropertyString" status="50331649"/>
+    <Property name="Comment" type="App::PropertyString">
+      <String value=""/>
+    </Property>
+    <Property name="Company" type="App::PropertyString">
+      <String value=""/>
+    </Property>
+    <Property name="CreatedBy" type="App::PropertyString" status="1">
+      <String value="FreeCAD PartToolBox authors"/>
+    </Property>
+    <Property name="CreationDate" type="App::PropertyString" status="16777217">
+      <String value="2021-07-25T01:58:53Z"/>
+    </Property>
+    <Property name="ForceXML" type="App::PropertyInteger" status="1">
+      <Integer value="3"/>
+    </Property>
+    <Property name="Id" type="App::PropertyString">
+      <String value=""/>
+    </Property>
+    <Property name="Label" type="App::PropertyString" status="1">
+      <String value="SinteredCylindricalBearings"/>
+    </Property>
+    <Property name="LastModifiedBy" type="App::PropertyString" status="1">
+      <String value="Alex Neufeld"/>
+    </Property>
+    <Property name="LastModifiedDate" type="App::PropertyString" status="16777217">
+      <String value="2021-08-05T16:11:47Z"/>
+    </Property>
+    <Property name="License" type="App::PropertyString" status="1">
+      <String value="LGPL-3.0-or-later"/>
+    </Property>
+    <Property name="LicenseURL" type="App::PropertyString" status="1">
+      <String value="https://www.gnu.org/licenses/lgpl-3.0-standalone.html"/>
+    </Property>
+    <Property name="Material" type="App::PropertyMap" status="1">
+      <Map count="0">
+      </Map>
+    </Property>
+    <Property name="Meta" type="App::PropertyMap" status="1">
+      <Map count="0">
+      </Map>
+    </Property>
+    <Property name="PreferBinary" type="App::PropertyBool" status="1">
+      <Bool value="false"/>
+    </Property>
+    <Property name="ShowHidden" type="App::PropertyBool" status="1">
+      <Bool value="false"/>
+    </Property>
+    <Property name="SplitXML" type="App::PropertyBool" status="1">
+      <Bool value="true"/>
+    </Property>
+    <Property name="TipName" type="App::PropertyString" status="83886080">
+      <String value=""/>
+    </Property>
+    <Property name="Uid" type="App::PropertyUUID" status="16777217">
+      <Uuid value="8502f3eb-25f5-472e-99f2-55bf0216a1b9"/>
+    </Property>
+    <Property name="UseHasher" type="App::PropertyBool" status="1">
+      <Bool value="true"/>
+    </Property>
+  </Properties>
+  <Objects Count="18" Dependencies="1">
+    <ObjectDeps Name="Part" Count="7">
+      <Dep Name="Spreadsheet004"/>
+      <Dep Name="Spreadsheet002"/>
+      <Dep Name="Origin"/>
+      <Dep Name="Spreadsheet003"/>
+      <Dep Name="Body"/>
+      <Dep Name="Spreadsheet"/>
+      <Dep Name="Spreadsheet001"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Origin" Count="0"/>
+    <ObjectDeps Name="Body" Count="4">
+      <Dep Name="Cylinder"/>
+      <Dep Name="Cylinder001"/>
+      <Dep Name="Chamfer"/>
+      <Dep Name="Origin001"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Origin001" Count="6">
+      <Dep Name="XY_Plane"/>
+      <Dep Name="Z_Axis"/>
+      <Dep Name="Y_Axis"/>
+      <Dep Name="XZ_Plane"/>
+      <Dep Name="X_Axis"/>
+      <Dep Name="YZ_Plane"/>
+    </ObjectDeps>
+    <ObjectDeps Name="X_Axis" Count="0"/>
+    <ObjectDeps Name="Y_Axis" Count="0"/>
+    <ObjectDeps Name="Z_Axis" Count="0"/>
+    <ObjectDeps Name="XY_Plane" Count="0"/>
+    <ObjectDeps Name="XZ_Plane" Count="0"/>
+    <ObjectDeps Name="YZ_Plane" Count="0"/>
+    <ObjectDeps Name="Spreadsheet" Count="1">
+      <Dep Name="Part"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Spreadsheet001" Count="0"/>
+    <ObjectDeps Name="Spreadsheet002" Count="0"/>
+    <ObjectDeps Name="Cylinder" Count="6">
+      <Dep Name="Spreadsheet002"/>
+      <Dep Name="Body"/>
+      <Dep Name="Spreadsheet"/>
+      <Dep Name="Spreadsheet001"/>
+      <Dep Name="Part"/>
+      <Dep Name="YZ_Plane"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Spreadsheet003" Count="0"/>
+    <ObjectDeps Name="Spreadsheet004" Count="0"/>
+    <ObjectDeps Name="Cylinder001" Count="4">
+      <Dep Name="Cylinder"/>
+      <Dep Name="Body"/>
+      <Dep Name="Spreadsheet"/>
+      <Dep Name="YZ_Plane"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Chamfer" Count="3">
+      <Dep Name="Cylinder"/>
+      <Dep Name="Cylinder001"/>
+      <Dep Name="Body"/>
+    </ObjectDeps>
+    <Object type="App::Part" name="Part" id="1418" revision="528" file="Part.xml" />
+    <Object type="App::Origin" name="Origin" id="1419" revision="0" file="Origin.xml" />
+    <Object type="PartDesign::Body" name="Body" id="1420" revision="167" Touched="1" file="Body.xml" />
+    <Object type="App::Origin" name="Origin001" id="1421" revision="0" file="Origin001.xml" />
+    <Object type="App::Line" name="X_Axis" id="1422" revision="1" file="X_Axis.xml" />
+    <Object type="App::Line" name="Y_Axis" id="1423" revision="2" file="Y_Axis.xml" />
+    <Object type="App::Line" name="Z_Axis" id="1424" revision="2" file="Z_Axis.xml" />
+    <Object type="App::Plane" name="XY_Plane" id="1425" revision="1" file="XY_Plane.xml" />
+    <Object type="App::Plane" name="XZ_Plane" id="1426" revision="2" file="XZ_Plane.xml" />
+    <Object type="App::Plane" name="YZ_Plane" id="1427" revision="2" file="YZ_Plane.xml" />
+    <Object type="Spreadsheet::Sheet" name="Spreadsheet" id="1428" revision="0" file="Spreadsheet.xml" />
+    <Object type="Spreadsheet::Sheet" name="Spreadsheet001" id="1429" revision="0" file="Spreadsheet001.xml" />
+    <Object type="Spreadsheet::Sheet" name="Spreadsheet002" id="1430" revision="0" file="Spreadsheet002.xml" />
+    <Object type="PartDesign::AdditiveCylinder" name="Cylinder" id="1433" revision="100" Touched="1" file="Cylinder.xml" />
+    <Object type="Spreadsheet::Sheet" name="Spreadsheet003" id="1431" revision="0" file="Spreadsheet003.xml" />
+    <Object type="Spreadsheet::Sheet" name="Spreadsheet004" id="1432" revision="0" file="Spreadsheet004.xml" />
+    <Object type="PartDesign::SubtractiveCylinder" name="Cylinder001" id="1436" revision="140" Touched="1" file="Cylinder001.xml" />
+    <Object type="PartDesign::Chamfer" name="Chamfer" id="1437" revision="144" Touched="1" file="Chamfer.xml" />
+  </Objects>
+  <ObjectData Count="0">
+  </ObjectData>
+</Document>

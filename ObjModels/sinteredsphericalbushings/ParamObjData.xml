@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- FreeCAD DocumentObject -->
+<Document SchemaVersion="4" FileVersion="2">
+<Object name="ParamObjData">
+  <Properties Count="6" TransientCount="0">
+    <Property name="ExpressionEngine" type="App::PropertyExpressionEngine" status="67108864">
+      <ExpressionEngine count="0"></ExpressionEngine>
+    </Property>
+    <Property name="Label" type="App::PropertyString" status="134217728">
+      <String value="ParamObjData"/>
+    </Property>
+    <Property name="Label2" type="App::PropertyString" status="128">
+      <String value=""/>
+    </Property>
+    <Property name="Proxy" type="App::PropertyPythonObject">
+      <Python  json="yes" value="null"/>
+    </Property>
+    <Property name="Visibility" type="App::PropertyBool" status="648">
+      <Bool value="true"/>
+    </Property>
+    <Property name="sinteredsphericalbushings_ID" type="App::PropertyPythonObject" group="" attr="0" ro="0" hide="0" doc="" status="2097152">
+      <Python  json="yes" cdata="1">
+<![CDATA[
+{
+  "1": [
+    1,
+    3,
+    2,
+    0.3
+  ],
+  "1.5": [
+    1.5,
+    4.5,
+    3,
+    0.3
+  ],
+  "2": [
+    2,
+    5,
+    3,
+    0.3
+  ],
+  "2.5": [
+    2.5,
+    6,
+    4,
+    0.3
+  ],
+  "3": [
+    3,
+    8,
+    6,
+    0.3
+  ],
+  "4": [
+    4,
+    10,
+    8,
+    0.3
+  ],
+  "5": [
+    5,
+    12,
+    9,
+    0.5
+  ],
+  "6": [
+    6,
+    14,
+    10,
+    0.5
+  ],
+  "7": [
+    7,
+    16,
+    11,
+    0.5
+  ],
+  "8": [
+    8,
+    16,
+    11,
+    0.5
+  ],
+  "9": [
+    9,
+    18,
+    12,
+    0.5
+  ],
+  "10A": [
+    10,
+    20,
+    13,
+    0.5
+  ],
+  "10B": [
+    10,
+    22,
+    14,
+    0.5
+  ],
+  "12": [
+    12,
+    22,
+    15,
+    0.5
+  ],
+  "14": [
+    14,
+    24,
+    17,
+    0.5
+  ],
+  "15": [
+    15,
+    27,
+    20,
+    0.5
+  ],
+  "16": [
+    16,
+    28,
+    20,
+    0.5
+  ],
+  "18": [
+    18,
+    30,
+    20,
+    0.5
+  ],
+  "20": [
+    20,
+    36,
+    25,
+    0.5
+  ]
+}
+]]>
+      </Python>
+    </Property>
+  </Properties>
+</Object>
+</Document>

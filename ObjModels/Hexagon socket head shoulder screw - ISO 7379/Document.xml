@@ -1,0 +1,843 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--
+ FreeCAD Document, see http://www.freecadweb.org for more information...
+-->
+<Document SchemaVersion="4" ProgramVersion="2021.717R24301 +3627 (Git)" FileVersion="2" Uid="36856177-9c81-4e72-8142-6359c0944f55" StringHasher="1">
+  <StringHasher saveall="0" threshold="0" count="525">
+<![CDATA[
+1 0 2:Scene bounding box is used to determine the scale of the shadow texture.
+You can increase the bounding box scale to avoid execessive clipping of
+shadows when viewing up close in certain angle.
+2 0 0:Override view object display mode when shadow is enabled.
+3 0 2:Epsilon is used to offset the shadow map depth from the model depth.
+Should be set to as low a number as possible without causing flickering
+in the shadows or on non-shadowed objects.
+4 0 0:Auto place the ground face at the Z bottom of the scene
+5 0 0:Whether to show the ground when viewing from under the ground face
+6 0 0:Ground placement. If 'GroundAutoPosition' is on, this specifies an additional offset of the ground
+7 0 1:Render ground with shading. If disabled, the ground and the shadow casted
+on ground will not change shading when viewing in different angle.
+8 0 0:Auto adjust ground size based on the scene bounding box
+9 0 1:The auto generated ground face is determined by the scene bounding box
+multiplied by this scale
+10 0 1:Specifies the physcal length of the ground texture image size.
+Texture mappings beyond this size will be wrapped around
+11 0 2:Specifics the ground transparency. When set to 0, the non-shadowed part
+of the ground will be complete transparent, showing only the shadowed part
+of the ground with some transparency.
+12 0 2:Specifics the clipping distance for when rendering shadows.
+You can increase the bounding box scale to avoid execessive
+clipping of shadows when viewing up close in certain angle.
+13 0 2:Specifies shadow precision. This parameter affects the internal texture
+size used to hold the casted shadows. You might want a bigger texture if
+you want a hard shadow but a smaller one for soft shadow.
+14 0 2:Whether to show auto generated ground face. You can specify you own ground
+object by changing its view property 'ShadowStyle' to 'Shadowed', meaning
+that it will only receive but not cast shadow.
+15 0 2:Specifies the blur raidus of the shadow edge. Higher number will result in
+slower rendering speed on scene change. Use a lower 'Precision' value to
+counter the effect.
+16 0 0:Whether to use spot light or directional light.
+17 0 3:Specifies the sample size used for rendering shadow spread. A value 0
+corresponds to a sampling square of 2x2. And 1 corresponds to 3x3, etc.
+The bigger the size the slower the rendering speed. You can use a lower
+'Precision' value to counter the effect.
+18 0 1:Specifies the spread size for a soft shadow. The resulting spread size is
+dependent on the model scale
+19 0 0:Can be used to avoid light bleeding in merged shadows cast from different objects.
+20 0 0:Whether to cast shadow from transparent objects.
+25 0 0:g12v2;SKT
+26 0 0:g13v1;SKT
+27 0 0:g13v2;SKT
+28 0 0:g14v1;SKT
+29 0 0:g14v2;SKT
+30 0 0:g15v1;SKT
+31 0 0:g15v2;SKT
+32 0 0:g16v1;SKT
+33 0 0:g16v2;SKT
+34 0 0:g17v1;SKT
+35 0 0:g17v2;SKT
+36 0 0:g18v1;SKT
+37 0 0:g18v2;SKT
+38 0 0:g22v1;SKT
+39 0 0:g19v1;SKT
+40 0 0:g22v2;SKT
+41 0 0:g20v1;SKT
+42 0 0:g19v2;SKT
+43 0 0:g21v1;SKT
+44 0 0:g20v2;SKT
+47 0 0:g13;SKT
+48 0 0:g14;SKT
+50 0 0:g16;SKT
+51 0 0:g17;SKT
+53 0 0:g22;SKT
+54 0 0:g19;SKT
+55 0 0:g20;SKT
+58 0 0:#19;:T4176:3:V
+59 0 0:#25;:T4176:3:V
+60 0 0:#27;:T4176:3:V
+61 0 0:#29;:T4176:3:V
+62 0 0:#2b;:T4176:3:V
+63 0 0:#1b;:T4176:3:V
+64 0 0:#1d;:T4176:3:V
+65 0 0:#1f;:T4176:3:V
+66 0 0:#21;:T4176:3:V
+67 0 0:#23;:T4176:3:V
+68 0 0:#37;:T4176:3:E
+69 0 0:#2f;:T4176:3:E
+70 0 0:#30;:T4176:3:E
+71 0 0:#32;:T4176:3:E
+72 0 0:#33;:T4176:3:E
+73 0 0:#35;:T4176:3:E
+74 0 0:#36;:T4176:3:E
+75 0 0:#3a;:G;RVL;:T4176:3:E
+76 0 0:#40;:G;RVL;:T4176:3:E
+77 0 0:#43;:G;RVL;:T4176:3:E
+78 0 0:#3e;:G;RVL;:T4176:3:E
+79 0 0:#1a;:T4176:3:V
+80 0 0:#1c;:T4176:3:V
+81 0 0:#1e;:T4176:3:V
+82 0 0:#20;:T4176:3:V
+83 0 0:#22;:T4176:3:V
+84 0 0:#24;:T4176:3:V
+85 0 0:#26;:T4176:3:V
+86 0 0:#28;:T4176:3:V
+87 0 0:#2a;:T4176:3:V
+88 0 0:#2c;:T4176:3:V
+89 0 0:#3f;:G;RVL;:T4176:3:E
+90 0 0:#41;:G;RVL;:T4176:3:E
+91 0 0:#42;:G;RVL;:T4176:3:E
+92 0 0:#3b;:G;RVL;:T4176:3:E
+93 0 0:#3c;:G;RVL;:T4176:3:E
+94 0 0:#3d;:G;RVL;:T4176:3:E
+95 0 0:#4b;Edge1;:L;RVL;:T4176:3:F
+96 0 0:#45;:G;RVL;:T4176:3:F
+97 0 0:#46;:G;RVL;:T4176:3:F
+98 0 0:#4c;Edge4;:L;RVL;:T4176:3:F
+99 0 0:#47;:G;RVL;:T4176:3:F
+100 0 0:#48;:G;RVL;:T4176:3:F
+101 0 0:#4d;Edge9;:L;RVL;:T4176:3:F
+102 0 0:#49;:G;RVL;:T4176:3:F
+103 0 0:#4a;:G;RVL;:T4176:3:F
+104 0 0:#44;:G;RVL;:T4176:3:F
+105 0 0:#4e;Edge16;:L;RVL;:T4176:3:F
+108 0 0:g26v2;SKT
+109 0 0:g27v1;SKT
+110 0 0:g27v2;SKT
+111 0 0:g28v1;SKT
+112 0 0:g28v2;SKT
+113 0 0:g29v1;SKT
+117 0 0:g27;SKT
+118 0 0:g28;SKT
+122 0 0:#6c;:T4186:3:V
+123 0 0:#6e;:T4186:3:V
+124 0 0:#70;:T4186:3:V
+125 0 0:#75;:T4186:3:E
+126 0 0:#76;:T4186:3:E
+127 0 0:#7a;:G;RVL;:T4186:3:E
+128 0 0:#7c;:G;RVL;:T4186:3:E
+129 0 0:#6d;:T4186:3:V
+130 0 0:#6f;:T4186:3:V
+131 0 0:#71;:T4186:3:V
+132 0 0:#7b;:G;RVL;:T4186:3:E
+133 0 0:#7f;Edge1;:L;RVL;:T4186:3:F
+134 0 0:#7d;:G;RVL;:T4186:3:F
+135 0 0:#7e;:G;RVL;:T4186:3:F
+136 0 0:#80;Edge4;:L;RVL;:T4186:3:F
+137 0 0:g32v1;SKT
+138 0 0:g37v2;SKT
+139 0 0:g32v2;SKT
+140 0 0:g33v1;SKT
+141 0 0:g33v2;SKT
+142 0 0:g34v1;SKT
+143 0 0:g34v2;SKT
+144 0 0:g35v1;SKT
+145 0 0:g35v2;SKT
+146 0 0:g36v1;SKT
+147 0 0:g36v2;SKT
+148 0 0:g37v1;SKT
+149 0 0:g32;SKT
+150 0 0:g33;SKT
+151 0 0:g34;SKT
+152 0 0:g35;SKT
+153 0 0:g36;SKT
+154 0 0:g37;SKT
+155 0 0:g39v1;SKT
+156 0 0:g39;SKT
+157 0 0:#9c;:T4189:3:E
+158 0 0:#9b;:T4189:3:V
+159 0 0:#8f;:T4189:3:V
+160 0 0:#91;:T4189:3:V
+161 0 0:#93;:T4189:3:V
+162 0 0:#89;:T4189:3:V
+163 0 0:#8b;:T4189:3:V
+164 0 0:#8d;:T4189:3:V
+165 0 0:#95;:T4189:3:E
+166 0 0:#96;:T4189:3:E
+167 0 0:#97;:T4189:3:E
+168 0 0:#98;:T4189:3:E
+169 0 0:#99;:T4189:3:E
+170 0 0:#9a;:T4189:3:E
+171 0 0:#9d;FAC;:T4189:3:F
+172 0 0:#a6;:G;XTR;:T4189:3:F
+173 0 0:#a7;:G;XTR;:T4189:3:F
+174 0 0:#a8;:G;XTR;:T4189:3:F
+175 0 0:#a9;:G;XTR;:T4189:3:F
+176 0 0:#aa;:G;XTR;:T4189:3:F
+177 0 0:#9d;:G;XTR;:T4189:3:F
+178 0 0:#a5;:G;XTR;:T4189:3:F
+179 0 0:#9f;:G;XTR;:T4189:3:E
+180 0 0:#a0;:G;XTR;:T4189:3:E
+181 0 0:#a1;:G;XTR;:T4189:3:E
+182 0 0:#9e;:G;XTR;:T4189:3:E
+183 0 0:#a2;:G;XTR;:T4189:3:E
+184 0 0:#a3;:G;XTR;:T4189:3:E
+185 0 0:#a4;:G;XTR;:T4189:3:E
+186 0 0:#7c;:T-4188:3:V
+187 0 0:#83;:T-4188:3:V
+188 0 0:#80;:T-4188:3:E
+189 0 0:#88;:T-4188:3:F
+190 0 0:#85;:T-4188:3:F
+191 0 0:(#be;K-12;:T4188:3:F)
+192 0 0:#87;:T-4188:3:F
+193 0 0:(#c0;K-10;:T4188:3:F)
+194 0 0:(#c0;K-9;:T4188:3:F)
+195 0 0:(#c0;K-8;:T4188:3:F)
+196 0 0:(#c0;K-7;:T4188:3:F)
+197 0 0:(#c0;K-6;:T4188:3:F)
+198 0 0:#7e;:T-4188:3:E
+199 0 0:(#be;K-11;:T4188:3:F)
+200 0 0:(#be;K-10;:T4188:3:F)
+201 0 0:(#be;K-9;:T4188:3:F)
+202 0 0:(#be;K-8;:T4188:3:F)
+203 0 0:(#be;K-7;:T4188:3:F)
+204 0 0:(#c0;K-11;:T4188:3:F)
+205 0 0:(#be;K-6;:T4188:3:F)
+206 0 0:(#c0;K-3;:T4188:3:F)
+207 0 0:(#c0;K-2;:T4188:3:F)
+208 0 0:(#c0;K-1;:T4188:3:F)
+209 0 0:(#be;K-1;:T4188:3:F)
+210 0 0:(#be;K-5;:T4188:3:F)
+211 0 0:(#be;K-4;:T4188:3:F)
+212 0 0:(#be;K-3;:T4188:3:F)
+213 0 0:(#be;K-2;:T4188:3:F)
+214 0 0:(#c6;K-1;:T4188:3:E)
+215 0 0:(#c0;K-5;:T4188:3:F)
+216 0 0:(#c0;K-4;:T4188:3:F)
+217 0 0:g40v1;SKT
+218 0 0:g42v2;SKT
+219 0 0:g40v2;SKT
+220 0 0:g41v1;SKT
+223 0 0:g40;SKT
+226 0 0:#df;:T4191:3:E
+227 0 0:#d9;:T4191:3:V
+228 0 0:#db;:T4191:3:V
+229 0 0:#e4;:G;RVL;:T4191:3:E
+230 0 0:#b5;:G#cd;CUT;:T-4190:3:V
+231 0 0:#b7;:G2#d1;CUT;:T-4190:3:V
+232 0 0:#b4;:G#d2;CUT;:T-4190:3:V
+233 0 0:#b3;:G#d3;CUT;:T-4190:3:V
+234 0 0:#b9;:G#d4;CUT;:T-4190:3:V
+235 0 0:#b8;:G#d5;CUT;:T-4190:3:V
+236 0 0:#b7;:G#d6;CUT;:T-4190:3:V
+237 0 0:#b5;:G2#d7;CUT;:T-4190:3:V
+238 0 0:#b4;:G2#d8;CUT;:T-4190:3:V
+239 0 0:#b3;:G2#ce;CUT;:T-4190:3:V
+240 0 0:#b9;:G2#cf;CUT;:T-4190:3:V
+241 0 0:#b8;:G2#d0;CUT;:T-4190:3:V
+242 0 0:#ba;:T4188:3:V
+243 0 0:#bb;:T4188:3:V
+244 0 0:#b0;:G#bf;CUT;:T-4190:3:E
+245 0 0:#af;:G#c7;CUT;:T-4190:3:E
+246 0 0:#ae;:G#c8;CUT;:T-4190:3:E
+247 0 0:#ad;:G#c9;CUT;:T-4190:3:E
+248 0 0:#ac;:G#ca;CUT;:T-4190:3:E
+249 0 0:#b2;:G#cb;CUT;:T-4190:3:E
+250 0 0:#b0;:G2#cc;CUT;:T-4190:3:E
+251 0 0:#af;:G2#c1;CUT;:T-4190:3:E
+252 0 0:#ae;:G2#c2;CUT;:T-4190:3:E
+253 0 0:#ad;:G2#c3;CUT;:T-4190:3:E
+254 0 0:#ac;:G2#c4;CUT;:T-4190:3:E
+255 0 0:#b2;:G2#c5;CUT;:T-4190:3:E
+256 0 0:#c6;:M;CUT;:T4188:3:E
+257 0 0:#bc;:T4188:3:E
+258 0 0:#be;:M;CUT;:T4188:3:F
+259 0 0:#c0;:M;CUT;:T4188:3:F
+260 0 0:#bd;:T4188:3:F
+261 0 0:#dc;:T4191:3:V
+262 0 0:#af;:M;CUT;:T-4190:3:F
+264 0 0:#e5;Edge2;:L;RVL;:T4191:3:F
+265 0 0:#b4;:M;CUT;:T-4190:3:E
+266 0 0:#ae;:M;CUT;:T-4190:3:F
+268 0 0:#b3;:M;CUT;:T-4190:3:E
+269 0 0:#ad;:M;CUT;:T-4190:3:F
+271 0 0:#b9;:M;CUT;:T-4190:3:E
+272 0 0:#ac;:M;CUT;:T-4190:3:F
+274 0 0:#b8;:M;CUT;:T-4190:3:E
+275 0 0:#b2;:M;CUT;:T-4190:3:F
+277 0 0:(#113;K-1;:T4190:4:F)
+278 0 0:#e2;:G;RVL;:T4191:3:F
+279 0 0:(#110;K-1;:T4190:4:F)
+280 0 0:(#10d;K-1;:T4190:4:F)
+281 0 0:(#10a;K-1;:T4190:4:F)
+282 0 0:(#106;K-1;:T4190:4:F)
+283 0 0:#b0;:M;CUT;:T-4190:3:F
+284 0 0:(#11b;K-1;:T4190:4:F)
+285 0 0:#b7;:M;CUT;:T-4190:3:E
+286 0 0:#b5;:M;CUT;:T-4190:3:E
+291 0 0:(#116;K-5;:T-4192:4:F)
+292 0 0:(#11d;K-1;:T4190:4:E)
+293 0 0:(#116;K-4;:T-4192:4:F)
+294 0 0:(#116;K-3;:T-4192:4:F)
+295 0 0:(#116;K-2;:T-4192:4:F)
+296 0 0:(#116;K-1;:T-4192:4:F)
+300 0 0:#e6;:T4190:3:V
+301 0 0:#e7;:T4190:3:V
+302 0 0:#e8;:T4190:3:V
+303 0 0:#e9;:T4190:3:V
+304 0 0:#ea;:T4190:3:V
+305 0 0:#eb;:T4190:3:V
+312 0 0:#e4;:T-4192:3:V
+313 0 0:#105;:T-4192:4:V
+314 0 0:#112;:G#123;FUS;:T4190:4:V
+315 0 0:#e2;:G#124;FUS;:T-4192:3:V
+316 0 0:#10f;:G#125;FUS;:T4190:4:V
+317 0 0:#10c;:G#126;FUS;:T4190:4:V
+318 0 0:#109;:G#127;FUS;:T4190:4:V
+319 0 0:#11e;:G#128;FUS;:T4190:4:V
+320 0 0:#f1;:T4190:3:V
+321 0 0:#ec;:T4190:3:V
+322 0 0:#f0;:T4190:3:V
+323 0 0:#ef;:T4190:3:V
+324 0 0:#ee;:T4190:3:V
+325 0 0:#ed;:T4190:3:V
+326 0 0:#f2;:T4190:3:V
+327 0 0:#f3;:T4190:3:V
+328 0 0:#f4;:T4190:3:E
+329 0 0:#f5;:T4190:3:E
+330 0 0:#f6;:T4190:3:E
+331 0 0:#f7;:T4190:3:E
+332 0 0:#f8;:T4190:3:E
+333 0 0:#f9;:T4190:3:E
+336 0 0:#11e;:M;FUS;:T4190:4:E
+338 0 0:#109;:M;FUS;:T4190:4:E
+340 0 0:#10c;:M;FUS;:T4190:4:E
+342 0 0:#10f;:M;FUS;:T4190:4:E
+344 0 0:#112;:M;FUS;:T4190:4:E
+346 0 0:#e5;:T-4192:3:E
+347 0 0:#116;:G11#115;FUS;:T-4192:4:E
+348 0 0:#116;:G10#117;FUS;:T-4192:4:E
+349 0 0:#116;:G9#118;FUS;:T-4192:4:E
+350 0 0:#116;:G8#119;FUS;:T-4192:4:E
+351 0 0:#116;:G7#11a;FUS;:T-4192:4:E
+352 0 0:#116;:G6#11c;FUS;:T-4192:4:E
+353 0 0:#e2;:M;FUS;:T-4192:3:E
+355 0 0:#ff;:T4190:3:E
+356 0 0:#11d;:M;FUS;:T4190:4:E
+358 0 0:#fe;:T4190:3:E
+360 0 0:#fd;:T4190:3:E
+362 0 0:#fc;:T4190:3:E
+364 0 0:#fb;:T4190:3:E
+365 0 0:#fa;:T4190:3:E
+366 0 0:#100;:T4190:4:E
+367 0 0:#101;:T4190:4:E
+368 0 0:#102;:T4190:4:F
+369 0 0:#11b;:M;FUS;:T4190:4:F
+370 0 0:#106;:M;FUS;:T4190:4:F
+371 0 0:#10a;:M;FUS;:T4190:4:F
+372 0 0:#10d;:M;FUS;:T4190:4:F
+373 0 0:#110;:M;FUS;:T4190:4:F
+375 0 0:#108;:M;FUS;:T-4192:4:F
+376 0 0:#116;:M;FUS;:T-4192:4:F
+377 0 0:#113;:M;FUS;:T4190:4:F
+383 0 0:#103;:T4190:4:F
+384 0 0:#104;:T4190:4:F
+385 0 0:#3a;:T-4177:3:V
+386 0 0:#4f;:T-4177:3:V
+387 0 0:#3f;:T-4177:3:V
+388 0 0:#50;:T-4177:3:V
+389 0 0:#40;:T-4177:3:V
+390 0 0:#51;:T-4177:3:V
+391 0 0:#41;:T-4177:3:V
+392 0 0:#52;:T-4177:3:V
+393 0 0:#42;:T-4177:3:V
+394 0 0:#53;:T-4177:3:V
+395 0 0:#43;:T-4177:3:V
+396 0 0:#54;:T-4177:3:V
+397 0 0:#3b;:T-4177:3:V
+398 0 0:#55;:T-4177:3:V
+399 0 0:#3c;:T-4177:3:V
+400 0 0:#56;:T-4177:3:V
+401 0 0:#3d;:T-4177:3:V
+402 0 0:#57;:T-4177:3:V
+403 0 0:#3e;:T-4177:3:V
+404 0 0:#58;:T-4177:3:V
+405 0 0:#4b;:T-4177:3:E
+406 0 0:#59;:T-4177:3:E
+407 0 0:#45;:T-4177:3:E
+408 0 0:#4c;:T-4177:3:E
+409 0 0:#46;:T-4177:3:E
+410 0 0:#5a;:T-4177:3:E
+411 0 0:#5b;:T-4177:3:E
+412 0 0:#47;:T-4177:3:E
+413 0 0:#4d;:T-4177:3:E
+414 0 0:#48;:T-4177:3:E
+415 0 0:#5c;:T-4177:3:E
+416 0 0:#5d;:T-4177:3:E
+417 0 0:#49;:T-4177:3:E
+418 0 0:#5e;:T-4177:3:E
+419 0 0:#4a;:T-4177:3:E
+420 0 0:#4e;:T-4177:3:E
+421 0 0:#44;:T-4177:3:E
+422 0 0:#60;:T-4177:3:F
+423 0 0:#61;:T-4177:3:F
+424 0 0:#62;:T-4177:3:F
+425 0 0:#63;:T-4177:3:F
+426 0 0:#64;:T-4177:3:F
+427 0 0:#65;:T-4177:3:F
+428 0 0:#66;:T-4177:3:F
+429 0 0:#67;:T-4177:3:F
+430 0 0:#68;:T-4177:3:F
+431 0 0:#69;:T-4177:3:F
+432 0 0:#13b;:T4192:4:V
+433 0 0:#13a;:T4192:4:V
+434 0 0:#13c;:T4192:4:V
+435 0 0:#13d;:T4192:4:V
+436 0 0:#13e;:T4192:4:V
+437 0 0:#13f;:T4192:4:V
+438 0 0:#140;:T4192:4:V
+439 0 0:#141;:T4192:4:V
+440 0 0:#142;:T4192:4:V
+441 0 0:#143;:T4192:4:V
+442 0 0:#144;:T4192:4:V
+443 0 0:#145;:T4192:4:V
+444 0 0:#146;:T4192:4:V
+445 0 0:#147;:T4192:4:V
+446 0 0:#15b;:T4192:4:E
+447 0 0:#15c;:T4192:4:E
+448 0 0:#15d;:T4192:4:E
+449 0 0:#15e;:T4192:4:E
+450 0 0:#15f;:T4192:4:E
+451 0 0:#160;:T4192:4:E
+453 0 0:#163;:T4192:4:E
+454 0 0:#164;:T4192:4:E
+456 0 0:#166;:T4192:4:E
+458 0 0:#168;:T4192:4:E
+460 0 0:#16a;:T4192:4:E
+462 0 0:#16c;:T4192:4:E
+463 0 0:#16d;:T4192:4:E
+464 0 0:#16e;:T4192:4:E
+465 0 0:#16f;:T4192:4:E
+466 0 0:#179;:T4192:4:F
+472 0 0:#17f;:T4192:4:F
+473 0 0:#180;:T4192:4:F
+474 0 0:#178;:T4192:4:F
+475 0 0:(#1da;K-1;:T4178:4:F)
+476 0 0:#5f;:T-4177:3:F
+477 0 0:(#1da;K-2;:T4178:4:F)
+478 0 0:(#1da;K-3;:T4178:4:F)
+479 0 0:(#1da;K-4;:T4178:4:F)
+480 0 0:(#1da;K-5;:T4178:4:F)
+481 0 0:(#1da;K-6;:T4178:4:F)
+760 0 0:#181;:T4177:4:V
+761 0 0:#182;:T4177:4:V
+762 0 0:#1b0;:T4178:4:V
+763 0 0:#1b1;:T4178:4:V
+764 0 0:#1b2;:T4178:4:V
+765 0 0:#1b3;:T4178:4:V
+766 0 0:#1b4;:T4178:4:V
+767 0 0:#1b5;:T4178:4:V
+768 0 0:#183;:T4177:4:V
+769 0 0:#184;:T4177:4:V
+770 0 0:#185;:T4177:4:V
+771 0 0:#186;:T4177:4:V
+772 0 0:#1b6;:T4178:4:V
+773 0 0:#1b7;:T4178:4:V
+774 0 0:#1b8;:T4178:4:V
+775 0 0:#1b9;:T4178:4:V
+776 0 0:#1ba;:T4178:4:V
+777 0 0:#1bb;:T4178:4:V
+778 0 0:#187;:T4177:4:V
+779 0 0:#188;:T4177:4:V
+780 0 0:#1bc;:T4178:4:V
+781 0 0:#1bd;:T4178:4:V
+782 0 0:#189;:T4177:4:V
+783 0 0:#18a;:T4177:4:V
+784 0 0:#18b;:T4177:4:V
+785 0 0:#18c;:T4177:4:V
+786 0 0:#18d;:T4177:4:V
+787 0 0:#18e;:T4177:4:V
+788 0 0:#18f;:T4177:4:V
+789 0 0:#190;:T4177:4:V
+790 0 0:#191;:T4177:4:V
+791 0 0:#192;:T4177:4:V
+792 0 0:#193;:T4177:4:V
+793 0 0:#194;:T4177:4:V
+794 0 0:#195;:T4177:4:E
+795 0 0:#1dc;:G#1db;CUT;:T4177:4:E
+796 0 0:#1dc;:G2#1dd;CUT;:T4177:4:E
+797 0 0:#1dc;:G3#1de;CUT;:T4177:4:E
+798 0 0:#1dc;:G4#1df;CUT;:T4177:4:E
+799 0 0:#1dc;:G5#1e0;CUT;:T4177:4:E
+800 0 0:#1dc;:G6#1e1;CUT;:T4177:4:E
+801 0 0:#196;:T4177:4:E
+802 0 0:#197;:T4177:4:E
+803 0 0:#1be;:T4178:4:E
+804 0 0:#1bf;:T4178:4:E
+805 0 0:#1c0;:T4178:4:E
+806 0 0:#1c1;:T4178:4:E
+807 0 0:#1c2;:T4178:4:E
+808 0 0:#1c3;:T4178:4:E
+809 0 0:#198;:T4177:4:E
+810 0 0:#199;:T4177:4:E
+812 0 0:#1c5;:T4178:4:E
+813 0 0:#1c6;:T4178:4:E
+815 0 0:#1c8;:T4178:4:E
+817 0 0:#1ca;:T4178:4:E
+819 0 0:#1cc;:T4178:4:E
+821 0 0:#1ce;:T4178:4:E
+822 0 0:#1cf;:T4178:4:E
+823 0 0:#19a;:T4177:4:E
+824 0 0:#1d0;:T4178:4:E
+825 0 0:#1d1;:T4178:4:E
+826 0 0:#19b;:T4177:4:E
+827 0 0:#19c;:T4177:4:E
+828 0 0:#19d;:T4177:4:E
+829 0 0:#19e;:T4177:4:E
+830 0 0:#19f;:T4177:4:E
+831 0 0:#1a0;:T4177:4:E
+832 0 0:#1a1;:T4177:4:E
+833 0 0:#1a2;:T4177:4:E
+834 0 0:#1a3;:T4177:4:E
+835 0 0:#1a4;:T4177:4:E
+836 0 0:#1a5;:T4177:4:E
+837 0 0:#1dc;:M;CUT;:T4177:4:F
+838 0 0:#1a6;:T4177:4:F
+839 0 0:#1da;:M;CUT;:T4178:4:F
+840 0 0:#1da;:M2;CUT;:T4178:4:F
+841 0 0:#1da;:M4;CUT;:T4178:4:F
+842 0 0:#1da;:M6;CUT;:T4178:4:F
+843 0 0:#1da;:M5;CUT;:T4178:4:F
+844 0 0:#1da;:M3;CUT;:T4178:4:F
+845 0 0:#1a7;:T4177:4:F
+846 0 0:#1d2;:T4178:4:F
+852 0 0:#1a8;:T4177:4:F
+853 0 0:#1d8;:T4178:4:F
+854 0 0:#1a9;:T4177:4:F
+855 0 0:#1d9;:T4178:4:F
+856 0 0:#1aa;:T4177:4:F
+857 0 0:#1ab;:T4177:4:F
+858 0 0:#1ac;:T4177:4:F
+859 0 0:#1ad;:T4177:4:F
+860 0 0:#1ae;:T4177:4:F
+861 0 0:#1af;:T4177:4:F
+906 0 0:#150;:T4192:4:E
+907 0 0:#158;:T4192:4:E
+908 0 0:#152;:T4192:4:E
+909 0 0:#156;:T4192:4:E
+910 0 0:#154;:T4192:4:E
+911 0 0:#171;:T4192:4:F
+912 0 0:#172;:T4192:4:F
+913 0 0:#175;:T4192:4:F
+914 0 0:#174;:T4192:4:F
+915 0 0:#173;:T4192:4:F
+916 0 0:#38b;:T4178:4:E
+917 0 0:#38d;:T4178:4:E
+918 0 0:#38e;:T4178:4:E
+919 0 0:#38c;:T4178:4:E
+920 0 0:#38a;:T4178:4:E
+921 0 0:#391;:T4178:4:F
+922 0 0:#392;:T4178:4:F
+923 0 0:#393;:T4178:4:F
+924 0 0:#390;:T4178:4:F
+925 0 0:#38f;:T4178:4:F
+]]>
+  </StringHasher>
+  <Properties Count="45" TransientCount="3">
+    <_Property name="FileName" type="App::PropertyString" status="50331649"/>
+    <_Property name="Tip" type="App::PropertyLink" status="33554433"/>
+    <_Property name="TransientDir" type="App::PropertyString" status="50331649"/>
+    <Property name="Comment" type="App::PropertyString">
+      <String value=""/>
+    </Property>
+    <Property name="Company" type="App::PropertyString">
+      <String value=""/>
+    </Property>
+    <Property name="CreatedBy" type="App::PropertyString" status="1">
+      <String value="Alex Neufeld"/>
+    </Property>
+    <Property name="CreationDate" type="App::PropertyString" status="16777217">
+      <String value="2021-02-12T03:23:38Z"/>
+    </Property>
+    <Property name="ForceXML" type="App::PropertyInteger" status="1">
+      <Integer value="3"/>
+    </Property>
+    <Property name="Id" type="App::PropertyString">
+      <String value=""/>
+    </Property>
+    <Property name="Label" type="App::PropertyString" status="1">
+      <String value="Hexagon socket head shoulder screw - ISO 7379"/>
+    </Property>
+    <Property name="LastModifiedBy" type="App::PropertyString" status="1">
+      <String value="Alex Neufeld"/>
+    </Property>
+    <Property name="LastModifiedDate" type="App::PropertyString" status="16777217">
+      <String value="2021-08-05T16:11:47Z"/>
+    </Property>
+    <Property name="License" type="App::PropertyString" status="1">
+      <String value="All rights reserved"/>
+    </Property>
+    <Property name="LicenseURL" type="App::PropertyString" status="1">
+      <String value="http://en.wikipedia.org/wiki/All_rights_reserved"/>
+    </Property>
+    <Property name="Material" type="App::PropertyMap" status="1">
+      <Map count="0">
+      </Map>
+    </Property>
+    <Property name="Meta" type="App::PropertyMap" status="1">
+      <Map count="0">
+      </Map>
+    </Property>
+    <Property name="PreferBinary" type="App::PropertyBool" status="1">
+      <Bool value="false"/>
+    </Property>
+    <Property name="Shadow_BoundBoxScale" type="App::PropertyFloatConstraint" group="Shadow" attr="0" ro="0" hide="0" docID="1" status="2097153">
+      <Float value="1.2"/>
+    </Property>
+    <Property name="Shadow_DisplayMode" type="App::PropertyEnumeration" group="Shadow" attr="0" ro="0" hide="0" docID="2" status="2097153">
+      <Integer value="-1"/>
+    </Property>
+    <Property name="Shadow_Epsilon" type="App::PropertyPrecision" group="Shadow" attr="0" ro="0" hide="0" docID="3" status="2097153">
+      <Float value="1e-05"/>
+    </Property>
+    <Property name="Shadow_GroundAutoPosition" type="App::PropertyBool" group="Shadow" attr="0" ro="0" hide="0" docID="4" status="2097153">
+      <Bool value="true"/>
+    </Property>
+    <Property name="Shadow_GroundBackFaceCull" type="App::PropertyBool" group="Shadow" attr="0" ro="0" hide="0" docID="5" status="2097153">
+      <Bool value="true"/>
+    </Property>
+    <Property name="Shadow_GroundBumpMap" type="App::PropertyFileIncluded" group="Shadow" attr="0" ro="0" hide="0" doc="" status="2097152">
+      <FileIncluded file=""/>
+    </Property>
+    <Property name="Shadow_GroundColor" type="App::PropertyColor" group="Shadow" attr="0" ro="0" hide="0" doc="" status="2097153">
+      <PropertyColor value="2105376000"/>
+    </Property>
+    <Property name="Shadow_GroundPlacement" type="App::PropertyPlacement" group="Shadow" attr="0" ro="0" hide="0" docID="6" status="2097153">
+      <PropertyPlacement Px="0" Py="0" Pz="0" Q0="0" Q1="0" Q2="0" Q3="1" A="0" Ox="0" Oy="0" Oz="1"/>
+    </Property>
+    <Property name="Shadow_GroundShading" type="App::PropertyBool" group="Shadow" attr="0" ro="0" hide="0" docID="7" status="2097153">
+      <Bool value="true"/>
+    </Property>
+    <Property name="Shadow_GroundSizeAuto" type="App::PropertyBool" group="Shadow" attr="0" ro="0" hide="0" docID="8" status="2097153">
+      <Bool value="true"/>
+    </Property>
+    <Property name="Shadow_GroundSizeScale" type="App::PropertyFloat" group="Shadow" attr="0" ro="0" hide="0" docID="9" status="2097153">
+      <Float value="2"/>
+    </Property>
+    <Property name="Shadow_GroundTexture" type="App::PropertyFileIncluded" group="Shadow" attr="0" ro="0" hide="0" doc="" status="2097152">
+      <FileIncluded file=""/>
+    </Property>
+    <Property name="Shadow_GroundTextureSize" type="App::PropertyLength" group="Shadow" attr="0" ro="0" hide="0" docID="10" status="2097153">
+      <Float value="100"/>
+    </Property>
+    <Property name="Shadow_GroundTransparency" type="App::PropertyFloatConstraint" group="Shadow" attr="0" ro="0" hide="0" docID="11" status="2097153">
+      <Float value="0"/>
+    </Property>
+    <Property name="Shadow_LightColor" type="App::PropertyColor" group="Shadow" attr="0" ro="0" hide="0" doc="" status="2097153">
+      <PropertyColor value="4043177728"/>
+    </Property>
+    <Property name="Shadow_LightDirection" type="App::PropertyVector" group="Shadow" attr="0" ro="0" hide="0" doc="" status="2097153">
+      <PropertyVector valueX="-1" valueY="-1" valueZ="-1"/>
+    </Property>
+    <Property name="Shadow_LightIntensity" type="App::PropertyFloatConstraint" group="Shadow" attr="0" ro="0" hide="0" doc="" status="2097153">
+      <Float value="0.8"/>
+    </Property>
+    <Property name="Shadow_MaxDistance" type="App::PropertyFloatConstraint" group="Shadow" attr="0" ro="0" hide="0" docID="12" status="2097153">
+      <Float value="0"/>
+    </Property>
+    <Property name="Shadow_Precision" type="App::PropertyFloatConstraint" group="Shadow" attr="0" ro="0" hide="0" docID="13" status="2097153">
+      <Float value="1"/>
+    </Property>
+    <Property name="Shadow_ShowGround" type="App::PropertyBool" group="Shadow" attr="0" ro="0" hide="0" docID="14" status="2097153">
+      <Bool value="true"/>
+    </Property>
+    <Property name="Shadow_SmoothBorder" type="App::PropertyIntegerConstraint" group="Shadow" attr="0" ro="0" hide="0" docID="15" status="2097153">
+      <Integer value="0"/>
+    </Property>
+    <Property name="Shadow_SpotLight" type="App::PropertyBool" group="Shadow" attr="0" ro="0" hide="0" docID="16" status="2097153">
+      <Bool value="false"/>
+    </Property>
+    <Property name="Shadow_SpreadSampleSize" type="App::PropertyIntegerConstraint" group="Shadow" attr="0" ro="0" hide="0" docID="17" status="2097153">
+      <Integer value="0"/>
+    </Property>
+    <Property name="Shadow_SpreadSize" type="App::PropertyIntegerConstraint" group="Shadow" attr="0" ro="0" hide="0" docID="18" status="2097153">
+      <Integer value="0"/>
+    </Property>
+    <Property name="Shadow_Threshold" type="App::PropertyFloatConstraint" group="Shadow" attr="0" ro="0" hide="0" docID="19" status="2097153">
+      <Float value="0"/>
+    </Property>
+    <Property name="Shadow_TransparentShadow" type="App::PropertyBool" group="Shadow" attr="0" ro="0" hide="0" docID="20" status="2097153">
+      <Bool value="false"/>
+    </Property>
+    <Property name="ShowHidden" type="App::PropertyBool" status="1">
+      <Bool value="true"/>
+    </Property>
+    <Property name="SplitXML" type="App::PropertyBool" status="1">
+      <Bool value="true"/>
+    </Property>
+    <Property name="TipName" type="App::PropertyString" status="83886081">
+      <String value="Part"/>
+    </Property>
+    <Property name="Uid" type="App::PropertyUUID" status="16777217">
+      <Uuid value="36856177-9c81-4e72-8142-6359c0944f55"/>
+    </Property>
+    <Property name="UseHasher" type="App::PropertyBool" status="1">
+      <Bool value="true"/>
+    </Property>
+  </Properties>
+  <Objects Count="34" Dependencies="1">
+    <ObjectDeps Name="Part" Count="3">
+      <Dep Name="Origin"/>
+      <Dep Name="Body"/>
+      <Dep Name="Spreadsheet"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Origin" Count="6">
+      <Dep Name="XZ_Plane"/>
+      <Dep Name="Z_Axis"/>
+      <Dep Name="XY_Plane"/>
+      <Dep Name="Y_Axis"/>
+      <Dep Name="YZ_Plane"/>
+      <Dep Name="X_Axis"/>
+    </ObjectDeps>
+    <ObjectDeps Name="X_Axis" Count="0"/>
+    <ObjectDeps Name="Y_Axis" Count="0"/>
+    <ObjectDeps Name="Z_Axis" Count="0"/>
+    <ObjectDeps Name="XY_Plane" Count="0"/>
+    <ObjectDeps Name="XZ_Plane" Count="0"/>
+    <ObjectDeps Name="YZ_Plane" Count="0"/>
+    <ObjectDeps Name="Body" Count="4">
+      <Dep Name="Revolution"/>
+      <Dep Name="Origin001"/>
+      <Dep Name="Sketch"/>
+      <Dep Name="Boolean"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Origin001" Count="6">
+      <Dep Name="X_Axis001"/>
+      <Dep Name="Z_Axis001"/>
+      <Dep Name="XZ_Plane001"/>
+      <Dep Name="Y_Axis001"/>
+      <Dep Name="YZ_Plane001"/>
+      <Dep Name="XY_Plane001"/>
+    </ObjectDeps>
+    <ObjectDeps Name="X_Axis001" Count="0"/>
+    <ObjectDeps Name="Y_Axis001" Count="0"/>
+    <ObjectDeps Name="Z_Axis001" Count="0"/>
+    <ObjectDeps Name="XY_Plane001" Count="0"/>
+    <ObjectDeps Name="XZ_Plane001" Count="0"/>
+    <ObjectDeps Name="YZ_Plane001" Count="0"/>
+    <ObjectDeps Name="Sketch" Count="3">
+      <Dep Name="XZ_Plane001"/>
+      <Dep Name="Spreadsheet"/>
+      <Dep Name="Part"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Revolution" Count="2">
+      <Dep Name="Body"/>
+      <Dep Name="Sketch"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Body001" Count="7">
+      <Dep Name="Sketch001"/>
+      <Dep Name="Pocket"/>
+      <Dep Name="Revolution001"/>
+      <Dep Name="Revolution002"/>
+      <Dep Name="Sketch002"/>
+      <Dep Name="Sketch003"/>
+      <Dep Name="Origin002"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Origin002" Count="6">
+      <Dep Name="Y_Axis002"/>
+      <Dep Name="XZ_Plane002"/>
+      <Dep Name="X_Axis002"/>
+      <Dep Name="Z_Axis002"/>
+      <Dep Name="YZ_Plane002"/>
+      <Dep Name="XY_Plane002"/>
+    </ObjectDeps>
+    <ObjectDeps Name="X_Axis002" Count="0"/>
+    <ObjectDeps Name="Y_Axis002" Count="0"/>
+    <ObjectDeps Name="Z_Axis002" Count="0"/>
+    <ObjectDeps Name="XY_Plane002" Count="0"/>
+    <ObjectDeps Name="XZ_Plane002" Count="0"/>
+    <ObjectDeps Name="YZ_Plane002" Count="0"/>
+    <ObjectDeps Name="Sketch001" Count="3">
+      <Dep Name="XZ_Plane002"/>
+      <Dep Name="Spreadsheet"/>
+      <Dep Name="Part"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Revolution001" Count="2">
+      <Dep Name="Sketch001"/>
+      <Dep Name="Body001"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Sketch002" Count="2">
+      <Dep Name="Spreadsheet"/>
+      <Dep Name="XY_Plane002"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Pocket" Count="3">
+      <Dep Name="Revolution001"/>
+      <Dep Name="Sketch002"/>
+      <Dep Name="Body001"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Sketch003" Count="3">
+      <Dep Name="XZ_Plane002"/>
+      <Dep Name="Spreadsheet"/>
+      <Dep Name="Part"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Revolution002" Count="3">
+      <Dep Name="Pocket"/>
+      <Dep Name="Sketch003"/>
+      <Dep Name="Body001"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Boolean" Count="3">
+      <Dep Name="Body"/>
+      <Dep Name="Revolution"/>
+      <Dep Name="Body001"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Spreadsheet" Count="1">
+      <Dep Name="Part"/>
+    </ObjectDeps>
+    <Object type="App::Part" name="Part" id="4151" revision="156" file="Part.xml" />
+    <Object type="App::Origin" name="Origin" id="4152" revision="0" file="Origin.xml" />
+    <Object type="App::Line" name="X_Axis" id="4153" revision="0" file="X_Axis.xml" />
+    <Object type="App::Line" name="Y_Axis" id="4154" revision="0" file="Y_Axis.xml" />
+    <Object type="App::Line" name="Z_Axis" id="4155" revision="0" file="Z_Axis.xml" />
+    <Object type="App::Plane" name="XY_Plane" id="4156" revision="0" file="XY_Plane.xml" />
+    <Object type="App::Plane" name="XZ_Plane" id="4157" revision="0" file="XZ_Plane.xml" />
+    <Object type="App::Plane" name="YZ_Plane" id="4158" revision="0" file="YZ_Plane.xml" />
+    <Object type="PartDesign::Body" name="Body" id="4168" revision="124" file="Body.xml" />
+    <Object type="App::Origin" name="Origin001" id="4169" revision="0" file="Origin001.xml" />
+    <Object type="App::Line" name="X_Axis001" id="4170" revision="0" file="X_Axis001.xml" />
+    <Object type="App::Line" name="Y_Axis001" id="4171" revision="0" file="Y_Axis001.xml" />
+    <Object type="App::Line" name="Z_Axis001" id="4172" revision="0" file="Z_Axis001.xml" />
+    <Object type="App::Plane" name="XY_Plane001" id="4173" revision="0" file="XY_Plane001.xml" />
+    <Object type="App::Plane" name="XZ_Plane001" id="4174" revision="0" file="XZ_Plane001.xml" />
+    <Object type="App::Plane" name="YZ_Plane001" id="4175" revision="0" file="YZ_Plane001.xml" />
+    <Object type="Sketcher::SketchObject" name="Sketch" id="4176" revision="87" file="Sketch.xml" />
+    <Object type="PartDesign::Revolution" name="Revolution" id="4177" revision="73" file="Revolution.xml" />
+    <Object type="PartDesign::Body" name="Body001" id="4178" revision="93" file="Body001.xml" />
+    <Object type="App::Origin" name="Origin002" id="4179" revision="0" file="Origin002.xml" />
+    <Object type="App::Line" name="X_Axis002" id="4180" revision="0" file="X_Axis002.xml" />
+    <Object type="App::Line" name="Y_Axis002" id="4181" revision="0" file="Y_Axis002.xml" />
+    <Object type="App::Line" name="Z_Axis002" id="4182" revision="0" file="Z_Axis002.xml" />
+    <Object type="App::Plane" name="XY_Plane002" id="4183" revision="0" file="XY_Plane002.xml" />
+    <Object type="App::Plane" name="XZ_Plane002" id="4184" revision="0" file="XZ_Plane002.xml" />
+    <Object type="App::Plane" name="YZ_Plane002" id="4185" revision="0" file="YZ_Plane002.xml" />
+    <Object type="Sketcher::SketchObject" name="Sketch001" id="4186" revision="24" file="Sketch001.xml" />
+    <Object type="PartDesign::Revolution" name="Revolution001" id="4188" revision="41" file="Revolution001.xml" />
+    <Object type="Sketcher::SketchObject" name="Sketch002" id="4189" revision="20" file="Sketch002.xml" />
+    <Object type="PartDesign::Pocket" name="Pocket" id="4190" revision="44" file="Pocket.xml" />
+    <Object type="Sketcher::SketchObject" name="Sketch003" id="4191" revision="18" file="Sketch003.xml" />
+    <Object type="PartDesign::Revolution" name="Revolution002" id="4192" revision="63" file="Revolution002.xml" />
+    <Object type="PartDesign::Boolean" name="Boolean" id="4193" revision="100" file="Boolean.xml" />
+    <Object type="Spreadsheet::Sheet" name="Spreadsheet" id="4207" revision="0" file="Spreadsheet.xml" />
+  </Objects>
+  <ObjectData Count="0">
+  </ObjectData>
+</Document>

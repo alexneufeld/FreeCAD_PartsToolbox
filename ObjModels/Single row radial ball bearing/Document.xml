@@ -1,0 +1,686 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--
+ FreeCAD Document, see http://www.freecadweb.org for more information...
+-->
+<Document SchemaVersion="4" ProgramVersion="2021.717R24301 +3627 (Git)" FileVersion="2" Uid="2e364700-adb9-4afe-ba4c-58a68185cbe8" StringHasher="1">
+  <StringHasher saveall="0" threshold="0" count="416">
+<![CDATA[
+1 0 0:Angle to cover with copies
+2 0 3:The type of array to create.
+- Ortho: places the copies in the direction of the global X, Y, Z axes.
+- Polar: places the copies along a circular arc, up to a specified angle, and with certain orientation defined by a center and an axis.
+- Circular: places the copies in concentric circular layers around the base object.
+3 0 0:The axis direction around which the elements in a polar or a circular array will be created
+4 0 2:The axis object that overrides the value of 'Axis' and 'Center', for example, a datum line.
+Its placement, position and rotation, will be used when creating polar and circular arrays.
+Leave this property empty to be able to set 'Axis' and 'Center' manually.
+5 0 0:The base object that will be duplicated
+6 0 1:Center point for polar and circular arrays.
+The 'Axis' passes through this point.
+7 0 1:Total number of elements in the array.
+This property is read-only, as the number depends on the parameters of the array.
+8 0 0:Show the individual array elements (only for Link arrays)
+9 0 0:Specifies if the copies should be fused together if they touch each other (slower)
+10 0 0:Distance and orientation of intervals in 'Axis' direction
+11 0 0:Distance and orientation of intervals in X direction
+12 0 0:Distance and orientation of intervals in Y direction
+13 0 0:Distance and orientation of intervals in Z direction
+14 0 0:Number of circular layers. The 'Base' object counts as one layer.
+15 0 0:Number of copies in the polar direction
+16 0 0:Number of copies in X direction
+17 0 0:Number of copies in Y direction
+18 0 0:Number of copies in Z direction
+19 0 0:Distance between circular layers
+20 0 0:A parameter that determines how many symmetry planes  the circular array will have.
+21 0 0:Distance between copies in the same circular layer
+22 0 0:Defines a hatch pattern.
+23 0 0:Defines the size of the hatch pattern.
+24 0 0:Force sync pattern placements even when array elements are expanded
+25 0 0:g10835v1;SKT
+26 0 0:g10846v2;SKT
+27 0 0:g10835v2;SKT
+28 0 0:g10836v1;SKT
+29 0 0:g10836v2;SKT
+30 0 0:g10837v1;SKT
+31 0 0:g10837v2;SKT
+32 0 0:g10838v1;SKT
+33 0 0:g10838v2;SKT
+34 0 0:g10839v1;SKT
+35 0 0:g10839v2;SKT
+36 0 0:g10840v1;SKT
+37 0 0:g10840v2;SKT
+38 0 0:g10841v1;SKT
+39 0 0:g10841v2;SKT
+40 0 0:g10842v1;SKT
+41 0 0:g10842v2;SKT
+42 0 0:g10843v1;SKT
+43 0 0:g10843v2;SKT
+44 0 0:g10844v1;SKT
+45 0 0:g10844v2;SKT
+46 0 0:g10845v1;SKT
+47 0 0:g10845v2;SKT
+48 0 0:g10846v1;SKT
+49 0 0:g10835;SKT
+50 0 0:g10836;SKT
+52 0 0:g10838;SKT
+53 0 0:g10839;SKT
+55 0 0:g10841;SKT
+57 0 0:g10843;SKT
+58 0 0:g10844;SKT
+60 0 0:g10846;SKT
+61 0 0:#31;:T4789:3:E
+62 0 0:#19;:T4789:3:V
+63 0 0:#25;:T4789:3:V
+64 0 0:#27;:T4789:3:V
+65 0 0:#29;:T4789:3:V
+66 0 0:#2b;:T4789:3:V
+67 0 0:#2d;:T4789:3:V
+68 0 0:#2f;:T4789:3:V
+69 0 0:#1b;:T4789:3:V
+70 0 0:#1d;:T4789:3:V
+71 0 0:#1f;:T4789:3:V
+72 0 0:#21;:T4789:3:V
+73 0 0:#23;:T4789:3:V
+74 0 0:#3a;:T4789:3:E
+75 0 0:#3c;:T4789:3:E
+76 0 0:#32;:T4789:3:E
+77 0 0:#34;:T4789:3:E
+78 0 0:#35;:T4789:3:E
+79 0 0:#37;:T4789:3:E
+80 0 0:#39;:T4789:3:E
+81 0 0:#46;:G;RVL;:T4789:3:E
+82 0 0:#3f;:G;RVL;:T4789:3:E
+83 0 0:#40;:G;RVL;:T4789:3:E
+84 0 0:#44;:G;RVL;:T4789:3:E
+85 0 0:#1a;:T4789:3:V
+86 0 0:#1c;:T4789:3:V
+87 0 0:#1e;:T4789:3:V
+88 0 0:#20;:T4789:3:V
+89 0 0:#22;:T4789:3:V
+90 0 0:#24;:T4789:3:V
+91 0 0:#26;:T4789:3:V
+92 0 0:#28;:T4789:3:V
+93 0 0:#2a;:T4789:3:V
+94 0 0:#2c;:T4789:3:V
+95 0 0:#2e;:T4789:3:V
+96 0 0:#30;:T4789:3:V
+97 0 0:#3e;:G;RVL;:T4789:3:E
+98 0 0:#45;:G;RVL;:T4789:3:E
+99 0 0:#47;:G;RVL;:T4789:3:E
+100 0 0:#48;:G;RVL;:T4789:3:E
+101 0 0:#49;:G;RVL;:T4789:3:E
+102 0 0:#41;:G;RVL;:T4789:3:E
+103 0 0:#42;:G;RVL;:T4789:3:E
+104 0 0:#43;:G;RVL;:T4789:3:E
+105 0 0:#3d;:G;RVL;:T4789:3:F
+106 0 0:#4c;:G;RVL;:T4789:3:F
+107 0 0:#51;Edge4;:L;RVL;:T4789:3:F
+108 0 0:#4d;:G;RVL;:T4789:3:F
+109 0 0:#4e;:G;RVL;:T4789:3:F
+110 0 0:#52;Edge11;:L;RVL;:T4789:3:F
+111 0 0:#4f;:G;RVL;:T4789:3:F
+112 0 0:#53;Edge12;:L;RVL;:T4789:3:F
+113 0 0:#50;:G;RVL;:T4789:3:F
+114 0 0:#4a;:G;RVL;:T4789:3:F
+115 0 0:#54;Edge19;:L;RVL;:T4789:3:F
+116 0 0:#4b;:G;RVL;:T4789:3:F
+117 0 0:#3e;:T-4805:3:V
+118 0 0:#55;:T-4805:3:V
+119 0 0:#45;:T-4805:3:V
+120 0 0:#56;:T-4805:3:V
+121 0 0:#46;:T-4805:3:V
+122 0 0:#57;:T-4805:3:V
+123 0 0:#47;:T-4805:3:V
+124 0 0:#58;:T-4805:3:V
+125 0 0:#48;:T-4805:3:V
+126 0 0:#59;:T-4805:3:V
+127 0 0:#49;:T-4805:3:V
+128 0 0:#5a;:T-4805:3:V
+129 0 0:#3f;:T-4805:3:V
+130 0 0:#5b;:T-4805:3:V
+131 0 0:#40;:T-4805:3:V
+132 0 0:#5c;:T-4805:3:V
+133 0 0:#41;:T-4805:3:V
+134 0 0:#5d;:T-4805:3:V
+135 0 0:#42;:T-4805:3:V
+136 0 0:#5e;:T-4805:3:V
+137 0 0:#43;:T-4805:3:V
+138 0 0:#5f;:T-4805:3:V
+139 0 0:#44;:T-4805:3:V
+140 0 0:#60;:T-4805:3:V
+141 0 0:#61;:T-4805:3:E
+142 0 0:#62;:T-4805:3:E
+143 0 0:#3d;:T-4805:3:E
+144 0 0:#51;:T-4805:3:E
+145 0 0:#4c;:T-4805:3:E
+146 0 0:#63;:T-4805:3:E
+147 0 0:#64;:T-4805:3:E
+148 0 0:#4d;:T-4805:3:E
+149 0 0:#65;:T-4805:3:E
+150 0 0:#4e;:T-4805:3:E
+151 0 0:#52;:T-4805:3:E
+152 0 0:#53;:T-4805:3:E
+153 0 0:#4f;:T-4805:3:E
+154 0 0:#66;:T-4805:3:E
+155 0 0:#67;:T-4805:3:E
+156 0 0:#50;:T-4805:3:E
+157 0 0:#68;:T-4805:3:E
+158 0 0:#4a;:T-4805:3:E
+159 0 0:#54;:T-4805:3:E
+160 0 0:#4b;:T-4805:3:E
+161 0 0:#69;:T-4805:3:F
+162 0 0:#6a;:T-4805:3:F
+163 0 0:#6b;:T-4805:3:F
+164 0 0:#6c;:T-4805:3:F
+165 0 0:#6d;:T-4805:3:F
+166 0 0:#6e;:T-4805:3:F
+167 0 0:#6f;:T-4805:3:F
+168 0 0:#70;:T-4805:3:F
+169 0 0:#71;:T-4805:3:F
+170 0 0:#72;:T-4805:3:F
+171 0 0:#73;:T-4805:3:F
+172 0 0:#74;:T-4805:3:F
+173 0 0:g10848v1;SKT
+174 0 0:g10859v2;SKT
+175 0 0:g10848v2;SKT
+176 0 0:g10849v1;SKT
+177 0 0:g10849v2;SKT
+178 0 0:g10850v1;SKT
+179 0 0:g10850v2;SKT
+180 0 0:g10851v1;SKT
+181 0 0:g10851v2;SKT
+182 0 0:g10852v1;SKT
+183 0 0:g10852v2;SKT
+184 0 0:g10853v1;SKT
+185 0 0:g10853v2;SKT
+186 0 0:g10854v1;SKT
+187 0 0:g10854v2;SKT
+188 0 0:g10855v1;SKT
+189 0 0:g10855v2;SKT
+190 0 0:g10856v1;SKT
+191 0 0:g10856v2;SKT
+192 0 0:g10857v1;SKT
+193 0 0:g10857v2;SKT
+194 0 0:g10858v1;SKT
+195 0 0:g10858v2;SKT
+196 0 0:g10859v1;SKT
+197 0 0:g10848;SKT
+198 0 0:g10849;SKT
+200 0 0:g10851;SKT
+201 0 0:g10852;SKT
+203 0 0:g10854;SKT
+205 0 0:g10856;SKT
+206 0 0:g10857;SKT
+208 0 0:g10859;SKT
+209 0 0:#c5;:T4808:3:E
+210 0 0:#ad;:T4808:3:V
+211 0 0:#b9;:T4808:3:V
+212 0 0:#bb;:T4808:3:V
+213 0 0:#bd;:T4808:3:V
+214 0 0:#bf;:T4808:3:V
+215 0 0:#c1;:T4808:3:V
+216 0 0:#c3;:T4808:3:V
+217 0 0:#af;:T4808:3:V
+218 0 0:#b1;:T4808:3:V
+219 0 0:#b3;:T4808:3:V
+220 0 0:#b5;:T4808:3:V
+221 0 0:#b7;:T4808:3:V
+222 0 0:#ce;:T4808:3:E
+223 0 0:#d0;:T4808:3:E
+224 0 0:#c6;:T4808:3:E
+225 0 0:#c8;:T4808:3:E
+226 0 0:#c9;:T4808:3:E
+227 0 0:#cb;:T4808:3:E
+228 0 0:#cd;:T4808:3:E
+229 0 0:#db;:G;RVL;:T4808:3:E
+230 0 0:#dd;:G;RVL;:T4808:3:E
+231 0 0:#d5;:G;RVL;:T4808:3:E
+232 0 0:#d7;:G;RVL;:T4808:3:E
+233 0 0:#ae;:T4808:3:V
+234 0 0:#b0;:T4808:3:V
+235 0 0:#b2;:T4808:3:V
+236 0 0:#b4;:T4808:3:V
+237 0 0:#b6;:T4808:3:V
+238 0 0:#b8;:T4808:3:V
+239 0 0:#ba;:T4808:3:V
+240 0 0:#bc;:T4808:3:V
+241 0 0:#be;:T4808:3:V
+242 0 0:#c0;:T4808:3:V
+243 0 0:#c2;:T4808:3:V
+244 0 0:#c4;:T4808:3:V
+245 0 0:#d2;:G;RVL;:T4808:3:E
+246 0 0:#d9;:G;RVL;:T4808:3:E
+247 0 0:#da;:G;RVL;:T4808:3:E
+248 0 0:#dc;:G;RVL;:T4808:3:E
+249 0 0:#d3;:G;RVL;:T4808:3:E
+250 0 0:#d4;:G;RVL;:T4808:3:E
+251 0 0:#d6;:G;RVL;:T4808:3:E
+252 0 0:#d8;:G;RVL;:T4808:3:E
+253 0 0:#d1;:G;RVL;:T4808:3:F
+254 0 0:#e0;:G;RVL;:T4808:3:F
+255 0 0:#e5;Edge6;:L;RVL;:T4808:3:F
+256 0 0:#e1;:G;RVL;:T4808:3:F
+257 0 0:#e2;:G;RVL;:T4808:3:F
+258 0 0:#e6;Edge9;:L;RVL;:T4808:3:F
+259 0 0:#e3;:G;RVL;:T4808:3:F
+260 0 0:#e7;Edge14;:L;RVL;:T4808:3:F
+261 0 0:#e4;:G;RVL;:T4808:3:F
+262 0 0:#de;:G;RVL;:T4808:3:F
+263 0 0:#e8;Edge17;:L;RVL;:T4808:3:F
+264 0 0:#df;:G;RVL;:T4808:3:F
+265 0 0:#d2;:T-4815:3:V
+266 0 0:#e9;:T-4815:3:V
+267 0 0:#d9;:T-4815:3:V
+268 0 0:#ea;:T-4815:3:V
+269 0 0:#da;:T-4815:3:V
+270 0 0:#eb;:T-4815:3:V
+271 0 0:#db;:T-4815:3:V
+272 0 0:#ec;:T-4815:3:V
+273 0 0:#dc;:T-4815:3:V
+274 0 0:#ed;:T-4815:3:V
+275 0 0:#dd;:T-4815:3:V
+276 0 0:#ee;:T-4815:3:V
+277 0 0:#d3;:T-4815:3:V
+278 0 0:#ef;:T-4815:3:V
+279 0 0:#d4;:T-4815:3:V
+280 0 0:#f0;:T-4815:3:V
+281 0 0:#d5;:T-4815:3:V
+282 0 0:#f1;:T-4815:3:V
+283 0 0:#d6;:T-4815:3:V
+284 0 0:#f2;:T-4815:3:V
+285 0 0:#d7;:T-4815:3:V
+286 0 0:#f3;:T-4815:3:V
+287 0 0:#d8;:T-4815:3:V
+288 0 0:#f4;:T-4815:3:V
+289 0 0:#f5;:T-4815:3:E
+290 0 0:#f6;:T-4815:3:E
+291 0 0:#d1;:T-4815:3:E
+292 0 0:#f7;:T-4815:3:E
+293 0 0:#e0;:T-4815:3:E
+294 0 0:#e5;:T-4815:3:E
+295 0 0:#f8;:T-4815:3:E
+296 0 0:#e1;:T-4815:3:E
+297 0 0:#e6;:T-4815:3:E
+298 0 0:#e2;:T-4815:3:E
+299 0 0:#f9;:T-4815:3:E
+300 0 0:#fa;:T-4815:3:E
+301 0 0:#e3;:T-4815:3:E
+302 0 0:#e7;:T-4815:3:E
+303 0 0:#fb;:T-4815:3:E
+304 0 0:#e4;:T-4815:3:E
+305 0 0:#e8;:T-4815:3:E
+306 0 0:#de;:T-4815:3:E
+307 0 0:#fc;:T-4815:3:E
+308 0 0:#df;:T-4815:3:E
+309 0 0:#fd;:T-4815:3:F
+310 0 0:#fe;:T-4815:3:F
+311 0 0:#ff;:T-4815:3:F
+312 0 0:#100;:T-4815:4:F
+313 0 0:#101;:T-4815:4:F
+314 0 0:#102;:T-4815:4:F
+315 0 0:#103;:T-4815:4:F
+316 0 0:#104;:T-4815:4:F
+317 0 0:#105;:T-4815:4:F
+318 0 0:#106;:T-4815:4:F
+319 0 0:#107;:T-4815:4:F
+320 0 0:#108;:T-4815:4:F
+321 0 0:g10861v1;SKT
+322 0 0:g10861;SKT
+323 0 0:g10862v1;SKT
+324 0 0:g10862;SKT
+325 0 0:#142;:T4826:4:E
+326 0 0:#141;:T4826:4:V
+327 0 0:#143;:T4826:4:V
+328 0 0:#144;:T4826:4:E
+329 0 0:#145;FAC;:T4826:4:F
+330 0 0:#145;:G;XTR;:T4826:4:F
+331 0 0:#148;:G;XTR;:T4826:4:F
+332 0 0:#146;:G;XTR;:T4826:4:E
+333 0 0:#147;:G;XTR;:T4826:4:E
+334 0 0:#14c;:U;XTR;:T4826:4:V
+335 0 0:#14d;:U;XTR;:T4826:4:V
+336 0 0:#14a;:U;XTR;:T4826:4:E
+337 0 0:#14b;:U;XTR;:T4826:4:E
+338 0 0:#149;:G0;XTR;:T4826:4:F
+339 0 0:#146;:T-4827:4:V
+340 0 0:#14e;:T-4827:4:V
+341 0 0:#147;:T-4827:4:V
+342 0 0:#14f;:T-4827:4:V
+343 0 0:#14c;:T-4827:4:E
+344 0 0:#145;:T-4827:4:E
+345 0 0:#150;:T-4827:4:E
+346 0 0:#14d;:T-4827:4:E
+347 0 0:#148;:T-4827:4:E
+348 0 0:#151;:T-4827:4:E
+349 0 0:#14a;:T-4827:4:F
+350 0 0:#14b;:T-4827:4:F
+351 0 0:#149;:T-4827:4:F
+352 0 0:#152;:T-4827:4:F
+353 0 0:Vertex1;:T-4803:7:V
+354 0 0:Vertex2;:T-4803:7:V
+355 0 0:Edge1;:T-4803:5:E
+356 0 0:Edge2;:T-4803:5:E
+357 0 0:Edge3;:T-4803:5:E
+358 0 0:Face1;:T-4803:5:F
+359 0 0:#161;:T4803:4:V
+360 0 0:#162;:T4803:4:V
+361 0 0:#163;:T4803:4:E
+362 0 0:#164;:T4803:4:E
+363 0 0:#165;:T4803:4:E
+364 0 0:#166;:T4803:4:F
+365 0 0:#167;I0;:T4803:4:V
+366 0 0:#168;I0;:T4803:4:V
+367 0 0:#169;I0;:T4803:4:E
+368 0 0:#16a;I0;:T4803:4:E
+369 0 0:#16b;I0;:T4803:4:E
+370 0 0:#16c;I0;:T4803:4:F
+371 0 0:#167;I1;:T4803:4:V
+372 0 0:#168;I1;:T4803:4:V
+373 0 0:#169;I1;:T4803:4:E
+374 0 0:#16a;I1;:T4803:4:E
+375 0 0:#16b;I1;:T4803:4:E
+376 0 0:#16c;I1;:T4803:4:F
+377 0 0:#167;I2;:T4803:4:V
+378 0 0:#168;I2;:T4803:4:V
+379 0 0:#169;I2;:T4803:4:E
+380 0 0:#16a;I2;:T4803:4:E
+381 0 0:#16b;I2;:T4803:4:E
+382 0 0:#16c;I2;:T4803:4:F
+383 0 0:#167;I3;:T4803:4:V
+384 0 0:#168;I3;:T4803:4:V
+385 0 0:#169;I3;:T4803:4:E
+386 0 0:#16a;I3;:T4803:4:E
+387 0 0:#16b;I3;:T4803:4:E
+388 0 0:#16c;I3;:T4803:4:F
+389 0 0:#167;I4;:T4803:4:V
+390 0 0:#168;I4;:T4803:4:V
+391 0 0:#169;I4;:T4803:4:E
+392 0 0:#16a;I4;:T4803:4:E
+393 0 0:#16b;I4;:T4803:4:E
+394 0 0:#16c;I4;:T4803:4:F
+395 0 0:#167;I5;:T4803:4:V
+396 0 0:#168;I5;:T4803:4:V
+397 0 0:#169;I5;:T4803:4:E
+398 0 0:#16a;I5;:T4803:4:E
+399 0 0:#16b;I5;:T4803:4:E
+400 0 0:#16c;I5;:T4803:4:F
+401 0 0:#167;I6;:T4803:4:V
+402 0 0:#168;I6;:T4803:4:V
+403 0 0:#169;I6;:T4803:4:E
+404 0 0:#16a;I6;:T4803:4:E
+405 0 0:#16b;I6;:T4803:4:E
+406 0 0:#16c;I6;:T4803:4:F
+407 0 0:#167;I7;:T4803:4:V
+408 0 0:#168;I7;:T4803:4:V
+409 0 0:#169;I7;:T4803:4:E
+410 0 0:#16a;I7;:T4803:4:E
+411 0 0:#16b;I7;:T4803:4:E
+412 0 0:#16c;I7;:T4803:4:F
+413 0 0:#167;I8;:T4803:4:V
+414 0 0:#168;I8;:T4803:4:V
+415 0 0:#169;I8;:T4803:4:E
+416 0 0:#16a;I8;:T4803:4:E
+417 0 0:#16b;I8;:T4803:4:E
+418 0 0:#16c;I8;:T4803:4:F
+419 0 0:#167;I9;:T4803:4:V
+420 0 0:#168;I9;:T4803:4:V
+421 0 0:#169;I9;:T4803:4:E
+422 0 0:#16a;I9;:T4803:4:E
+423 0 0:#16b;I9;:T4803:4:E
+424 0 0:#16c;I9;:T4803:4:F
+]]>
+  </StringHasher>
+  <Properties Count="19" TransientCount="3">
+    <_Property name="FileName" type="App::PropertyString" status="50331649"/>
+    <_Property name="Tip" type="App::PropertyLink" status="33554433"/>
+    <_Property name="TransientDir" type="App::PropertyString" status="50331649"/>
+    <Property name="Comment" type="App::PropertyString">
+      <String value=""/>
+    </Property>
+    <Property name="Company" type="App::PropertyString">
+      <String value=""/>
+    </Property>
+    <Property name="CreatedBy" type="App::PropertyString" status="1">
+      <String value="Alex Neufeld"/>
+    </Property>
+    <Property name="CreationDate" type="App::PropertyString" status="16777217">
+      <String value="2021-02-15T21:42:57Z"/>
+    </Property>
+    <Property name="ForceXML" type="App::PropertyInteger" status="1">
+      <Integer value="3"/>
+    </Property>
+    <Property name="Id" type="App::PropertyString">
+      <String value=""/>
+    </Property>
+    <Property name="Label" type="App::PropertyString" status="1">
+      <String value="Single row radial ball bearing"/>
+    </Property>
+    <Property name="LastModifiedBy" type="App::PropertyString" status="1">
+      <String value="Alex Neufeld"/>
+    </Property>
+    <Property name="LastModifiedDate" type="App::PropertyString" status="16777217">
+      <String value="2021-08-05T16:11:45Z"/>
+    </Property>
+    <Property name="License" type="App::PropertyString" status="1">
+      <String value="All rights reserved"/>
+    </Property>
+    <Property name="LicenseURL" type="App::PropertyString" status="1">
+      <String value="http://en.wikipedia.org/wiki/All_rights_reserved"/>
+    </Property>
+    <Property name="Material" type="App::PropertyMap" status="1">
+      <Map count="0">
+      </Map>
+    </Property>
+    <Property name="Meta" type="App::PropertyMap" status="1">
+      <Map count="0">
+      </Map>
+    </Property>
+    <Property name="PreferBinary" type="App::PropertyBool" status="1">
+      <Bool value="false"/>
+    </Property>
+    <Property name="ShowHidden" type="App::PropertyBool" status="1">
+      <Bool value="false"/>
+    </Property>
+    <Property name="SplitXML" type="App::PropertyBool" status="1">
+      <Bool value="true"/>
+    </Property>
+    <Property name="TipName" type="App::PropertyString" status="83886081">
+      <String value="Part"/>
+    </Property>
+    <Property name="Uid" type="App::PropertyUUID" status="16777217">
+      <Uuid value="2e364700-adb9-4afe-ba4c-58a68185cbe8"/>
+    </Property>
+    <Property name="UseHasher" type="App::PropertyBool" status="1">
+      <Bool value="true"/>
+    </Property>
+  </Properties>
+  <Objects Count="49" Dependencies="1">
+    <ObjectDeps Name="Part" Count="7">
+      <Dep Name="Origin"/>
+      <Dep Name="Body"/>
+      <Dep Name="Spreadsheet"/>
+      <Dep Name="Body002"/>
+      <Dep Name="Array"/>
+      <Dep Name="Body001"/>
+      <Dep Name="Body003"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Origin" Count="6">
+      <Dep Name="Z_Axis"/>
+      <Dep Name="YZ_Plane"/>
+      <Dep Name="XY_Plane"/>
+      <Dep Name="X_Axis"/>
+      <Dep Name="Y_Axis"/>
+      <Dep Name="XZ_Plane"/>
+    </ObjectDeps>
+    <ObjectDeps Name="X_Axis" Count="0"/>
+    <ObjectDeps Name="Y_Axis" Count="0"/>
+    <ObjectDeps Name="Z_Axis" Count="0"/>
+    <ObjectDeps Name="XY_Plane" Count="0"/>
+    <ObjectDeps Name="XZ_Plane" Count="0"/>
+    <ObjectDeps Name="YZ_Plane" Count="0"/>
+    <ObjectDeps Name="Body" Count="3">
+      <Dep Name="Revolution"/>
+      <Dep Name="Origin001"/>
+      <Dep Name="Sketch"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Origin001" Count="6">
+      <Dep Name="YZ_Plane001"/>
+      <Dep Name="X_Axis001"/>
+      <Dep Name="XZ_Plane001"/>
+      <Dep Name="XY_Plane001"/>
+      <Dep Name="Z_Axis001"/>
+      <Dep Name="Y_Axis001"/>
+    </ObjectDeps>
+    <ObjectDeps Name="X_Axis001" Count="0"/>
+    <ObjectDeps Name="Y_Axis001" Count="0"/>
+    <ObjectDeps Name="Z_Axis001" Count="0"/>
+    <ObjectDeps Name="XY_Plane001" Count="0"/>
+    <ObjectDeps Name="XZ_Plane001" Count="0"/>
+    <ObjectDeps Name="YZ_Plane001" Count="0"/>
+    <ObjectDeps Name="Sketch" Count="2">
+      <Dep Name="XZ_Plane001"/>
+      <Dep Name="Spreadsheet"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Body001" Count="3">
+      <Dep Name="Origin002"/>
+      <Dep Name="Spreadsheet"/>
+      <Dep Name="Sphere"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Origin002" Count="6">
+      <Dep Name="X_Axis002"/>
+      <Dep Name="Z_Axis002"/>
+      <Dep Name="XY_Plane002"/>
+      <Dep Name="YZ_Plane002"/>
+      <Dep Name="Y_Axis002"/>
+      <Dep Name="XZ_Plane002"/>
+    </ObjectDeps>
+    <ObjectDeps Name="X_Axis002" Count="0"/>
+    <ObjectDeps Name="Y_Axis002" Count="0"/>
+    <ObjectDeps Name="Z_Axis002" Count="0"/>
+    <ObjectDeps Name="XY_Plane002" Count="0"/>
+    <ObjectDeps Name="XZ_Plane002" Count="0"/>
+    <ObjectDeps Name="YZ_Plane002" Count="0"/>
+    <ObjectDeps Name="Sphere" Count="3">
+      <Dep Name="XY_Plane002"/>
+      <Dep Name="Spreadsheet"/>
+      <Dep Name="Body001"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Array" Count="1">
+      <Dep Name="Body001"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Revolution" Count="3">
+      <Dep Name="Body"/>
+      <Dep Name="Z_Axis001"/>
+      <Dep Name="Sketch"/>
+    </ObjectDeps>
+    <ObjectDeps Name="X_Axis003" Count="0"/>
+    <ObjectDeps Name="XZ_Plane003" Count="0"/>
+    <ObjectDeps Name="Sketch001" Count="2">
+      <Dep Name="Spreadsheet"/>
+      <Dep Name="XZ_Plane003"/>
+    </ObjectDeps>
+    <ObjectDeps Name="YZ_Plane003" Count="0"/>
+    <ObjectDeps Name="Body002" Count="3">
+      <Dep Name="Revolution001"/>
+      <Dep Name="Origin003"/>
+      <Dep Name="Sketch001"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Z_Axis003" Count="0"/>
+    <ObjectDeps Name="XY_Plane003" Count="0"/>
+    <ObjectDeps Name="Origin003" Count="6">
+      <Dep Name="Y_Axis003"/>
+      <Dep Name="X_Axis003"/>
+      <Dep Name="XY_Plane003"/>
+      <Dep Name="Z_Axis003"/>
+      <Dep Name="YZ_Plane003"/>
+      <Dep Name="XZ_Plane003"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Y_Axis003" Count="0"/>
+    <ObjectDeps Name="Revolution001" Count="3">
+      <Dep Name="Body002"/>
+      <Dep Name="Z_Axis003"/>
+      <Dep Name="Sketch001"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Body003" Count="3">
+      <Dep Name="Pad"/>
+      <Dep Name="Sketch002"/>
+      <Dep Name="Origin004"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Origin004" Count="6">
+      <Dep Name="YZ_Plane004"/>
+      <Dep Name="XZ_Plane004"/>
+      <Dep Name="Y_Axis004"/>
+      <Dep Name="X_Axis004"/>
+      <Dep Name="Z_Axis004"/>
+      <Dep Name="XY_Plane004"/>
+    </ObjectDeps>
+    <ObjectDeps Name="X_Axis004" Count="0"/>
+    <ObjectDeps Name="Y_Axis004" Count="0"/>
+    <ObjectDeps Name="Z_Axis004" Count="0"/>
+    <ObjectDeps Name="XY_Plane004" Count="0"/>
+    <ObjectDeps Name="XZ_Plane004" Count="0"/>
+    <ObjectDeps Name="YZ_Plane004" Count="0"/>
+    <ObjectDeps Name="Sketch002" Count="2">
+      <Dep Name="Spreadsheet"/>
+      <Dep Name="XY_Plane004"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Pad" Count="2">
+      <Dep Name="Sketch002"/>
+      <Dep Name="Body003"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Spreadsheet" Count="1">
+      <Dep Name="Part"/>
+    </ObjectDeps>
+    <Object type="App::Part" name="Part" id="4773" revision="81" file="Part.xml" />
+    <Object type="App::Origin" name="Origin" id="4774" revision="0" file="Origin.xml" />
+    <Object type="App::Line" name="X_Axis" id="4775" revision="0" file="X_Axis.xml" />
+    <Object type="App::Line" name="Y_Axis" id="4776" revision="0" file="Y_Axis.xml" />
+    <Object type="App::Line" name="Z_Axis" id="4777" revision="0" file="Z_Axis.xml" />
+    <Object type="App::Plane" name="XY_Plane" id="4778" revision="0" file="XY_Plane.xml" />
+    <Object type="App::Plane" name="XZ_Plane" id="4779" revision="0" file="XZ_Plane.xml" />
+    <Object type="App::Plane" name="YZ_Plane" id="4780" revision="0" file="YZ_Plane.xml" />
+    <Object type="PartDesign::Body" name="Body" id="4781" revision="25" file="Body.xml" />
+    <Object type="App::Origin" name="Origin001" id="4782" revision="0" file="Origin001.xml" />
+    <Object type="App::Line" name="X_Axis001" id="4783" revision="0" file="X_Axis001.xml" />
+    <Object type="App::Line" name="Y_Axis001" id="4784" revision="0" file="Y_Axis001.xml" />
+    <Object type="App::Line" name="Z_Axis001" id="4785" revision="0" file="Z_Axis001.xml" />
+    <Object type="App::Plane" name="XY_Plane001" id="4786" revision="0" file="XY_Plane001.xml" />
+    <Object type="App::Plane" name="XZ_Plane001" id="4787" revision="0" file="XZ_Plane001.xml" />
+    <Object type="App::Plane" name="YZ_Plane001" id="4788" revision="0" file="YZ_Plane001.xml" />
+    <Object type="Sketcher::SketchObject" name="Sketch" id="4789" revision="42" file="Sketch.xml" />
+    <Object type="PartDesign::Body" name="Body001" id="4795" revision="36" file="Body001.xml" />
+    <Object type="App::Origin" name="Origin002" id="4796" revision="0" file="Origin002.xml" />
+    <Object type="App::Line" name="X_Axis002" id="4797" revision="0" file="X_Axis002.xml" />
+    <Object type="App::Line" name="Y_Axis002" id="4798" revision="0" file="Y_Axis002.xml" />
+    <Object type="App::Line" name="Z_Axis002" id="4799" revision="0" file="Z_Axis002.xml" />
+    <Object type="App::Plane" name="XY_Plane002" id="4800" revision="0" file="XY_Plane002.xml" />
+    <Object type="App::Plane" name="XZ_Plane002" id="4801" revision="0" file="XZ_Plane002.xml" />
+    <Object type="App::Plane" name="YZ_Plane002" id="4802" revision="0" file="YZ_Plane002.xml" />
+    <Object type="PartDesign::AdditiveSphere" name="Sphere" id="4803" revision="23" file="Sphere.xml" />
+    <Object type="Part::FeaturePython" name="Array" id="4804" revision="41" ViewType="Gui::ViewProviderLinkPython" file="Array.xml" />
+    <Object type="PartDesign::Revolution" name="Revolution" id="4805" revision="21" file="Revolution.xml" />
+    <Object type="App::Line" name="X_Axis003" id="4806" revision="0" file="X_Axis003.xml" />
+    <Object type="App::Plane" name="XZ_Plane003" id="4807" revision="0" file="XZ_Plane003.xml" />
+    <Object type="Sketcher::SketchObject" name="Sketch001" id="4808" revision="40" file="Sketch001.xml" />
+    <Object type="App::Plane" name="YZ_Plane003" id="4809" revision="0" file="YZ_Plane003.xml" />
+    <Object type="PartDesign::Body" name="Body002" id="4810" revision="25" file="Body002.xml" />
+    <Object type="App::Line" name="Z_Axis003" id="4811" revision="0" file="Z_Axis003.xml" />
+    <Object type="App::Plane" name="XY_Plane003" id="4812" revision="0" file="XY_Plane003.xml" />
+    <Object type="App::Origin" name="Origin003" id="4813" revision="0" file="Origin003.xml" />
+    <Object type="App::Line" name="Y_Axis003" id="4814" revision="0" file="Y_Axis003.xml" />
+    <Object type="PartDesign::Revolution" name="Revolution001" id="4815" revision="21" file="Revolution001.xml" />
+    <Object type="PartDesign::Body" name="Body003" id="4818" revision="25" file="Body003.xml" />
+    <Object type="App::Origin" name="Origin004" id="4819" revision="0" file="Origin004.xml" />
+    <Object type="App::Line" name="X_Axis004" id="4820" revision="0" file="X_Axis004.xml" />
+    <Object type="App::Line" name="Y_Axis004" id="4821" revision="0" file="Y_Axis004.xml" />
+    <Object type="App::Line" name="Z_Axis004" id="4822" revision="0" file="Z_Axis004.xml" />
+    <Object type="App::Plane" name="XY_Plane004" id="4823" revision="0" file="XY_Plane004.xml" />
+    <Object type="App::Plane" name="XZ_Plane004" id="4824" revision="0" file="XZ_Plane004.xml" />
+    <Object type="App::Plane" name="YZ_Plane004" id="4825" revision="0" file="YZ_Plane004.xml" />
+    <Object type="Sketcher::SketchObject" name="Sketch002" id="4826" revision="27" file="Sketch002.xml" />
+    <Object type="PartDesign::Pad" name="Pad" id="4827" revision="22" file="Pad.xml" />
+    <Object type="Spreadsheet::Sheet" name="Spreadsheet" id="4828" revision="0" file="Spreadsheet.xml" />
+  </Objects>
+  <ObjectData Count="0">
+  </ObjectData>
+</Document>

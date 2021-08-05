@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- FreeCAD DocumentObject -->
+<Document SchemaVersion="4" FileVersion="2">
+<Object name="Spreadsheet">
+  <Properties Count="10" TransientCount="0">
+    <Property name="ExpressionEngine" type="App::PropertyExpressionEngine" status="67108864">
+      <ExpressionEngine count="1" cdata="1">
+        <Expressions><![CDATA[
+0:.cells.Bind.B2.G2
+0:tuple(.cells, <<B>> + str(href(Part.Diameter) + 3), <<G>> + str(href(Part.Diameter) + 3))
+0:
+
+]]>
+        </Expressions>
+      </ExpressionEngine>
+    </Property>
+    <Property name="Label" type="App::PropertyString" status="134217728">
+      <String value="Spreadsheet"/>
+    </Property>
+    <Property name="Label2" type="App::PropertyString" status="128">
+      <String value=""/>
+    </Property>
+    <Property name="PythonMode" type="App::PropertyBool">
+      <Bool value="false"/>
+    </Property>
+    <Property name="Visibility" type="App::PropertyBool" status="648">
+      <Bool value="true"/>
+    </Property>
+    <Property name="cells" type="Spreadsheet::PropertySheet" status="67108864">
+      <Cells Count="112">
+        <Cell address="A1" content="Dia"/>
+        <Cell address="B1" content="Dia_mm"/>
+        <Cell address="C1" content="a"/>
+        <Cell address="D1" content="d1_min"/>
+        <Cell address="E1" content="max."/>
+        <Cell address="F1" content="d2_max"/>
+        <Cell address="G1" content="s"/>
+        <Cell editMode="2" editModeName="Combo" editPersistent="1" address="A2" content="=dbind(Part.Diameter.All)"/>
+        <Cell alias="Dia_mm" address="B2" content="=.B12"/>
+        <Cell alias="a" address="C2" content="=.C12"/>
+        <Cell alias="d1_min" address="D2" content="=.D12"/>
+        <Cell alias="d1_max" address="E2" content="=.E12"/>
+        <Cell alias="d2_max" address="F2" content="=.F12"/>
+        <Cell alias="s" address="G2" content="=.G12"/>
+        <Cell address="A3" content="1​mm"/>
+        <Cell address="B3" content="1"/>
+        <Cell address="C3" content="0.15"/>
+        <Cell address="D3" content="1.2"/>
+        <Cell address="E3" content="1.3"/>
+        <Cell address="F3" content="0.8"/>
+        <Cell address="G3" content="0.2"/>
+        <Cell address="A4" content="1.5​mm"/>
+        <Cell address="B4" content="1.5"/>
+        <Cell address="C4" content="0.25"/>
+        <Cell address="D4" content="1.7"/>
+        <Cell address="E4" content="1.8"/>
+        <Cell address="F4" content="1.1"/>
+        <Cell address="G4" content="0.3"/>
+        <Cell address="A5" content="2​mm"/>
+        <Cell address="B5" content="2"/>
+        <Cell address="C5" content="0.35"/>
+        <Cell address="D5" content="2.3"/>
+        <Cell address="E5" content="2.4"/>
+        <Cell address="F5" content="1.5"/>
+        <Cell address="G5" content="0.4"/>
+        <Cell address="A6" content="2.5​mm"/>
+        <Cell address="B6" content="2.5"/>
+        <Cell address="C6" content="0.4"/>
+        <Cell address="D6" content="2.8"/>
+        <Cell address="E6" content="2.9"/>
+        <Cell address="F6" content="1.8"/>
+        <Cell address="G6" content="0.5"/>
+        <Cell address="A7" content="3​mm"/>
+        <Cell address="B7" content="3"/>
+        <Cell address="C7" content="0.5"/>
+        <Cell address="D7" content="3.3"/>
+        <Cell address="E7" content="3.5"/>
+        <Cell address="F7" content="2.1"/>
+        <Cell address="G7" content="0.6"/>
+        <Cell address="A8" content="3.5​mm"/>
+        <Cell address="B8" content="3.5"/>
+        <Cell address="C8" content="0.6"/>
+        <Cell address="D8" content="3.8"/>
+        <Cell address="E8" content="4"/>
+        <Cell address="F8" content="2.3"/>
+        <Cell address="G8" content="0.75"/>
+        <Cell address="A9" content="4​mm"/>
+        <Cell address="B9" content="4"/>
+        <Cell address="C9" content="0.65"/>
+        <Cell address="D9" content="4.4"/>
+        <Cell address="E9" content="4.6"/>
+        <Cell address="F9" content="2.8"/>
+        <Cell address="G9" content="0.8"/>
+        <Cell address="A10" content="4.5​mm"/>
+        <Cell address="B10" content="4.5"/>
+        <Cell address="C10" content="0.8"/>
+        <Cell address="D10" content="4.9"/>
+        <Cell address="E10" content="5.1"/>
+        <Cell address="F10" content="2.9"/>
+        <Cell address="G10" content="1"/>
+        <Cell address="A11" content="5​mm"/>
+        <Cell address="B11" content="5"/>
+        <Cell address="C11" content="0.9"/>
+        <Cell address="D11" content="5.4"/>
+        <Cell address="E11" content="5.6"/>
+        <Cell address="F11" content="3.4"/>
+        <Cell address="G11" content="1"/>
+        <Cell address="A12" content="6​mm"/>
+        <Cell address="B12" content="6"/>
+        <Cell address="C12" content="1.2"/>
+        <Cell address="D12" content="6.4"/>
+        <Cell address="E12" content="6.7"/>
+        <Cell address="F12" content="3.9"/>
+        <Cell address="G12" content="1.25"/>
+        <Cell address="A13" content="8​mm"/>
+        <Cell address="B13" content="8"/>
+        <Cell address="C13" content="2"/>
+        <Cell address="D13" content="8.5"/>
+        <Cell address="E13" content="8.800000000000001"/>
+        <Cell address="F13" content="5.5"/>
+        <Cell address="G13" content="1.5"/>
+        <Cell address="A14" content="10​mm"/>
+        <Cell address="B14" content="10"/>
+        <Cell address="C14" content="2"/>
+        <Cell address="D14" content="10.5"/>
+        <Cell address="E14" content="10.8"/>
+        <Cell address="F14" content="6.5"/>
+        <Cell address="G14" content="2"/>
+        <Cell address="A15" content="12​mm"/>
+        <Cell address="B15" content="12"/>
+        <Cell address="C15" content="2"/>
+        <Cell address="D15" content="12.5"/>
+        <Cell address="E15" content="12.8"/>
+        <Cell address="F15" content="7.5"/>
+        <Cell address="G15" content="2.5"/>
+        <Cell address="A16" content="13​mm"/>
+        <Cell address="B16" content="13"/>
+        <Cell address="C16" content="2"/>
+        <Cell address="D16" content="13.5"/>
+        <Cell address="E16" content="13.8"/>
+        <Cell address="F16" content="8.5"/>
+        <Cell address="G16" content="2.5"/>
+      </Cells>
+    </Property>
+    <Property name="columnWidths" type="Spreadsheet::PropertyColumnWidths" status="218103808">
+      <ColumnInfo Count="0">
+      </ColumnInfo>
+    </Property>
+    <Property name="hiddenColumns" type="App::PropertyIntegerSet" status="201326592">
+      <IntegerSet count="0">
+      </IntegerSet>
+    </Property>
+    <Property name="hiddenRows" type="App::PropertyIntegerSet" status="201326592">
+      <IntegerSet count="0">
+      </IntegerSet>
+    </Property>
+    <Property name="rowHeights" type="Spreadsheet::PropertyRowHeights" status="218103808">
+      <RowInfo Count="0">
+      </RowInfo>
+    </Property>
+  </Properties>
+</Object>
+</Document>

@@ -1,0 +1,534 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--
+ FreeCAD Document, see http://www.freecadweb.org for more information...
+-->
+<Document SchemaVersion="4" ProgramVersion="2021.717R24301 +3627 (Git)" FileVersion="2" Uid="bff1f20b-9039-4c8a-a268-e4772a3d21a5" StringHasher="1">
+  <StringHasher saveall="0" threshold="0" count="392">
+<![CDATA[
+8 0 0:g4v1;SKT
+9 0 0:g11v1;SKT
+10 0 0:g5v1;SKT
+11 0 0:g4v2;SKT
+12 0 0:g6v1;SKT
+13 0 0:g5v2;SKT
+14 0 0:g7v1;SKT
+15 0 0:g6v2;SKT
+16 0 0:g8v1;SKT
+17 0 0:g7v2;SKT
+18 0 0:g9v1;SKT
+19 0 0:g8v2;SKT
+20 0 0:g10v1;SKT
+21 0 0:g9v2;SKT
+22 0 0:g1v1;SKT
+23 0 0:g10v2;SKT
+24 0 0:g1v2;SKT
+25 0 0:g2v1;SKT
+26 0 0:g2v2;SKT
+27 0 0:g3v1;SKT
+28 0 0:g3v2;SKT
+29 0 0:g11v2;SKT
+30 0 0:g4;SKT
+31 0 0:g5;SKT
+32 0 0:g6;SKT
+34 0 0:g8;SKT
+36 0 0:g10;SKT
+37 0 0:g1;SKT
+39 0 0:g3;SKT
+40 0 0:g11;SKT
+41 0 0:#1e;:T549:3:E
+42 0 0:#8;:T549:2:V
+43 0 0:#14;:T549:3:V
+44 0 0:#16;:T549:3:V
+45 0 0:#18;:T549:3:V
+46 0 0:#1a;:T549:3:V
+47 0 0:#1c;:T549:3:V
+48 0 0:#a;:T549:2:V
+49 0 0:#c;:T549:2:V
+50 0 0:#e;:T549:2:V
+51 0 0:#10;:T549:3:V
+52 0 0:#12;:T549:3:V
+53 0 0:#27;:T549:3:E
+54 0 0:#28;:T549:3:E
+55 0 0:#1f;:T549:3:E
+56 0 0:#20;:T549:3:E
+57 0 0:#22;:T549:3:E
+58 0 0:#24;:T549:3:E
+59 0 0:#25;:T549:3:E
+60 0 0:#32;:G;RVL;:T549:3:E
+61 0 0:#34;:G;RVL;:T549:3:E
+62 0 0:#2e;:G;RVL;:T549:3:E
+63 0 0:#9;:T549:2:V
+64 0 0:#b;:T549:2:V
+65 0 0:#d;:T549:2:V
+66 0 0:#f;:T549:2:V
+67 0 0:#11;:T549:3:V
+68 0 0:#13;:T549:3:V
+69 0 0:#15;:T549:3:V
+70 0 0:#17;:T549:3:V
+71 0 0:#19;:T549:3:V
+72 0 0:#1b;:T549:3:V
+73 0 0:#1d;:T549:3:V
+74 0 0:#2a;:G;RVL;:T549:3:E
+75 0 0:#30;:G;RVL;:T549:3:E
+76 0 0:#31;:G;RVL;:T549:3:E
+77 0 0:#33;:G;RVL;:T549:3:E
+78 0 0:#2b;:G;RVL;:T549:3:E
+79 0 0:#2c;:G;RVL;:T549:3:E
+80 0 0:#2d;:G;RVL;:T549:3:E
+81 0 0:#2f;:G;RVL;:T549:3:E
+82 0 0:#29;:G;RVL;:T549:3:F
+83 0 0:#37;:G;RVL;:T549:3:F
+84 0 0:#38;:G;RVL;:T549:3:F
+85 0 0:#3c;Edge6;:L;RVL;:T549:3:F
+86 0 0:#39;:G;RVL;:T549:3:F
+87 0 0:#3d;Edge9;:L;RVL;:T549:3:F
+88 0 0:#3a;:G;RVL;:T549:3:F
+89 0 0:#3b;:G;RVL;:T549:3:F
+90 0 0:#3e;Edge16;:L;RVL;:T549:3:F
+91 0 0:#35;:G;RVL;:T549:3:F
+92 0 0:#36;:G;RVL;:T549:3:F
+93 0 0:#30;:T-550:3:V
+94 0 0:#40;:T-550:3:V
+95 0 0:#31;:T-550:3:V
+96 0 0:#41;:T-550:3:V
+97 0 0:#32;:T-550:3:V
+98 0 0:#42;:T-550:3:V
+99 0 0:#33;:T-550:3:V
+100 0 0:#43;:T-550:3:V
+101 0 0:#34;:T-550:3:V
+102 0 0:#44;:T-550:3:V
+103 0 0:#2b;:T-550:3:V
+104 0 0:#45;:T-550:3:V
+105 0 0:#2c;:T-550:3:V
+106 0 0:#46;:T-550:3:V
+107 0 0:#2d;:T-550:3:V
+108 0 0:#47;:T-550:3:V
+109 0 0:#2e;:T-550:3:V
+110 0 0:#48;:T-550:3:V
+111 0 0:#4b;:T-550:3:E
+112 0 0:#4c;:T-550:3:E
+113 0 0:#37;:T-550:3:E
+114 0 0:#3c;:T-550:3:E
+115 0 0:#38;:T-550:3:E
+116 0 0:#4d;:T-550:3:E
+117 0 0:#3d;:T-550:3:E
+118 0 0:#39;:T-550:3:E
+119 0 0:#4e;:T-550:3:E
+120 0 0:#4f;:T-550:3:E
+121 0 0:#3a;:T-550:3:E
+122 0 0:#50;:T-550:3:E
+123 0 0:#3b;:T-550:3:E
+124 0 0:#3e;:T-550:3:E
+125 0 0:#53;:T-550:3:F
+126 0 0:#54;:T-550:3:F
+127 0 0:#55;:T-550:3:F
+128 0 0:#56;:T-550:3:F
+129 0 0:#57;:T-550:3:F
+130 0 0:#58;:T-550:3:F
+131 0 0:#59;:T-550:3:F
+132 0 0:#5a;:T-550:3:F
+133 0 0:#52;:T-550:3:F
+134 0 0:(#85;K-1;:T550:3:F)
+135 0 0:#51;:T-550:3:E
+136 0 0:#35;:T-550:3:E
+137 0 0:#29;:T-550:3:E
+138 0 0:(#85;K-2;:T550:3:F)
+139 0 0:#4a;:T-550:3:E
+140 0 0:#5c;:T-550:3:F
+141 0 0:(#8c;K-1;:T550:3:F)
+142 0 0:#5b;:T-550:3:F
+143 0 0:(#8e;K-1;:T550:3:F)
+144 0 0:(#8e;K-2;:T550:3:F)
+145 0 0:(#8c;K-2;:T550:3:F)
+146 0 0:(Face1;K-1;:T-552:5:F)
+147 0 0:(Face1;K-3;:T-552:5:F)
+148 0 0:(Face1;K-2;:T-552:5:F)
+149 0 0:(Face1;K-5;:T-552:5:F)
+150 0 0:(Face1;K-6;:T-552:5:F)
+151 0 0:(Face1;K-4;:T-552:5:F)
+152 0 0:Vertex1;:T-552:7:V
+153 0 0:Vertex2;:T-552:7:V
+154 0 0:Vertex3;:T-552:7:V
+155 0 0:Vertex4;:T-552:7:V
+156 0 0:Vertex5;:T-552:7:V
+157 0 0:Vertex6;:T-552:7:V
+158 0 0:Vertex7;:T-552:7:V
+159 0 0:Vertex8;:T-552:7:V
+160 0 0:Edge1;:T-552:5:E
+161 0 0:Edge2;:T-552:5:E
+162 0 0:Edge3;:T-552:5:E
+163 0 0:Edge4;:T-552:5:E
+164 0 0:Edge5;:T-552:5:E
+165 0 0:Edge6;:T-552:5:E
+166 0 0:Edge7;:T-552:5:E
+167 0 0:Edge8;:T-552:5:E
+168 0 0:Edge9;:T-552:5:E
+169 0 0:Edge10;:T-552:6:E
+170 0 0:Edge11;:T-552:6:E
+171 0 0:Edge12;:T-552:6:E
+172 0 0:Face1;:T-552:5:F
+173 0 0:Face2;:T-552:5:F
+174 0 0:Face3;:T-552:5:F
+175 0 0:Face4;:T-552:5:F
+176 0 0:Face5;:T-552:5:F
+177 0 0:Face6;:T-552:5:F
+178 0 0:#8b;:G#92;CUT;:T550:3:V
+179 0 0:#89;:G#93;CUT;:T550:3:V
+180 0 0:#5d;:T550:3:V
+181 0 0:#5e;:T550:3:V
+182 0 0:#8b;:G2#94;CUT;:T550:3:V
+183 0 0:#87;:G2#95;CUT;:T550:3:V
+184 0 0:#88;:G#96;CUT;:T550:3:V
+185 0 0:#87;:G#97;CUT;:T550:3:V
+186 0 0:#5f;:T550:3:V
+187 0 0:#60;:T550:3:V
+188 0 0:#6d;:T550:3:V
+189 0 0:#6e;:T550:3:V
+190 0 0:#61;:T550:3:V
+191 0 0:#62;:T550:3:V
+192 0 0:#6b;:T550:3:V
+193 0 0:#6c;:T550:3:V
+194 0 0:#63;:T550:3:V
+195 0 0:#64;:T550:3:V
+196 0 0:#69;:T550:3:V
+197 0 0:#6a;:T550:3:V
+198 0 0:#65;:T550:3:V
+199 0 0:#66;:T550:3:V
+200 0 0:#67;:T550:3:V
+201 0 0:#68;:T550:3:V
+202 0 0:Face1;:G7#86;CUT;:T-552:5:E
+203 0 0:#89;:M;CUT;:T550:3:E
+204 0 0:#6f;:T550:3:E
+205 0 0:Face1;:G8#8a;CUT;:T-552:5:E
+206 0 0:Face1;:G11#8d;CUT;:T-552:5:E
+207 0 0:Face1;:G9#8f;CUT;:T-552:5:E
+208 0 0:Face1;:G10#90;CUT;:T-552:5:E
+209 0 0:Face1;:G12#91;CUT;:T-552:5:E
+210 0 0:#70;:T550:3:E
+211 0 0:#71;:T550:3:E
+212 0 0:#88;:M;CUT;:T550:3:E
+213 0 0:#7c;:T550:3:E
+214 0 0:#72;:T550:3:E
+215 0 0:#73;:T550:3:E
+216 0 0:#7a;:T550:3:E
+217 0 0:#74;:T550:3:E
+218 0 0:#78;:T550:3:E
+219 0 0:#7b;:T550:3:E
+220 0 0:#75;:T550:3:E
+221 0 0:#76;:T550:3:E
+222 0 0:#77;:T550:3:E
+223 0 0:#79;:T550:3:E
+224 0 0:Face1;:M;CUT;:T-552:5:F
+225 0 0:#7d;:T550:3:F
+226 0 0:#7e;:T550:3:F
+227 0 0:#84;:T550:3:F
+228 0 0:#7f;:T550:3:F
+229 0 0:#83;:T550:3:F
+230 0 0:#80;:T550:3:F
+231 0 0:#82;:T550:3:F
+232 0 0:#81;:T550:3:F
+233 0 0:#85;:M;CUT;:T550:3:F
+234 0 0:(#e9;K-3;:T552:3:F)
+235 0 0:#ac;I3;:T-552:3:F
+236 0 0:#8b;:M;CUT;:T550:3:E
+237 0 0:(#e9;K-4;:T552:3:F)
+238 0 0:#ac;I4;:T-552:3:F
+239 0 0:(#e9;K-5;:T552:3:F)
+240 0 0:#ac;I5;:T-552:3:F
+241 0 0:#8c;:M;CUT;:T550:3:F
+242 0 0:(#f1;K-2;:T552:3:F)
+243 0 0:#ac;I1;:T-552:3:F
+244 0 0:#87;:M;CUT;:T550:3:E
+245 0 0:(#f1;K-1;:T552:3:F)
+246 0 0:#8e;:M;CUT;:T550:3:F
+247 0 0:(#f6;K-1;:T552:3:F)
+248 0 0:(#f1;K-4;:T552:3:F)
+249 0 0:#ac;I2;:T-552:3:F
+250 0 0:(#f1;K-3;:T552:3:F)
+251 0 0:(#f6;K-2;:T552:3:F)
+252 0 0:(#f1;K-6;:T552:3:F)
+253 0 0:(#f1;K-5;:T552:3:F)
+254 0 0:(#f6;K-3;:T552:3:F)
+255 0 0:(#f1;K-8;:T552:3:F)
+256 0 0:(#f1;K-7;:T552:3:F)
+257 0 0:(#f6;K-4;:T552:3:F)
+258 0 0:(#f1;K-10;:T552:3:F)
+259 0 0:(#f1;K-9;:T552:3:F)
+260 0 0:(#f6;K-5;:T552:3:F)
+261 0 0:(#e9;K-1;:T552:3:F)
+262 0 0:(#e9;K-2;:T552:3:F)
+263 0 0:(#eb;K-1;:T-552:3:F)
+264 0 0:(#ee;K-2;:T-552:3:F)
+265 0 0:(#ee;K-1;:T-552:3:F)
+266 0 0:(#f0;K-2;:T-552:3:F)
+267 0 0:(#f0;K-1;:T-552:3:F)
+268 0 0:(#f3;K-4;:T-552:3:F)
+269 0 0:(#f3;K-3;:T-552:3:F)
+270 0 0:(#f9;K-4;:T-552:3:F)
+271 0 0:(#f9;K-3;:T-552:3:F)
+272 0 0:(#eb;K-4;:T-552:3:F)
+273 0 0:(#eb;K-3;:T-552:3:F)
+274 0 0:(#ee;K-4;:T-552:3:F)
+275 0 0:(#ee;K-3;:T-552:3:F)
+276 0 0:(#f0;K-4;:T-552:3:F)
+277 0 0:(#f0;K-3;:T-552:3:F)
+278 0 0:(#f3;K-2;:T-552:3:F)
+279 0 0:(#f3;K-1;:T-552:3:F)
+280 0 0:(#f9;K-2;:T-552:3:F)
+281 0 0:(#f9;K-1;:T-552:3:F)
+282 0 0:(#eb;K-2;:T-552:3:F)
+283 0 0:#b2;:T552:3:V
+284 0 0:#b3;:T552:3:V
+285 0 0:#b4;:T552:3:V
+286 0 0:#b5;:T552:3:V
+287 0 0:#b6;:T552:3:V
+288 0 0:#ec;:G2#116;CUT;:T552:3:V
+289 0 0:#ec;:G#117;CUT;:T552:3:V
+290 0 0:#ec;:G4#118;CUT;:T552:3:V
+291 0 0:#ec;:G3#119;CUT;:T552:3:V
+292 0 0:#ec;:G6#11a;CUT;:T552:3:V
+293 0 0:#ec;:G5#107;CUT;:T552:3:V
+294 0 0:#ec;:G8#108;CUT;:T552:3:V
+295 0 0:#ec;:G7#109;CUT;:T552:3:V
+296 0 0:#ec;:G10#10a;CUT;:T552:3:V
+297 0 0:#ec;:G9#10b;CUT;:T552:3:V
+298 0 0:#b7;:T552:3:V
+299 0 0:#b8;:T552:3:V
+300 0 0:#b9;:T552:3:V
+301 0 0:#ba;:T552:3:V
+302 0 0:#bb;:T552:3:V
+303 0 0:#f4;:G2#10c;CUT;:T552:3:V
+304 0 0:#f4;:G#10d;CUT;:T552:3:V
+305 0 0:#f4;:G4#10e;CUT;:T552:3:V
+306 0 0:#f4;:G3#10f;CUT;:T552:3:V
+307 0 0:#f4;:G6#110;CUT;:T552:3:V
+308 0 0:#f4;:G5#111;CUT;:T552:3:V
+309 0 0:#f4;:G8#112;CUT;:T552:3:V
+310 0 0:#f4;:G7#113;CUT;:T552:3:V
+311 0 0:#f4;:G10#114;CUT;:T552:3:V
+312 0 0:#f4;:G9#115;CUT;:T552:3:V
+313 0 0:#bc;:T552:3:V
+314 0 0:#bd;:T552:3:V
+315 0 0:#be;:T552:3:V
+316 0 0:#bf;:T552:3:V
+317 0 0:#c0;:T552:3:V
+318 0 0:#c1;:T552:3:V
+319 0 0:#c2;:T552:3:V
+320 0 0:#c3;:T552:3:V
+321 0 0:#c4;:T552:3:V
+322 0 0:#c5;:T552:3:V
+323 0 0:#c6;:T552:3:V
+324 0 0:#c7;:T552:3:V
+325 0 0:#c8;:T552:3:V
+326 0 0:#c9;:T552:3:V
+327 0 0:#ca;:T552:3:E
+328 0 0:#cb;:T552:3:E
+329 0 0:#cc;:T552:3:E
+330 0 0:#cd;:T552:3:E
+331 0 0:#ec;:M6;CUT;:T552:3:E
+332 0 0:#f3;:G5#105;CUT;:T-552:3:E
+333 0 0:#ec;:M5;CUT;:T552:3:E
+334 0 0:#f9;:G5#106;CUT;:T-552:3:E
+335 0 0:#ec;:M4;CUT;:T552:3:E
+336 0 0:#eb;:G5#ea;CUT;:T-552:3:E
+337 0 0:#ec;:M3;CUT;:T552:3:E
+338 0 0:#ee;:G5#ed;CUT;:T-552:3:E
+339 0 0:#ec;:M2;CUT;:T552:3:E
+340 0 0:#f0;:G5#ef;CUT;:T-552:3:E
+341 0 0:#ec;:M;CUT;:T552:3:E
+342 0 0:#ce;:T552:3:E
+343 0 0:#cf;:T552:3:E
+344 0 0:#d0;:T552:3:E
+345 0 0:#d1;:T552:3:E
+346 0 0:#d2;:T552:3:E
+347 0 0:#d3;:T552:3:E
+348 0 0:#f3;:G7#f2;CUT;:T-552:3:E
+349 0 0:#f4;:M6;CUT;:T552:3:E
+350 0 0:#f3;:G6#f5;CUT;:T-552:3:E
+351 0 0:#f3;:G8#f7;CUT;:T-552:3:E
+352 0 0:#f9;:G7#f8;CUT;:T-552:3:E
+353 0 0:#f4;:M5;CUT;:T552:3:E
+354 0 0:#f9;:G6#fa;CUT;:T-552:3:E
+355 0 0:#f9;:G8#fb;CUT;:T-552:3:E
+356 0 0:#eb;:G7#fc;CUT;:T-552:3:E
+357 0 0:#f4;:M4;CUT;:T552:3:E
+358 0 0:#eb;:G6#fd;CUT;:T-552:3:E
+359 0 0:#eb;:G8#fe;CUT;:T-552:3:E
+360 0 0:#ee;:G7#ff;CUT;:T-552:3:E
+361 0 0:#f4;:M3;CUT;:T552:3:E
+362 0 0:#ee;:G6#100;CUT;:T-552:3:E
+363 0 0:#ee;:G8#101;CUT;:T-552:3:E
+364 0 0:#f0;:G7#102;CUT;:T-552:3:E
+365 0 0:#f4;:M2;CUT;:T552:3:E
+366 0 0:#f0;:G6#103;CUT;:T-552:3:E
+367 0 0:#f0;:G8#104;CUT;:T-552:3:E
+368 0 0:#f4;:M;CUT;:T552:3:E
+369 0 0:#d5;:T552:3:E
+370 0 0:#d4;:T552:3:E
+371 0 0:#d6;:T552:3:E
+372 0 0:#d7;:T552:3:E
+373 0 0:#d8;:T552:3:E
+374 0 0:#d9;:T552:3:E
+375 0 0:#da;:T552:3:E
+376 0 0:#db;:T552:3:E
+377 0 0:#dc;:T552:3:E
+378 0 0:#dd;:T552:3:E
+379 0 0:#de;:T552:3:E
+380 0 0:#df;:T552:3:E
+381 0 0:#e9;:M;CUT;:T552:3:F
+382 0 0:#e0;:T552:3:F
+383 0 0:#e1;:T552:3:F
+384 0 0:#f1;:M6;CUT;:T552:3:F
+385 0 0:#f3;:M;CUT;:T-552:3:F
+386 0 0:#f1;:M5;CUT;:T552:3:F
+387 0 0:#f9;:M;CUT;:T-552:3:F
+388 0 0:#f1;:M4;CUT;:T552:3:F
+389 0 0:#eb;:M;CUT;:T-552:3:F
+390 0 0:#f1;:M3;CUT;:T552:3:F
+391 0 0:#ee;:M;CUT;:T-552:3:F
+392 0 0:#f1;:M2;CUT;:T552:3:F
+393 0 0:#f0;:M;CUT;:T-552:3:F
+394 0 0:#f1;:M;CUT;:T552:3:F
+395 0 0:#f6;:M;CUT;:T552:3:F
+396 0 0:#e2;:T552:3:F
+397 0 0:#e3;:T552:3:F
+398 0 0:#e4;:T552:3:F
+399 0 0:#e5;:T552:3:F
+400 0 0:#e6;:T552:3:F
+401 0 0:#e7;:T552:3:F
+402 0 0:#e8;:T552:3:F
+]]>
+  </StringHasher>
+  <Properties Count="19" TransientCount="3">
+    <_Property name="FileName" type="App::PropertyString" status="50331649"/>
+    <_Property name="Tip" type="App::PropertyLink" status="33554433"/>
+    <_Property name="TransientDir" type="App::PropertyString" status="50331649"/>
+    <Property name="Comment" type="App::PropertyString">
+      <String value=""/>
+    </Property>
+    <Property name="Company" type="App::PropertyString">
+      <String value=""/>
+    </Property>
+    <Property name="CreatedBy" type="App::PropertyString" status="1">
+      <String value="FreeCAD PartToolBox authors"/>
+    </Property>
+    <Property name="CreationDate" type="App::PropertyString" status="16777217">
+      <String value="2021-07-25T03:27:33Z"/>
+    </Property>
+    <Property name="ForceXML" type="App::PropertyInteger" status="1">
+      <Integer value="3"/>
+    </Property>
+    <Property name="Id" type="App::PropertyString">
+      <String value=""/>
+    </Property>
+    <Property name="Label" type="App::PropertyString" status="1">
+      <String value="Prevailing torque type hexagon regular nut - ISO 7040"/>
+    </Property>
+    <Property name="LastModifiedBy" type="App::PropertyString" status="1">
+      <String value="Alex Neufeld"/>
+    </Property>
+    <Property name="LastModifiedDate" type="App::PropertyString" status="16777217">
+      <String value="2021-08-05T16:11:34Z"/>
+    </Property>
+    <Property name="License" type="App::PropertyString" status="1">
+      <String value="LGPL-3.0-or-later"/>
+    </Property>
+    <Property name="LicenseURL" type="App::PropertyString" status="1">
+      <String value="https://www.gnu.org/licenses/lgpl-3.0-standalone.html"/>
+    </Property>
+    <Property name="Material" type="App::PropertyMap" status="1">
+      <Map count="0">
+      </Map>
+    </Property>
+    <Property name="Meta" type="App::PropertyMap" status="1">
+      <Map count="0">
+      </Map>
+    </Property>
+    <Property name="PreferBinary" type="App::PropertyBool" status="1">
+      <Bool value="false"/>
+    </Property>
+    <Property name="ShowHidden" type="App::PropertyBool" status="1">
+      <Bool value="false"/>
+    </Property>
+    <Property name="SplitXML" type="App::PropertyBool" status="1">
+      <Bool value="true"/>
+    </Property>
+    <Property name="TipName" type="App::PropertyString" status="83886080">
+      <String value=""/>
+    </Property>
+    <Property name="Uid" type="App::PropertyUUID" status="16777217">
+      <Uuid value="bff1f20b-9039-4c8a-a268-e4772a3d21a5"/>
+    </Property>
+    <Property name="UseHasher" type="App::PropertyBool" status="1">
+      <Bool value="true"/>
+    </Property>
+  </Properties>
+  <Objects Count="15" Dependencies="1">
+    <ObjectDeps Name="Part" Count="3">
+      <Dep Name="Spreadsheet"/>
+      <Dep Name="Body"/>
+      <Dep Name="Origin"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Origin" Count="0"/>
+    <ObjectDeps Name="Body" Count="5">
+      <Dep Name="Box"/>
+      <Dep Name="Revolution"/>
+      <Dep Name="Origin001"/>
+      <Dep Name="Sketch"/>
+      <Dep Name="PolarPattern"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Origin001" Count="6">
+      <Dep Name="XZ_Plane"/>
+      <Dep Name="X_Axis"/>
+      <Dep Name="Y_Axis"/>
+      <Dep Name="XY_Plane"/>
+      <Dep Name="YZ_Plane"/>
+      <Dep Name="Z_Axis"/>
+    </ObjectDeps>
+    <ObjectDeps Name="X_Axis" Count="0"/>
+    <ObjectDeps Name="Y_Axis" Count="0"/>
+    <ObjectDeps Name="Z_Axis" Count="0"/>
+    <ObjectDeps Name="XY_Plane" Count="0"/>
+    <ObjectDeps Name="XZ_Plane" Count="0"/>
+    <ObjectDeps Name="YZ_Plane" Count="0"/>
+    <ObjectDeps Name="Spreadsheet" Count="1">
+      <Dep Name="Part"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Sketch" Count="2">
+      <Dep Name="Spreadsheet"/>
+      <Dep Name="XZ_Plane"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Revolution" Count="2">
+      <Dep Name="Body"/>
+      <Dep Name="Sketch"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Box" Count="4">
+      <Dep Name="Spreadsheet"/>
+      <Dep Name="Body"/>
+      <Dep Name="Revolution"/>
+      <Dep Name="XY_Plane"/>
+    </ObjectDeps>
+    <ObjectDeps Name="PolarPattern" Count="3">
+      <Dep Name="Box"/>
+      <Dep Name="Body"/>
+      <Dep Name="Z_Axis"/>
+    </ObjectDeps>
+    <Object type="App::Part" name="Part" id="537" revision="703" file="Part.xml" />
+    <Object type="App::Origin" name="Origin" id="538" revision="0" file="Origin.xml" />
+    <Object type="PartDesign::Body" name="Body" id="539" revision="295" file="Body.xml" />
+    <Object type="App::Origin" name="Origin001" id="540" revision="0" file="Origin001.xml" />
+    <Object type="App::Line" name="X_Axis" id="541" revision="1" file="X_Axis.xml" />
+    <Object type="App::Line" name="Y_Axis" id="542" revision="2" file="Y_Axis.xml" />
+    <Object type="App::Line" name="Z_Axis" id="543" revision="2" file="Z_Axis.xml" />
+    <Object type="App::Plane" name="XY_Plane" id="544" revision="1" file="XY_Plane.xml" />
+    <Object type="App::Plane" name="XZ_Plane" id="545" revision="2" file="XZ_Plane.xml" />
+    <Object type="App::Plane" name="YZ_Plane" id="546" revision="2" file="YZ_Plane.xml" />
+    <Object type="Spreadsheet::Sheet" name="Spreadsheet" id="547" revision="0" file="Spreadsheet.xml" />
+    <Object type="Sketcher::SketchObject" name="Sketch" id="549" revision="267" file="Sketch.xml" />
+    <Object type="PartDesign::Revolution" name="Revolution" id="550" revision="139" file="Revolution.xml" />
+    <Object type="PartDesign::SubtractiveBox" name="Box" id="552" revision="164" file="Box.xml" />
+    <Object type="PartDesign::PolarPattern" name="PolarPattern" id="553" revision="201" file="PolarPattern.xml" />
+  </Objects>
+  <ObjectData Count="0">
+  </ObjectData>
+</Document>

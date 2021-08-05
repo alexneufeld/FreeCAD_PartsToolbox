@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- FreeCAD DocumentObject -->
+<Document SchemaVersion="4" FileVersion="2">
+<Object name="Spreadsheet">
+  <Properties Count="10" TransientCount="0">
+    <Property name="ExpressionEngine" type="App::PropertyExpressionEngine" status="67108864">
+      <ExpressionEngine count="1" cdata="1">
+        <Expressions><![CDATA[
+0:.cells.Bind.B2.C2
+0:tuple(.cells, <<B>> + str(href(Part.InnerDiameter) + 3), <<C>> + str(href(Part.InnerDiameter) + 3))
+0:
+
+]]>
+        </Expressions>
+      </ExpressionEngine>
+    </Property>
+    <Property name="Label" type="App::PropertyString" status="134217728">
+      <String value="Data"/>
+    </Property>
+    <Property name="Label2" type="App::PropertyString" status="128">
+      <String value=""/>
+    </Property>
+    <Property name="PythonMode" type="App::PropertyBool">
+      <Bool value="false"/>
+    </Property>
+    <Property name="Visibility" type="App::PropertyBool" status="648">
+      <Bool value="true"/>
+    </Property>
+    <Property name="cells" type="Spreadsheet::PropertySheet" status="67108864">
+      <Cells Count="102">
+        <Cell address="A1" content="ID"/>
+        <Cell address="B1" content="ID (mm)"/>
+        <Cell address="C1" content="vars"/>
+        <Cell editMode="2" editModeName="Combo" editPersistent="1" address="A2" content="=dbind(Part.InnerDiameter.All)"/>
+        <Cell alias="id" address="B2" content="=.B14"/>
+        <Cell alias="vars" address="C2" content="=.C14"/>
+        <Cell address="A3" content="1​mm"/>
+        <Cell address="B3" content="1"/>
+        <Cell address="C3" content="B2:|"/>
+        <Cell address="A4" content="1.5​mm"/>
+        <Cell address="B4" content="1.5"/>
+        <Cell address="C4" content="C2:|"/>
+        <Cell address="A5" content="2​mm"/>
+        <Cell address="B5" content="2"/>
+        <Cell address="C5" content="D2:|"/>
+        <Cell address="A6" content="2.5​mm"/>
+        <Cell address="B6" content="2.5"/>
+        <Cell address="C6" content="E2:|"/>
+        <Cell address="A7" content="3​mm"/>
+        <Cell address="B7" content="3"/>
+        <Cell address="C7" content="F2:|"/>
+        <Cell address="A8" content="4​mm"/>
+        <Cell address="B8" content="4"/>
+        <Cell address="C8" content="G2:|"/>
+        <Cell address="A9" content="5​mm"/>
+        <Cell address="B9" content="5"/>
+        <Cell address="C9" content="H2:|"/>
+        <Cell address="A10" content="6​mm"/>
+        <Cell address="B10" content="6"/>
+        <Cell address="C10" content="I2:|"/>
+        <Cell address="A11" content="7​mm"/>
+        <Cell address="B11" content="7"/>
+        <Cell address="C11" content="J2:|"/>
+        <Cell address="A12" content="8​mm"/>
+        <Cell address="B12" content="8"/>
+        <Cell address="C12" content="K2:|"/>
+        <Cell address="A13" content="9​mm"/>
+        <Cell address="B13" content="9"/>
+        <Cell address="C13" content="L2:|"/>
+        <Cell address="A14" content="10​mm"/>
+        <Cell address="B14" content="10"/>
+        <Cell address="C14" content="M2:|"/>
+        <Cell address="A15" content="12​mm"/>
+        <Cell address="B15" content="12"/>
+        <Cell address="C15" content="N2:|"/>
+        <Cell address="A16" content="14​mm"/>
+        <Cell address="B16" content="14"/>
+        <Cell address="C16" content="O2:|"/>
+        <Cell address="A17" content="15​mm"/>
+        <Cell address="B17" content="15"/>
+        <Cell address="C17" content="P2:|"/>
+        <Cell address="A18" content="16​mm"/>
+        <Cell address="B18" content="16"/>
+        <Cell address="C18" content="Q2:|"/>
+        <Cell address="A19" content="18​mm"/>
+        <Cell address="B19" content="18"/>
+        <Cell address="C19" content="R2:|"/>
+        <Cell address="A20" content="20​mm"/>
+        <Cell address="B20" content="20"/>
+        <Cell address="C20" content="S2:|"/>
+        <Cell address="A21" content="22​mm"/>
+        <Cell address="B21" content="22"/>
+        <Cell address="C21" content="T2:|"/>
+        <Cell address="A22" content="25​mm"/>
+        <Cell address="B22" content="25"/>
+        <Cell address="C22" content="U2:|"/>
+        <Cell address="A23" content="28​mm"/>
+        <Cell address="B23" content="28"/>
+        <Cell address="C23" content="V2:|"/>
+        <Cell address="A24" content="30​mm"/>
+        <Cell address="B24" content="30"/>
+        <Cell address="C24" content="W2:|"/>
+        <Cell address="A25" content="32​mm"/>
+        <Cell address="B25" content="32"/>
+        <Cell address="C25" content="X2:|"/>
+        <Cell address="A26" content="35​mm"/>
+        <Cell address="B26" content="35"/>
+        <Cell address="C26" content="Y2:|"/>
+        <Cell address="A27" content="38​mm"/>
+        <Cell address="B27" content="38"/>
+        <Cell address="C27" content="Z2:|"/>
+        <Cell address="A28" content="40​mm"/>
+        <Cell address="B28" content="40"/>
+        <Cell address="C28" content="AA2:|"/>
+        <Cell address="A29" content="42​mm"/>
+        <Cell address="B29" content="42"/>
+        <Cell address="C29" content="AB2:|"/>
+        <Cell address="A30" content="45​mm"/>
+        <Cell address="B30" content="45"/>
+        <Cell address="C30" content="AC2:|"/>
+        <Cell address="A31" content="48​mm"/>
+        <Cell address="B31" content="48"/>
+        <Cell address="C31" content="AD2:|"/>
+        <Cell address="A32" content="50​mm"/>
+        <Cell address="B32" content="50"/>
+        <Cell address="C32" content="AE2:|"/>
+        <Cell address="A33" content="55​mm"/>
+        <Cell address="B33" content="55"/>
+        <Cell address="C33" content="AF2:|"/>
+        <Cell address="A34" content="60​mm"/>
+        <Cell address="B34" content="60"/>
+        <Cell address="C34" content="AG2:|"/>
+      </Cells>
+    </Property>
+    <Property name="columnWidths" type="Spreadsheet::PropertyColumnWidths" status="218103808">
+      <ColumnInfo Count="0">
+      </ColumnInfo>
+    </Property>
+    <Property name="hiddenColumns" type="App::PropertyIntegerSet" status="201326592">
+      <IntegerSet count="0">
+      </IntegerSet>
+    </Property>
+    <Property name="hiddenRows" type="App::PropertyIntegerSet" status="201326592">
+      <IntegerSet count="0">
+      </IntegerSet>
+    </Property>
+    <Property name="rowHeights" type="Spreadsheet::PropertyRowHeights" status="218103808">
+      <RowInfo Count="0">
+      </RowInfo>
+    </Property>
+  </Properties>
+</Object>
+</Document>

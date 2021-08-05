@@ -70,7 +70,7 @@ class ToolboxDock(QtGui.QDockWidget):
                 QtGui.QDialogButtonBox.Ok), UI.label, UI.treeWidget.currentItem()
         ))
         UI.buttonBox.accepted.connect(
-            lambda: InsertParamObjBind(UI.treeWidget.currentItem().text(0)+".FCStd"))
+            lambda: InsertParamObjBind(UI.treeWidget.currentItem().text(0)))
         # TODO filtered files will still appear, they just won't be selectable
         # hide their rows to completely remove them
         #UI.treeView.setRowHidden(row, parent, True)
@@ -98,7 +98,7 @@ def populate_tree(top_level_obj, items):
         if type(i) == str:
             # setText(colum#, string)
             subobj.setIcon(0,PartIcon)
-            subobj.setText(0, i[:-6])
+            subobj.setText(0, i)
         # folder
         elif type(i) == dict:
             k = list(i.keys())[0]
@@ -152,7 +152,7 @@ def InsertParamObjBind(partFileName):
     # copy the parts document to the users project folder if it
     # isn't already there:
     if not os.path.exists(objfilepath):
-        shutil.copyfile(sourcefilepath, objfilepath)
+        shutil.copytree(sourcefilepath, objfilepath)
     # open the local copy of the part file se we can get an obj from it
     part_doc = FreeCAD.openDocument(objfilepath, hidden=True)
     # grab either a part or a body to link to with a shapebinder:

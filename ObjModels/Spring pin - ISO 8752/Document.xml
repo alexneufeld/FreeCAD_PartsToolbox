@@ -1,0 +1,335 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--
+ FreeCAD Document, see http://www.freecadweb.org for more information...
+-->
+<Document SchemaVersion="4" ProgramVersion="2021.717R24301 +3627 (Git)" FileVersion="2" Uid="b3e1c6e7-498f-4688-8060-877731aabf65" StringHasher="1">
+  <StringHasher saveall="0" threshold="0" count="180">
+<![CDATA[
+1 0 0:g2v1;SKT
+2 0 0:g4v1;SKT
+3 0 0:g1v1;SKT
+4 0 0:g4v2;SKT
+5 0 0:g1v2;SKT
+6 0 0:g3v2;SKT
+7 0 0:g3v1;SKT
+8 0 0:g2v2;SKT
+9 0 0:g4;SKT
+10 0 0:g1;SKT
+11 0 0:g3;SKT
+12 0 0:g2;SKT
+13 0 0:#9;:T2955:2:E
+14 0 0:#1;:T2955:2:V
+15 0 0:#3;:T2955:2:V
+16 0 0:#5;:T2955:2:V
+17 0 0:#7;:T2955:2:V
+18 0 0:#a;:T2955:2:E
+19 0 0:#b;:T2955:2:E
+20 0 0:#c;:T2955:2:E
+21 0 0:#d;FAC;:T2955:2:F
+22 0 0:#13;:G;XTR;:T2955:3:F
+23 0 0:#14;:G;XTR;:T2955:3:F
+24 0 0:#d;:G;XTR;:T2955:2:F
+25 0 0:#12;:G;XTR;:T2955:3:F
+26 0 0:#e;:G;XTR;:T2955:2:E
+27 0 0:#f;:G;XTR;:T2955:2:E
+28 0 0:#10;:G;XTR;:T2955:3:E
+29 0 0:#11;:G;XTR;:T2955:3:E
+30 0 0:#2;:T2955:2:V
+31 0 0:#1a;:U;XTR;:T2955:3:V
+32 0 0:#4;:T2955:2:V
+33 0 0:#1b;:U;XTR;:T2955:3:V
+34 0 0:#6;:T2955:2:V
+35 0 0:#1c;:U;XTR;:T2955:3:V
+36 0 0:#8;:T2955:2:V
+37 0 0:#1d;:U;XTR;:T2955:3:V
+38 0 0:#18;:U;XTR;:T2955:3:E
+39 0 0:#19;:U;XTR;:T2955:3:E
+40 0 0:#16;:U;XTR;:T2955:3:E
+41 0 0:#17;:U;XTR;:T2955:3:E
+42 0 0:#15;:G0;XTR;:T2955:3:F
+43 0 0:#e;:T-2956:2:V
+44 0 0:#1e;:T-2956:3:V
+45 0 0:#1f;:T-2956:3:V
+48 0 0:#21;:T-2956:3:V
+51 0 0:#23;:T-2956:3:V
+52 0 0:#11;:T-2956:3:V
+53 0 0:#24;:T-2956:3:V
+54 0 0:#25;:T-2956:3:V
+55 0 0:#1a;:T-2956:3:E
+56 0 0:#1b;:T-2956:3:E
+57 0 0:#d;:T-2956:2:E
+58 0 0:#26;:T-2956:3:E
+59 0 0:#1c;:T-2956:3:E
+61 0 0:#27;:T-2956:3:E
+62 0 0:#1d;:T-2956:3:E
+63 0 0:#13;:T-2956:3:E
+64 0 0:#28;:T-2956:3:E
+65 0 0:#14;:T-2956:3:E
+66 0 0:#29;:T-2956:3:E
+67 0 0:#18;:T-2956:3:F
+68 0 0:#19;:T-2956:3:F
+69 0 0:#16;:T-2956:3:F
+70 0 0:#17;:T-2956:3:F
+71 0 0:#15;:T-2956:3:F
+72 0 0:#2a;:T-2956:3:F
+97 0 0:#2b;:T2956:3:V
+98 0 0:#2c;:T2956:3:V
+99 0 0:#2d;:T2956:3:V
+100 0 0:#34;:T2956:3:V
+101 0 0:#35;:T2956:3:V
+102 0 0:#36;:T2956:3:V
+103 0 0:#37;:T2956:3:E
+104 0 0:#41;:T2956:3:E
+105 0 0:#42;:T2956:3:E
+106 0 0:#3e;:T2956:3:E
+111 0 0:#46;:T2956:3:F
+113 0 0:#a;:T2959:2:E
+114 0 0:#3;:T2959:2:V
+115 0 0:#5;:T2959:2:V
+116 0 0:#8;:T2959:2:V
+117 0 0:#c;:T2959:2:E
+118 0 0:#74;:G;RVL;:T2959:3:E
+119 0 0:(#44;K-1;:T2956:3:F)
+120 0 0:#71;:G;RVL;:T2959:3:F
+121 0 0:(#43;K-1;:T2956:3:F)
+122 0 0:#72;:G;RVL;:T2959:3:E
+123 0 0:(#45;K-1;:T2956:3:F)
+124 0 0:(#39;K-1;:T2956:3:E)
+125 0 0:(#78;K-1;:T-2960:3:F)
+126 0 0:(#3f;K-1;:T2956:3:E)
+127 0 0:(#78;K-2;:T-2960:3:F)
+128 0 0:#7a;:G#7c;CUT;:T-2960:3:V
+129 0 0:#38;:G#7d;CUT;:T2956:3:V
+131 0 0:#7a;:G2#7e;CUT;:T-2960:3:V
+132 0 0:#3b;:G#7f;CUT;:T2956:3:V
+134 0 0:#39;:M;CUT;:T2956:3:E
+135 0 0:#78;:G3#79;CUT;:T-2960:3:E
+136 0 0:#38;:M;CUT;:T2956:3:E
+137 0 0:#3a;:T2956:3:E
+138 0 0:#3f;:M;CUT;:T2956:3:E
+139 0 0:#7a;:M;CUT;:T-2960:3:E
+140 0 0:#78;:G5#7b;CUT;:T-2960:3:E
+141 0 0:#78;:G4#77;CUT;:T-2960:3:E
+142 0 0:#3b;:M;CUT;:T2956:3:E
+144 0 0:#40;:T2956:3:E
+145 0 0:#43;:M;CUT;:T2956:3:F
+146 0 0:#47;:M;CUT;:T2956:3:F
+147 0 0:#78;:M;CUT;:T-2960:3:F
+148 0 0:#44;:M;CUT;:T2956:3:F
+149 0 0:#48;:T2956:3:F
+150 0 0:#45;:M;CUT;:T2956:3:F
+151 0 0:#6;:T2959:2:V
+152 0 0:#1;:T2959:2:V
+153 0 0:#7;:T2959:2:V
+154 0 0:#73;:G;RVL;:T2959:3:E
+155 0 0:#75;:G;RVL;:T2959:3:F
+156 0 0:#76;Edge4;:L;RVL;:T2959:3:F
+157 0 0:#72;I1;:T2959:3:V
+158 0 0:#97;I1;:T2959:3:V
+159 0 0:#71;I1;:T2959:3:E
+161 0 0:#7a;I1;:T2959:3:E
+164 0 0:#78;I1;:T2959:3:F
+167 0 0:#73;I1;:T2959:3:V
+168 0 0:#98;I1;:T2959:3:V
+169 0 0:#74;I1;:T2959:3:V
+170 0 0:#99;I1;:T2959:3:V
+171 0 0:#9a;I1;:T2959:3:E
+172 0 0:#76;I1;:T2959:3:E
+173 0 0:#75;I1;:T2959:3:E
+174 0 0:#9b;I1;:T2959:3:F
+175 0 0:#9c;I1;:T2959:3:F
+176 0 0:#61;:T2960:3:V
+177 0 0:#62;:T2960:3:V
+178 0 0:#80;:T2960:3:V
+179 0 0:#81;:T2960:3:V
+181 0 0:#63;:T2960:3:V
+182 0 0:#64;:T2960:3:V
+183 0 0:#65;:T2960:3:V
+184 0 0:#83;:T2960:3:V
+187 0 0:#84;:T2960:3:V
+190 0 0:#66;:T2960:3:V
+191 0 0:#86;:T2960:3:E
+192 0 0:#87;:T2960:3:E
+195 0 0:#67;:T2960:3:E
+196 0 0:#68;:T2960:3:E
+197 0 0:#8a;:T2960:3:E
+200 0 0:#8c;:T2960:3:E
+207 0 0:#69;:T2960:3:E
+208 0 0:#6a;:T2960:3:E
+213 0 0:#94;:M;CUT;:T2960:3:F
+215 0 0:#6f;:T2960:3:F
+217 0 0:(#94;K-1;:T2960:3:F)
+218 0 0:(#96;K-1;:T2960:3:F)
+219 0 0:(#91;K-1;:T2960:3:F)
+220 0 0:(#a4;K-2;:T-2960:3:F)
+221 0 0:(#90;K-1;:T2960:3:E)
+222 0 0:(#a4;K-1;:T-2960:3:F)
+223 0 0:(#89;K-1;:T2960:3:E)
+224 0 0:#88;:G#de;CUT;:T2960:3:V
+225 0 0:#a1;:G#df;CUT;:T-2960:3:V
+226 0 0:#8e;:G#dc;CUT;:T2960:3:V
+227 0 0:#a1;:G2#dd;CUT;:T-2960:3:V
+228 0 0:#88;:M;CUT;:T2960:3:E
+229 0 0:#a4;:G3#db;CUT;:T-2960:3:E
+230 0 0:#89;:M;CUT;:T2960:3:E
+231 0 0:#8b;:T2960:3:E
+232 0 0:#8d;:T2960:3:E
+233 0 0:#8e;:M;CUT;:T2960:3:E
+234 0 0:#a4;:G4#d9;CUT;:T-2960:3:E
+235 0 0:#a4;:G5#da;CUT;:T-2960:3:E
+236 0 0:#a1;:M;CUT;:T-2960:3:E
+237 0 0:#90;:M;CUT;:T2960:3:E
+238 0 0:#91;:M;CUT;:T2960:3:F
+239 0 0:#92;:T2960:3:F
+240 0 0:#93;:T2960:3:F
+241 0 0:#a4;:M;CUT;:T-2960:3:F
+242 0 0:#95;:M;CUT;:T2960:3:F
+243 0 0:#96;:M;CUT;:T2960:3:F
+]]>
+  </StringHasher>
+  <Properties Count="19" TransientCount="3">
+    <_Property name="FileName" type="App::PropertyString" status="50331649"/>
+    <_Property name="Tip" type="App::PropertyLink" status="33554433"/>
+    <_Property name="TransientDir" type="App::PropertyString" status="50331649"/>
+    <Property name="Comment" type="App::PropertyString">
+      <String value=""/>
+    </Property>
+    <Property name="Company" type="App::PropertyString">
+      <String value=""/>
+    </Property>
+    <Property name="CreatedBy" type="App::PropertyString" status="1">
+      <String value="FreeCAD PartToolBox authors"/>
+    </Property>
+    <Property name="CreationDate" type="App::PropertyString" status="16777217">
+      <String value="2021-08-02T20:16:18Z"/>
+    </Property>
+    <Property name="ForceXML" type="App::PropertyInteger" status="1">
+      <Integer value="3"/>
+    </Property>
+    <Property name="Id" type="App::PropertyString">
+      <String value=""/>
+    </Property>
+    <Property name="Label" type="App::PropertyString" status="1">
+      <String value="Spring pin - ISO 8752"/>
+    </Property>
+    <Property name="LastModifiedBy" type="App::PropertyString" status="1">
+      <String value="Alex Neufeld"/>
+    </Property>
+    <Property name="LastModifiedDate" type="App::PropertyString" status="16777217">
+      <String value="2021-08-05T16:11:45Z"/>
+    </Property>
+    <Property name="License" type="App::PropertyString" status="1">
+      <String value="LGPL-3.0-or-later"/>
+    </Property>
+    <Property name="LicenseURL" type="App::PropertyString" status="1">
+      <String value="https://www.gnu.org/licenses/lgpl-3.0-standalone.html"/>
+    </Property>
+    <Property name="Material" type="App::PropertyMap" status="1">
+      <Map count="0">
+      </Map>
+    </Property>
+    <Property name="Meta" type="App::PropertyMap" status="1">
+      <Map count="0">
+      </Map>
+    </Property>
+    <Property name="PreferBinary" type="App::PropertyBool" status="1">
+      <Bool value="false"/>
+    </Property>
+    <Property name="ShowHidden" type="App::PropertyBool" status="1">
+      <Bool value="false"/>
+    </Property>
+    <Property name="SplitXML" type="App::PropertyBool" status="1">
+      <Bool value="true"/>
+    </Property>
+    <Property name="TipName" type="App::PropertyString" status="83886080">
+      <String value=""/>
+    </Property>
+    <Property name="Uid" type="App::PropertyUUID" status="16777217">
+      <Uuid value="b3e1c6e7-498f-4688-8060-877731aabf65"/>
+    </Property>
+    <Property name="UseHasher" type="App::PropertyBool" status="1">
+      <Bool value="true"/>
+    </Property>
+  </Properties>
+  <Objects Count="17" Dependencies="1">
+    <ObjectDeps Name="Part" Count="3">
+      <Dep Name="Spreadsheet"/>
+      <Dep Name="Body"/>
+      <Dep Name="Origin"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Origin" Count="0"/>
+    <ObjectDeps Name="Body" Count="7">
+      <Dep Name="Pad"/>
+      <Dep Name="Origin001"/>
+      <Dep Name="Groove"/>
+      <Dep Name="Sketch001"/>
+      <Dep Name="DatumPlane"/>
+      <Dep Name="Mirrored"/>
+      <Dep Name="Sketch"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Origin001" Count="6">
+      <Dep Name="Y_Axis"/>
+      <Dep Name="XY_Plane"/>
+      <Dep Name="XZ_Plane"/>
+      <Dep Name="Z_Axis"/>
+      <Dep Name="YZ_Plane"/>
+      <Dep Name="X_Axis"/>
+    </ObjectDeps>
+    <ObjectDeps Name="X_Axis" Count="0"/>
+    <ObjectDeps Name="Y_Axis" Count="0"/>
+    <ObjectDeps Name="Z_Axis" Count="0"/>
+    <ObjectDeps Name="XY_Plane" Count="0"/>
+    <ObjectDeps Name="XZ_Plane" Count="0"/>
+    <ObjectDeps Name="YZ_Plane" Count="0"/>
+    <ObjectDeps Name="Spreadsheet" Count="1">
+      <Dep Name="Part"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Sketch" Count="2">
+      <Dep Name="Spreadsheet"/>
+      <Dep Name="XY_Plane"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Pad" Count="3">
+      <Dep Name="Part"/>
+      <Dep Name="Body"/>
+      <Dep Name="Sketch"/>
+    </ObjectDeps>
+    <ObjectDeps Name="DatumPlane" Count="2">
+      <Dep Name="Part"/>
+      <Dep Name="XY_Plane"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Sketch001" Count="3">
+      <Dep Name="Spreadsheet"/>
+      <Dep Name="YZ_Plane"/>
+      <Dep Name="Sketch"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Groove" Count="3">
+      <Dep Name="Pad"/>
+      <Dep Name="Sketch001"/>
+      <Dep Name="Body"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Mirrored" Count="3">
+      <Dep Name="Groove"/>
+      <Dep Name="Body"/>
+      <Dep Name="DatumPlane"/>
+    </ObjectDeps>
+    <Object type="App::Part" name="Part" id="2944" revision="523" file="Part.xml" />
+    <Object type="App::Origin" name="Origin" id="2945" revision="0" file="Origin.xml" />
+    <Object type="PartDesign::Body" name="Body" id="2946" revision="230" file="Body.xml" />
+    <Object type="App::Origin" name="Origin001" id="2947" revision="0" file="Origin001.xml" />
+    <Object type="App::Line" name="X_Axis" id="2948" revision="1" file="X_Axis.xml" />
+    <Object type="App::Line" name="Y_Axis" id="2949" revision="2" file="Y_Axis.xml" />
+    <Object type="App::Line" name="Z_Axis" id="2950" revision="2" file="Z_Axis.xml" />
+    <Object type="App::Plane" name="XY_Plane" id="2951" revision="1" file="XY_Plane.xml" />
+    <Object type="App::Plane" name="XZ_Plane" id="2952" revision="2" file="XZ_Plane.xml" />
+    <Object type="App::Plane" name="YZ_Plane" id="2953" revision="2" file="YZ_Plane.xml" />
+    <Object type="Spreadsheet::Sheet" name="Spreadsheet" id="2954" revision="0" file="Spreadsheet.xml" />
+    <Object type="Sketcher::SketchObject" name="Sketch" id="2955" revision="244" file="Sketch.xml" />
+    <Object type="PartDesign::Pad" name="Pad" id="2956" revision="84" file="Pad.xml" />
+    <Object type="PartDesign::Plane" name="DatumPlane" id="2958" revision="7" file="DatumPlane.xml" />
+    <Object type="Sketcher::SketchObject" name="Sketch001" id="2959" revision="110" file="Sketch001.xml" />
+    <Object type="PartDesign::Groove" name="Groove" id="2960" revision="52" file="Groove.xml" />
+    <Object type="PartDesign::Mirrored" name="Mirrored" id="2961" revision="54" file="Mirrored.xml" />
+  </Objects>
+  <ObjectData Count="0">
+  </ObjectData>
+</Document>

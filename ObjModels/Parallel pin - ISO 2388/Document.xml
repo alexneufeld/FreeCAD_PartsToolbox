@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--
+ FreeCAD Document, see http://www.freecadweb.org for more information...
+-->
+<Document SchemaVersion="4" ProgramVersion="2021.717R24301 +3627 (Git)" FileVersion="2" Uid="78e6d6af-ce61-4aa9-935c-4f2ab240f256" StringHasher="1">
+  <StringHasher saveall="0" threshold="0" count="22">
+<![CDATA[
+1 0 0:Edge2;:T-2036:5:E
+2 0 0:Face1;:T-2036:5:F
+3 0 0:Edge3;:T-2036:5:E
+4 0 0:Edge1;:T-2036:5:E
+5 0 0:Face3;:T-2036:5:F
+6 0 0:Face2;:T-2036:5:F
+7 0 0:#2;:M;CHF;:T2036:2:F
+8 0 0:#3;:G;CHF;:T2036:2:F
+9 0 0:#4;:G;CHF;:T2036:2:F
+10 0 0:#1;:M;CHF;:T2036:2:E
+11 0 0:#8;:U3;CHF;:T2036:2:E
+12 0 0:#9;:U3;CHF;:T2036:2:E
+13 0 0:#a;:U;CHF;:T2036:2:V
+14 0 0:#b;:U;CHF;:T2036:2:V
+15 0 0:#a;:U2;CHF;:T2036:2:V
+16 0 0:#c;:U;CHF;:T2036:2:V
+17 0 0:#8;:U;CHF;:T2036:2:E
+18 0 0:#7;:U;CHF;:T2036:2:E
+19 0 0:#9;:U;CHF;:T2036:2:E
+20 0 0:#7;:U2;CHF;:T2036:2:E
+21 0 0:#5;:M;CHF;:T2036:2:F
+22 0 0:#6;:M;CHF;:T2036:2:F
+]]>
+  </StringHasher>
+  <Properties Count="19" TransientCount="3">
+    <_Property name="FileName" type="App::PropertyString" status="50331649"/>
+    <_Property name="Tip" type="App::PropertyLink" status="33554433"/>
+    <_Property name="TransientDir" type="App::PropertyString" status="50331649"/>
+    <Property name="Comment" type="App::PropertyString" status="1">
+      <String value=""/>
+    </Property>
+    <Property name="Company" type="App::PropertyString" status="1">
+      <String value=""/>
+    </Property>
+    <Property name="CreatedBy" type="App::PropertyString" status="1">
+      <String value="FreeCAD PartToolBox authors"/>
+    </Property>
+    <Property name="CreationDate" type="App::PropertyString" status="16777217">
+      <String value="2021-07-24T02:36:50Z"/>
+    </Property>
+    <Property name="ForceXML" type="App::PropertyInteger" status="1">
+      <Integer value="3"/>
+    </Property>
+    <Property name="Id" type="App::PropertyString">
+      <String value=""/>
+    </Property>
+    <Property name="Label" type="App::PropertyString" status="1">
+      <String value="Parallel pin - ISO 2388"/>
+    </Property>
+    <Property name="LastModifiedBy" type="App::PropertyString" status="1">
+      <String value="Alex Neufeld"/>
+    </Property>
+    <Property name="LastModifiedDate" type="App::PropertyString" status="16777217">
+      <String value="2021-08-05T16:11:42Z"/>
+    </Property>
+    <Property name="License" type="App::PropertyString" status="1">
+      <String value="LGPL-3.0-or-later"/>
+    </Property>
+    <Property name="LicenseURL" type="App::PropertyString" status="1">
+      <String value="https://www.gnu.org/licenses/lgpl-3.0-standalone.html"/>
+    </Property>
+    <Property name="Material" type="App::PropertyMap" status="1">
+      <Map count="0">
+      </Map>
+    </Property>
+    <Property name="Meta" type="App::PropertyMap" status="1">
+      <Map count="0">
+      </Map>
+    </Property>
+    <Property name="PreferBinary" type="App::PropertyBool" status="1">
+      <Bool value="false"/>
+    </Property>
+    <Property name="ShowHidden" type="App::PropertyBool" status="1">
+      <Bool value="false"/>
+    </Property>
+    <Property name="SplitXML" type="App::PropertyBool" status="1">
+      <Bool value="true"/>
+    </Property>
+    <Property name="TipName" type="App::PropertyString" status="83886080">
+      <String value=""/>
+    </Property>
+    <Property name="Uid" type="App::PropertyUUID" status="16777217">
+      <Uuid value="78e6d6af-ce61-4aa9-935c-4f2ab240f256"/>
+    </Property>
+    <Property name="UseHasher" type="App::PropertyBool" status="1">
+      <Bool value="true"/>
+    </Property>
+  </Properties>
+  <Objects Count="13" Dependencies="1">
+    <ObjectDeps Name="Part" Count="3">
+      <Dep Name="Origin"/>
+      <Dep Name="Body"/>
+      <Dep Name="Spreadsheet001"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Origin" Count="0"/>
+    <ObjectDeps Name="Body" Count="3">
+      <Dep Name="Cylinder"/>
+      <Dep Name="Origin001"/>
+      <Dep Name="Chamfer"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Origin001" Count="6">
+      <Dep Name="YZ_Plane"/>
+      <Dep Name="XY_Plane"/>
+      <Dep Name="X_Axis"/>
+      <Dep Name="XZ_Plane"/>
+      <Dep Name="Z_Axis"/>
+      <Dep Name="Y_Axis"/>
+    </ObjectDeps>
+    <ObjectDeps Name="X_Axis" Count="0"/>
+    <ObjectDeps Name="Y_Axis" Count="0"/>
+    <ObjectDeps Name="Z_Axis" Count="0"/>
+    <ObjectDeps Name="XY_Plane" Count="0"/>
+    <ObjectDeps Name="XZ_Plane" Count="0"/>
+    <ObjectDeps Name="YZ_Plane" Count="0"/>
+    <ObjectDeps Name="Spreadsheet001" Count="1">
+      <Dep Name="Part"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Cylinder" Count="4">
+      <Dep Name="XY_Plane"/>
+      <Dep Name="Body"/>
+      <Dep Name="Spreadsheet001"/>
+      <Dep Name="Part"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Chamfer" Count="3">
+      <Dep Name="Cylinder"/>
+      <Dep Name="Body"/>
+      <Dep Name="Spreadsheet001"/>
+    </ObjectDeps>
+    <Object type="App::Part" name="Part" id="2022" revision="5994" file="Part.xml" />
+    <Object type="App::Origin" name="Origin" id="2023" revision="0" file="Origin.xml" />
+    <Object type="PartDesign::Body" name="Body" id="2024" revision="833" file="Body.xml" />
+    <Object type="App::Origin" name="Origin001" id="2025" revision="0" file="Origin001.xml" />
+    <Object type="App::Line" name="X_Axis" id="2026" revision="1" file="X_Axis.xml" />
+    <Object type="App::Line" name="Y_Axis" id="2027" revision="2" file="Y_Axis.xml" />
+    <Object type="App::Line" name="Z_Axis" id="2028" revision="2" file="Z_Axis.xml" />
+    <Object type="App::Plane" name="XY_Plane" id="2029" revision="1" file="XY_Plane.xml" />
+    <Object type="App::Plane" name="XZ_Plane" id="2030" revision="2" file="XZ_Plane.xml" />
+    <Object type="App::Plane" name="YZ_Plane" id="2031" revision="2" file="YZ_Plane.xml" />
+    <Object type="Spreadsheet::Sheet" name="Spreadsheet001" id="2033" revision="0" file="Spreadsheet001.xml" />
+    <Object type="PartDesign::AdditiveCylinder" name="Cylinder" id="2036" revision="774" file="Cylinder.xml" />
+    <Object type="PartDesign::Chamfer" name="Chamfer" id="2037" revision="926" file="Chamfer.xml" />
+  </Objects>
+  <ObjectData Count="0">
+  </ObjectData>
+</Document>

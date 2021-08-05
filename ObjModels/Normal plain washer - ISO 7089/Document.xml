@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--
+ FreeCAD Document, see http://www.freecadweb.org for more information...
+-->
+<Document SchemaVersion="4" ProgramVersion="2021.717R24301 +3627 (Git)" FileVersion="2" Uid="cde1858a-fcd2-4a38-a510-351e4cc65842" StringHasher="1">
+  <StringHasher saveall="0" threshold="0" count="22">
+<![CDATA[
+1 0 0:Vertex1;:T-1394:7:V
+2 0 0:Vertex2;:T-1394:7:V
+3 0 0:Edge1;:T-1394:5:E
+4 0 0:Edge2;:T-1394:5:E
+5 0 0:Edge3;:T-1394:5:E
+6 0 0:Face1;:T-1394:5:F
+7 0 0:Face2;:T-1394:5:F
+8 0 0:Face3;:T-1394:5:F
+15 0 0:#1;:T1394:2:V
+16 0 0:#2;:T1394:2:V
+21 0 0:#4;:T1394:2:E
+32 0 0:#8;:M;CUT;:T1394:2:F
+34 0 0:#7;:M;CUT;:T1394:2:F
+35 0 0:Vertex1;:T-1396:7:V
+36 0 0:Vertex2;:T-1396:7:V
+37 0 0:#3;:T1394:2:E
+38 0 0:#5;:T1394:2:E
+39 0 0:Edge1;:T-1396:5:E
+40 0 0:Edge3;:T-1396:5:E
+41 0 0:Edge2;:T-1396:5:E
+42 0 0:#6;:T1394:2:F
+43 0 0:Face1;:T-1396:5:F
+]]>
+  </StringHasher>
+  <Properties Count="19" TransientCount="3">
+    <_Property name="FileName" type="App::PropertyString" status="50331649"/>
+    <_Property name="Tip" type="App::PropertyLink" status="33554433"/>
+    <_Property name="TransientDir" type="App::PropertyString" status="50331649"/>
+    <Property name="Comment" type="App::PropertyString">
+      <String value=""/>
+    </Property>
+    <Property name="Company" type="App::PropertyString">
+      <String value=""/>
+    </Property>
+    <Property name="CreatedBy" type="App::PropertyString" status="1">
+      <String value="FreeCAD PartToolBox authors"/>
+    </Property>
+    <Property name="CreationDate" type="App::PropertyString" status="16777217">
+      <String value="2021-07-31T16:12:37Z"/>
+    </Property>
+    <Property name="ForceXML" type="App::PropertyInteger" status="1">
+      <Integer value="3"/>
+    </Property>
+    <Property name="Id" type="App::PropertyString">
+      <String value=""/>
+    </Property>
+    <Property name="Label" type="App::PropertyString" status="1">
+      <String value="Normal plain washer - ISO 7089"/>
+    </Property>
+    <Property name="LastModifiedBy" type="App::PropertyString" status="1">
+      <String value="Alex Neufeld"/>
+    </Property>
+    <Property name="LastModifiedDate" type="App::PropertyString" status="16777217">
+      <String value="2021-08-05T16:11:40Z"/>
+    </Property>
+    <Property name="License" type="App::PropertyString" status="1">
+      <String value="LGPL-3.0-or-later"/>
+    </Property>
+    <Property name="LicenseURL" type="App::PropertyString" status="1">
+      <String value="https://www.gnu.org/licenses/lgpl-3.0-standalone.html"/>
+    </Property>
+    <Property name="Material" type="App::PropertyMap" status="1">
+      <Map count="0">
+      </Map>
+    </Property>
+    <Property name="Meta" type="App::PropertyMap" status="1">
+      <Map count="0">
+      </Map>
+    </Property>
+    <Property name="PreferBinary" type="App::PropertyBool" status="1">
+      <Bool value="false"/>
+    </Property>
+    <Property name="ShowHidden" type="App::PropertyBool" status="1">
+      <Bool value="false"/>
+    </Property>
+    <Property name="SplitXML" type="App::PropertyBool" status="1">
+      <Bool value="true"/>
+    </Property>
+    <Property name="TipName" type="App::PropertyString" status="83886080">
+      <String value=""/>
+    </Property>
+    <Property name="Uid" type="App::PropertyUUID" status="16777217">
+      <Uuid value="cde1858a-fcd2-4a38-a510-351e4cc65842"/>
+    </Property>
+    <Property name="UseHasher" type="App::PropertyBool" status="1">
+      <Bool value="true"/>
+    </Property>
+  </Properties>
+  <Objects Count="13" Dependencies="1">
+    <ObjectDeps Name="Part" Count="3">
+      <Dep Name="Spreadsheet"/>
+      <Dep Name="Body"/>
+      <Dep Name="Origin"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Origin" Count="0"/>
+    <ObjectDeps Name="Body" Count="3">
+      <Dep Name="Cylinder"/>
+      <Dep Name="Cylinder001"/>
+      <Dep Name="Origin001"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Origin001" Count="6">
+      <Dep Name="XZ_Plane"/>
+      <Dep Name="X_Axis"/>
+      <Dep Name="XY_Plane"/>
+      <Dep Name="Z_Axis"/>
+      <Dep Name="Y_Axis"/>
+      <Dep Name="YZ_Plane"/>
+    </ObjectDeps>
+    <ObjectDeps Name="X_Axis" Count="0"/>
+    <ObjectDeps Name="Y_Axis" Count="0"/>
+    <ObjectDeps Name="Z_Axis" Count="0"/>
+    <ObjectDeps Name="XY_Plane" Count="0"/>
+    <ObjectDeps Name="XZ_Plane" Count="0"/>
+    <ObjectDeps Name="YZ_Plane" Count="0"/>
+    <ObjectDeps Name="Spreadsheet" Count="1">
+      <Dep Name="Part"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Cylinder" Count="3">
+      <Dep Name="Spreadsheet"/>
+      <Dep Name="XY_Plane"/>
+      <Dep Name="Body"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Cylinder001" Count="4">
+      <Dep Name="Spreadsheet"/>
+      <Dep Name="Cylinder"/>
+      <Dep Name="XY_Plane"/>
+      <Dep Name="Body"/>
+    </ObjectDeps>
+    <Object type="App::Part" name="Part" id="1383" revision="2444" file="Part.xml" />
+    <Object type="App::Origin" name="Origin" id="1384" revision="0" file="Origin.xml" />
+    <Object type="PartDesign::Body" name="Body" id="1385" revision="1748" file="Body.xml" />
+    <Object type="App::Origin" name="Origin001" id="1386" revision="0" file="Origin001.xml" />
+    <Object type="App::Line" name="X_Axis" id="1387" revision="1" file="X_Axis.xml" />
+    <Object type="App::Line" name="Y_Axis" id="1388" revision="2" file="Y_Axis.xml" />
+    <Object type="App::Line" name="Z_Axis" id="1389" revision="2" file="Z_Axis.xml" />
+    <Object type="App::Plane" name="XY_Plane" id="1390" revision="1" file="XY_Plane.xml" />
+    <Object type="App::Plane" name="XZ_Plane" id="1391" revision="2" file="XZ_Plane.xml" />
+    <Object type="App::Plane" name="YZ_Plane" id="1392" revision="2" file="YZ_Plane.xml" />
+    <Object type="Spreadsheet::Sheet" name="Spreadsheet" id="1393" revision="0" file="Spreadsheet.xml" />
+    <Object type="PartDesign::AdditiveCylinder" name="Cylinder" id="1394" revision="1321" file="Cylinder.xml" />
+    <Object type="PartDesign::SubtractiveCylinder" name="Cylinder001" id="1396" revision="2175" file="Cylinder001.xml" />
+  </Objects>
+  <ObjectData Count="0">
+  </ObjectData>
+</Document>

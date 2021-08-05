@@ -1,0 +1,770 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--
+ FreeCAD Document, see http://www.freecadweb.org for more information...
+-->
+<Document SchemaVersion="4" ProgramVersion="2021.717R24301 +3627 (Git)" FileVersion="2" Uid="509a0889-ad49-4322-a4aa-9058cbeaf127" StringHasher="1">
+  <StringHasher saveall="0" threshold="0" count="583">
+<![CDATA[
+1 0 0:g1v1;SKT
+2 0 0:g1;SKT
+3 0 0:g2v1;SKT
+4 0 0:g2;SKT
+5 0 0:#4;:T4934:2:E
+6 0 0:#3;:T4934:2:V
+7 0 0:#1;:T4934:2:V
+8 0 0:#2;:T4934:2:E
+9 0 0:#5;FAC;:T4934:2:F
+10 0 0:#5;:G;XTR;:T4934:2:F
+11 0 0:#8;:G;XTR;:T4934:2:F
+12 0 0:#6;:G;XTR;:T4934:2:E
+13 0 0:#7;:G;XTR;:T4934:2:E
+14 0 0:#c;:U;XTR;:T4934:2:V
+15 0 0:#d;:U;XTR;:T4934:2:V
+16 0 0:#a;:U;XTR;:T4934:2:E
+17 0 0:#b;:U;XTR;:T4934:2:E
+18 0 0:#9;:G0;XTR;:T4934:2:F
+23 0 0:#c;:T-4935:2:E
+24 0 0:#5;:T-4935:2:E
+25 0 0:#10;:T-4935:3:E
+26 0 0:#d;:T-4935:2:E
+27 0 0:#8;:T-4935:2:E
+28 0 0:#11;:T-4935:3:E
+29 0 0:#a;:T-4935:2:F
+30 0 0:#b;:T-4935:2:F
+31 0 0:#9;:T-4935:2:F
+32 0 0:#12;:T-4935:3:F
+33 0 0:#1b;:G;CHF;:T4935:3:F
+34 0 0:#1c;:G;CHF;:T4935:3:F
+35 0 0:#18;:G;CHF;:T4935:3:F
+36 0 0:#19;:G;CHF;:T4935:3:F
+37 0 0:#17;:M;CHF;:T4935:3:E
+38 0 0:#23;:U3;CHF;:T4935:3:E
+39 0 0:#24;:U3;CHF;:T4935:3:E
+40 0 0:#21;:U3;CHF;:T4935:3:E
+41 0 0:#22;:U3;CHF;:T4935:3:E
+42 0 0:#1a;:M;CHF;:T4935:3:E
+43 0 0:#25;:U;CHF;:T4935:3:V
+44 0 0:#26;:U;CHF;:T4935:3:V
+45 0 0:#25;:U2;CHF;:T4935:3:V
+46 0 0:#27;:U;CHF;:T4935:3:V
+47 0 0:#2a;:U;CHF;:T4935:3:V
+48 0 0:#28;:U;CHF;:T4935:3:V
+49 0 0:#2a;:U2;CHF;:T4935:3:V
+50 0 0:#29;:U;CHF;:T4935:3:V
+51 0 0:#23;:U;CHF;:T4935:3:E
+52 0 0:#23;:U2;CHF;:T4935:3:E
+53 0 0:#24;:U;CHF;:T4935:3:E
+54 0 0:#24;:U2;CHF;:T4935:3:E
+55 0 0:#21;:U;CHF;:T4935:3:E
+56 0 0:#21;:U2;CHF;:T4935:3:E
+57 0 0:#22;:U;CHF;:T4935:3:E
+58 0 0:#22;:U2;CHF;:T4935:3:E
+59 0 0:#1d;:M;CHF;:T4935:3:F
+60 0 0:#1f;:M;CHF;:T4935:3:F
+61 0 0:#20;:M;CHF;:T4935:3:F
+62 0 0:#1e;:M;CHF;:T4935:3:F
+63 0 0:g4v2;SKT
+64 0 0:g1v2;SKT
+65 0 0:g2v2;SKT
+66 0 0:g3v1;SKT
+67 0 0:g3v2;SKT
+68 0 0:g4v1;SKT
+69 0 0:g3;SKT
+70 0 0:g4;SKT
+71 0 0:#2;:T4937:2:E
+72 0 0:#1;:T4937:2:V
+73 0 0:#40;:T4937:3:V
+74 0 0:#41;:T4937:3:V
+75 0 0:#43;:T4937:3:V
+76 0 0:#4;:T4937:2:E
+77 0 0:#45;:T4937:3:E
+78 0 0:#46;:T4937:3:E
+79 0 0:#47;FAC;:T4937:3:F
+80 0 0:#4d;:G;XTR;:T4937:3:F
+81 0 0:#4e;:G;XTR;:T4937:3:F
+82 0 0:#47;:G;XTR;:T4937:3:F
+83 0 0:#4c;:G;XTR;:T4937:3:F
+84 0 0:#48;:G;XTR;:T4937:3:E
+85 0 0:#49;:G;XTR;:T4937:3:E
+86 0 0:#4a;:G;XTR;:T4937:3:E
+87 0 0:#4b;:G;XTR;:T4937:3:E
+90 0 0:(#23;K-2;:T4936:3:F)
+91 0 0:(#3c;K-7;:T4936:3:F)
+92 0 0:(#21;K-4;:T4936:3:F)
+96 0 0:(#21;K-1;:T4936:3:F)
+97 0 0:(#3c;K-3;:T4936:3:F)
+99 0 0:(#23;K-1;:T4936:3:F)
+100 0 0:(#3c;K-4;:T4936:3:F)
+101 0 0:(#3c;K-5;:T4936:3:F)
+102 0 0:(#3c;K-6;:T4936:3:F)
+103 0 0:(#21;K-3;:T4936:3:F)
+109 0 0:(#21;K-2;:T4936:3:F)
+111 0 0:(#51;K-4;:T-4938:3:F)
+112 0 0:(#51;K-6;:T-4938:3:F)
+113 0 0:(#3e;K-1;:T4936:3:F)
+114 0 0:(#53;K-5;:T-4938:3:F)
+115 0 0:(#53;K-3;:T-4938:3:F)
+116 0 0:(#53;K-2;:T-4938:3:F)
+117 0 0:(#53;K-4;:T-4938:3:F)
+118 0 0:(#3c;K-1;:T4936:3:F)
+119 0 0:(#3c;K-2;:T4936:3:F)
+120 0 0:(#51;K-1;:T-4938:3:F)
+121 0 0:(#51;K-3;:T-4938:3:F)
+122 0 0:(#51;K-5;:T-4938:3:F)
+123 0 0:(#3e;K-3;:T4936:3:F)
+125 0 0:(#53;K-6;:T-4938:3:F)
+126 0 0:(#3e;K-2;:T4936:3:F)
+127 0 0:(#3b;K-2;:T4936:3:F)
+128 0 0:(#3b;K-1;:T4936:3:F)
+129 0 0:(#53;K-1;:T-4938:3:F)
+130 0 0:(#51;K-2;:T-4938:3:F)
+131 0 0:(#3e;K-4;:T4936:3:F)
+132 0 0:#2b;:T4936:3:V
+133 0 0:#34;:G2#78;CUT;:T4936:3:V
+136 0 0:#34;:G#81;CUT;:T4936:3:V
+137 0 0:#2d;:T4936:3:V
+138 0 0:#2c;:T4936:3:V
+147 0 0:#2e;:T4936:3:V
+149 0 0:#56;:G#76;CUT;:T-4938:3:V
+150 0 0:#57;:G#77;CUT;:T-4938:3:V
+163 0 0:#34;:M;CUT;:T4936:3:E
+167 0 0:#34;:M2;CUT;:T4936:3:E
+168 0 0:#25;:T4936:3:E
+170 0 0:#33;:T4936:3:E
+171 0 0:#26;:M;CUT;:T4936:3:E
+183 0 0:#26;:M2;CUT;:T4936:3:E
+184 0 0:#35;:T4936:3:E
+186 0 0:#28;:M2;CUT;:T4936:3:E
+188 0 0:#50;:G#65;CUT;:T-4938:3:E
+190 0 0:#28;:M;CUT;:T4936:3:E
+192 0 0:#38;:M;CUT;:T4936:3:E
+195 0 0:#38;:M2;CUT;:T4936:3:E
+203 0 0:#56;:M;CUT;:T-4938:3:E
+205 0 0:#57;:M;CUT;:T-4938:3:E
+208 0 0:#3b;:M;CUT;:T4936:3:F
+209 0 0:#23;:M2;CUT;:T4936:3:F
+210 0 0:#51;:M2;CUT;:T-4938:3:F
+212 0 0:#53;:M;CUT;:T-4938:3:F
+213 0 0:#23;:M;CUT;:T4936:3:F
+215 0 0:#3c;:M;CUT;:T4936:3:F
+216 0 0:#21;:M;CUT;:T4936:3:F
+217 0 0:#3e;:M;CUT;:T4936:3:F
+218 0 0:#21;:M2;CUT;:T4936:3:F
+220 0 0:#53;:M2;CUT;:T-4938:3:F
+221 0 0:#50;:M;CUT;:T-4938:3:F
+222 0 0:#51;:M;CUT;:T-4938:3:F
+225 0 0:(#22;K-3;:T4936:3:F)
+226 0 0:(#3d;K-7;:T4936:3:F)
+227 0 0:(#24;K-2;:T4936:3:F)
+228 0 0:(#22;K-4;:T4936:3:F)
+229 0 0:(#3d;K-3;:T4936:3:F)
+230 0 0:(#3d;K-4;:T4936:3:F)
+231 0 0:(#3d;K-5;:T4936:3:F)
+232 0 0:(#3d;K-6;:T4936:3:F)
+233 0 0:(#24;K-1;:T4936:3:F)
+234 0 0:(#22;K-2;:T4936:3:F)
+235 0 0:(#22;K-1;:T4936:3:F)
+236 0 0:(#51;K-8;:T-4938:3:F)
+237 0 0:(#51;K-9;:T-4938:3:F)
+238 0 0:(#51;K-11;:T-4938:3:F)
+239 0 0:(#51;K-7;:T-4938:3:F)
+240 0 0:(#53;K-7;:T-4938:3:F)
+241 0 0:(#53;K-8;:T-4938:3:F)
+242 0 0:(#3d;K-1;:T4936:3:F)
+243 0 0:(#3d;K-2;:T4936:3:F)
+244 0 0:(#53;K-11;:T-4938:3:F)
+245 0 0:(#53;K-9;:T-4938:3:F)
+246 0 0:(#53;K-10;:T-4938:3:F)
+247 0 0:(#53;K-12;:T-4938:3:F)
+248 0 0:(#51;K-10;:T-4938:3:F)
+249 0 0:(#51;K-12;:T-4938:3:F)
+250 0 0:#36;:G2#82;CUT;:T4936:3:V
+251 0 0:#26;:G2#79;CUT;:T4936:3:V
+252 0 0:#28;:G4#70;CUT;:T4936:3:V
+253 0 0:#38;:G4#f8;CUT;:T4936:3:V
+254 0 0:#3a;:G4#f9;CUT;:T4936:3:V
+255 0 0:#29;:G4#ec;CUT;:T4936:3:V
+256 0 0:#27;:G2#6f;CUT;:T4936:3:V
+257 0 0:#36;:G#74;CUT;:T4936:3:V
+258 0 0:#26;:G#73;CUT;:T4936:3:V
+259 0 0:#28;:G#72;CUT;:T4936:3:V
+260 0 0:#28;:G2#7d;CUT;:T4936:3:V
+261 0 0:#28;:G3#7a;CUT;:T4936:3:V
+262 0 0:#38;:G3#ed;CUT;:T4936:3:V
+263 0 0:#3a;:G3#ee;CUT;:T4936:3:V
+264 0 0:#29;:G3#ef;CUT;:T4936:3:V
+265 0 0:#27;:G#75;CUT;:T4936:3:V
+266 0 0:#29;:G#f0;CUT;:T4936:3:V
+267 0 0:#29;:G2#f1;CUT;:T4936:3:V
+268 0 0:#56;:G2#f2;CUT;:T-4938:3:V
+269 0 0:#57;:G2#f3;CUT;:T-4938:3:V
+270 0 0:#3a;:G#f4;CUT;:T4936:3:V
+271 0 0:#38;:G#f5;CUT;:T4936:3:V
+272 0 0:#38;:G2#f6;CUT;:T4936:3:V
+273 0 0:#3a;:G2#f7;CUT;:T4936:3:V
+274 0 0:#51;:G13#7f;CUT;:T-4938:3:E
+275 0 0:#36;:M;CUT;:T4936:3:E
+276 0 0:#51;:G14#5a;CUT;:T-4938:3:E
+277 0 0:#51;:G17#5b;CUT;:T-4938:3:E
+278 0 0:#51;:G21#5c;CUT;:T-4938:3:E
+279 0 0:#51;:G24#7b;CUT;:T-4938:3:E
+280 0 0:#51;:G22#e1;CUT;:T-4938:3:E
+281 0 0:#51;:G19#e2;CUT;:T-4938:3:E
+282 0 0:#51;:G15#e3;CUT;:T-4938:3:E
+283 0 0:#27;:M;CUT;:T4936:3:E
+284 0 0:#36;:M2;CUT;:T4936:3:E
+285 0 0:#53;:G13#80;CUT;:T-4938:3:E
+286 0 0:#53;:G14#63;CUT;:T-4938:3:E
+287 0 0:#53;:G16#61;CUT;:T-4938:3:E
+288 0 0:#53;:G17#64;CUT;:T-4938:3:E
+289 0 0:#51;:G16#66;CUT;:T-4938:3:E
+290 0 0:#51;:G20#67;CUT;:T-4938:3:E
+291 0 0:#3a;:M;CUT;:T4936:3:E
+292 0 0:#51;:G25#83;CUT;:T-4938:3:E
+293 0 0:#51;:G23#e4;CUT;:T-4938:3:E
+294 0 0:#29;:M;CUT;:T4936:3:E
+295 0 0:#27;:M2;CUT;:T4936:3:E
+296 0 0:#53;:G18#e5;CUT;:T-4938:3:E
+297 0 0:#29;:M2;CUT;:T4936:3:E
+298 0 0:#53;:G19#e6;CUT;:T-4938:3:E
+299 0 0:#50;:G2#e7;CUT;:T-4938:3:E
+300 0 0:#51;:G18#e8;CUT;:T-4938:3:E
+301 0 0:#53;:G15#e9;CUT;:T-4938:3:E
+302 0 0:#53;:G23#ea;CUT;:T-4938:3:E
+303 0 0:#53;:G25#7e;CUT;:T-4938:3:E
+304 0 0:#53;:G20#60;CUT;:T-4938:3:E
+305 0 0:#53;:G21#6d;CUT;:T-4938:3:E
+306 0 0:#53;:G24#71;CUT;:T-4938:3:E
+307 0 0:#53;:G22#eb;CUT;:T-4938:3:E
+308 0 0:#3a;:M2;CUT;:T4936:3:E
+309 0 0:#24;:M2;CUT;:T4936:3:F
+310 0 0:#3b;:M2;CUT;:T4936:3:F
+311 0 0:#22;:M;CUT;:T4936:3:F
+312 0 0:#3d;:M;CUT;:T4936:3:F
+313 0 0:#24;:M;CUT;:T4936:3:F
+314 0 0:#22;:M2;CUT;:T4936:3:F
+315 0 0:#3e;:M2;CUT;:T4936:3:F
+316 0 0:g6v2;SKT
+317 0 0:g5v1;SKT
+322 0 0:#2;:T4939:2:E
+323 0 0:#1;:T4939:2:V
+324 0 0:#40;:T4939:3:V
+325 0 0:#41;:T4939:3:V
+326 0 0:#43;:T4939:3:V
+327 0 0:#3f;:T4939:3:V
+329 0 0:#45;:T4939:3:E
+330 0 0:#46;:T4939:3:E
+332 0 0:#144;:G;RVL;:T4939:4:E
+333 0 0:#143;:G;RVL;:T4939:4:E
+334 0 0:#3;:T4939:2:V
+335 0 0:#42;:T4939:3:V
+336 0 0:#44;:T4939:3:V
+337 0 0:#13d;:T4939:4:V
+339 0 0:#142;:G;RVL;:T4939:4:F
+345 0 0:#149;:G;RVL;:T4939:4:F
+351 0 0:#14c;Edge2;:L;RVL;:T4939:4:F
+353 0 0:#145;:G;RVL;:T4939:4:E
+359 0 0:#14a;:G;RVL;:T4939:4:F
+377 0 0:#146;:G;RVL;:T4939:4:E
+378 0 0:#147;:G;RVL;:T4939:4:E
+426 0 0:(#dc;K-1;:T4938:3:F)
+427 0 0:(#dc;K-2;:T4938:3:F)
+431 0 0:(#d0;K-2;:T4938:3:F)
+436 0 0:(#d2;K-2;:T4938:3:F)
+448 0 0:(#d0;K-1;:T4938:3:F)
+452 0 0:(#d2;K-1;:T4938:3:F)
+462 0 0:#84;:T4938:3:V
+465 0 0:#89;:T4938:3:V
+466 0 0:#8a;:T4938:3:V
+471 0 0:#93;:T4938:3:V
+472 0 0:#101;:T4938:4:V
+473 0 0:#88;:T4938:3:V
+474 0 0:#102;:T4938:4:V
+479 0 0:#103;:T4938:4:V
+480 0 0:#104;:T4938:4:V
+489 0 0:#109;:T4938:4:V
+494 0 0:#10a;:T4938:4:V
+495 0 0:#10b;:T4938:4:V
+506 0 0:#10e;:T4938:4:V
+507 0 0:#10f;:T4938:4:V
+508 0 0:#110;:T4938:4:V
+510 0 0:#111;:T4938:4:V
+528 0 0:#105;:T4938:4:V
+529 0 0:#fc;:T4938:3:V
+530 0 0:#fd;:T4938:3:V
+531 0 0:#fe;:T4938:3:V
+532 0 0:#ff;:T4938:3:V
+533 0 0:#108;:T4938:4:V
+534 0 0:#107;:T4938:4:V
+535 0 0:#106;:T4938:4:V
+537 0 0:#85;:T4938:3:V
+538 0 0:#fa;:T4938:3:V
+542 0 0:#fb;:T4938:3:V
+546 0 0:#100;:T4938:4:V
+559 0 0:#a8;:T4938:3:E
+560 0 0:#aa;:T4938:3:E
+567 0 0:#b8;:T4938:3:E
+569 0 0:#11c;:T4938:4:E
+570 0 0:#11d;:T4938:4:E
+571 0 0:#a7;:T4938:3:E
+572 0 0:#11e;:T4938:4:E
+573 0 0:#b7;:T4938:3:E
+579 0 0:#ba;:T4938:3:E
+590 0 0:#127;:T4938:4:E
+596 0 0:#129;:T4938:4:E
+602 0 0:#12d;:T4938:4:E
+611 0 0:#12e;:T4938:4:E
+612 0 0:#12f;:T4938:4:E
+613 0 0:#130;:T4938:4:E
+615 0 0:#c3;:T4938:3:E
+616 0 0:#131;:T4938:4:E
+618 0 0:#132;:T4938:4:E
+619 0 0:#133;:T4938:4:E
+627 0 0:#134;:T4938:4:E
+649 0 0:#be;:T4938:3:E
+651 0 0:#116;:T4938:4:E
+652 0 0:#117;:T4938:4:E
+653 0 0:#118;:T4938:4:E
+655 0 0:#126;:T4938:4:E
+657 0 0:#125;:T4938:4:E
+658 0 0:#124;:T4938:4:E
+659 0 0:#122;:T4938:4:E
+660 0 0:#c0;:T4938:3:E
+661 0 0:#123;:T4938:4:E
+663 0 0:#112;:T4938:4:E
+669 0 0:#114;:T4938:4:E
+674 0 0:#11a;:T4938:4:E
+689 0 0:#d0;:M;CUT;:T4938:3:F
+693 0 0:#136;:T4938:4:F
+694 0 0:#d5;:T4938:3:F
+698 0 0:#139;:T4938:4:F
+699 0 0:#dc;:M;CUT;:T4938:3:F
+704 0 0:#da;:T4938:3:F
+713 0 0:#13a;:T4938:4:F
+715 0 0:#13b;:T4938:4:F
+726 0 0:#d8;:T4938:3:F
+727 0 0:#d9;:T4938:3:F
+728 0 0:#137;:T4938:4:F
+731 0 0:#d2;:M;CUT;:T4938:3:F
+997 0 0:#149;:G2#1aa;CUT;:T-4942:4:V
+998 0 0:#146;:T-4942:4:V
+999 0 0:#150;:T-4942:4:V
+1000 0 0:#147;:T-4942:4:V
+1001 0 0:#151;:T-4942:4:V
+1023 0 0:#142;:G#1c0;CUT;:T-4942:4:V
+1026 0 0:#149;:G#1c4;CUT;:T-4942:4:V
+1030 0 0:#144;:T-4942:4:V
+1031 0 0:#14e;:T-4942:4:V
+1034 0 0:#145;:T-4942:4:V
+1035 0 0:#14f;:T-4942:4:V
+1062 0 0:#149;:M2;CUT;:T-4942:4:E
+1064 0 0:#14a;:T-4942:4:E
+1101 0 0:#142;:M;CUT;:T-4942:4:E
+1106 0 0:#149;:M;CUT;:T-4942:4:E
+1125 0 0:#153;:M;CUT;:T-4942:4:F
+1127 0 0:#159;:M;CUT;:T-4942:4:F
+1128 0 0:#159;:M2;CUT;:T-4942:4:F
+1130 0 0:#95;:T4938:3:V
+1131 0 0:#96;:T4938:3:V
+1132 0 0:#10c;:T4938:4:V
+1133 0 0:#10d;:T4938:4:V
+1134 0 0:#a3;:T4938:3:E
+1135 0 0:#113;:T4938:4:E
+1136 0 0:#153;:G#1af;CUT;:T-4942:4:E
+1137 0 0:#ab;:T4938:3:E
+1138 0 0:#119;:T4938:4:E
+1139 0 0:#115;:T4938:4:E
+1140 0 0:#159;:G#1b4;CUT;:T-4942:4:E
+1141 0 0:#11b;:T4938:4:E
+1142 0 0:#14c;:T-4942:4:E
+1143 0 0:#11f;:T4938:4:E
+1144 0 0:#120;:T4938:4:E
+1145 0 0:#bc;:T4938:3:E
+1146 0 0:#121;:T4938:4:E
+1147 0 0:#128;:T4938:4:E
+1148 0 0:#159;:G2#1ab;CUT;:T-4942:4:E
+1149 0 0:#12a;:T4938:4:E
+1150 0 0:#12b;:T4938:4:E
+1151 0 0:#12c;:T4938:4:E
+1152 0 0:#161;:T-4942:4:E
+1153 0 0:#cb;:T4938:3:E
+1154 0 0:#cd;:T4938:3:E
+1155 0 0:#179;:T-4942:4:E
+1156 0 0:#17a;:T-4942:4:E
+1157 0 0:#d1;:T4938:3:F
+1158 0 0:#135;:T4938:4:F
+1159 0 0:#d7;:T4938:3:F
+1160 0 0:#138;:T4938:4:F
+1161 0 0:#15f;:T-4942:4:F
+1162 0 0:#d4;:T4938:3:F
+1163 0 0:#dd;:T4938:3:F
+1164 0 0:#de;:T4938:3:F
+1165 0 0:#167;:T-4942:4:F
+1640 0 0:#18b;:T3794:4:V
+1641 0 0:#18c;:T3794:4:V
+1642 0 0:#18d;:T3794:4:V
+1643 0 0:#18e;:T3794:4:V
+1644 0 0:#18f;:T3794:4:V
+1645 0 0:#190;:T3794:4:V
+1646 0 0:#191;:T3794:4:V
+1647 0 0:#192;:T3794:4:V
+1648 0 0:#193;:T3794:4:V
+1649 0 0:#194;:T3794:4:V
+1650 0 0:#195;:T3794:4:V
+1651 0 0:#196;:T3794:4:V
+1652 0 0:#197;:T3794:4:V
+1653 0 0:#198;:T3794:4:V
+1654 0 0:#199;:T3794:4:V
+1655 0 0:#19a;:T3794:4:V
+1656 0 0:#19b;:T3794:4:V
+1657 0 0:#19c;:T3794:4:V
+1658 0 0:#19d;:T3794:4:V
+1659 0 0:#19e;:T3794:4:V
+1660 0 0:#19f;:T3794:4:V
+1661 0 0:#1a0;:T3794:4:V
+1662 0 0:#1a1;:T3794:4:V
+1663 0 0:#1a2;:T3794:4:V
+1664 0 0:#1a3;:T3794:4:V
+1665 0 0:#1a4;:T3794:4:V
+1666 0 0:#1a5;:T3794:4:V
+1667 0 0:#1a6;:T3794:4:V
+1668 0 0:#1a7;:T3794:4:V
+1669 0 0:#1a8;:T3794:4:V
+1670 0 0:#1a9;:T3794:4:V
+1671 0 0:#1aa;:T3794:4:E
+1672 0 0:#1ab;:T3794:4:E
+1673 0 0:#1ac;:T3794:4:E
+1674 0 0:#1ad;:T3794:4:E
+1675 0 0:#1ae;:T3794:4:E
+1676 0 0:#1af;:T3794:4:E
+1677 0 0:#1b0;:T3794:4:E
+1678 0 0:#1b1;:T3794:4:E
+1679 0 0:#1b2;:T3794:4:E
+1680 0 0:#1b3;:T3794:4:E
+1681 0 0:#1b4;:T3794:4:E
+1682 0 0:#1b5;:T3794:4:E
+1683 0 0:#1b6;:T3794:4:E
+1684 0 0:#1b7;:T3794:4:E
+1685 0 0:#1b8;:T3794:4:E
+1686 0 0:#1b9;:T3794:4:E
+1687 0 0:#1ba;:T3794:4:E
+1688 0 0:#1bb;:T3794:4:E
+1689 0 0:#1bc;:T3794:4:E
+1690 0 0:#1bd;:T3794:4:E
+1691 0 0:#1be;:T3794:4:E
+1692 0 0:#1bf;:T3794:4:E
+1693 0 0:#1c0;:T3794:4:E
+1694 0 0:#1c1;:T3794:4:E
+1695 0 0:#1c2;:T3794:4:E
+1696 0 0:#1c3;:T3794:4:E
+1697 0 0:#1c4;:T3794:4:E
+1698 0 0:#1c5;:T3794:4:E
+1699 0 0:#1c6;:T3794:4:E
+1700 0 0:#1c7;:T3794:4:E
+1701 0 0:#1c8;:T3794:4:E
+1702 0 0:#1c9;:T3794:4:E
+1703 0 0:#1ca;:T3794:4:E
+1704 0 0:#1cb;:T3794:4:E
+1705 0 0:#1cc;:T3794:4:E
+1706 0 0:#1cd;:T3794:4:E
+1707 0 0:#1ce;:T3794:4:E
+1708 0 0:#1cf;:T3794:4:E
+1709 0 0:#1d0;:T3794:4:E
+1710 0 0:#1d1;:T3794:4:E
+1711 0 0:#1d2;:T3794:4:F
+1712 0 0:#1d3;:T3794:4:F
+1713 0 0:#1d4;:T3794:4:F
+1714 0 0:#1d5;:T3794:4:F
+1715 0 0:#1d6;:T3794:4:F
+1716 0 0:#1d7;:T3794:4:F
+1717 0 0:#1d8;:T3794:4:F
+1718 0 0:#1d9;:T3794:4:F
+1719 0 0:#1da;:T3794:4:F
+1720 0 0:#1db;:T3794:4:F
+1721 0 0:#1dc;:T3794:4:F
+1722 0 0:#1dd;:T3794:4:F
+1723 0 0:#1de;:T3794:4:F
+1724 0 0:#1df;:T3794:4:F
+1725 0 0:#1e0;:T3794:4:F
+1726 0 0:#1e1;:T3794:4:F
+1727 0 0:#1e2;:T3794:4:F
+1728 0 0:#1e3;:T3794:4:F
+1729 0 0:#1e4;:T3794:4:F
+1730 0 0:#1e5;:T3794:4:F
+1731 0 0:#1e6;:T3794:4:F
+1732 0 0:#1e7;:T3794:4:F
+1733 0 0:#1e8;:T3794:4:F
+1734 0 0:#bfc;:T3816:4:V
+1735 0 0:#bfd;:T3816:4:V
+1736 0 0:#bfe;:T3816:4:V
+1737 0 0:#bff;:T3816:4:V
+1738 0 0:#c00;:T3816:4:V
+1739 0 0:#c01;:T3816:4:V
+1740 0 0:#c02;:T3816:4:V
+1741 0 0:#c03;:T3816:4:V
+1742 0 0:#c04;:T3816:4:V
+1743 0 0:#c05;:T3816:4:V
+1744 0 0:#c06;:T3816:4:V
+1745 0 0:#c07;:T3816:4:V
+1746 0 0:#c08;:T3816:4:V
+1747 0 0:#c09;:T3816:4:V
+1748 0 0:#c0a;:T3816:4:V
+1749 0 0:#c0b;:T3816:4:V
+1750 0 0:#c0c;:T3816:4:V
+1751 0 0:#c0d;:T3816:4:V
+1752 0 0:#c0e;:T3816:4:V
+1753 0 0:#c0f;:T3816:4:V
+1754 0 0:#c10;:T3816:4:V
+1755 0 0:#c11;:T3816:4:V
+1756 0 0:#c12;:T3816:4:V
+1757 0 0:#c13;:T3816:4:V
+1758 0 0:#c14;:T3816:4:V
+1759 0 0:#c15;:T3816:4:V
+1760 0 0:#c16;:T3816:4:V
+1761 0 0:#c17;:T3816:4:V
+1762 0 0:#c18;:T3816:4:V
+1763 0 0:#c19;:T3816:4:V
+1764 0 0:#c1a;:T3816:4:V
+1765 0 0:#c1b;:T3816:4:E
+1766 0 0:#c1c;:T3816:4:E
+1767 0 0:#c1d;:T3816:4:E
+1768 0 0:#c1e;:T3816:4:E
+1769 0 0:#c1f;:T3816:4:E
+1770 0 0:#c20;:T3816:4:E
+1771 0 0:#c21;:T3816:4:E
+1772 0 0:#c22;:T3816:4:E
+1773 0 0:#c23;:T3816:4:E
+1774 0 0:#c24;:T3816:4:E
+1775 0 0:#c25;:T3816:4:E
+1776 0 0:#c26;:T3816:4:E
+1777 0 0:#c27;:T3816:4:E
+1778 0 0:#c28;:T3816:4:E
+1779 0 0:#c29;:T3816:4:E
+1780 0 0:#c2a;:T3816:4:E
+1781 0 0:#c2b;:T3816:4:E
+1782 0 0:#c2c;:T3816:4:E
+1783 0 0:#c2d;:T3816:4:E
+1784 0 0:#c2e;:T3816:4:E
+1785 0 0:#c2f;:T3816:4:E
+1786 0 0:#c30;:T3816:4:E
+1787 0 0:#c31;:T3816:4:E
+1788 0 0:#c32;:T3816:4:E
+1789 0 0:#c33;:T3816:4:E
+1790 0 0:#c34;:T3816:4:E
+1791 0 0:#c35;:T3816:4:E
+1792 0 0:#c36;:T3816:4:E
+1793 0 0:#c37;:T3816:4:E
+1794 0 0:#c38;:T3816:4:E
+1795 0 0:#c39;:T3816:4:E
+1796 0 0:#c3a;:T3816:4:E
+1797 0 0:#c3b;:T3816:4:E
+1798 0 0:#c3c;:T3816:4:E
+1799 0 0:#c3d;:T3816:4:E
+1800 0 0:#c3e;:T3816:4:E
+1801 0 0:#c3f;:T3816:4:E
+1802 0 0:#c40;:T3816:4:E
+1803 0 0:#c41;:T3816:4:E
+1804 0 0:#c42;:T3816:4:E
+1805 0 0:#c43;:T3816:4:F
+1806 0 0:#c44;:T3816:4:F
+1807 0 0:#c45;:T3816:4:F
+1808 0 0:#c46;:T3816:4:F
+1809 0 0:#c47;:T3816:4:F
+1810 0 0:#c48;:T3816:4:F
+1811 0 0:#c49;:T3816:4:F
+1812 0 0:#c4a;:T3816:4:F
+1813 0 0:#c4b;:T3816:4:F
+1814 0 0:#c4c;:T3816:4:F
+1815 0 0:#c4d;:T3816:4:F
+1816 0 0:#c4e;:T3816:4:F
+1817 0 0:#c4f;:T3816:4:F
+1818 0 0:#c50;:T3816:4:F
+1819 0 0:#c51;:T3816:4:F
+1820 0 0:#c52;:T3816:4:F
+1821 0 0:#c53;:T3816:4:F
+1822 0 0:#c54;:T3816:4:F
+1823 0 0:#c55;:T3816:4:F
+1824 0 0:#c56;:T3816:4:F
+1825 0 0:#c57;:T3816:4:F
+1826 0 0:#c58;:T3816:4:F
+1827 0 0:#c59;:T3816:4:F
+]]>
+  </StringHasher>
+  <Properties Count="19" TransientCount="3">
+    <_Property name="FileName" type="App::PropertyString" status="50331649"/>
+    <_Property name="Tip" type="App::PropertyLink" status="33554433"/>
+    <_Property name="TransientDir" type="App::PropertyString" status="50331649"/>
+    <Property name="Comment" type="App::PropertyString" status="1">
+      <String value=""/>
+    </Property>
+    <Property name="Company" type="App::PropertyString">
+      <String value=""/>
+    </Property>
+    <Property name="CreatedBy" type="App::PropertyString" status="1">
+      <String value="FreeCAD PartToolBox authors"/>
+    </Property>
+    <Property name="CreationDate" type="App::PropertyString" status="16777217">
+      <String value="2021-08-01T03:55:30Z"/>
+    </Property>
+    <Property name="ForceXML" type="App::PropertyInteger" status="1">
+      <Integer value="3"/>
+    </Property>
+    <Property name="Id" type="App::PropertyString">
+      <String value=""/>
+    </Property>
+    <Property name="Label" type="App::PropertyString" status="1">
+      <String value="shaft_collar_test"/>
+    </Property>
+    <Property name="LastModifiedBy" type="App::PropertyString" status="1">
+      <String value="Alex Neufeld"/>
+    </Property>
+    <Property name="LastModifiedDate" type="App::PropertyString" status="16777217">
+      <String value="2021-08-05T16:34:11Z"/>
+    </Property>
+    <Property name="License" type="App::PropertyString" status="1">
+      <String value="LGPL-3.0-or-later"/>
+    </Property>
+    <Property name="LicenseURL" type="App::PropertyString" status="1">
+      <String value="https://www.gnu.org/licenses/lgpl-3.0-standalone.html"/>
+    </Property>
+    <Property name="Material" type="App::PropertyMap" status="1">
+      <Map count="0">
+      </Map>
+    </Property>
+    <Property name="Meta" type="App::PropertyMap" status="1">
+      <Map count="0">
+      </Map>
+    </Property>
+    <Property name="PreferBinary" type="App::PropertyBool" status="1">
+      <Bool value="false"/>
+    </Property>
+    <Property name="ShowHidden" type="App::PropertyBool" status="1">
+      <Bool value="false"/>
+    </Property>
+    <Property name="SplitXML" type="App::PropertyBool" status="1">
+      <Bool value="true"/>
+    </Property>
+    <Property name="TipName" type="App::PropertyString" status="83886080">
+      <String value=""/>
+    </Property>
+    <Property name="Uid" type="App::PropertyUUID" status="16777217">
+      <Uuid value="509a0889-ad49-4322-a4aa-9058cbeaf127"/>
+    </Property>
+    <Property name="UseHasher" type="App::PropertyBool" status="1">
+      <Bool value="true"/>
+    </Property>
+  </Properties>
+  <Objects Count="25" Dependencies="1">
+    <ObjectDeps Name="Part" Count="4">
+      <Dep Name="Origin"/>
+      <Dep Name="Spreadsheet"/>
+      <Dep Name="Binder"/>
+      <Dep Name="Body"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Origin" Count="6">
+      <Dep Name="YZ_Plane001"/>
+      <Dep Name="Z_Axis001"/>
+      <Dep Name="XZ_Plane001"/>
+      <Dep Name="X_Axis001"/>
+      <Dep Name="Y_Axis001"/>
+      <Dep Name="XY_Plane001"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Body" Count="8">
+      <Dep Name="Sketch001"/>
+      <Dep Name="Pocket"/>
+      <Dep Name="Pad"/>
+      <Dep Name="Groove"/>
+      <Dep Name="Chamfer"/>
+      <Dep Name="Sketch002"/>
+      <Dep Name="Origin001"/>
+      <Dep Name="Sketch"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Origin001" Count="6">
+      <Dep Name="XZ_Plane"/>
+      <Dep Name="Z_Axis"/>
+      <Dep Name="Y_Axis"/>
+      <Dep Name="XY_Plane"/>
+      <Dep Name="YZ_Plane"/>
+      <Dep Name="X_Axis"/>
+    </ObjectDeps>
+    <ObjectDeps Name="X_Axis" Count="0"/>
+    <ObjectDeps Name="Y_Axis" Count="0"/>
+    <ObjectDeps Name="Z_Axis" Count="0"/>
+    <ObjectDeps Name="XY_Plane" Count="0"/>
+    <ObjectDeps Name="XZ_Plane" Count="0"/>
+    <ObjectDeps Name="YZ_Plane" Count="0"/>
+    <ObjectDeps Name="Spreadsheet" Count="1">
+      <Dep Name="Part"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Sketch" Count="2">
+      <Dep Name="Spreadsheet"/>
+      <Dep Name="XY_Plane"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Pad" Count="3">
+      <Dep Name="Spreadsheet"/>
+      <Dep Name="Sketch"/>
+      <Dep Name="Body"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Chamfer" Count="3">
+      <Dep Name="Spreadsheet"/>
+      <Dep Name="Pad"/>
+      <Dep Name="Body"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Sketch001" Count="2">
+      <Dep Name="Spreadsheet"/>
+      <Dep Name="XY_Plane"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Pocket" Count="3">
+      <Dep Name="Sketch001"/>
+      <Dep Name="Chamfer"/>
+      <Dep Name="Body"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Sketch002" Count="2">
+      <Dep Name="Spreadsheet"/>
+      <Dep Name="XY_Plane"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Groove" Count="3">
+      <Dep Name="Pocket"/>
+      <Dep Name="Sketch002"/>
+      <Dep Name="Body"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Binder" Count="3">
+      <Dep Name="Spreadsheet"/>
+      <Dep Name="Sketch002"/>
+      <Dep Name="Part"/>
+    </ObjectDeps>
+    <ObjectDeps Name="X_Axis001" Count="0"/>
+    <ObjectDeps Name="Y_Axis001" Count="0"/>
+    <ObjectDeps Name="Z_Axis001" Count="0"/>
+    <ObjectDeps Name="XY_Plane001" Count="0"/>
+    <ObjectDeps Name="XZ_Plane001" Count="0"/>
+    <ObjectDeps Name="YZ_Plane001" Count="0"/>
+    <Object type="App::Part" name="Part" id="4923" revision="849" file="Part.xml" />
+    <Object type="App::Origin" name="Origin" id="4924" revision="0" file="Origin.xml" />
+    <Object type="PartDesign::Body" name="Body" id="4925" revision="434" file="Body.xml" />
+    <Object type="App::Origin" name="Origin001" id="4926" revision="0" file="Origin001.xml" />
+    <Object type="App::Line" name="X_Axis" id="4927" revision="1" file="X_Axis.xml" />
+    <Object type="App::Line" name="Y_Axis" id="4928" revision="2" file="Y_Axis.xml" />
+    <Object type="App::Line" name="Z_Axis" id="4929" revision="2" file="Z_Axis.xml" />
+    <Object type="App::Plane" name="XY_Plane" id="4930" revision="1" file="XY_Plane.xml" />
+    <Object type="App::Plane" name="XZ_Plane" id="4931" revision="2" file="XZ_Plane.xml" />
+    <Object type="App::Plane" name="YZ_Plane" id="4932" revision="2" file="YZ_Plane.xml" />
+    <Object type="Spreadsheet::Sheet" name="Spreadsheet" id="4933" revision="0" file="Spreadsheet.xml" />
+    <Object type="Sketcher::SketchObject" name="Sketch" id="4934" revision="134" file="Sketch.xml" />
+    <Object type="PartDesign::Pad" name="Pad" id="4935" revision="134" file="Pad.xml" />
+    <Object type="PartDesign::Chamfer" name="Chamfer" id="4936" revision="122" file="Chamfer.xml" />
+    <Object type="Sketcher::SketchObject" name="Sketch001" id="4937" revision="181" file="Sketch001.xml" />
+    <Object type="PartDesign::Pocket" name="Pocket" id="4938" revision="125" file="Pocket.xml" />
+    <Object type="Sketcher::SketchObject" name="Sketch002" id="4939" revision="325" file="Sketch002.xml" />
+    <Object type="PartDesign::Groove" name="Groove" id="4942" revision="117" file="Groove.xml" />
+    <Object type="PartDesign::SubShapeBinder" name="Binder" id="4944" revision="235" file="Binder.xml" />
+    <Object type="App::Line" name="X_Axis001" id="4949" revision="1" file="X_Axis001.xml" />
+    <Object type="App::Line" name="Y_Axis001" id="4950" revision="2" file="Y_Axis001.xml" />
+    <Object type="App::Line" name="Z_Axis001" id="4951" revision="2" file="Z_Axis001.xml" />
+    <Object type="App::Plane" name="XY_Plane001" id="4952" revision="1" file="XY_Plane001.xml" />
+    <Object type="App::Plane" name="XZ_Plane001" id="4953" revision="2" file="XZ_Plane001.xml" />
+    <Object type="App::Plane" name="YZ_Plane001" id="4954" revision="2" file="YZ_Plane001.xml" />
+  </Objects>
+  <ObjectData Count="0">
+  </ObjectData>
+</Document>

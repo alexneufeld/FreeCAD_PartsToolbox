@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--
+ FreeCAD Document, see http://www.freecadweb.org for more information...
+-->
+<Document SchemaVersion="4" ProgramVersion="2021.717R24301 +3627 (Git)" FileVersion="2" Uid="69bd248f-0035-421b-bd70-8fdd39b964f0" StringHasher="1">
+  <StringHasher saveall="0" threshold="0" count="4">
+<![CDATA[
+1 0 0:maximum chamfer on bore
+2 0 0:outer spherical diameter
+3 0 0:inner diameter
+4 0 0:axial length
+]]>
+  </StringHasher>
+  <Properties Count="19" TransientCount="3">
+    <_Property name="FileName" type="App::PropertyString" status="50331649"/>
+    <_Property name="Tip" type="App::PropertyLink" status="33554433"/>
+    <_Property name="TransientDir" type="App::PropertyString" status="50331649"/>
+    <Property name="Comment" type="App::PropertyString">
+      <String value=""/>
+    </Property>
+    <Property name="Company" type="App::PropertyString">
+      <String value=""/>
+    </Property>
+    <Property name="CreatedBy" type="App::PropertyString" status="1">
+      <String value="Alex Neufeld"/>
+    </Property>
+    <Property name="CreationDate" type="App::PropertyString" status="16777217">
+      <String value="2021-04-10T01:23:38Z"/>
+    </Property>
+    <Property name="ForceXML" type="App::PropertyInteger" status="1">
+      <Integer value="3"/>
+    </Property>
+    <Property name="Id" type="App::PropertyString">
+      <String value=""/>
+    </Property>
+    <Property name="Label" type="App::PropertyString" status="1">
+      <String value="sinteredsphericalbushings"/>
+    </Property>
+    <Property name="LastModifiedBy" type="App::PropertyString" status="1">
+      <String value="Alex Neufeld"/>
+    </Property>
+    <Property name="LastModifiedDate" type="App::PropertyString" status="16777217">
+      <String value="2021-08-05T16:11:36Z"/>
+    </Property>
+    <Property name="License" type="App::PropertyString" status="1">
+      <String value="All rights reserved"/>
+    </Property>
+    <Property name="LicenseURL" type="App::PropertyString" status="1">
+      <String value="http://en.wikipedia.org/wiki/All_rights_reserved"/>
+    </Property>
+    <Property name="Material" type="App::PropertyMap" status="1">
+      <Map count="0">
+      </Map>
+    </Property>
+    <Property name="Meta" type="App::PropertyMap" status="1">
+      <Map count="0">
+      </Map>
+    </Property>
+    <Property name="PreferBinary" type="App::PropertyBool" status="1">
+      <Bool value="false"/>
+    </Property>
+    <Property name="ShowHidden" type="App::PropertyBool" status="1">
+      <Bool value="false"/>
+    </Property>
+    <Property name="SplitXML" type="App::PropertyBool" status="1">
+      <Bool value="true"/>
+    </Property>
+    <Property name="TipName" type="App::PropertyString" status="83886081">
+      <String value="Part"/>
+    </Property>
+    <Property name="Uid" type="App::PropertyUUID" status="16777217">
+      <Uuid value="69bd248f-0035-421b-bd70-8fdd39b964f0"/>
+    </Property>
+    <Property name="UseHasher" type="App::PropertyBool" status="1">
+      <Bool value="true"/>
+    </Property>
+  </Properties>
+  <Objects Count="20" Dependencies="1">
+    <ObjectDeps Name="ParamObjData" Count="0"/>
+    <ObjectDeps Name="Parameters" Count="1">
+      <Dep Name="ParamObjData"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Body" Count="3">
+      <Dep Name="Sketch"/>
+      <Dep Name="Revolution"/>
+      <Dep Name="Origin"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Origin" Count="6">
+      <Dep Name="Y_Axis"/>
+      <Dep Name="X_Axis"/>
+      <Dep Name="XY_Plane"/>
+      <Dep Name="YZ_Plane"/>
+      <Dep Name="Z_Axis"/>
+      <Dep Name="XZ_Plane"/>
+    </ObjectDeps>
+    <ObjectDeps Name="X_Axis" Count="0"/>
+    <ObjectDeps Name="Y_Axis" Count="0"/>
+    <ObjectDeps Name="Z_Axis" Count="0"/>
+    <ObjectDeps Name="XY_Plane" Count="0"/>
+    <ObjectDeps Name="XZ_Plane" Count="0"/>
+    <ObjectDeps Name="YZ_Plane" Count="0"/>
+    <ObjectDeps Name="Part" Count="3">
+      <Dep Name="Origin001"/>
+      <Dep Name="Body"/>
+      <Dep Name="Parameters"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Origin001" Count="6">
+      <Dep Name="XZ_Plane001"/>
+      <Dep Name="YZ_Plane001"/>
+      <Dep Name="Z_Axis001"/>
+      <Dep Name="X_Axis001"/>
+      <Dep Name="XY_Plane001"/>
+      <Dep Name="Y_Axis001"/>
+    </ObjectDeps>
+    <ObjectDeps Name="X_Axis001" Count="0"/>
+    <ObjectDeps Name="Y_Axis001" Count="0"/>
+    <ObjectDeps Name="Z_Axis001" Count="0"/>
+    <ObjectDeps Name="XY_Plane001" Count="0"/>
+    <ObjectDeps Name="XZ_Plane001" Count="0"/>
+    <ObjectDeps Name="YZ_Plane001" Count="0"/>
+    <ObjectDeps Name="Sketch" Count="2">
+      <Dep Name="XY_Plane"/>
+      <Dep Name="Parameters"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Revolution" Count="3">
+      <Dep Name="X_Axis"/>
+      <Dep Name="Sketch"/>
+      <Dep Name="Body"/>
+    </ObjectDeps>
+    <Object type="App::FeaturePython" name="ParamObjData" id="12" revision="0" file="ParamObjData.xml" />
+    <Object type="App::FeaturePython" name="Parameters" id="13" revision="0" file="Parameters.xml" />
+    <Object type="PartDesign::Body" name="Body" id="14" revision="1" Touched="1" file="Body.xml" />
+    <Object type="App::Origin" name="Origin" id="15" revision="0" file="Origin.xml" />
+    <Object type="App::Line" name="X_Axis" id="16" revision="0" file="X_Axis.xml" />
+    <Object type="App::Line" name="Y_Axis" id="17" revision="0" file="Y_Axis.xml" />
+    <Object type="App::Line" name="Z_Axis" id="18" revision="0" file="Z_Axis.xml" />
+    <Object type="App::Plane" name="XY_Plane" id="19" revision="0" file="XY_Plane.xml" />
+    <Object type="App::Plane" name="XZ_Plane" id="20" revision="0" file="XZ_Plane.xml" />
+    <Object type="App::Plane" name="YZ_Plane" id="21" revision="0" file="YZ_Plane.xml" />
+    <Object type="App::Part" name="Part" id="22" revision="0" file="Part.xml" />
+    <Object type="App::Origin" name="Origin001" id="23" revision="0" file="Origin001.xml" />
+    <Object type="App::Line" name="X_Axis001" id="24" revision="0" file="X_Axis001.xml" />
+    <Object type="App::Line" name="Y_Axis001" id="25" revision="0" file="Y_Axis001.xml" />
+    <Object type="App::Line" name="Z_Axis001" id="26" revision="0" file="Z_Axis001.xml" />
+    <Object type="App::Plane" name="XY_Plane001" id="27" revision="0" file="XY_Plane001.xml" />
+    <Object type="App::Plane" name="XZ_Plane001" id="28" revision="0" file="XZ_Plane001.xml" />
+    <Object type="App::Plane" name="YZ_Plane001" id="29" revision="0" file="YZ_Plane001.xml" />
+    <Object type="Sketcher::SketchObject" name="Sketch" id="30" revision="1" Touched="1" file="Sketch.xml" />
+    <Object type="PartDesign::Revolution" name="Revolution" id="31" revision="2" Touched="1" file="Revolution.xml" />
+  </Objects>
+  <ObjectData Count="0">
+  </ObjectData>
+</Document>

@@ -1,0 +1,409 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--
+ FreeCAD Document, see http://www.freecadweb.org for more information...
+-->
+<Document SchemaVersion="4" ProgramVersion="2021.717R24301 +3627 (Git)" FileVersion="2" Uid="e0b09288-b194-4f71-8570-a252eb296239" StringHasher="1">
+  <StringHasher saveall="0" threshold="0" count="267">
+<![CDATA[
+1 0 0:g6305v1;SKT
+2 0 0:g6305;SKT
+3 0 0:#2;:T2195:2:E
+4 0 0:#1;:T2195:2:V
+5 0 0:#3;:G;PSH;:T2195:2:F
+6 0 0:#3;:G2;PSH;:T2195:2:F
+7 0 0:#3;:G3;PSH;:T2195:2:F
+8 0 0:#4;:G;PSH;:T2195:2:E
+9 0 0:#4;:G2;PSH;:T2195:2:E
+10 0 0:#4;:G3;PSH;:T2195:2:E
+11 0 0:#5;:U;PSH;:T2195:2:E
+12 0 0:(#b;K-1;:T2195:2:E)
+13 0 0:#7;:U2;PSH;:T2195:2:E
+14 0 0:(#d;K-1;:T2195:2:E)
+15 0 0:#3;FAC;:T2195:2:F
+16 0 0:#f;:G;SEW;:T2195:2:F
+17 0 0:#8;:U;PSH;:T2195:2:V
+18 0 0:(#11;K-1;:T2195:3:V)
+19 0 0:#a;:U2;PSH;:T2195:2:V
+20 0 0:(#13;K-1;:T2195:3:V)
+21 0 0:#4;:G#12;SEW;:T2195:2:V
+22 0 0:#9;:U;PSH;:T2195:2:V
+23 0 0:#9;:U2;PSH;:T2195:2:V
+24 0 0:#4;:G#14;SEW;:T2195:2:V
+25 0 0:#3;:G#c;SEW;:T2195:2:E
+26 0 0:#8;:G;SEW;:T2195:2:E
+27 0 0:#6;:U;PSH;:T2195:2:E
+28 0 0:#6;:U2;PSH;:T2195:2:E
+29 0 0:#a;:G;SEW;:T2195:2:E
+30 0 0:#3;:G#e;SEW;:T2195:2:E
+31 0 0:#5;:G;SEW;:T2195:2:F
+32 0 0:#7;:G;SEW;:T2195:2:F
+33 0 0:#10;D1;:T2195:3:F
+36 0 0:g6301v2;SKT
+37 0 0:g6302v2;SKT
+38 0 0:g6302v1;SKT
+39 0 0:g6303v1;SKT
+43 0 0:g6302;SKT
+47 0 0:#24;:T2193:3:V
+48 0 0:#26;:T2193:3:V
+49 0 0:#2b;:T2193:3:E
+50 0 0:#2f;:G;RVL;:T2193:3:E
+51 0 0:#30;:G;RVL;:T2193:3:E
+52 0 0:#16;:T-2196:3:V
+53 0 0:#17;:T-2196:3:V
+54 0 0:#18;:T-2196:3:V
+55 0 0:#9;:T-2196:2:E
+56 0 0:#1c;:T-2196:3:E
+57 0 0:#1d;:T-2196:3:E
+58 0 0:#1e;:T-2196:3:E
+59 0 0:#20;:T-2196:3:F
+60 0 0:#21;:T-2196:3:F
+61 0 0:#25;:T2193:3:V
+62 0 0:#27;:T2193:3:V
+63 0 0:#32;Edge1;:L;RVL;:T2193:3:F
+64 0 0:#33;Edge2;:L;RVL;:T2193:3:F
+65 0 0:#1a;:T-2196:3:E
+66 0 0:#1f;:T-2196:3:F
+67 0 0:(#42;K-4;:T2196:3:F)
+68 0 0:#31;:G;RVL;:T2193:3:F
+69 0 0:(#42;K-3;:T2196:3:F)
+70 0 0:#1b;:T-2196:3:E
+71 0 0:(#42;K-2;:T2196:3:F)
+72 0 0:(#42;K-5;:T2196:3:F)
+73 0 0:#6;:T-2196:2:F
+74 0 0:(#49;K-2;:T2196:3:F)
+75 0 0:(#49;K-1;:T2196:3:F)
+76 0 0:(#41;K-1;:T2196:3:E)
+77 0 0:(#44;K-1;:T-2194:3:F)
+78 0 0:(#44;K-4;:T-2194:3:F)
+79 0 0:(#44;K-3;:T-2194:3:F)
+80 0 0:(#44;K-2;:T-2194:3:F)
+81 0 0:(#42;K-1;:T2196:3:F)
+82 0 0:#16;I1;:T2195:3:V
+83 0 0:#17;I1;:T2195:3:V
+84 0 0:#9;I1;:T2195:2:E
+85 0 0:#1c;I1;:T2195:3:E
+86 0 0:#2f;I1;:T2193:3:V
+87 0 0:#3d;I1;:T2193:3:V
+88 0 0:#30;I1;:T2193:3:V
+89 0 0:#3e;I1;:T2193:3:V
+90 0 0:#32;I1;:T2193:3:E
+91 0 0:#33;I1;:T2193:3:E
+92 0 0:#3f;I1;:T2193:3:F
+93 0 0:#40;I1;:T2193:3:F
+94 0 0:#39;:T2196:3:E
+95 0 0:(#3a;:T2196:3:E)
+96 0 0:#1e;I1;:T2195:3:E
+97 0 0:#1d;I1;:T2195:3:E
+98 0 0:#1b;I1;:T2195:3:E
+99 0 0:#44;I1;:T2193:3:F
+100 0 0:(#63;K-10;:T-2194:3:F)
+101 0 0:#6;I1;:T2195:2:F
+102 0 0:(#63;K-9;:T-2194:3:F)
+103 0 0:(#63;K-8;:T-2194:3:F)
+104 0 0:#1f;I1;:T2195:3:F
+105 0 0:#1a;I1;:T2195:3:E
+106 0 0:#31;I1;:T2193:3:E
+107 0 0:(#63;K-7;:T-2194:3:F)
+108 0 0:(#63;K-6;:T-2194:3:F)
+109 0 0:(#63;K-5;:T-2194:3:F)
+110 0 0:#3b;:T2196:3:F
+111 0 0:#20;I1;:T2195:3:F
+112 0 0:(#36;:T2196:3:V)
+113 0 0:#18;I1;:T2195:3:V
+114 0 0:(#63;K-4;:T-2194:3:F)
+115 0 0:(#63;K-3;:T-2194:3:F)
+116 0 0:(#63;K-2;:T-2194:3:F)
+117 0 0:(#63;K-1;:T-2194:3:F)
+118 0 0:(#6a;K-1;:T-2194:3:E)
+119 0 0:(#68;K-1;:T-2196:3:F)
+120 0 0:#15;I1;:T2195:3:V
+121 0 0:#19;I1;:T2195:3:E
+122 0 0:#10;I1;:T2195:3:F
+123 0 0:#21;I1;:T2195:3:F
+124 0 0:#31;:G#4c;FUS;:T-2194:3:V
+125 0 0:#34;:T2196:3:V
+126 0 0:#46;:G#4d;FUS;:T2196:3:V
+127 0 0:#46;:G4#4e;FUS;:T2196:3:V
+128 0 0:#46;:G3#4f;FUS;:T2196:3:V
+129 0 0:#46;:G2#50;FUS;:T2196:3:V
+130 0 0:#35;:T2196:3:V
+131 0 0:#30;:T-2194:3:V
+132 0 0:#3e;:T-2194:3:V
+133 0 0:#31;:G2#51;FUS;:T-2194:3:V
+134 0 0:#2f;:T-2194:3:V
+135 0 0:#3d;:T-2194:3:V
+136 0 0:#71;:M#70;FUS;:T-2196:3:V
+137 0 0:#53;:T-2196:3:V
+138 0 0:#62;:G4#72;FUS;:T-2196:3:V
+139 0 0:#52;:T-2196:3:V
+140 0 0:#62;:G3#73;FUS;:T-2196:3:V
+141 0 0:#62;:G2#74;FUS;:T-2196:3:V
+142 0 0:#62;:G#75;FUS;:T-2196:3:V
+143 0 0:#69;:G#76;FUS;:T-2196:3:V
+144 0 0:#58;:T-2194:3:V
+145 0 0:#59;:T-2194:3:V
+146 0 0:#6a;:G2#77;FUS;:T-2194:3:V
+147 0 0:#56;:T-2194:3:V
+148 0 0:#57;:T-2194:3:V
+149 0 0:#41;:M;FUS;:T2196:3:E
+150 0 0:#46;:M;FUS;:T2196:3:E
+151 0 0:#44;:G5#47;FUS;:T-2194:3:E
+152 0 0:#44;:G8#48;FUS;:T-2194:3:E
+153 0 0:#46;:M3;FUS;:T2196:3:E
+154 0 0:#44;:G10#4a;FUS;:T-2194:3:E
+155 0 0:#46;:M2;FUS;:T2196:3:E
+156 0 0:#44;:G9#4b;FUS;:T-2194:3:E
+157 0 0:#37;:T2196:3:E
+158 0 0:#38;:T2196:3:E
+159 0 0:#31;:M;FUS;:T-2194:3:E
+160 0 0:#44;:G7#43;FUS;:T-2194:3:E
+161 0 0:#31;:M2;FUS;:T-2194:3:E
+162 0 0:#32;:T-2194:3:E
+163 0 0:#44;:G6#45;FUS;:T-2194:3:E
+164 0 0:#33;:T-2194:3:E
+165 0 0:#5e;:M;FUS;:T2196:3:E
+166 0 0:#60;:M#5f;FUS;:T-2196:3:E
+167 0 0:#61;:M;FUS;:T-2196:3:E
+168 0 0:#55;:T-2196:3:E
+169 0 0:#62;:M3;FUS;:T-2196:3:E
+170 0 0:#65;:G2#64;FUS;:T-2196:3:E
+171 0 0:#62;:M2;FUS;:T-2196:3:E
+172 0 0:#65;:G#66;FUS;:T-2196:3:E
+173 0 0:#62;:M;FUS;:T-2196:3:E
+174 0 0:#54;:T-2196:3:E
+175 0 0:#68;:G5#67;FUS;:T-2196:3:E
+176 0 0:#69;:M;FUS;:T-2196:3:E
+177 0 0:#6a;:M;FUS;:T-2194:3:E
+178 0 0:#68;:G4#6b;FUS;:T-2196:3:E
+179 0 0:#6a;:M2;FUS;:T-2194:3:E
+180 0 0:#5a;:T-2194:3:E
+181 0 0:#68;:G3#6c;FUS;:T-2196:3:E
+182 0 0:#68;:G2#6d;FUS;:T-2196:3:E
+183 0 0:#5b;:T-2194:3:E
+184 0 0:#42;:M2;FUS;:T2196:3:F
+185 0 0:#42;:M;FUS;:T2196:3:F
+186 0 0:#49;:M;FUS;:T2196:3:F
+187 0 0:#44;:M;FUS;:T-2194:3:F
+188 0 0:#42;:M3;FUS;:T2196:3:F
+189 0 0:#6e;:M;FUS;:T2196:3:F
+190 0 0:#3f;:T-2194:3:F
+191 0 0:#40;:T-2194:3:F
+192 0 0:#6f;:M;FUS;:T-2196:3:F
+193 0 0:#65;:M;FUS;:T-2196:3:F
+194 0 0:#68;:M;FUS;:T-2196:3:F
+195 0 0:#63;:M;FUS;:T-2194:3:F
+196 0 0:#68;:M3;FUS;:T-2196:3:F
+197 0 0:#68;:M2;FUS;:T-2196:3:F
+198 0 0:#5c;:T-2194:3:F
+199 0 0:#5d;:T-2194:3:F
+200 0 0:#7c;:T2194:3:V
+201 0 0:#7d;:T2194:3:V
+202 0 0:#7e;:T2194:3:V
+203 0 0:#7f;:T2194:3:V
+204 0 0:#80;:T2194:3:V
+205 0 0:#81;:T2194:3:V
+206 0 0:#82;:T2194:3:V
+207 0 0:#83;:T2194:3:V
+208 0 0:#84;:T2194:3:V
+209 0 0:#85;:T2194:3:V
+210 0 0:#86;:T2194:3:V
+211 0 0:#87;:T2194:3:V
+212 0 0:#88;:T2194:3:V
+213 0 0:#89;:T2194:3:V
+214 0 0:#8a;:T2194:3:V
+215 0 0:#8b;:T2194:3:V
+216 0 0:#8c;:T2194:3:V
+217 0 0:#8d;:T2194:3:V
+218 0 0:#8e;:T2194:3:V
+219 0 0:#8f;:T2194:3:V
+220 0 0:#90;:T2194:3:V
+221 0 0:#91;:T2194:3:V
+222 0 0:#92;:T2194:3:V
+223 0 0:#93;:T2194:3:V
+224 0 0:#94;:T2194:3:V
+225 0 0:#95;:T2194:3:E
+226 0 0:#96;:T2194:3:E
+227 0 0:#97;:T2194:3:E
+228 0 0:#98;:T2194:3:E
+229 0 0:#99;:T2194:3:E
+230 0 0:#9a;:T2194:3:E
+231 0 0:#9b;:T2194:3:E
+232 0 0:#9c;:T2194:3:E
+233 0 0:#9d;:T2194:3:E
+234 0 0:#9e;:T2194:3:E
+235 0 0:#9f;:T2194:3:E
+236 0 0:#a0;:T2194:3:E
+237 0 0:#a1;:T2194:3:E
+238 0 0:#a2;:T2194:3:E
+239 0 0:#a3;:T2194:3:E
+240 0 0:#a4;:T2194:3:E
+241 0 0:#a5;:T2194:3:E
+242 0 0:#a6;:T2194:3:E
+243 0 0:#a7;:T2194:3:E
+244 0 0:#a8;:T2194:3:E
+245 0 0:#a9;:T2194:3:E
+246 0 0:#aa;:T2194:3:E
+247 0 0:#ab;:T2194:3:E
+248 0 0:#ac;:T2194:3:E
+249 0 0:#ad;:T2194:3:E
+250 0 0:#ae;:T2194:3:E
+251 0 0:#af;:T2194:3:E
+252 0 0:#b0;:T2194:3:E
+253 0 0:#b1;:T2194:3:E
+254 0 0:#b2;:T2194:3:E
+255 0 0:#b3;:T2194:3:E
+256 0 0:#b4;:T2194:3:E
+257 0 0:#b5;:T2194:3:E
+258 0 0:#b6;:T2194:3:E
+259 0 0:#b7;:T2194:3:E
+260 0 0:#b8;:T2194:3:F
+261 0 0:#b9;:T2194:3:F
+262 0 0:#ba;:T2194:3:F
+263 0 0:#bb;:T2194:3:F
+264 0 0:#bc;:T2194:3:F
+265 0 0:#bd;:T2194:3:F
+266 0 0:#be;:T2194:3:F
+267 0 0:#bf;:T2194:3:F
+268 0 0:#c0;:T2194:3:F
+269 0 0:#c1;:T2194:3:F
+270 0 0:#c2;:T2194:3:F
+271 0 0:#c3;:T2194:3:F
+272 0 0:#c4;:T2194:3:F
+273 0 0:#c5;:T2194:3:F
+274 0 0:#c6;:T2194:3:F
+275 0 0:#c7;:T2194:3:F
+]]>
+  </StringHasher>
+  <Properties Count="19" TransientCount="3">
+    <_Property name="FileName" type="App::PropertyString" status="50331649"/>
+    <_Property name="Tip" type="App::PropertyLink" status="33554433"/>
+    <_Property name="TransientDir" type="App::PropertyString" status="50331649"/>
+    <Property name="Comment" type="App::PropertyString">
+      <String value=""/>
+    </Property>
+    <Property name="Company" type="App::PropertyString">
+      <String value=""/>
+    </Property>
+    <Property name="CreatedBy" type="App::PropertyString" status="1">
+      <String value="Alex Neufeld"/>
+    </Property>
+    <Property name="CreationDate" type="App::PropertyString" status="16777217">
+      <String value="2021-04-04T03:33:26Z"/>
+    </Property>
+    <Property name="ForceXML" type="App::PropertyInteger" status="1">
+      <Integer value="3"/>
+    </Property>
+    <Property name="Id" type="App::PropertyString">
+      <String value=""/>
+    </Property>
+    <Property name="Label" type="App::PropertyString" status="1">
+      <String value="bowshackles"/>
+    </Property>
+    <Property name="LastModifiedBy" type="App::PropertyString" status="1">
+      <String value="Alex Neufeld"/>
+    </Property>
+    <Property name="LastModifiedDate" type="App::PropertyString" status="16777217">
+      <String value="2021-08-05T16:11:41Z"/>
+    </Property>
+    <Property name="License" type="App::PropertyString" status="1">
+      <String value="All rights reserved"/>
+    </Property>
+    <Property name="LicenseURL" type="App::PropertyString" status="1">
+      <String value="http://en.wikipedia.org/wiki/All_rights_reserved"/>
+    </Property>
+    <Property name="Material" type="App::PropertyMap" status="1">
+      <Map count="0">
+      </Map>
+    </Property>
+    <Property name="Meta" type="App::PropertyMap" status="1">
+      <Map count="0">
+      </Map>
+    </Property>
+    <Property name="PreferBinary" type="App::PropertyBool" status="1">
+      <Bool value="false"/>
+    </Property>
+    <Property name="ShowHidden" type="App::PropertyBool" status="1">
+      <Bool value="false"/>
+    </Property>
+    <Property name="SplitXML" type="App::PropertyBool" status="1">
+      <Bool value="true"/>
+    </Property>
+    <Property name="TipName" type="App::PropertyString" status="83886080">
+      <String value=""/>
+    </Property>
+    <Property name="Uid" type="App::PropertyUUID" status="16777217">
+      <Uuid value="e0b09288-b194-4f71-8570-a252eb296239"/>
+    </Property>
+    <Property name="UseHasher" type="App::PropertyBool" status="1">
+      <Bool value="true"/>
+    </Property>
+  </Properties>
+  <Objects Count="14" Dependencies="1">
+    <ObjectDeps Name="Body" Count="7">
+      <Dep Name="Revolution"/>
+      <Dep Name="Sketch"/>
+      <Dep Name="Sketch002"/>
+      <Dep Name="Mirrored"/>
+      <Dep Name="Sketch001"/>
+      <Dep Name="Origin"/>
+      <Dep Name="AdditivePipe"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Origin" Count="6">
+      <Dep Name="Y_Axis"/>
+      <Dep Name="YZ_Plane"/>
+      <Dep Name="XZ_Plane"/>
+      <Dep Name="Z_Axis"/>
+      <Dep Name="XY_Plane"/>
+      <Dep Name="X_Axis"/>
+    </ObjectDeps>
+    <ObjectDeps Name="X_Axis" Count="0"/>
+    <ObjectDeps Name="Y_Axis" Count="0"/>
+    <ObjectDeps Name="Z_Axis" Count="0"/>
+    <ObjectDeps Name="XY_Plane" Count="0"/>
+    <ObjectDeps Name="XZ_Plane" Count="0"/>
+    <ObjectDeps Name="YZ_Plane" Count="0"/>
+    <ObjectDeps Name="Sketch" Count="2">
+      <Dep Name="XZ_Plane"/>
+      <Dep Name="Sketch001"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Sketch001" Count="1">
+      <Dep Name="XZ_Plane"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Revolution" Count="3">
+      <Dep Name="Body"/>
+      <Dep Name="Sketch001"/>
+      <Dep Name="AdditivePipe"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Sketch002" Count="2">
+      <Dep Name="XY_Plane"/>
+      <Dep Name="Sketch001"/>
+    </ObjectDeps>
+    <ObjectDeps Name="AdditivePipe" Count="3">
+      <Dep Name="Sketch"/>
+      <Dep Name="Sketch002"/>
+      <Dep Name="Body"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Mirrored" Count="4">
+      <Dep Name="Revolution"/>
+      <Dep Name="Sketch002"/>
+      <Dep Name="Body"/>
+      <Dep Name="AdditivePipe"/>
+    </ObjectDeps>
+    <Object type="PartDesign::Body" name="Body" id="2168" revision="9" file="Body.xml" />
+    <Object type="App::Origin" name="Origin" id="2169" revision="0" file="Origin.xml" />
+    <Object type="App::Line" name="X_Axis" id="2170" revision="0" file="X_Axis.xml" />
+    <Object type="App::Line" name="Y_Axis" id="2171" revision="0" file="Y_Axis.xml" />
+    <Object type="App::Line" name="Z_Axis" id="2172" revision="0" file="Z_Axis.xml" />
+    <Object type="App::Plane" name="XY_Plane" id="2173" revision="0" file="XY_Plane.xml" />
+    <Object type="App::Plane" name="XZ_Plane" id="2174" revision="0" file="XZ_Plane.xml" />
+    <Object type="App::Plane" name="YZ_Plane" id="2175" revision="0" file="YZ_Plane.xml" />
+    <Object type="Sketcher::SketchObject" name="Sketch" id="2192" revision="4" file="Sketch.xml" />
+    <Object type="Sketcher::SketchObject" name="Sketch001" id="2193" revision="3" file="Sketch001.xml" />
+    <Object type="PartDesign::Revolution" name="Revolution" id="2194" revision="8" file="Revolution.xml" />
+    <Object type="Sketcher::SketchObject" name="Sketch002" id="2195" revision="4" file="Sketch002.xml" />
+    <Object type="PartDesign::AdditivePipe" name="AdditivePipe" id="2196" revision="7" file="AdditivePipe.xml" />
+    <Object type="PartDesign::Mirrored" name="Mirrored" id="2199" revision="10" file="Mirrored.xml" />
+  </Objects>
+  <ObjectData Count="0">
+  </ObjectData>
+</Document>
