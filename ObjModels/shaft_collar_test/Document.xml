@@ -3,7 +3,7 @@
  FreeCAD Document, see http://www.freecadweb.org for more information...
 -->
 <Document SchemaVersion="4" ProgramVersion="2021.717R24301 +3627 (Git)" FileVersion="2" Uid="509a0889-ad49-4322-a4aa-9058cbeaf127" StringHasher="1">
-  <StringHasher saveall="0" threshold="0" count="583">
+  <StringHasher saveall="0" threshold="0" count="489">
 <![CDATA[
 1 0 0:g1v1;SKT
 2 0 0:g1;SKT
@@ -400,100 +400,6 @@
 1163 0 0:#dd;:T4938:3:F
 1164 0 0:#de;:T4938:3:F
 1165 0 0:#167;:T-4942:4:F
-1640 0 0:#18b;:T3794:4:V
-1641 0 0:#18c;:T3794:4:V
-1642 0 0:#18d;:T3794:4:V
-1643 0 0:#18e;:T3794:4:V
-1644 0 0:#18f;:T3794:4:V
-1645 0 0:#190;:T3794:4:V
-1646 0 0:#191;:T3794:4:V
-1647 0 0:#192;:T3794:4:V
-1648 0 0:#193;:T3794:4:V
-1649 0 0:#194;:T3794:4:V
-1650 0 0:#195;:T3794:4:V
-1651 0 0:#196;:T3794:4:V
-1652 0 0:#197;:T3794:4:V
-1653 0 0:#198;:T3794:4:V
-1654 0 0:#199;:T3794:4:V
-1655 0 0:#19a;:T3794:4:V
-1656 0 0:#19b;:T3794:4:V
-1657 0 0:#19c;:T3794:4:V
-1658 0 0:#19d;:T3794:4:V
-1659 0 0:#19e;:T3794:4:V
-1660 0 0:#19f;:T3794:4:V
-1661 0 0:#1a0;:T3794:4:V
-1662 0 0:#1a1;:T3794:4:V
-1663 0 0:#1a2;:T3794:4:V
-1664 0 0:#1a3;:T3794:4:V
-1665 0 0:#1a4;:T3794:4:V
-1666 0 0:#1a5;:T3794:4:V
-1667 0 0:#1a6;:T3794:4:V
-1668 0 0:#1a7;:T3794:4:V
-1669 0 0:#1a8;:T3794:4:V
-1670 0 0:#1a9;:T3794:4:V
-1671 0 0:#1aa;:T3794:4:E
-1672 0 0:#1ab;:T3794:4:E
-1673 0 0:#1ac;:T3794:4:E
-1674 0 0:#1ad;:T3794:4:E
-1675 0 0:#1ae;:T3794:4:E
-1676 0 0:#1af;:T3794:4:E
-1677 0 0:#1b0;:T3794:4:E
-1678 0 0:#1b1;:T3794:4:E
-1679 0 0:#1b2;:T3794:4:E
-1680 0 0:#1b3;:T3794:4:E
-1681 0 0:#1b4;:T3794:4:E
-1682 0 0:#1b5;:T3794:4:E
-1683 0 0:#1b6;:T3794:4:E
-1684 0 0:#1b7;:T3794:4:E
-1685 0 0:#1b8;:T3794:4:E
-1686 0 0:#1b9;:T3794:4:E
-1687 0 0:#1ba;:T3794:4:E
-1688 0 0:#1bb;:T3794:4:E
-1689 0 0:#1bc;:T3794:4:E
-1690 0 0:#1bd;:T3794:4:E
-1691 0 0:#1be;:T3794:4:E
-1692 0 0:#1bf;:T3794:4:E
-1693 0 0:#1c0;:T3794:4:E
-1694 0 0:#1c1;:T3794:4:E
-1695 0 0:#1c2;:T3794:4:E
-1696 0 0:#1c3;:T3794:4:E
-1697 0 0:#1c4;:T3794:4:E
-1698 0 0:#1c5;:T3794:4:E
-1699 0 0:#1c6;:T3794:4:E
-1700 0 0:#1c7;:T3794:4:E
-1701 0 0:#1c8;:T3794:4:E
-1702 0 0:#1c9;:T3794:4:E
-1703 0 0:#1ca;:T3794:4:E
-1704 0 0:#1cb;:T3794:4:E
-1705 0 0:#1cc;:T3794:4:E
-1706 0 0:#1cd;:T3794:4:E
-1707 0 0:#1ce;:T3794:4:E
-1708 0 0:#1cf;:T3794:4:E
-1709 0 0:#1d0;:T3794:4:E
-1710 0 0:#1d1;:T3794:4:E
-1711 0 0:#1d2;:T3794:4:F
-1712 0 0:#1d3;:T3794:4:F
-1713 0 0:#1d4;:T3794:4:F
-1714 0 0:#1d5;:T3794:4:F
-1715 0 0:#1d6;:T3794:4:F
-1716 0 0:#1d7;:T3794:4:F
-1717 0 0:#1d8;:T3794:4:F
-1718 0 0:#1d9;:T3794:4:F
-1719 0 0:#1da;:T3794:4:F
-1720 0 0:#1db;:T3794:4:F
-1721 0 0:#1dc;:T3794:4:F
-1722 0 0:#1dd;:T3794:4:F
-1723 0 0:#1de;:T3794:4:F
-1724 0 0:#1df;:T3794:4:F
-1725 0 0:#1e0;:T3794:4:F
-1726 0 0:#1e1;:T3794:4:F
-1727 0 0:#1e2;:T3794:4:F
-1728 0 0:#1e3;:T3794:4:F
-1729 0 0:#1e4;:T3794:4:F
-1730 0 0:#1e5;:T3794:4:F
-1731 0 0:#1e6;:T3794:4:F
-1732 0 0:#1e7;:T3794:4:F
-1733 0 0:#1e8;:T3794:4:F
 1734 0 0:#bfc;:T3816:4:V
 1735 0 0:#bfd;:T3816:4:V
 1736 0 0:#bfe;:T3816:4:V
@@ -619,7 +525,7 @@
       <String value="Alex Neufeld"/>
     </Property>
     <Property name="LastModifiedDate" type="App::PropertyString" status="16777217">
-      <String value="2021-08-05T16:34:11Z"/>
+      <String value="2021-08-08T02:47:36Z"/>
     </Property>
     <Property name="License" type="App::PropertyString" status="1">
       <String value="LGPL-3.0-or-later"/>
@@ -656,35 +562,35 @@
   </Properties>
   <Objects Count="25" Dependencies="1">
     <ObjectDeps Name="Part" Count="4">
-      <Dep Name="Origin"/>
       <Dep Name="Spreadsheet"/>
+      <Dep Name="Origin"/>
       <Dep Name="Binder"/>
       <Dep Name="Body"/>
     </ObjectDeps>
     <ObjectDeps Name="Origin" Count="6">
-      <Dep Name="YZ_Plane001"/>
-      <Dep Name="Z_Axis001"/>
       <Dep Name="XZ_Plane001"/>
       <Dep Name="X_Axis001"/>
+      <Dep Name="YZ_Plane001"/>
       <Dep Name="Y_Axis001"/>
       <Dep Name="XY_Plane001"/>
+      <Dep Name="Z_Axis001"/>
     </ObjectDeps>
     <ObjectDeps Name="Body" Count="8">
-      <Dep Name="Sketch001"/>
       <Dep Name="Pocket"/>
+      <Dep Name="Sketch"/>
+      <Dep Name="Sketch002"/>
       <Dep Name="Pad"/>
+      <Dep Name="Origin001"/>
       <Dep Name="Groove"/>
       <Dep Name="Chamfer"/>
-      <Dep Name="Sketch002"/>
-      <Dep Name="Origin001"/>
-      <Dep Name="Sketch"/>
+      <Dep Name="Sketch001"/>
     </ObjectDeps>
     <ObjectDeps Name="Origin001" Count="6">
-      <Dep Name="XZ_Plane"/>
       <Dep Name="Z_Axis"/>
-      <Dep Name="Y_Axis"/>
       <Dep Name="XY_Plane"/>
       <Dep Name="YZ_Plane"/>
+      <Dep Name="Y_Axis"/>
+      <Dep Name="XZ_Plane"/>
       <Dep Name="X_Axis"/>
     </ObjectDeps>
     <ObjectDeps Name="X_Axis" Count="0"/>
@@ -715,9 +621,9 @@
       <Dep Name="XY_Plane"/>
     </ObjectDeps>
     <ObjectDeps Name="Pocket" Count="3">
-      <Dep Name="Sketch001"/>
       <Dep Name="Chamfer"/>
       <Dep Name="Body"/>
+      <Dep Name="Sketch001"/>
     </ObjectDeps>
     <ObjectDeps Name="Sketch002" Count="2">
       <Dep Name="Spreadsheet"/>
@@ -730,8 +636,8 @@
     </ObjectDeps>
     <ObjectDeps Name="Binder" Count="3">
       <Dep Name="Spreadsheet"/>
-      <Dep Name="Sketch002"/>
       <Dep Name="Part"/>
+      <Dep Name="Sketch002"/>
     </ObjectDeps>
     <ObjectDeps Name="X_Axis001" Count="0"/>
     <ObjectDeps Name="Y_Axis001" Count="0"/>

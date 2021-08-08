@@ -4,20 +4,20 @@
 -->
 <Document SchemaVersion="1" FileVersion="2" Split="1" HasExpansion="1">
 <Expand  count="1">
-  <Expand name="Part"/>
+  <Expand name="Body"/>
 </Expand>
 >
-  <Camera extra="0" id="3" binding="0">
+  <Camera extra="0" id="11" binding="0">
 <![CDATA[
 OrthographicCamera {
   viewportMapping ADJUST_CAMERA
-  position -10.143647 26.755415 4.9782763
-  orientation -0.58379221 -0.71472937 -0.38516057  2.3019969
-  nearDistance 5.3469806
-  farDistance 41.516262
+  position 40.990276 -70.997437 57.403557
+  orientation 0.86492187 0.23175442 0.44519675  1.0835806
+  nearDistance 91.531151
+  farDistance 108.64966
   aspectRatio 1
-  focalDistance 14.822167
-  height 87.625282
+  focalDistance 100.08
+  height 100.08
 
 }
 ## overrideMode: As Is]]>
