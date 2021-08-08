@@ -3,3 +3,4 @@ __pycache__/
 *.FCBak
 ignore/
 Thumbnails/*
+.vscode/

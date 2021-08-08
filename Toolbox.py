@@ -26,10 +26,10 @@
 
 import FreeCAD
 import os
-import time
 from PySide import QtGui, QtUiTools, QtCore
 import shutil
 import yaml
+import defusedxml.ElementTree as tree
 
 # make the directories that relevant files are stored in
 # available to the rest of the workbench
@@ -39,8 +39,8 @@ objpath = os.path.join(__dir__, "ObjModels")
 UIPath = os.path.join(__dir__, "UI")
 ThumbPath = os.path.join(__dir__, "Thumbnails")
 # set up some icons
-PartIcon = QtGui.QIcon(os.path.join(iconPath,"PartsToolbox_Part.svg"))
-FolderIcon = QtGui.QIcon(os.path.join(iconPath,"Group.svg"))
+PartIcon = QtGui.QIcon(os.path.join(iconPath, "PartsToolbox_Part.svg"))
+FolderIcon = QtGui.QIcon(os.path.join(iconPath, "Group.svg"))
 # class that defines the dock widget
 # adapted from here: https://wiki.freecadweb.org/Macro_SplitToolboxDock
 
@@ -57,10 +57,10 @@ class ToolboxDock(QtGui.QDockWidget):
         self.setWidget(UI)
         # configure the UI with our data and functions
         # import object hierarchy from yaml
-        ydata = yaml.safe_load(
+        yamlData = yaml.safe_load(
             open(os.path.join(__dir__, "PartsHierarchy.yaml")))
         # recursive function to parse the nested list
-        populate_tree(UI.treeWidget, ydata)
+        populate_tree(UI.treeWidget, yamlData)
         # disable ok button initially
         # (it can't do anything until the user selects a part to add)
         UI.buttonBox.button(QtGui.QDialogButtonBox.Ok).setEnabled(False)
@@ -97,24 +97,24 @@ def populate_tree(top_level_obj, items):
         # part
         if type(i) == str:
             # setText(colum#, string)
-            subobj.setIcon(0,PartIcon)
+            subobj.setIcon(0, PartIcon)
             subobj.setText(0, i)
         # folder
         elif type(i) == dict:
             k = list(i.keys())[0]
-            subobj.setIcon(0,FolderIcon)
+            subobj.setIcon(0, FolderIcon)
             subobj.setText(0, k)
             populate_tree(subobj, i[k])
 
 
-def selectionChanged(OKbutton, thumbnailBox, selectedTreeItem):
+def selectionChanged(OKButton, thumbnailBox, selectedTreeItem):
     # this runs every time the user selects a different part in the tree view
     if selectedTreeItem:
         # if a category is selected, disable the add button:
         if selectedTreeItem.childCount() > 0:
-            OKbutton.setEnabled(False)
+            OKButton.setEnabled(False)
         else:
-            OKbutton.setEnabled(True)
+            OKButton.setEnabled(True)
             '''
             # update thumbnail
             imgpath = os.path.join(ThumbPath, selectedobj[:-6]+".png")
@@ -125,64 +125,117 @@ def selectionChanged(OKbutton, thumbnailBox, selectedTreeItem):
                 print(f"failed to set thumbnail - {E}")
             '''
     else:
-        OKbutton.setEnabled(True)
+        OKButton.setEnabled(True)
 
 
 def InsertParamObjBind(partFileName):
-    # This version of object insert uses a shape binder to refer to part
-    # subobject shapebinders do a lot of work for us, such as abstracting
-    # the parts model hierarchy out of view of the user
-    # we need an active document to put a part in
-    doc = FreeCAD.ActiveDocument
-    path_to_doc = os.path.dirname(doc.FileName)
-    if not doc:
-        FreeCAD.Console.PrintError(
-            "Can't add Part - No active document found!\n")
-        return
-    if path_to_doc == "":
-        FreeCAD.Console.PrintError(
-            "Can't add Part - Active Document must be saved to a file!\n")
-        return
-    #  TODO: fix terrible variable names here
-    objfilepath = os.path.join(
-        path_to_doc, "ToolboxParts", partFileName)
+    """
+    Given a part filename, add a copy of that part to the 
+    active FreeCAD document
+    """
+    doc, pathToDoc = verifySavedDoc()
+    sourcePartPath = os.path.join(objpath, partFileName)
+    partFilePath = os.path.join(
+        pathToDoc, "ToolboxParts", partFileName)
     # place a "ToolboxParts" directory next to the open document:
-    os.makedirs(os.path.dirname(objfilepath), exist_ok=True)
-    sourcefilepath = os.path.join(objpath, partFileName)
+    os.makedirs(os.path.dirname(partFilePath), exist_ok=True)
     # copy the parts document to the users project folder if it
     # isn't already there:
-    if not os.path.exists(objfilepath):
-        shutil.copytree(sourcefilepath, objfilepath)
-    # open the local copy of the part file se we can get an obj from it
-    part_doc = FreeCAD.openDocument(objfilepath, hidden=True)
-    # grab either a part or a body to link to with a shapebinder:
+    copyFreecadDocument(sourcePartPath, os.path.join(
+        pathToDoc, "ToolboxParts"))
+    # open the local copy of the part file so we can get an obj from it
+    part_doc = FreeCAD.openDocument(partFilePath, hidden=True)
+    # grab either a part or a body to link to:
     if hasattr(part_doc, "Part"):
         top_obj = part_doc.Part
     elif hasattr(part_doc, "Body"):
         top_obj = part_doc.Body
     else:
-        top_obj = None
-    if top_obj:
-        # keep track of how long this all takes
-        st = time.time()
-        # add a shapebinder and assign an object to link
-        binder = doc.addObject('PartDesign::SubShapeBinder', 'ToolboxPart')
-        binder.Support = top_obj
-        FreeCAD.Console.PrintMessage(
-            f"imported {partFileName} in {time.time()-st:.3f} s\n")
-        # modify the shapebinders properties so it behaves correctly
-        binder.BindCopyOnChange = 'Enabled'
-        # binder renders transparent w. yellow lines if this is True.
-        # perhaps a desirable effect? TODO make this a config option
-        binder.ViewObject.UseBinderStyle = False
-        # this probably won't work very well...
-        # getExpression returns a tuple (propname, extressionStr)
-        binder.setExpression("Label", top_obj.getExpression("Label")[1])
-    # can't close the import document, it must stay opened in the background
-    # or the part will error on recompute
-    # FreeCAD.closeDocument(part_doc.Name)
+        raise Exception(
+            f"file {partFileName} has no suitable objects to copy!")
+    # add a shapebinder and assign an object to link
+    binder = doc.addObject('PartDesign::SubShapeBinder', 'ToolboxPart')
+    binder.Support = top_obj
+    # modify the shapebinders properties so it behaves correctly
+    binder.BindCopyOnChange = 'Enabled'
+    # binder renders transparent w. yellow lines if this is True.
+    binder.ViewObject.UseBinderStyle = False
+    # set label to mirror source objects label
+    # getExpression returns a tuple (propname, extressionStr)
+    binder.setExpression("Label", top_obj.getExpression("Label")[1])
     # set the active document back to the users project:
-    # note: FreeCAD.setActiveDocument(x) != FreeCAD.Gui.setActiveDocument(x)
+    # NOTE: FreeCAD.setActiveDocument(x) != FreeCAD.Gui.setActiveDocument(x)
     FreeCAD.setActiveDocument(doc.Name)
     FreeCAD.ActiveDocument.recompute()
     return
+
+
+def getDependenciesRecursive(docObj):
+    """
+    recursively get dependencies of a given document object
+    """
+    dependencies = docObj.OutList[:]
+    full_list = []
+    for item in dependencies:
+        full_list.append(item.FileName)
+        full_list.extend(getDependenciesRecursive(item))
+    return list(set(full_list))
+
+
+def verifySavedDoc():
+    """
+    Get the active FreeCAD document, and check that it is 
+    saved to disk. Otherwise, raise an exception
+    """
+    doc = FreeCAD.ActiveDocument
+    path_to_doc = os.path.dirname(doc.FileName)
+    if not doc:
+        raise Exception("Can't add Part - No active document found!")
+    if path_to_doc == "":
+        raise Exception(
+            "Can't add Part - Active Document must be saved to a file!")
+    return (doc, path_to_doc)
+
+
+def copyFreecadDocument(docFilePath, destinationDir):
+    """
+    given a FreeCAD document saved to docFilePath, copy its file and
+    any files it depends on to the directory destinationDir.
+    """
+    # open th document, get its dependencies, then close it
+    docObj = FreeCAD.openDocument(docFilePath, hidden=True)
+    files = [docObj.FileName] + getDependenciesRecursive(docObj)
+    FreeCAD.closeDocument(docObj.Name)
+    # DocumentObject.FileName gets us the full path to the files
+    # which is convenient
+    for f in files:
+        print(f"copying {f} to {destinationDir}")
+        # copy each file. handle both .FCStd and save-as-directory
+        # file formats
+        if not os.path.exists(os.path.join(destinationDir, os.path.basename(f))):
+            # don't copy files that already exist
+            if f.endswith(".FCStd"):
+                # .FCStd format
+                shutil.copyfile(f, destinationDir)
+            else:
+                # directory format
+                shutil.copytree(f, os.path.join(
+                    destinationDir, os.path.basename(f)))
+    return
+
+
+def getDataFromFCFolder(folder):
+    try:
+        doc = tree.parse(open(os.path.join(folder, "Part.xml")))
+    except:
+        print(f"couldn't open {os.path.join(folder,'Part.xml')}")
+        return
+    root = doc.getroot()
+    # we have the xml data, let's get something useful out of it
+    Properties = list(list(root.iter(tag="Object"))
+                      [0].iter(tag="Properties"))[0]
+    objtype = "None"
+    for x in Properties:
+        if x.attrib["name"] == "Type":
+            objtype = x[0].attrib["value"]
+    print(f"{folder}:   Type = {objtype}")
