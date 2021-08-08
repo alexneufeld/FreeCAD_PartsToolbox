@@ -113,17 +113,18 @@ def selectionChanged(OKButton, thumbnailBox, selectedTreeItem):
         # if a category is selected, disable the add button:
         if selectedTreeItem.childCount() > 0:
             OKButton.setEnabled(False)
+            thumbnailBox.setPixmap(None)
         else:
             OKButton.setEnabled(True)
-            '''
+            
             # update thumbnail
-            imgpath = os.path.join(ThumbPath, selectedobj[:-6]+".png")
+            imagePath = os.path.join(objpath, selectedTreeItem.text(0),"thumbnails/Thumbnail.png")
             try:
-                pixmap = QtGui.QPixmap(imgpath)
+                pixmap = QtGui.QPixmap(imagePath)
                 thumbnailBox.setPixmap(pixmap)
             except Exception as E:
                 print(f"failed to set thumbnail - {E}")
-            '''
+            
     else:
         OKButton.setEnabled(True)
 
