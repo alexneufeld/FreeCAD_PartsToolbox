@@ -116,15 +116,16 @@ def selectionChanged(OKButton, thumbnailBox, selectedTreeItem):
             thumbnailBox.setPixmap(None)
         else:
             OKButton.setEnabled(True)
-            
+
             # update thumbnail
-            imagePath = os.path.join(objpath, selectedTreeItem.text(0),"thumbnails/Thumbnail.png")
+            imagePath = os.path.join(
+                objpath, selectedTreeItem.text(0), "thumbnails/Thumbnail.png")
             try:
                 pixmap = QtGui.QPixmap(imagePath)
                 thumbnailBox.setPixmap(pixmap)
             except Exception as E:
                 print(f"failed to set thumbnail - {E}")
-            
+
     else:
         OKButton.setEnabled(True)
 
@@ -225,18 +226,90 @@ def copyFreecadDocument(docFilePath, destinationDir):
     return
 
 
-def getDataFromFCFolder(folder):
-    try:
-        doc = tree.parse(open(os.path.join(folder, "Part.xml")))
-    except:
-        print(f"couldn't open {os.path.join(folder,'Part.xml')}")
-        return
+def getDataFromFCFolder(folderPath):
+    """
+    given a FreeCAD document folder, return metadata
+    of a parts library object stored there
+    """
+    doc = tree.parse(open(os.path.join(folderPath, "Document.xml")))
     root = doc.getroot()
     # we have the xml data, let's get something useful out of it
-    Properties = list(list(root.iter(tag="Object"))
-                      [0].iter(tag="Properties"))[0]
-    objtype = "None"
-    for x in Properties:
-        if x.attrib["name"] == "Type":
-            objtype = x[0].attrib["value"]
-    print(f"{folder}:   Type = {objtype}")
+    docObjs = list(root.iter(tag="ObjectData"))[0]
+    partObj = None
+    for x in docObjs:
+        if x.attrib["name"] == "Part":
+            partObj = x
+    proplist = []
+    if partObj:
+        proplist = list(partObj.iter(tag="Properties"))[0]
+    else:
+        return None
+    mdata = {
+        "Id": "",
+        "Type": "",
+        "License": "",
+        "LicenseURL": "",
+    }
+    for prop in proplist:
+        if prop.attrib["name"] in mdata.keys():
+            mdata[prop.attrib["name"]] = prop[0].attrib["value"]
+    return(mdata)
+
+
+def partMetaBrowser():
+    """
+    Open a Qt widget to browse and edit metadata fields of parts library parts
+    """
+    UIFilePath = os.path.join(UIPath, "PartMetaBrowser.ui")
+    UI = QtUiTools.QUiLoader().load(UIFilePath)
+    files = os.listdir(objpath)
+    UI.tableWidget.setRowCount(0)
+    UI.tableWidget.setColumnCount(5)
+    header = UI.tableWidget.horizontalHeader()
+    header.setResizeMode(QtGui.QHeaderView.ResizeToContents)
+    header.setResizeMode(0, QtGui.QHeaderView.Stretch)
+    tablecolumns = ["File Name", "Type", "Id", "License", "LicenseURL"]
+    # keep a reference copy of all metadata as a nested list
+    datalist = {}
+    UI.tableWidget.setHorizontalHeaderLabels(tablecolumns)
+    for f in files:
+        itemData = getDataFromFCFolder(os.path.join(objpath, f))
+        if itemData:
+            currentRow = UI.tableWidget.rowCount()
+            UI.tableWidget.setRowCount(UI.tableWidget.rowCount()+1)
+            fnameItem = QtGui.QTableWidgetItem(PartIcon, f)
+            # set filename items to be non-editable
+            fnameItem.setFlags(QtCore.Qt.ItemIsEnabled)
+            UI.tableWidget.setItem(currentRow, 0, fnameItem)
+            datalist.update({f: {"Type": itemData["Type"], "Id": itemData["Id"],
+                            "License": itemData["License"], "LicenseURL": itemData["LicenseURL"]}})
+            for j, col in enumerate(tablecolumns[1:]):
+                item = QtGui.QTableWidgetItem(itemData[col])
+                UI.tableWidget.setItem(currentRow, j+1, item)
+    UI.buttonBox.accepted.connect(
+        lambda: (updataMetadata(datalist, UI.tableWidget), UI.close()))
+    UI.show()
+
+
+def updataMetadata(oldData, tableWidget):
+    #tablecolumns = ["File Name", "Type", "ID", "License", "LicenseURL"]
+    newData = {}
+    for row in range(tableWidget.rowCount()):
+        fname = tableWidget.item(row, 0).text()
+        newData.update({fname: {
+            "Type": tableWidget.item(row, 1).text(),
+            "Id": tableWidget.item(row, 2).text(),
+            "License": tableWidget.item(row, 3).text(),
+            "LicenseURL": tableWidget.item(row, 4).text()
+        }})
+    for file in oldData.keys():
+        if oldData[file] != newData[file]:
+            print(f"Update {file}")
+            doc = FreeCAD.openDocument(os.path.join(objpath,file))
+            for key, val in newData[file].items():
+                setattr(doc.Part,key,val)
+            doc.save()
+            doc.recompute()
+            FreeCAD.closeDocument(doc.Name)
+    
+    
