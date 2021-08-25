@@ -27,7 +27,6 @@
 
 import FreeCAD
 import os
-from PySide import QtUiTools
 
 # command to add a standard part
 # note that defining a FreeCAD command like this requires some weird
@@ -39,7 +38,6 @@ class FCToolboxAddCmd:
         # parse the ObjModels directory for available parts
         import Toolbox
         self.iconPath = Toolbox.iconPath
-        pass
 
     def GetResources(self):
         return {
