@@ -348,6 +348,6 @@ def updateMetadata(oldData, tableWidget):
                 os.path.join(objpath, file), hidden=True)
             for key, val in newData[file].items():
                 setattr(doc.Part, key, val)
-            doc.save()
             doc.recompute()
+            doc.save()
             FreeCAD.closeDocument(doc.Name)

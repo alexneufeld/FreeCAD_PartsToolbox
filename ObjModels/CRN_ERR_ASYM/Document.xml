@@ -297,7 +297,7 @@ Mínimo = 2
       <String value="Alex Neufeld"/>
     </Property>
     <Property name="LastModifiedDate" type="App::PropertyString" status="16777217">
-      <String value="2021-08-08T03:58:59Z"/>
+      <String value="2021-08-25T04:06:07Z"/>
     </Property>
     <Property name="License" type="App::PropertyString" status="1">
       <String value="LGPL-3.0-or-later"/>
@@ -334,8 +334,8 @@ Mínimo = 2
   </Properties>
   <Objects Count="14" Dependencies="1">
     <ObjectDeps Name="Part" Count="2">
-      <Dep Name="Origin"/>
       <Dep Name="Body"/>
+      <Dep Name="Origin"/>
     </ObjectDeps>
     <ObjectDeps Name="Origin" Count="0"/>
     <ObjectDeps Name="Body" Count="2">
@@ -343,11 +343,11 @@ Mínimo = 2
       <Dep Name="Origin001"/>
     </ObjectDeps>
     <ObjectDeps Name="Origin001" Count="6">
+      <Dep Name="Y_Axis"/>
+      <Dep Name="Z_Axis"/>
+      <Dep Name="X_Axis"/>
       <Dep Name="YZ_Plane"/>
       <Dep Name="XZ_Plane"/>
-      <Dep Name="Z_Axis"/>
-      <Dep Name="Y_Axis"/>
-      <Dep Name="X_Axis"/>
       <Dep Name="XY_Plane"/>
     </ObjectDeps>
     <ObjectDeps Name="X_Axis" Count="0"/>
@@ -357,9 +357,9 @@ Mínimo = 2
     <ObjectDeps Name="XZ_Plane" Count="0"/>
     <ObjectDeps Name="YZ_Plane" Count="0"/>
     <ObjectDeps Name="Boolean" Count="3">
-      <Dep Name="Reference"/>
-      <Dep Name="Reference001"/>
       <Dep Name="Body"/>
+      <Dep Name="Reference001"/>
+      <Dep Name="Reference"/>
     </ObjectDeps>
     <ObjectDeps Name="Reference" Count="1">
       <Dep Name="Part"/>
@@ -368,7 +368,7 @@ Mínimo = 2
       <Dep Name="Part"/>
     </ObjectDeps>
     <ObjectDeps Name="CRN_ERR_ASYM001" Count="0"/>
-    <Object type="App::Part" name="Part" id="4473" revision="66" />
+    <Object type="App::Part" name="Part" id="4473" revision="67" Touched="1" />
     <Object type="App::Origin" name="Origin" id="4474" revision="0" />
     <Object type="PartDesign::Body" name="Body" id="4475" revision="41" />
     <Object type="App::Origin" name="Origin001" id="4476" revision="0" />
@@ -378,9 +378,9 @@ Mínimo = 2
     <Object type="App::Plane" name="XY_Plane" id="4480" revision="1" />
     <Object type="App::Plane" name="XZ_Plane" id="4481" revision="2" />
     <Object type="App::Plane" name="YZ_Plane" id="4482" revision="2" />
-    <Object type="PartDesign::Boolean" name="Boolean" id="4487" revision="42" />
-    <Object type="PartDesign::SubShapeBinder" name="Reference" id="4488" revision="10" Touched="1" Invalid="1" Error="Link not restored&#10;Linked object: Part&#10;Linked file: STR_STD_ERR.FCStd" />
-    <Object type="PartDesign::SubShapeBinder" name="Reference001" id="4489" revision="31" Touched="1" Invalid="1" Error="Link not restored&#10;Linked object: Part&#10;Linked file: STR_STD_ERR.FCStd" />
+    <Object type="PartDesign::Boolean" name="Boolean" id="4487" revision="43" />
+    <Object type="PartDesign::SubShapeBinder" name="Reference" id="4488" revision="10" Touched="1" Invalid="1" Error="Missing support object" />
+    <Object type="PartDesign::SubShapeBinder" name="Reference001" id="4489" revision="31" Touched="1" Invalid="1" Error="Missing support object" />
     <Object type="Part::FeaturePython" name="CRN_ERR_ASYM001" id="4490" revision="5" />
   </Objects>
   <ObjectData Count="14">
@@ -450,8 +450,8 @@ Mínimo = 2
         <Property name="Placement" type="App::PropertyPlacement" status="8388608">
           <PropertyPlacement Px="0" Py="0" Pz="0" Q0="0" Q1="0" Q2="0" Q3="1" A="0" Ox="0" Oy="0" Oz="1"/>
         </Property>
-        <Property name="Type" type="App::PropertyString">
-          <String value="Standard Part"/>
+        <Property name="Type" type="App::PropertyString" status="1">
+          <String value="STEMFIE3D"/>
         </Property>
         <Property name="Uid" type="App::PropertyUUID">
           <Uuid value="1ce48bdf-711f-4bf0-bd58-28f18e0bc994"/>
@@ -896,7 +896,7 @@ Wi
 Fa
 0  1e-07 1 10
 
-0101000
+0111000
 +87 0 *
 Ve
 1.00000075e-07
@@ -942,7 +942,7 @@ Wi
 Fa
 0  1e-07 3 0
 
-0101000
+0111000
 +80 0 *
 Ve
 1.00000075e-07
@@ -988,7 +988,7 @@ Wi
 Fa
 0  1e-07 2 0
 
-0101000
+0111000
 +73 0 *
 Ve
 1.00000075e-07
@@ -1036,7 +1036,7 @@ Wi
 Fa
 0  1e-07 4 0
 
-0101000
+0111000
 +66 0 *
 Ve
 1.00000075e-07
@@ -1084,7 +1084,7 @@ Wi
 Fa
 0  1e-07 5 0
 
-0101000
+0111000
 +59 0 *
 Ve
 1.5e-07
@@ -1128,7 +1128,7 @@ Wi
 Fa
 0  1e-07 7 10
 
-0101000
+0111000
 +52 0 *
 Ed
  1.00000075e-07 1 1 0
@@ -1151,7 +1151,7 @@ Wi
 Fa
 0  1e-07 6 26
 
-0101000
+0111000
 +48 0 *
 Wi
 
@@ -1251,7 +1251,7 @@ Wi
 Fa
 0  1.00000075e-07 8 0
 
-0101000
+0111000
 +46 0 +43 0 +40 0 +37 0 +32 0 *
 Ve
 1e-07
@@ -1283,7 +1283,7 @@ Wi
 Fa
 0  1e-07 9 0
 
-0101000
+0111000
 +27 0 *
 Ve
 1e-07
@@ -1315,7 +1315,7 @@ Wi
 Fa
 0  1e-07 10 0
 
-0101000
+0111000
 +22 0 *
 Ve
 1e-07
@@ -1347,7 +1347,7 @@ Wi
 Fa
 0  1e-07 11 0
 
-0101000
+0111000
 +17 0 *
 Wi
 
@@ -1402,7 +1402,7 @@ Wi
 Fa
 0  1.00000075e-07 13 0
 
-0101000
+0111000
 +15 0 +14 0 +13 0 +12 0 +7 0 *
 Ed
  1e-05 1 1 0
@@ -1419,7 +1419,7 @@ Wi
 Fa
 0  1e-07 12 0
 
-0101000
+0111000
 +4 0 *
 Sh
 
@@ -2614,7 +2614,7 @@ Wi
 Fa
 0  1e-07 1 10
 
-0101000
+0111000
 +87 0 *
 Ve
 1.00000075e-07
@@ -2665,7 +2665,7 @@ Wi
 Fa
 0  1e-07 5 0
 
-0101000
+0111000
 +80 0 *
 Ve
 1.00000075e-07
@@ -2716,7 +2716,7 @@ Wi
 Fa
 0  1e-07 9 0
 
-0101000
+0111000
 +73 0 *
 Ve
 1.00000075e-07
@@ -2767,7 +2767,7 @@ Wi
 Fa
 0  1e-07 10 0
 
-0101000
+0111000
 +66 0 *
 Ve
 1.00000075e-07
@@ -2818,7 +2818,7 @@ Wi
 Fa
 0  1e-07 11 0
 
-0101000
+0111000
 +59 0 *
 Ve
 1.5e-07
@@ -2868,7 +2868,7 @@ Wi
 Fa
 0  1e-07 13 10
 
-0101000
+0111000
 +52 0 *
 Ed
  1.00000075e-07 1 1 0
@@ -2895,7 +2895,7 @@ Wi
 Fa
 0  1e-07 12 32
 
-0101000
+0111000
 +48 0 *
 Wi
 
@@ -3002,7 +3002,7 @@ Wi
 Fa
 0  1.00000075e-07 14 0
 
-0101000
+0111000
 +46 0 +43 0 +40 0 +37 0 +32 0 *
 Ve
 1e-07
@@ -3035,7 +3035,7 @@ Wi
 Fa
 0  1e-07 15 0
 
-0101000
+0111000
 +27 0 *
 Ve
 1e-07
@@ -3068,7 +3068,7 @@ Wi
 Fa
 0  1e-07 16 0
 
-0101000
+0111000
 +22 0 *
 Ve
 1e-07
@@ -3101,7 +3101,7 @@ Wi
 Fa
 0  1e-07 17 0
 
-0101000
+0111000
 +17 0 *
 Wi
 
@@ -3160,7 +3160,7 @@ Wi
 Fa
 0  1.00000075e-07 19 0
 
-0101000
+0111000
 +15 0 +14 0 +13 0 +12 0 +7 0 *
 Ed
  1e-05 1 1 0
@@ -3177,7 +3177,7 @@ Wi
 Fa
 0  1e-07 18 0
 
-0101000
+0111000
 +4 0 *
 Sh
 
@@ -4142,7 +4142,7 @@ Wi
 Fa
 0  1e-07 1 0
 
-0101000
+0111000
 +54 0 *
 Ve
 1.00000075e-07
@@ -4193,7 +4193,7 @@ Wi
 Fa
 0  1e-07 2 0
 
-0101000
+0111000
 +47 0 *
 Ve
 1.00000075e-07
@@ -4244,7 +4244,7 @@ Wi
 Fa
 0  1e-07 3 0
 
-0101000
+0111000
 +40 0 *
 Ed
  1.00000075e-07 1 1 0
@@ -4322,7 +4322,7 @@ Wi
 Fa
 0  1e-07 6 142
 
-0101000
+0111000
 +37 0 +34 0 +31 0 +28 0 *
 Ed
  1.00000075e-07 1 1 0
@@ -4400,7 +4400,7 @@ Wi
 Fa
 0  1e-07 7 159
 
-0101000
+0111000
 +25 0 +22 0 +19 0 +16 0 *
 Wi
 
@@ -4409,7 +4409,7 @@ Wi
 Fa
 0  1e-07 8 0
 
-0101000
+0111000
 +14 0 *
 Ed
  1.00000001e-07 1 1 0
@@ -4447,7 +4447,7 @@ Wi
 Fa
 0  1e-07 9 0
 
-0101000
+0111000
 +11 0 *
 Ed
  1e-07 1 1 0
@@ -4464,7 +4464,7 @@ Wi
 Fa
 0  1e-07 10 0
 
-0101000
+0111000
 +8 0 *
 Ed
  1e-07 1 1 0
@@ -4481,7 +4481,7 @@ Wi
 Fa
 0  1e-07 11 0
 
-0101000
+0111000
 +5 0 *
 Sh
 
@@ -5017,7 +5017,7 @@ Wi
 Fa
 0  1e-07 1 0
 
-0101000
+0111000
 +45 0 *
 Ve
 1.00000075e-07
@@ -5068,7 +5068,7 @@ Wi
 Fa
 0  1e-07 2 0
 
-0101000
+0111000
 +38 0 *
 Ve
 1.00000075e-07
@@ -5119,7 +5119,7 @@ Wi
 Fa
 0  1e-07 4 0
 
-0101000
+0111000
 +31 0 *
 Ed
  1.00000075e-07 1 1 0
@@ -5177,7 +5177,7 @@ Wi
 Fa
 0  1e-07 5 58
 
-0101000
+0111000
 +28 0 +25 0 +22 0 *
 Ed
  1.00000075e-07 1 1 0
@@ -5235,7 +5235,7 @@ Wi
 Fa
 0  1e-07 6 71
 
-0101000
+0111000
 +19 0 +16 0 +13 0 *
 Wi
 
@@ -5244,7 +5244,7 @@ Wi
 Fa
 0  1e-07 7 0
 
-0101000
+0111000
 +11 0 *
 Ed
  1e-07 1 1 0
@@ -5266,7 +5266,7 @@ Wi
 Fa
 0  1e-07 8 0
 
-0101000
+0111000
 +8 0 *
 Ed
  1e-07 1 1 0
@@ -5283,7 +5283,7 @@ Wi
 Fa
 0  1e-07 9 0
 
-0101000
+0111000
 +5 0 *
 Sh
 
@@ -5601,7 +5601,7 @@ Wi
 Fa
 0  1e-07 1 0
 
-0111000
+0101000
 +81 0 *
 Ve
 1.00000001e-07
@@ -5652,7 +5652,7 @@ Wi
 Fa
 0  1e-07 2 0
 
-0111000
+0101000
 +75 0 *
 Ve
 1.00000001e-07
@@ -5688,7 +5688,7 @@ Wi
 Fa
 0  1e-07 4 0
 
-0111000
+0101000
 +70 0 *
 Ve
 1.00000001e-07
@@ -5724,7 +5724,7 @@ Wi
 Fa
 0  1e-07 7 0
 
-0111000
+0101000
 +65 0 *
 Ve
 1.5e-07
@@ -5776,7 +5776,7 @@ Wi
 Fa
 0  1e-07 8 0
 
-0111000
+0101000
 +58 0 *
 Ve
 1.00000001e-07
@@ -5812,7 +5812,7 @@ Wi
 Fa
 0  1e-07 9 0
 
-0111000
+0101000
 +53 0 *
 Ed
  1.00000001e-07 1 1 0
@@ -5841,7 +5841,7 @@ Wi
 Fa
 0  1e-07 10 2
 
-0111000
+0101000
 +49 0 *
 Wi
 
@@ -5948,7 +5948,7 @@ Wi
 Fa
 0  1.00000001e-07 11 0
 
-0111000
+0101000
 +47 0 +42 0 +39 0 +36 0 +33 0 *
 Ve
 1.00000001e-07
@@ -5981,7 +5981,7 @@ Wi
 Fa
 0  1e-07 13 0
 
-0111000
+0101000
 +28 0 *
 Ve
 1.00000001e-07
@@ -6014,7 +6014,7 @@ Wi
 Fa
 0  1e-07 14 0
 
-0111000
+0101000
 +23 0 *
 Ve
 1.00000001e-07
@@ -6047,7 +6047,7 @@ Wi
 Fa
 0  1e-07 15 0
 
-0111000
+0101000
 +18 0 *
 Wi
 
@@ -6106,7 +6106,7 @@ Wi
 Fa
 0  1.00000001e-07 16 0
 
-0111000
+0101000
 +16 0 +11 0 +10 0 +9 0 +8 0 *
 Ed
  1e-05 1 1 0
@@ -6123,7 +6123,7 @@ Wi
 Fa
 0  1e-07 12 0
 
-0111000
+0101000
 +5 0 *
 Sh
 

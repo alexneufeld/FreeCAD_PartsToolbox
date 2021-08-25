@@ -630,7 +630,7 @@
       <String value="Alex Neufeld"/>
     </Property>
     <Property name="LastModifiedDate" type="App::PropertyString" status="16777217">
-      <String value="2021-08-17T23:34:09Z"/>
+      <String value="2021-08-25T04:14:30Z"/>
     </Property>
     <Property name="License" type="App::PropertyString" status="1">
       <String value="All rights reserved"/>
@@ -667,24 +667,24 @@
   </Properties>
   <Objects Count="26" Dependencies="1">
     <ObjectDeps Name="Body" Count="10">
-      <Dep Name="Chamfer"/>
-      <Dep Name="Sketch001"/>
-      <Dep Name="Origin"/>
-      <Dep Name="Groove"/>
       <Dep Name="Pad"/>
-      <Dep Name="Sketch"/>
+      <Dep Name="Sketch001"/>
       <Dep Name="DatumPlane"/>
+      <Dep Name="Groove"/>
+      <Dep Name="Chamfer"/>
       <Dep Name="SubtractiveHelix"/>
       <Dep Name="Sketch002"/>
+      <Dep Name="Origin"/>
+      <Dep Name="Sketch"/>
       <Dep Name="Mirrored"/>
     </ObjectDeps>
     <ObjectDeps Name="Origin" Count="6">
-      <Dep Name="Z_Axis"/>
       <Dep Name="Y_Axis"/>
-      <Dep Name="YZ_Plane"/>
       <Dep Name="XY_Plane"/>
-      <Dep Name="XZ_Plane"/>
       <Dep Name="X_Axis"/>
+      <Dep Name="XZ_Plane"/>
+      <Dep Name="Z_Axis"/>
+      <Dep Name="YZ_Plane"/>
     </ObjectDeps>
     <ObjectDeps Name="X_Axis" Count="0"/>
     <ObjectDeps Name="Y_Axis" Count="0"/>
@@ -693,17 +693,17 @@
     <ObjectDeps Name="XZ_Plane" Count="0"/>
     <ObjectDeps Name="YZ_Plane" Count="0"/>
     <ObjectDeps Name="Part" Count="3">
+      <Dep Name="Spreadsheet"/>
       <Dep Name="Body"/>
       <Dep Name="Origin001"/>
-      <Dep Name="Spreadsheet"/>
     </ObjectDeps>
     <ObjectDeps Name="Origin001" Count="6">
       <Dep Name="XY_Plane001"/>
       <Dep Name="X_Axis001"/>
-      <Dep Name="XZ_Plane001"/>
-      <Dep Name="Y_Axis001"/>
-      <Dep Name="YZ_Plane001"/>
       <Dep Name="Z_Axis001"/>
+      <Dep Name="Y_Axis001"/>
+      <Dep Name="XZ_Plane001"/>
+      <Dep Name="YZ_Plane001"/>
     </ObjectDeps>
     <ObjectDeps Name="X_Axis001" Count="0"/>
     <ObjectDeps Name="Y_Axis001" Count="0"/>
@@ -712,46 +712,46 @@
     <ObjectDeps Name="XZ_Plane001" Count="0"/>
     <ObjectDeps Name="YZ_Plane001" Count="0"/>
     <ObjectDeps Name="Sketch" Count="2">
-      <Dep Name="XY_Plane"/>
       <Dep Name="Spreadsheet"/>
+      <Dep Name="XY_Plane"/>
     </ObjectDeps>
     <ObjectDeps Name="Pad" Count="3">
-      <Dep Name="Body"/>
       <Dep Name="Spreadsheet"/>
+      <Dep Name="Body"/>
       <Dep Name="Sketch"/>
     </ObjectDeps>
     <ObjectDeps Name="Chamfer" Count="3">
-      <Dep Name="Body"/>
       <Dep Name="Spreadsheet"/>
       <Dep Name="Pad"/>
+      <Dep Name="Body"/>
     </ObjectDeps>
     <ObjectDeps Name="Sketch001" Count="2">
-      <Dep Name="YZ_Plane"/>
       <Dep Name="Spreadsheet"/>
+      <Dep Name="YZ_Plane"/>
     </ObjectDeps>
     <ObjectDeps Name="Groove" Count="3">
-      <Dep Name="Body"/>
-      <Dep Name="Chamfer"/>
       <Dep Name="Sketch001"/>
+      <Dep Name="Chamfer"/>
+      <Dep Name="Body"/>
     </ObjectDeps>
     <ObjectDeps Name="DatumPlane" Count="2">
-      <Dep Name="XY_Plane"/>
       <Dep Name="Pad"/>
+      <Dep Name="XY_Plane"/>
     </ObjectDeps>
     <ObjectDeps Name="Mirrored" Count="3">
-      <Dep Name="Body"/>
-      <Dep Name="Groove"/>
       <Dep Name="DatumPlane"/>
+      <Dep Name="Groove"/>
+      <Dep Name="Body"/>
     </ObjectDeps>
     <ObjectDeps Name="Sketch002" Count="2">
       <Dep Name="Spreadsheet"/>
       <Dep Name="XZ_Plane"/>
     </ObjectDeps>
     <ObjectDeps Name="SubtractiveHelix" Count="5">
-      <Dep Name="Body"/>
-      <Dep Name="Part"/>
       <Dep Name="Spreadsheet"/>
+      <Dep Name="Part"/>
       <Dep Name="Sketch002"/>
+      <Dep Name="Body"/>
       <Dep Name="Mirrored"/>
     </ObjectDeps>
     <ObjectDeps Name="Spreadsheet" Count="1">
@@ -765,7 +765,7 @@
     <Object type="App::Plane" name="XY_Plane" id="1486" revision="0" />
     <Object type="App::Plane" name="XZ_Plane" id="1487" revision="0" />
     <Object type="App::Plane" name="YZ_Plane" id="1488" revision="0" />
-    <Object type="App::Part" name="Part" id="1489" revision="92" Touched="1" />
+    <Object type="App::Part" name="Part" id="1489" revision="94" />
     <Object type="App::Origin" name="Origin001" id="1490" revision="0" />
     <Object type="App::Line" name="X_Axis001" id="1491" revision="0" />
     <Object type="App::Line" name="Y_Axis001" id="1492" revision="0" />
@@ -2214,7 +2214,7 @@ Vertex9	#276;:T1527:4:V 13 0 15 30 97 162 277 141 146 169 324 325 446 630
             <Link value="Spreadsheet"/>
           </LinkList>
         </Property>
-        <Property name="Id" type="App::PropertyString" status="1">
+        <Property name="Id" type="App::PropertyString">
           <String value="???"/>
         </Property>
         <Property name="Label" type="App::PropertyString" status="134217728">
@@ -2223,7 +2223,7 @@ Vertex9	#276;:T1527:4:V 13 0 15 30 97 162 277 141 146 169 324 325 446 630
         <Property name="Label2" type="App::PropertyString" status="128">
           <String value=""/>
         </Property>
-        <Property name="License" type="App::PropertyString" status="1">
+        <Property name="License" type="App::PropertyString">
           <String value="LGPL-3.0-or-later"/>
         </Property>
         <Property name="LicenseURL" type="App::PropertyString">
@@ -2247,7 +2247,7 @@ Vertex9	#276;:T1527:4:V 13 0 15 30 97 162 277 141 146 169 324 325 446 630
           <Bool value="false"/>
         </Property>
         <Property name="Type" type="App::PropertyString">
-          <String value=""/>
+          <String value="Fasteners|Nuts"/>
         </Property>
         <Property name="Uid" type="App::PropertyUUID">
           <Uuid value="08ad3ce4-bee9-49de-b3ed-e15e1cf672aa"/>
@@ -7807,7 +7807,7 @@ Curves 12
 1 2.2810186040063782 0.1435095486267576 -0.015000369685730821 9.8315470395000005e-07 6.1854821089999996e-08 -0.99999999999951494 
 7 0 0  1 2 2  2.9940802479867732 0.18837154250692698 -0.55249966586115173  2.281019538003346 0.14350960738883761 -0.96500036968527003 
  -0.82499999999999996 2 -0 2
-2 2.9580669988863346 0.18610578305346517 -0.48999970140786486 0.062790460722343608 -0.9980267321280909 -2.8140000000000001e-14 0.99802673212760662 0.062790460722313132 9.8509856907999982e-07 -9.831547039560468e-07 -6.1854821093926841e-08 0.99999999999951483 0.072168783648703133
+2 2.9580669988863346 0.18610578305346517 -0.48999970140786486 0.062790460722343608 -0.9980267321280909 -2.8140000000000001e-14 0.99802673212760651 0.062790460722313132 9.8509856907999961e-07 -9.831547039560468e-07 -6.1854821093926841e-08 0.99999999999951494 0.072168783648703133
 7 0 0  1 2 2  2.2810186040063782 0.14350954862675758 -0.01500036968573093  2.9940801250924354 0.18837153477507435 -0.42749966586121252 
  -0.82500000000000018 2 -0 2
 7 0 0  5 6 2  3.0000000000000004 7.0000000000000003e-17 -0.43750000000000011  2.9999999415223493 0.037700494202369123 -0.43549968263642486  2.9994075598224925 0.075398903844646731 -0.43349974082942067  2.9982232852279975 0.11308421795201318 -0.43149992503188844  2.9964474168217392 0.1507454375422132 -0.42949998322473404  2.9940801250924354 0.18837153477507435 -0.42749966586121252 
@@ -7859,7 +7859,7 @@ Surfaces 6
 0 6
 0.063622651315673268 6
 
-1 2.534651091233691 0.15946673716138923 -0.49000011933895937 -0.062790460722343608 0.99802673212809079 2.8170000000000001e-14 0.99802673212809079 0.062790460722343608 -5.9164567891575885e-31 -1.7688072785484201e-15 2.8114413044048318e-14 -1 
+1 2.534651091233691 0.15946673716138923 -0.49000011933895937 -0.062790460722343608 0.99802673212809079 2.8170000000000001e-14 0.99802673212809079 0.062790460722343608 -7.8886090522101181e-31 -1.7688072785484203e-15 2.8114413044048318e-14 -1 
 Triangulations 0
 
 TShapes 34

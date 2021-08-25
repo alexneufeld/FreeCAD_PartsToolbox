@@ -58,7 +58,7 @@
       <String value="Alex Neufeld"/>
     </Property>
     <Property name="LastModifiedDate" type="App::PropertyString" status="16777217">
-      <String value="2021-08-08T03:59:01Z"/>
+      <String value="2021-08-25T04:06:07Z"/>
     </Property>
     <Property name="License" type="App::PropertyString" status="1">
       <String value="LGPL-3.0-or-later"/>
@@ -96,8 +96,8 @@
   <Objects Count="13" Dependencies="1">
     <ObjectDeps Name="Part" Count="3">
       <Dep Name="Spreadsheet"/>
-      <Dep Name="Origin"/>
       <Dep Name="Body"/>
+      <Dep Name="Origin"/>
     </ObjectDeps>
     <ObjectDeps Name="Origin" Count="0"/>
     <ObjectDeps Name="Body" Count="3">
@@ -106,12 +106,12 @@
       <Dep Name="Cylinder"/>
     </ObjectDeps>
     <ObjectDeps Name="Origin001" Count="6">
-      <Dep Name="XZ_Plane"/>
-      <Dep Name="YZ_Plane"/>
+      <Dep Name="XY_Plane"/>
       <Dep Name="X_Axis"/>
+      <Dep Name="YZ_Plane"/>
       <Dep Name="Z_Axis"/>
       <Dep Name="Y_Axis"/>
-      <Dep Name="XY_Plane"/>
+      <Dep Name="XZ_Plane"/>
     </ObjectDeps>
     <ObjectDeps Name="X_Axis" Count="0"/>
     <ObjectDeps Name="Y_Axis" Count="0"/>
@@ -124,16 +124,16 @@
     </ObjectDeps>
     <ObjectDeps Name="Cylinder" Count="3">
       <Dep Name="Spreadsheet"/>
-      <Dep Name="XY_Plane"/>
       <Dep Name="Body"/>
+      <Dep Name="XY_Plane"/>
     </ObjectDeps>
     <ObjectDeps Name="Cylinder001" Count="4">
       <Dep Name="Spreadsheet"/>
-      <Dep Name="Cylinder"/>
-      <Dep Name="XY_Plane"/>
       <Dep Name="Body"/>
+      <Dep Name="XY_Plane"/>
+      <Dep Name="Cylinder"/>
     </ObjectDeps>
-    <Object type="App::Part" name="Part" id="1383" revision="215" />
+    <Object type="App::Part" name="Part" id="1383" revision="217" />
     <Object type="App::Origin" name="Origin" id="1384" revision="0" />
     <Object type="PartDesign::Body" name="Body" id="1385" revision="27" />
     <Object type="App::Origin" name="Origin001" id="1386" revision="0" />
@@ -234,7 +234,7 @@
           <PropertyPlacement Px="0" Py="0" Pz="0" Q0="0" Q1="0" Q2="0" Q3="1" A="0" Ox="0" Oy="0" Oz="1"/>
         </Property>
         <Property name="Type" type="App::PropertyString">
-          <String value="Standard Part"/>
+          <String value="Fasteners|Washers"/>
         </Property>
         <Property name="Uid" type="App::PropertyUUID">
           <Uuid value="3cac266c-f733-45e4-b9e3-24404270afc9"/>
@@ -423,7 +423,7 @@ Wi
 Fa
 0  1e-07 1 0
 
-0101000
+0111000
 +17 0 *
 Wi
 
@@ -451,7 +451,7 @@ Wi
 Fa
 0  1e-07 2 4
 
-0101000
+0111000
 +15 0 +12 0 *
 Wi
 
@@ -479,7 +479,7 @@ Wi
 Fa
 0  1e-07 4 4
 
-0101000
+0111000
 +10 0 +7 0 *
 Ed
  1e-07 1 1 0
@@ -496,7 +496,7 @@ Wi
 Fa
 0  1e-07 3 0
 
-0101000
+0111000
 +4 0 *
 Sh
 
@@ -1119,7 +1119,7 @@ Wi
 Fa
 0  1e-07 1 0
 
-0101000
+0111000
 +8 0 *
 Wi
 
@@ -1128,7 +1128,7 @@ Wi
 Fa
 0  1e-07 2 0
 
-0101000
+0111000
 +6 0 *
 Wi
 
@@ -1137,7 +1137,7 @@ Wi
 Fa
 0  1e-07 3 0
 
-0101000
+0111000
 -4 0 *
 Sh
 
@@ -1500,7 +1500,7 @@ Wi
 Fa
 0  1e-07 1 0
 
-0101000
+0111000
 +17 0 *
 Wi
 
@@ -1530,7 +1530,7 @@ Wi
 Fa
 0  1e-07 2 4
 
-0101000
+0111000
 +15 0 +12 0 *
 Wi
 
@@ -1560,7 +1560,7 @@ Wi
 Fa
 0  1e-07 3 4
 
-0101000
+0111000
 +10 0 +7 0 *
 Ed
  1e-07 1 1 0
@@ -1577,7 +1577,7 @@ Wi
 Fa
 0  1e-07 4 0
 
-0101000
+0111000
 +4 0 *
 Sh
 

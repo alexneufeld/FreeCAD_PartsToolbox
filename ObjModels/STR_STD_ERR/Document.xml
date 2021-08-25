@@ -216,7 +216,7 @@
       <String value="Alex Neufeld"/>
     </Property>
     <Property name="LastModifiedDate" type="App::PropertyString" status="16777217">
-      <String value="2021-08-08T03:59:07Z"/>
+      <String value="2021-08-25T04:06:14Z"/>
     </Property>
     <Property name="License" type="App::PropertyString" status="1">
       <String value="LGPL-3.0-or-later"/>
@@ -258,20 +258,20 @@
     </ObjectDeps>
     <ObjectDeps Name="Origin" Count="0"/>
     <ObjectDeps Name="Body" Count="6">
+      <Dep Name="Pad"/>
+      <Dep Name="Sketch"/>
+      <Dep Name="Pocket"/>
       <Dep Name="Sketch001"/>
       <Dep Name="Origin001"/>
-      <Dep Name="Sketch"/>
-      <Dep Name="Pad"/>
-      <Dep Name="Pocket"/>
       <Dep Name="LinearPattern"/>
     </ObjectDeps>
     <ObjectDeps Name="Origin001" Count="6">
-      <Dep Name="Y_Axis"/>
-      <Dep Name="X_Axis"/>
-      <Dep Name="YZ_Plane"/>
-      <Dep Name="XZ_Plane"/>
       <Dep Name="Z_Axis"/>
+      <Dep Name="X_Axis"/>
       <Dep Name="XY_Plane"/>
+      <Dep Name="XZ_Plane"/>
+      <Dep Name="Y_Axis"/>
+      <Dep Name="YZ_Plane"/>
     </ObjectDeps>
     <ObjectDeps Name="X_Axis" Count="0"/>
     <ObjectDeps Name="Y_Axis" Count="0"/>
@@ -284,24 +284,24 @@
       <Dep Name="XY_Plane"/>
     </ObjectDeps>
     <ObjectDeps Name="Pad" Count="2">
-      <Dep Name="Body"/>
       <Dep Name="Sketch"/>
+      <Dep Name="Body"/>
     </ObjectDeps>
     <ObjectDeps Name="Sketch001" Count="1">
       <Dep Name="XY_Plane"/>
     </ObjectDeps>
     <ObjectDeps Name="Pocket" Count="3">
-      <Dep Name="Sketch001"/>
-      <Dep Name="Body"/>
       <Dep Name="Pad"/>
+      <Dep Name="Body"/>
+      <Dep Name="Sketch001"/>
     </ObjectDeps>
     <ObjectDeps Name="LinearPattern" Count="4">
+      <Dep Name="Part"/>
       <Dep Name="X_Axis"/>
       <Dep Name="Body"/>
-      <Dep Name="Part"/>
       <Dep Name="Pocket"/>
     </ObjectDeps>
-    <Object type="App::Part" name="Part" id="3309" revision="162" />
+    <Object type="App::Part" name="Part" id="3309" revision="164" />
     <Object type="App::Origin" name="Origin" id="3310" revision="0" />
     <Object type="PartDesign::Body" name="Body" id="3311" revision="142" />
     <Object type="App::Origin" name="Origin001" id="3312" revision="0" />
@@ -382,7 +382,7 @@
           <PropertyPlacement Px="0" Py="0" Pz="0" Q0="0" Q1="0" Q2="0" Q3="1" A="0" Ox="0" Oy="0" Oz="1"/>
         </Property>
         <Property name="Type" type="App::PropertyString">
-          <String value="Standard Part"/>
+          <String value="STEMFIE3D"/>
         </Property>
         <Property name="Uid" type="App::PropertyUUID">
           <Uuid value="ee8fd42e-e8a8-4559-a6e7-d4ffdfbdb4b3"/>
@@ -970,7 +970,7 @@ Wi
 Fa
 0  1e-07 1 0
 
-0101000
+0111000
 +53 0 *
 Ve
 1.00000075e-07
@@ -1021,7 +1021,7 @@ Wi
 Fa
 0  1e-07 2 0
 
-0101000
+0111000
 +46 0 *
 Ve
 1.00000075e-07
@@ -1072,7 +1072,7 @@ Wi
 Fa
 0  1e-07 3 0
 
-0101000
+0111000
 +39 0 *
 Ed
  1.00000075e-07 1 1 0
@@ -1150,7 +1150,7 @@ Wi
 Fa
 0  1e-07 5 77
 
-0101000
+0111000
 +36 0 +33 0 +30 0 +27 0 *
 Ed
  1.00000075e-07 1 1 0
@@ -1228,7 +1228,7 @@ Wi
 Fa
 0  1e-07 6 94
 
-0101000
+0111000
 +24 0 +21 0 +18 0 +15 0 *
 Wi
 
@@ -1237,7 +1237,7 @@ Wi
 Fa
 0  1e-07 7 0
 
-0101000
+0111000
 +13 0 *
 Ed
  1e-07 1 1 0
@@ -1262,7 +1262,7 @@ Wi
 Fa
 0  1e-07 8 0
 
-0101000
+0111000
 +10 0 *
 Ed
  1e-07 1 1 0
@@ -1279,7 +1279,7 @@ Wi
 Fa
 0  1e-07 9 0
 
-0101000
+0111000
 +7 0 *
 Ed
  1e-07 1 1 0
@@ -1296,7 +1296,7 @@ Wi
 Fa
 0  1e-07 10 0
 
-0101000
+0111000
 +4 0 *
 Sh
 
@@ -2287,7 +2287,7 @@ Wi
 Fa
 0  1e-07 1 0
 
-0101000
+0111000
 +19 0 *
 Ve
 1.00000018e-07
@@ -2320,7 +2320,7 @@ Wi
 Fa
 0  1e-07 3 0
 
-0101000
+0111000
 +14 0 *
 Ve
 1.00000027e-07
@@ -2355,7 +2355,7 @@ Wi
 Fa
 0  1e-07 5 0
 
-0101000
+0111000
 +9 0 *
 Ed
  1e-07 1 1 0
@@ -2372,7 +2372,7 @@ Wi
 Fa
 0  1e-07 2 0
 
-0101000
+0111000
 +6 0 *
 Wi
 
@@ -2381,7 +2381,7 @@ Wi
 Fa
 0  1e-07 4 0
 
-0101000
+0111000
 +4 12 *
 Sh
 
@@ -6486,7 +6486,7 @@ Wi
 Fa
 0  1e-07 1 0
 
-0101000
+0111000
 +28 0 *
 Ve
 1.00000027e-07
@@ -6519,7 +6519,7 @@ Wi
 Fa
 0  1e-07 2 0
 
-0101000
+0111000
 +23 0 *
 Ve
 1.00000018e-07
@@ -6552,7 +6552,7 @@ Wi
 Fa
 0  1e-07 3 0
 
-0101000
+0111000
 +18 0 *
 Ed
  1e-07 1 1 0
@@ -6756,7 +6756,7 @@ Wi
 Fa
 0  1e-07 4 14
 
-0101000
+0111000
 +15 0 +12 0 *
 Wi
 
@@ -6769,7 +6769,7 @@ Wi
 Fa
 0  1e-07 4 352
 
-0101000
+0111000
 +10 0 +9 0 *
 Wi
 
@@ -6778,7 +6778,7 @@ Wi
 Fa
 0  1e-07 5 0
 
-0101000
+0111000
 +7 0 *
 Ed
  1e-07 1 1 0
@@ -6795,7 +6795,7 @@ Wi
 Fa
 0  1e-07 59 0
 
-0101000
+0111000
 +4 0 *
 Sh
 
@@ -9525,7 +9525,7 @@ Wi
 Fa
 0  1e-07 1 0
 
-0101000
+0111000
 +32 0 *
 Ve
 1.00000027e-07
@@ -9558,7 +9558,7 @@ Wi
 Fa
 0  1e-07 2 0
 
-0101000
+0111000
 +27 0 *
 Ve
 1.00000018e-07
@@ -9591,7 +9591,7 @@ Wi
 Fa
 0  1e-07 3 0
 
-0101000
+0111000
 +22 0 *
 Ed
  1e-07 1 1 0
@@ -9803,7 +9803,7 @@ Wi
 Fa
 0  1e-07 4 15
 
-0101000
+0111000
 +19 0 +16 0 +15 0 +14 0 *
 Wi
 
@@ -9824,7 +9824,7 @@ Wi
 Fa
 0  1e-07 4 354
 
-0101000
+0111000
 +12 0 +11 0 +10 0 +9 0 *
 Wi
 
@@ -9833,7 +9833,7 @@ Wi
 Fa
 0  1e-07 5 0
 
-0101000
+0111000
 +7 0 *
 Ed
  1e-07 1 1 0
@@ -9850,7 +9850,7 @@ Wi
 Fa
 0  1e-07 59 0
 
-0101000
+0111000
 +4 0 *
 Sh
 

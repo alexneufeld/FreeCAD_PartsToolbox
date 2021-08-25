@@ -497,7 +497,7 @@
       <String value="Alex Neufeld"/>
     </Property>
     <Property name="LastModifiedDate" type="App::PropertyString" status="16777217">
-      <String value="2021-08-25T03:39:20Z"/>
+      <String value="2021-08-25T04:14:31Z"/>
     </Property>
     <Property name="License" type="App::PropertyString" status="1">
       <String value="LGPL-3.0-or-later"/>
@@ -535,21 +535,21 @@
   <Objects Count="17" Dependencies="1">
     <ObjectDeps Name="Body" Count="8">
       <Dep Name="Pad"/>
-      <Dep Name="Pocket"/>
-      <Dep Name="Origin001"/>
       <Dep Name="Sketch"/>
-      <Dep Name="PolarPattern"/>
-      <Dep Name="Sketch002"/>
       <Dep Name="Groove"/>
+      <Dep Name="Origin001"/>
+      <Dep Name="Pocket"/>
+      <Dep Name="Sketch002"/>
       <Dep Name="Sketch001"/>
+      <Dep Name="PolarPattern"/>
     </ObjectDeps>
     <ObjectDeps Name="Origin001" Count="6">
-      <Dep Name="X_Axis"/>
-      <Dep Name="YZ_Plane"/>
-      <Dep Name="Z_Axis"/>
-      <Dep Name="Y_Axis"/>
-      <Dep Name="XZ_Plane"/>
       <Dep Name="XY_Plane"/>
+      <Dep Name="Z_Axis"/>
+      <Dep Name="X_Axis"/>
+      <Dep Name="XZ_Plane"/>
+      <Dep Name="YZ_Plane"/>
+      <Dep Name="Y_Axis"/>
     </ObjectDeps>
     <ObjectDeps Name="X_Axis" Count="0"/>
     <ObjectDeps Name="Y_Axis" Count="0"/>
@@ -558,16 +558,16 @@
     <ObjectDeps Name="XZ_Plane" Count="0"/>
     <ObjectDeps Name="YZ_Plane" Count="0"/>
     <ObjectDeps Name="Sketch" Count="2">
-      <Dep Name="Body"/>
       <Dep Name="XY_Plane"/>
+      <Dep Name="Body"/>
     </ObjectDeps>
     <ObjectDeps Name="Pad" Count="2">
       <Dep Name="Sketch"/>
       <Dep Name="Body"/>
     </ObjectDeps>
     <ObjectDeps Name="PolarPattern" Count="3">
-      <Dep Name="Pocket"/>
       <Dep Name="Sketch"/>
+      <Dep Name="Pocket"/>
       <Dep Name="Body"/>
     </ObjectDeps>
     <ObjectDeps Name="Sketch001" Count="2">
@@ -576,16 +576,16 @@
     </ObjectDeps>
     <ObjectDeps Name="Groove" Count="3">
       <Dep Name="Pad"/>
-      <Dep Name="Body"/>
       <Dep Name="Sketch001"/>
+      <Dep Name="Body"/>
     </ObjectDeps>
     <ObjectDeps Name="Sketch002" Count="2">
-      <Dep Name="Body"/>
       <Dep Name="XY_Plane"/>
+      <Dep Name="Body"/>
     </ObjectDeps>
     <ObjectDeps Name="Pocket" Count="3">
-      <Dep Name="Sketch002"/>
       <Dep Name="Groove"/>
+      <Dep Name="Sketch002"/>
       <Dep Name="Body"/>
     </ObjectDeps>
     <ObjectDeps Name="Origin" Count="0"/>
@@ -609,7 +609,7 @@
     <Object type="Sketcher::SketchObject" name="Sketch002" id="3275" revision="320" />
     <Object type="PartDesign::Pocket" name="Pocket" id="3276" revision="195" />
     <Object type="App::Origin" name="Origin" id="3277" revision="0" />
-    <Object type="App::Part" name="Part" id="3278" revision="9" />
+    <Object type="App::Part" name="Part" id="3278" revision="11" />
   </Objects>
   <ObjectData Count="17">
     <Object name="Body" Extensions="True">
@@ -8015,7 +8015,7 @@ TShapes 0
           <PropertyPlacement Px="0" Py="0" Pz="0" Q0="0" Q1="0" Q2="0" Q3="1" A="0" Ox="0" Oy="0" Oz="1"/>
         </Property>
         <Property name="Type" type="App::PropertyString">
-          <String value="Standard Part"/>
+          <String value="Fasteners|Other"/>
         </Property>
         <Property name="Uid" type="App::PropertyUUID">
           <Uuid value="692b1318-6574-4370-99b1-5b155ff6a5cb"/>

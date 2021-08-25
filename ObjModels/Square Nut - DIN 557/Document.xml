@@ -363,7 +363,7 @@
       <String value="Alex Neufeld"/>
     </Property>
     <Property name="LastModifiedDate" type="App::PropertyString" status="16777217">
-      <String value="2021-08-08T03:59:41Z"/>
+      <String value="2021-08-25T04:14:33Z"/>
     </Property>
     <Property name="License" type="App::PropertyString" status="1">
       <String value="All rights reserved"/>
@@ -401,9 +401,9 @@
   <Objects Count="21" Dependencies="1">
     <ObjectDeps Name="Origin001" Count="0"/>
     <ObjectDeps Name="Part" Count="3">
+      <Dep Name="Spreadsheet"/>
       <Dep Name="Origin001"/>
       <Dep Name="Body"/>
-      <Dep Name="Spreadsheet"/>
     </ObjectDeps>
     <ObjectDeps Name="Z_Axis" Count="0"/>
     <ObjectDeps Name="YZ_Plane" Count="0"/>
@@ -416,80 +416,80 @@
       <Dep Name="XY_Plane"/>
       <Dep Name="X_Axis"/>
       <Dep Name="XZ_Plane"/>
-      <Dep Name="Y_Axis"/>
       <Dep Name="YZ_Plane"/>
+      <Dep Name="Y_Axis"/>
     </ObjectDeps>
     <ObjectDeps Name="Body" Count="11">
+      <Dep Name="Sketch"/>
+      <Dep Name="Cylinder"/>
+      <Dep Name="Groove"/>
+      <Dep Name="Groove001"/>
+      <Dep Name="DatumPlane"/>
+      <Dep Name="Box"/>
       <Dep Name="Sketch001"/>
       <Dep Name="SubtractiveHelix"/>
-      <Dep Name="Origin"/>
-      <Dep Name="DatumPlane"/>
-      <Dep Name="Mirrored"/>
-      <Dep Name="Cylinder"/>
       <Dep Name="Sketch002"/>
-      <Dep Name="Box"/>
-      <Dep Name="Groove"/>
-      <Dep Name="Groove001"/>
-      <Dep Name="Sketch"/>
+      <Dep Name="Mirrored"/>
+      <Dep Name="Origin"/>
     </ObjectDeps>
     <ObjectDeps Name="SubtractiveHelix" Count="5">
-      <Dep Name="Sketch001"/>
-      <Dep Name="Body"/>
-      <Dep Name="Part"/>
-      <Dep Name="Spreadsheet"/>
       <Dep Name="Groove001"/>
+      <Dep Name="Part"/>
+      <Dep Name="Sketch001"/>
+      <Dep Name="Spreadsheet"/>
+      <Dep Name="Body"/>
     </ObjectDeps>
     <ObjectDeps Name="Groove001" Count="3">
-      <Dep Name="Mirrored"/>
       <Dep Name="Sketch002"/>
       <Dep Name="Body"/>
+      <Dep Name="Mirrored"/>
     </ObjectDeps>
     <ObjectDeps Name="Mirrored" Count="3">
+      <Dep Name="Groove"/>
       <Dep Name="DatumPlane"/>
       <Dep Name="Body"/>
-      <Dep Name="Groove"/>
     </ObjectDeps>
     <ObjectDeps Name="Groove" Count="3">
+      <Dep Name="Sketch"/>
       <Dep Name="Cylinder"/>
       <Dep Name="Body"/>
-      <Dep Name="Sketch"/>
     </ObjectDeps>
     <ObjectDeps Name="Sketch" Count="3">
-      <Dep Name="XZ_Plane"/>
       <Dep Name="Part"/>
       <Dep Name="Spreadsheet"/>
+      <Dep Name="XZ_Plane"/>
     </ObjectDeps>
     <ObjectDeps Name="DatumPlane" Count="2">
-      <Dep Name="XY_Plane"/>
       <Dep Name="Box"/>
+      <Dep Name="XY_Plane"/>
     </ObjectDeps>
     <ObjectDeps Name="Sketch002" Count="3">
-      <Dep Name="XZ_Plane"/>
       <Dep Name="Box"/>
       <Dep Name="Spreadsheet"/>
+      <Dep Name="XZ_Plane"/>
     </ObjectDeps>
     <ObjectDeps Name="Sketch001" Count="3">
       <Dep Name="Cylinder"/>
-      <Dep Name="XZ_Plane"/>
       <Dep Name="Spreadsheet"/>
+      <Dep Name="XZ_Plane"/>
     </ObjectDeps>
     <ObjectDeps Name="Cylinder" Count="5">
-      <Dep Name="XY_Plane"/>
-      <Dep Name="Body"/>
       <Dep Name="Part"/>
       <Dep Name="Box"/>
+      <Dep Name="XY_Plane"/>
       <Dep Name="Spreadsheet"/>
+      <Dep Name="Body"/>
     </ObjectDeps>
     <ObjectDeps Name="Box" Count="3">
       <Dep Name="XY_Plane"/>
-      <Dep Name="Body"/>
       <Dep Name="Spreadsheet"/>
+      <Dep Name="Body"/>
     </ObjectDeps>
     <ObjectDeps Name="Spreadsheet" Count="1">
       <Dep Name="Part"/>
     </ObjectDeps>
     <Object type="App::Origin" name="Origin001" id="3995" revision="0" />
-    <Object type="App::Part" name="Part" id="3994" revision="1068" />
+    <Object type="App::Part" name="Part" id="3994" revision="1070" />
     <Object type="App::Line" name="Z_Axis" id="3983" revision="2" />
     <Object type="App::Plane" name="YZ_Plane" id="3986" revision="2" />
     <Object type="App::Line" name="Y_Axis" id="3982" revision="2" />
@@ -624,7 +624,7 @@
           <Bool value="false"/>
         </Property>
         <Property name="Type" type="App::PropertyString">
-          <String value="Fastener"/>
+          <String value="Fasteners|Nuts"/>
         </Property>
         <Property name="Uid" type="App::PropertyUUID">
           <Uuid value="90785d52-0a6f-4ce4-8442-f6b73169e953"/>
@@ -1589,7 +1589,7 @@ Surfaces 6
 0 6
 0.063622651315673268 6
 
-1 2.4863427598756855 0.15642743549948562 -0.49000013303234091 -0.062790459088788261 0.99802673223086535 2.9309999999999997e-14 0.99802673223086535 0.062790459088788261 7.8886090522101163e-31 -1.8403883558923825e-15 2.9252163521686657e-14 -1 
+1 2.4863427598756855 0.15642743549948562 -0.49000013303234091 -0.062790459088788261 0.99802673223086535 2.9309999999999997e-14 0.99802673223086535 0.062790459088788261 1.1832913578315175e-30 -1.8403883558923821e-15 2.9252163521686657e-14 -1 
 Triangulations 0
 
 TShapes 34
@@ -3978,7 +3978,7 @@ Wi
 Fa
 0  1e-07 1 0
 
-0101000
+0111000
 +45 0 *
 Ve
 1e-07
@@ -4028,7 +4028,7 @@ Wi
 Fa
 0  1e-07 2 0
 
-0101000
+0111000
 +38 0 *
 Ve
 1e-07
@@ -4083,7 +4083,7 @@ Wi
 Fa
 0  1e-07 3 7
 
-0101000
+0111000
 +33 0 +30 0 *
 Ve
 1e-07
@@ -4117,7 +4117,7 @@ Wi
 Fa
 0  1e-07 4 0
 
-0101000
+0111000
 +25 0 *
 Ed
  1e-07 1 1 0
@@ -4156,7 +4156,7 @@ Wi
 Fa
 0  1e-07 5 13
 
-0101000
+0111000
 +22 0 +19 0 *
 Wi
 
@@ -4165,7 +4165,7 @@ Wi
 Fa
 0  1e-07 6 0
 
-0101000
+0111000
 +17 0 *
 Ve
 1.00000001e-07
@@ -4198,7 +4198,7 @@ Wi
 Fa
 0  1e-07 7 10
 
-0101000
+0111000
 +12 0 *
 Ve
 1.00000001e-07
@@ -4231,7 +4231,7 @@ Wi
 Fa
 0  1e-07 9 0
 
-0101000
+0111000
 +7 0 *
 Ed
  1e-07 1 1 0
@@ -4248,7 +4248,7 @@ Wi
 Fa
 0  1e-07 11 17
 
-0101000
+0111000
 +4 0 *
 Sh
 
@@ -4749,7 +4749,7 @@ Wi
 Fa
 0  1e-07 1 0
 
-0101000
+0111000
 +40 0 *
 Ve
 1e-07
@@ -4799,7 +4799,7 @@ Wi
 Fa
 0  1e-07 2 0
 
-0101000
+0111000
 +33 0 *
 Ve
 1e-07
@@ -4855,7 +4855,7 @@ Wi
 Fa
 0  1e-07 3 8
 
-0101000
+0111000
 +28 0 +25 0 *
 Ve
 1e-07
@@ -4889,7 +4889,7 @@ Wi
 Fa
 0  1e-07 4 0
 
-0101000
+0111000
 +20 0 *
 Ed
  1e-07 1 1 0
@@ -4928,7 +4928,7 @@ Wi
 Fa
 0  1e-07 5 6
 
-0101000
+0111000
 +17 0 +14 0 *
 Wi
 
@@ -4937,7 +4937,7 @@ Wi
 Fa
 0  1e-07 6 0
 
-0101000
+0111000
 +12 0 *
 Ve
 1.00000001e-07
@@ -4970,7 +4970,7 @@ Wi
 Fa
 0  1e-07 7 7
 
-0101000
+0111000
 +7 0 *
 Ed
  1e-07 1 1 0
@@ -4987,7 +4987,7 @@ Wi
 Fa
 0  1e-07 10 0
 
-0101000
+0111000
 +4 0 *
 Sh
 
@@ -6308,7 +6308,7 @@ Wi
 Fa
 0  1e-07 1 0
 
-0101000
+0111000
 +35 0 *
 Ve
 1e-07
@@ -6358,7 +6358,7 @@ Wi
 Fa
 0  1e-07 2 0
 
-0101000
+0111000
 +28 0 *
 Ve
 1e-07
@@ -6414,7 +6414,7 @@ Wi
 Fa
 0  1e-07 3 4
 
-0101000
+0111000
 +23 0 +20 0 *
 Ve
 1e-07
@@ -6448,7 +6448,7 @@ Wi
 Fa
 0  1e-07 4 0
 
-0101000
+0111000
 +15 0 *
 Ed
  1e-07 1 1 0
@@ -6488,7 +6488,7 @@ Wi
 Fa
 0  1e-07 5 4
 
-0101000
+0111000
 +12 0 +9 0 *
 Wi
 
@@ -6497,7 +6497,7 @@ Wi
 Fa
 0  1e-07 6 0
 
-0101000
+0111000
 +7 0 *
 Ed
  1e-07 1 1 0
@@ -6514,7 +6514,7 @@ Wi
 Fa
 0  1e-07 7 0
 
-0101000
+0111000
 +4 0 *
 Sh
 
@@ -7125,7 +7125,7 @@ Wi
 Fa
 0  1e-07 1 0
 
-0101000
+0111000
 +26 0 *
 Ve
 1e-07
@@ -7198,7 +7198,7 @@ Wi
 Fa
 0  1e-07 6 0
 
-0101000
+0111000
 +16 0 *
 Ed
  1e-07 1 1 0
@@ -7225,7 +7225,7 @@ Wi
 Fa
 0  1e-07 2 0
 
-0101000
+0111000
 +12 0 *
 Ed
  1e-07 1 1 0
@@ -7252,7 +7252,7 @@ Wi
 Fa
 0  1e-07 4 0
 
-0101000
+0111000
 +8 0 *
 Wi
 
@@ -7261,7 +7261,7 @@ Wi
 Fa
 0  1e-07 5 0
 
-0101000
+0111000
 +6 0 *
 Wi
 
@@ -7270,7 +7270,7 @@ Wi
 Fa
 0  1e-07 3 0
 
-0101000
+0111000
 +4 0 *
 Sh
 

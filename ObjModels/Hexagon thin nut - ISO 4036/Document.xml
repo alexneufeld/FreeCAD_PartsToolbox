@@ -328,7 +328,7 @@
       <String value="Alex Neufeld"/>
     </Property>
     <Property name="LastModifiedDate" type="App::PropertyString" status="16777217">
-      <String value="2021-08-08T03:59:19Z"/>
+      <String value="2021-08-25T04:14:27Z"/>
     </Property>
     <Property name="License" type="App::PropertyString" status="1">
       <String value="All rights reserved"/>
@@ -365,20 +365,20 @@
   </Properties>
   <Objects Count="22" Dependencies="1">
     <ObjectDeps Name="Body" Count="6">
-      <Dep Name="Origin"/>
-      <Dep Name="Pad"/>
       <Dep Name="Sketch"/>
-      <Dep Name="Sketch002"/>
-      <Dep Name="SubtractiveHelix"/>
       <Dep Name="Chamfer"/>
+      <Dep Name="SubtractiveHelix"/>
+      <Dep Name="Sketch002"/>
+      <Dep Name="Pad"/>
+      <Dep Name="Origin"/>
     </ObjectDeps>
     <ObjectDeps Name="Origin" Count="6">
-      <Dep Name="Z_Axis"/>
-      <Dep Name="X_Axis"/>
       <Dep Name="XZ_Plane"/>
       <Dep Name="YZ_Plane"/>
-      <Dep Name="XY_Plane"/>
       <Dep Name="Y_Axis"/>
+      <Dep Name="XY_Plane"/>
+      <Dep Name="Z_Axis"/>
+      <Dep Name="X_Axis"/>
     </ObjectDeps>
     <ObjectDeps Name="X_Axis" Count="0"/>
     <ObjectDeps Name="Y_Axis" Count="0"/>
@@ -388,16 +388,16 @@
     <ObjectDeps Name="YZ_Plane" Count="0"/>
     <ObjectDeps Name="Part" Count="3">
       <Dep Name="Origin001"/>
-      <Dep Name="Body"/>
       <Dep Name="Spreadsheet"/>
+      <Dep Name="Body"/>
     </ObjectDeps>
     <ObjectDeps Name="Origin001" Count="6">
-      <Dep Name="Z_Axis001"/>
-      <Dep Name="X_Axis001"/>
-      <Dep Name="Y_Axis001"/>
       <Dep Name="XY_Plane001"/>
       <Dep Name="XZ_Plane001"/>
       <Dep Name="YZ_Plane001"/>
+      <Dep Name="Z_Axis001"/>
+      <Dep Name="X_Axis001"/>
+      <Dep Name="Y_Axis001"/>
     </ObjectDeps>
     <ObjectDeps Name="X_Axis001" Count="0"/>
     <ObjectDeps Name="Y_Axis001" Count="0"/>
@@ -411,24 +411,24 @@
     </ObjectDeps>
     <ObjectDeps Name="Pad" Count="3">
       <Dep Name="Sketch"/>
-      <Dep Name="Body"/>
       <Dep Name="Spreadsheet"/>
+      <Dep Name="Body"/>
     </ObjectDeps>
     <ObjectDeps Name="Chamfer" Count="3">
-      <Dep Name="Pad"/>
-      <Dep Name="Body"/>
       <Dep Name="Spreadsheet"/>
+      <Dep Name="Body"/>
+      <Dep Name="Pad"/>
     </ObjectDeps>
     <ObjectDeps Name="Sketch002" Count="2">
       <Dep Name="XZ_Plane"/>
       <Dep Name="Spreadsheet"/>
     </ObjectDeps>
     <ObjectDeps Name="SubtractiveHelix" Count="5">
+      <Dep Name="Chamfer"/>
       <Dep Name="Part"/>
+      <Dep Name="Spreadsheet"/>
       <Dep Name="Sketch002"/>
       <Dep Name="Body"/>
-      <Dep Name="Spreadsheet"/>
-      <Dep Name="Chamfer"/>
     </ObjectDeps>
     <ObjectDeps Name="Spreadsheet" Count="1">
       <Dep Name="Part"/>
@@ -441,7 +441,7 @@
     <Object type="App::Plane" name="XY_Plane" id="1486" revision="0" />
     <Object type="App::Plane" name="XZ_Plane" id="1487" revision="0" />
     <Object type="App::Plane" name="YZ_Plane" id="1488" revision="0" />
-    <Object type="App::Part" name="Part" id="1489" revision="227" />
+    <Object type="App::Part" name="Part" id="1489" revision="234" />
     <Object type="App::Origin" name="Origin001" id="1490" revision="0" />
     <Object type="App::Line" name="X_Axis001" id="1491" revision="0" />
     <Object type="App::Line" name="Y_Axis001" id="1492" revision="0" />
@@ -653,7 +653,7 @@ Wi
 Fa
 0  1e-07 1 0
 
-0101000
+0111000
 +62 3 *
 Ve
 1e-07
@@ -685,7 +685,7 @@ Wi
 Fa
 0  1e-07 2 0
 
-0101000
+0111000
 +57 0 *
 Ve
 1e-07
@@ -717,7 +717,7 @@ Wi
 Fa
 0  1e-07 3 0
 
-0101000
+0111000
 +52 0 *
 Wi
 
@@ -814,7 +814,7 @@ Wi
 Fa
 0  1e-07 4 0
 
-0101000
+0111000
 +50 9 +37 12 *
 Wi
 
@@ -911,7 +911,7 @@ Wi
 Fa
 0  1e-07 5 0
 
-0101000
+0111000
 +35 16 +22 12 *
 Ed
  1e-07 1 1 0
@@ -934,7 +934,7 @@ Wi
 Fa
 0  1e-07 6 0
 
-0101000
+0111000
 +18 0 *
 Ed
  1e-07 1 1 0
@@ -950,7 +950,7 @@ Wi
 Fa
 0  1e-07 7 0
 
-0101000
+0111000
 +15 0 *
 Ed
  1e-07 1 1 0
@@ -966,7 +966,7 @@ Wi
 Fa
 0  1e-07 8 0
 
-0101000
+0111000
 +12 0 *
 Ed
  1e-07 1 1 0
@@ -982,7 +982,7 @@ Wi
 Fa
 0  1e-07 9 0
 
-0101000
+0111000
 +9 0 *
 Ed
  1e-07 1 1 0
@@ -998,7 +998,7 @@ Wi
 Fa
 0  1e-07 10 0
 
-0101000
+0111000
 +6 0 *
 Wi
 
@@ -1007,7 +1007,7 @@ Wi
 Fa
 0  1e-07 11 0
 
-0101000
+0111000
 +4 0 *
 Sh
 
@@ -1333,7 +1333,7 @@ Vertex9	#45c;:T1527:4:V 6 0 10 58 84 157 1116
           </LinkList>
         </Property>
         <Property name="Id" type="App::PropertyString">
-          <String value=""/>
+          <String value="???"/>
         </Property>
         <Property name="Label" type="App::PropertyString" status="134217728">
           <String value="Hexagon thin nut - ISO 4036 - M6"/>
@@ -1342,10 +1342,10 @@ Vertex9	#45c;:T1527:4:V 6 0 10 58 84 157 1116
           <String value=""/>
         </Property>
         <Property name="License" type="App::PropertyString">
-          <String value=""/>
+          <String value="LGPL-3.0-or-later"/>
         </Property>
         <Property name="LicenseURL" type="App::PropertyString">
-          <String value=""/>
+          <String value="https://www.gnu.org/licenses/lgpl-3.0-standalone.html"/>
         </Property>
         <Property name="Material" type="App::PropertyMap">
           <Map count="0">
@@ -1365,7 +1365,7 @@ Vertex9	#45c;:T1527:4:V 6 0 10 58 84 157 1116
           <Bool value="false"/>
         </Property>
         <Property name="Type" type="App::PropertyString">
-          <String value=""/>
+          <String value="Fasteners|Nuts"/>
         </Property>
         <Property name="Uid" type="App::PropertyUUID">
           <Uuid value="08ad3ce4-bee9-49de-b3ed-e15e1cf672aa"/>
@@ -2526,7 +2526,7 @@ Wi
 Fa
 0  1e-07 1 0
 
-0101000
+0111000
 +35 0 *
 Ve
 1e-07
@@ -2557,7 +2557,7 @@ Wi
 Fa
 0  1e-07 4 0
 
-0101000
+0111000
 +30 0 *
 Ve
 1e-07
@@ -2588,7 +2588,7 @@ Wi
 Fa
 0  1e-07 5 0
 
-0101000
+0111000
 +25 0 *
 Ve
 1e-07
@@ -2619,7 +2619,7 @@ Wi
 Fa
 0  1e-07 6 0
 
-0101000
+0111000
 +20 0 *
 Ve
 1e-07
@@ -2651,7 +2651,7 @@ Wi
 Fa
 0  1e-07 7 0
 
-0101000
+0111000
 +15 0 *
 Ed
  1e-07 1 1 0
@@ -2670,7 +2670,7 @@ Wi
 Fa
 0  1e-07 2 0
 
-0101000
+0111000
 +12 0 *
 Ve
 1e-07
@@ -2703,7 +2703,7 @@ Wi
 Fa
 0  1e-07 8 0
 
-0101000
+0111000
 +7 0 *
 Wi
 
@@ -2716,7 +2716,7 @@ Wi
 Fa
 0  1e-07 3 0
 
-0101000
+0111000
 +5 12 -4 12 *
 Sh
 
@@ -3063,7 +3063,7 @@ Wi
 Fa
 0  1e-07 1 0
 
-0101000
+0111000
 +49 3 *
 Ve
 1e-07
@@ -3234,7 +3234,7 @@ Wi
 Fa
 0  1e-07 4 0
 
-0101000
+0111000
 +37 8 +24 11 *
 Wi
 
@@ -3243,7 +3243,7 @@ Wi
 Fa
 0  1e-07 4 0
 
-0101000
+0111000
 +22 15 +24 11 *
 Ed
  1e-07 1 1 0
@@ -3267,7 +3267,7 @@ Wi
 Fa
 0  1e-07 6 0
 
-0101000
+0111000
 +18 0 *
 Ed
  1e-07 1 1 0
@@ -3283,7 +3283,7 @@ Wi
 Fa
 0  1e-07 7 0
 
-0101000
+0111000
 +15 0 *
 Ed
  1e-07 1 1 0
@@ -3299,7 +3299,7 @@ Wi
 Fa
 0  1e-07 8 0
 
-0101000
+0111000
 +12 0 *
 Ed
  1e-07 1 1 0
@@ -3315,7 +3315,7 @@ Wi
 Fa
 0  1e-07 9 0
 
-0101000
+0111000
 +9 0 *
 Ed
  1e-07 1 1 0
@@ -3332,7 +3332,7 @@ Wi
 Fa
 0  1e-07 10 0
 
-0101000
+0111000
 +6 0 *
 Wi
 
@@ -3341,7 +3341,7 @@ Wi
 Fa
 0  1e-07 5 0
 
-0101000
+0111000
 +4 0 *
 Sh
 
@@ -3824,7 +3824,7 @@ Surfaces 6
 0 6
 0.063622651315673268 6
 
-1 2.5346510912337492 0.1594667371613929 -0.4900001193389541 -0.062790460722343497 0.99802673212809079 2.8120000000000001e-14 0.99802673212809079 0.062790460722343497 -3.944304526105059e-31 -1.7656677555122996e-15 2.8064511707441913e-14 -1 
+1 2.5346510912337492 0.1594667371613929 -0.4900001193389541 -0.062790460722343497 0.99802673212809079 2.8120000000000001e-14 0.99802673212809079 0.062790460722343497 -9.8607613152626476e-31 -1.7656677555123002e-15 2.8064511707441913e-14 -1 
 Triangulations 0
 
 TShapes 34
@@ -4350,7 +4350,7 @@ Wi
 Fa
 0  1e-07 1 0
 
-0101000
+0111000
 +49 3 *
 Ve
 1e-07
@@ -4383,7 +4383,7 @@ Wi
 Fa
 0  0 2 0
 
-0101000
+0111000
 +44 0 *
 Ve
 1e-07
@@ -4416,7 +4416,7 @@ Wi
 Fa
 0  0 3 0
 
-0101000
+0111000
 +39 0 *
 Wi
 
@@ -4521,7 +4521,7 @@ Wi
 Fa
 0  1e-07 4 0
 
-0101000
+0111000
 +37 8 +24 11 *
 Wi
 
@@ -4530,7 +4530,7 @@ Wi
 Fa
 0  1e-07 4 0
 
-0101000
+0111000
 +22 15 +24 11 *
 Ed
  1e-07 1 1 0
@@ -4554,7 +4554,7 @@ Wi
 Fa
 0  1e-07 6 0
 
-0101000
+0111000
 +18 0 *
 Ed
  1e-07 1 1 0
@@ -4570,7 +4570,7 @@ Wi
 Fa
 0  1e-07 7 0
 
-0101000
+0111000
 +15 0 *
 Ed
  1e-07 1 1 0
@@ -4586,7 +4586,7 @@ Wi
 Fa
 0  1e-07 8 0
 
-0101000
+0111000
 +12 0 *
 Ed
  1e-07 1 1 0
@@ -4602,7 +4602,7 @@ Wi
 Fa
 0  1e-07 9 0
 
-0101000
+0111000
 +9 0 *
 Ed
  1e-07 1 1 0
@@ -4619,7 +4619,7 @@ Wi
 Fa
 0  1e-07 10 0
 
-0101000
+0111000
 +6 0 *
 Wi
 
@@ -4628,7 +4628,7 @@ Wi
 Fa
 0  1e-07 5 0
 
-0101000
+0111000
 +4 0 *
 Sh
 

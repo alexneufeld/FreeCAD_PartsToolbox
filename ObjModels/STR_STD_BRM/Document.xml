@@ -381,7 +381,7 @@
       <String value="Alex Neufeld"/>
     </Property>
     <Property name="LastModifiedDate" type="App::PropertyString" status="16777217">
-      <String value="2021-08-08T03:59:50Z"/>
+      <String value="2021-08-25T04:14:39Z"/>
     </Property>
     <Property name="License" type="App::PropertyString" status="1">
       <String value="LGPL-3.0-or-later"/>
@@ -423,21 +423,21 @@
     </ObjectDeps>
     <ObjectDeps Name="Origin" Count="0"/>
     <ObjectDeps Name="Body" Count="8">
-      <Dep Name="Hole"/>
-      <Dep Name="Origin001"/>
-      <Dep Name="LinearPattern001"/>
-      <Dep Name="MultiTransform"/>
-      <Dep Name="Pad"/>
-      <Dep Name="Sketch"/>
-      <Dep Name="LinearPattern"/>
       <Dep Name="Sketch001"/>
+      <Dep Name="Sketch"/>
+      <Dep Name="MultiTransform"/>
+      <Dep Name="Origin001"/>
+      <Dep Name="LinearPattern"/>
+      <Dep Name="Pad"/>
+      <Dep Name="LinearPattern001"/>
+      <Dep Name="Hole"/>
     </ObjectDeps>
     <ObjectDeps Name="Origin001" Count="6">
       <Dep Name="X_Axis"/>
       <Dep Name="Y_Axis"/>
-      <Dep Name="YZ_Plane"/>
-      <Dep Name="XY_Plane"/>
       <Dep Name="Z_Axis"/>
+      <Dep Name="XY_Plane"/>
+      <Dep Name="YZ_Plane"/>
       <Dep Name="XZ_Plane"/>
     </ObjectDeps>
     <ObjectDeps Name="X_Axis" Count="0"/>
@@ -447,38 +447,38 @@
     <ObjectDeps Name="XZ_Plane" Count="0"/>
     <ObjectDeps Name="YZ_Plane" Count="0"/>
     <ObjectDeps Name="Sketch" Count="2">
-      <Dep Name="XY_Plane"/>
       <Dep Name="Part"/>
+      <Dep Name="XY_Plane"/>
     </ObjectDeps>
     <ObjectDeps Name="Sketch001" Count="1">
       <Dep Name="Sketch"/>
     </ObjectDeps>
     <ObjectDeps Name="Pad" Count="2">
-      <Dep Name="Body"/>
       <Dep Name="Sketch"/>
+      <Dep Name="Body"/>
     </ObjectDeps>
     <ObjectDeps Name="Hole" Count="3">
+      <Dep Name="Sketch001"/>
       <Dep Name="Body"/>
       <Dep Name="Pad"/>
-      <Dep Name="Sketch001"/>
     </ObjectDeps>
     <ObjectDeps Name="MultiTransform" Count="4">
-      <Dep Name="Hole"/>
-      <Dep Name="LinearPattern001"/>
       <Dep Name="Body"/>
       <Dep Name="LinearPattern"/>
+      <Dep Name="LinearPattern001"/>
+      <Dep Name="Hole"/>
     </ObjectDeps>
     <ObjectDeps Name="LinearPattern" Count="3">
+      <Dep Name="Part"/>
       <Dep Name="X_Axis"/>
       <Dep Name="Body"/>
-      <Dep Name="Part"/>
     </ObjectDeps>
     <ObjectDeps Name="LinearPattern001" Count="3">
+      <Dep Name="Part"/>
       <Dep Name="Y_Axis"/>
       <Dep Name="Body"/>
-      <Dep Name="Part"/>
     </ObjectDeps>
-    <Object type="App::Part" name="Part" id="996" revision="129" />
+    <Object type="App::Part" name="Part" id="996" revision="131" />
     <Object type="App::Origin" name="Origin" id="997" revision="0" />
     <Object type="PartDesign::Body" name="Body" id="998" revision="104" />
     <Object type="App::Origin" name="Origin001" id="999" revision="0" />
@@ -564,7 +564,7 @@
           <PropertyPlacement Px="0" Py="0" Pz="0" Q0="0" Q1="0" Q2="0" Q3="1" A="0" Ox="0" Oy="0" Oz="1"/>
         </Property>
         <Property name="Type" type="App::PropertyString">
-          <String value="Standard Part"/>
+          <String value="STEMFIE3D"/>
         </Property>
         <Property name="Uid" type="App::PropertyUUID">
           <Uuid value="6ea2fdc1-0ce5-4ed0-9f34-7af4c4cc43db"/>
@@ -968,7 +968,7 @@ Wi
 Fa
 0  1e-07 1 0
 
-0101000
+0111000
 +162 0 *
 Ve
 1.00000006e-07
@@ -1016,7 +1016,7 @@ Wi
 Fa
 0  1e-07 2 0
 
-0101000
+0111000
 +155 0 *
 Ve
 1.00000007e-07
@@ -1064,7 +1064,7 @@ Wi
 Fa
 0  1e-07 3 0
 
-0101000
+0111000
 +148 0 *
 Ve
 1.00000006e-07
@@ -1366,7 +1366,7 @@ Wi
 Fa
 0  1e-07 6 18
 
-0101000
+0111000
 +137 0 +134 0 +131 0 +128 0 +125 0 +122 0 +119 0 +116 0 +113 0 +110 0 
 +107 0 +104 0 +101 0 *
 Ve
@@ -1669,7 +1669,7 @@ Wi
 Fa
 0  1e-07 21 57
 
-0101000
+0111000
 +90 0 +87 0 +84 0 +81 0 +78 0 +75 0 +72 0 +69 0 +66 0 +63 0 
 +60 0 +57 0 +54 0 *
 Ed
@@ -1688,7 +1688,7 @@ Wi
 Fa
 0  1e-07 4 0
 
-0101000
+0111000
 +51 0 *
 Ed
  1.00000007e-07 1 1 0
@@ -1706,7 +1706,7 @@ Wi
 Fa
 0  1e-07 5 0
 
-0101000
+0111000
 +48 0 *
 Ed
  1e-07 1 1 0
@@ -1724,7 +1724,7 @@ Wi
 Fa
 0  1e-07 7 0
 
-0101000
+0111000
 +45 0 *
 Ed
  1e-07 1 1 0
@@ -1742,7 +1742,7 @@ Wi
 Fa
 0  1e-07 8 0
 
-0101000
+0111000
 +42 0 *
 Wi
 
@@ -1751,7 +1751,7 @@ Wi
 Fa
 0  1e-07 22 0
 
-0101000
+0111000
 +40 0 *
 Ed
  1e-07 1 1 0
@@ -1768,7 +1768,7 @@ Wi
 Fa
 0  1e-07 9 0
 
-0101000
+0111000
 +37 0 *
 Ed
  1e-07 1 1 0
@@ -1785,7 +1785,7 @@ Wi
 Fa
 0  1e-07 10 0
 
-0101000
+0111000
 +34 0 *
 Ed
  1e-07 1 1 0
@@ -1802,7 +1802,7 @@ Wi
 Fa
 0  1e-07 11 0
 
-0101000
+0111000
 +31 0 *
 Ed
  1e-07 1 1 0
@@ -1819,7 +1819,7 @@ Wi
 Fa
 0  1e-07 12 0
 
-0101000
+0111000
 +28 0 *
 Ed
  1e-07 1 1 0
@@ -1836,7 +1836,7 @@ Wi
 Fa
 0  1e-07 13 0
 
-0101000
+0111000
 +25 0 *
 Ed
  1e-07 1 1 0
@@ -1853,7 +1853,7 @@ Wi
 Fa
 0  1e-07 14 0
 
-0101000
+0111000
 +22 0 *
 Ed
  1e-07 1 1 0
@@ -1870,7 +1870,7 @@ Wi
 Fa
 0  1e-07 15 0
 
-0101000
+0111000
 +19 0 *
 Ed
  1e-07 1 1 0
@@ -1887,7 +1887,7 @@ Wi
 Fa
 0  1e-07 16 0
 
-0101000
+0111000
 +16 0 *
 Ed
  1e-07 1 1 0
@@ -1904,7 +1904,7 @@ Wi
 Fa
 0  1e-07 17 0
 
-0101000
+0111000
 +13 0 *
 Ed
  1e-07 1 1 0
@@ -1921,7 +1921,7 @@ Wi
 Fa
 0  1e-07 18 0
 
-0101000
+0111000
 +10 0 *
 Ed
  1e-07 1 1 0
@@ -1938,7 +1938,7 @@ Wi
 Fa
 0  1e-07 19 0
 
-0101000
+0111000
 +7 0 *
 Ed
  1e-07 1 1 0
@@ -1955,7 +1955,7 @@ Wi
 Fa
 0  1e-07 20 0
 
-0101000
+0111000
 +4 0 *
 Sh
 
@@ -3509,7 +3509,7 @@ Wi
 Fa
 0  1e-07 1 0
 
-0101000
+0111000
 +39 0 *
 Ve
 1.00000007e-07
@@ -3544,7 +3544,7 @@ Wi
 Fa
 0  1e-07 3 0
 
-0101000
+0111000
 +34 0 *
 Ve
 1.00000007e-07
@@ -3577,7 +3577,7 @@ Wi
 Fa
 0  1e-07 5 0
 
-0101000
+0111000
 +29 0 *
 Ve
 1e-07
@@ -3612,7 +3612,7 @@ Wi
 Fa
 0  1e-07 6 0
 
-0101000
+0111000
 +24 0 *
 Ve
 1e-07
@@ -3645,7 +3645,7 @@ Wi
 Fa
 0  1e-07 7 0
 
-0101000
+0111000
 +19 0 *
 Ve
 1.00000006e-07
@@ -3680,7 +3680,7 @@ Wi
 Fa
 0  1e-07 8 0
 
-0101000
+0111000
 +14 0 *
 Ve
 1.00000006e-07
@@ -3713,7 +3713,7 @@ Wi
 Fa
 0  1e-07 9 0
 
-0101000
+0111000
 +9 0 *
 Ed
  1e-07 1 1 0
@@ -3732,7 +3732,7 @@ Wi
 Fa
 0  1e-07 2 0
 
-0101000
+0111000
 +6 0 *
 Wi
 
@@ -3741,7 +3741,7 @@ Wi
 Fa
 0  1e-07 4 0
 
-0101000
+0111000
 +4 12 *
 Sh
 
@@ -4505,7 +4505,7 @@ Wi
 Fa
 0  1e-07 1 0
 
-0101000
+0111000
 +50 0 *
 Ve
 1.00000006e-07
@@ -4540,7 +4540,7 @@ Wi
 Fa
 0  1e-07 2 0
 
-0101000
+0111000
 +45 0 *
 Ve
 1.00000007e-07
@@ -4575,7 +4575,7 @@ Wi
 Fa
 0  1e-07 3 0
 
-0101000
+0111000
 +40 0 *
 Ve
 1.00000006e-07
@@ -4688,7 +4688,7 @@ Wi
 Fa
 0  1e-07 4 14
 
-0101000
+0111000
 +29 0 +26 0 *
 Wi
 
@@ -4729,7 +4729,7 @@ Wi
 Fa
 0  1e-07 4 42
 
-0101000
+0111000
 +24 0 +21 0 *
 Ed
  1.00000006e-07 1 1 0
@@ -4747,7 +4747,7 @@ Wi
 Fa
 0  1e-07 5 0
 
-0101000
+0111000
 +18 0 *
 Ed
  1.00000007e-07 1 1 0
@@ -4765,7 +4765,7 @@ Wi
 Fa
 0  1e-07 6 0
 
-0101000
+0111000
 +15 0 *
 Ed
  1e-07 1 1 0
@@ -4783,7 +4783,7 @@ Wi
 Fa
 0  1e-07 7 0
 
-0101000
+0111000
 +12 0 *
 Ed
  1e-07 1 1 0
@@ -4801,7 +4801,7 @@ Wi
 Fa
 0  1e-07 8 0
 
-0101000
+0111000
 +9 0 *
 Wi
 
@@ -4810,7 +4810,7 @@ Wi
 Fa
 0  1e-07 12 0
 
-0101000
+0111000
 +7 0 *
 Ed
  1e-07 1 1 0
@@ -4827,7 +4827,7 @@ Wi
 Fa
 0  1e-07 10 0
 
-0101000
+0111000
 +4 0 *
 Sh
 
@@ -5672,7 +5672,7 @@ Wi
 Fa
 0  1e-07 1 0
 
-0101000
+0111000
 +72 0 *
 Ve
 1.00000006e-07
@@ -5707,7 +5707,7 @@ Wi
 Fa
 0  1e-07 2 0
 
-0101000
+0111000
 +67 0 *
 Ve
 1.00000007e-07
@@ -5742,7 +5742,7 @@ Wi
 Fa
 0  1e-07 3 0
 
-0101000
+0111000
 +62 0 *
 Ve
 1.00000006e-07
@@ -5899,7 +5899,7 @@ Wi
 Fa
 0  1e-07 4 15
 
-0101000
+0111000
 +51 0 +48 0 +47 0 +46 0 +45 0 +44 0 +43 0 +42 0 +41 0 +40 0 
 +39 0 +38 0 +37 0 *
 Wi
@@ -5985,7 +5985,7 @@ Wi
 Fa
 0  1e-07 4 54
 
-0101000
+0111000
 +35 0 +32 0 +31 0 +30 0 +29 0 +28 0 +27 0 +26 0 +25 0 +24 0 
 +23 0 +22 0 +21 0 *
 Ed
@@ -6004,7 +6004,7 @@ Wi
 Fa
 0  1e-07 5 0
 
-0101000
+0111000
 +18 0 *
 Ed
  1.00000007e-07 1 1 0
@@ -6022,7 +6022,7 @@ Wi
 Fa
 0  1e-07 6 0
 
-0101000
+0111000
 +15 0 *
 Ed
  1e-07 1 1 0
@@ -6040,7 +6040,7 @@ Wi
 Fa
 0  1e-07 7 0
 
-0101000
+0111000
 +12 0 *
 Ed
  1e-07 1 1 0
@@ -6058,7 +6058,7 @@ Wi
 Fa
 0  1e-07 8 0
 
-0101000
+0111000
 +9 0 *
 Wi
 
@@ -6067,7 +6067,7 @@ Wi
 Fa
 0  1e-07 12 0
 
-0101000
+0111000
 +7 0 *
 Ed
  1e-07 1 1 0
@@ -6084,7 +6084,7 @@ Wi
 Fa
 0  1e-07 10 0
 
-0101000
+0111000
 +4 0 *
 Sh
 

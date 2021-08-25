@@ -75,7 +75,7 @@
       <String value="Alex Neufeld"/>
     </Property>
     <Property name="LastModifiedDate" type="App::PropertyString" status="16777217">
-      <String value="2021-08-08T03:59:26Z"/>
+      <String value="2021-08-25T04:14:31Z"/>
     </Property>
     <Property name="License" type="App::PropertyString" status="1">
       <String value="LGPL-3.0-or-later"/>
@@ -112,24 +112,24 @@
   </Properties>
   <Objects Count="14" Dependencies="1">
     <ObjectDeps Name="Part" Count="3">
-      <Dep Name="Body"/>
-      <Dep Name="Origin"/>
       <Dep Name="Spreadsheet"/>
+      <Dep Name="Origin"/>
+      <Dep Name="Body"/>
     </ObjectDeps>
     <ObjectDeps Name="Origin" Count="0"/>
     <ObjectDeps Name="Body" Count="4">
-      <Dep Name="Origin001"/>
       <Dep Name="Cylinder001"/>
-      <Dep Name="Chamfer"/>
       <Dep Name="Cylinder"/>
+      <Dep Name="Chamfer"/>
+      <Dep Name="Origin001"/>
     </ObjectDeps>
     <ObjectDeps Name="Origin001" Count="6">
-      <Dep Name="YZ_Plane"/>
-      <Dep Name="XZ_Plane"/>
-      <Dep Name="XY_Plane"/>
-      <Dep Name="Z_Axis"/>
       <Dep Name="X_Axis"/>
+      <Dep Name="Z_Axis"/>
+      <Dep Name="XZ_Plane"/>
       <Dep Name="Y_Axis"/>
+      <Dep Name="XY_Plane"/>
+      <Dep Name="YZ_Plane"/>
     </ObjectDeps>
     <ObjectDeps Name="X_Axis" Count="0"/>
     <ObjectDeps Name="Y_Axis" Count="0"/>
@@ -141,22 +141,22 @@
       <Dep Name="Part"/>
     </ObjectDeps>
     <ObjectDeps Name="Cylinder" Count="3">
-      <Dep Name="Body"/>
-      <Dep Name="XY_Plane"/>
       <Dep Name="Spreadsheet"/>
+      <Dep Name="XY_Plane"/>
+      <Dep Name="Body"/>
     </ObjectDeps>
     <ObjectDeps Name="Cylinder001" Count="4">
-      <Dep Name="Body"/>
-      <Dep Name="XY_Plane"/>
       <Dep Name="Spreadsheet"/>
       <Dep Name="Cylinder"/>
+      <Dep Name="XY_Plane"/>
+      <Dep Name="Body"/>
     </ObjectDeps>
     <ObjectDeps Name="Chamfer" Count="3">
-      <Dep Name="Body"/>
-      <Dep Name="Cylinder001"/>
       <Dep Name="Spreadsheet"/>
+      <Dep Name="Cylinder001"/>
+      <Dep Name="Body"/>
     </ObjectDeps>
-    <Object type="App::Part" name="Part" id="1383" revision="1939" />
+    <Object type="App::Part" name="Part" id="1383" revision="1941" />
     <Object type="App::Origin" name="Origin" id="1384" revision="0" />
     <Object type="PartDesign::Body" name="Body" id="1385" revision="1361" />
     <Object type="App::Origin" name="Origin001" id="1386" revision="0" />
@@ -257,7 +257,7 @@
           <PropertyPlacement Px="0" Py="0" Pz="0" Q0="0" Q1="0" Q2="0" Q3="1" A="0" Ox="0" Oy="0" Oz="1"/>
         </Property>
         <Property name="Type" type="App::PropertyString">
-          <String value="Standard Part"/>
+          <String value="Fasteners|Washers"/>
         </Property>
         <Property name="Uid" type="App::PropertyUUID">
           <Uuid value="3cac266c-f733-45e4-b9e3-24404270afc9"/>
@@ -464,7 +464,7 @@ Wi
 Fa
 0  1e-07 1 0
 
-0101000
+0111000
 +22 6 *
 Ve
 1e-07
@@ -496,7 +496,7 @@ Wi
 Fa
 0  1e-07 2 0
 
-0101000
+0111000
 +17 0 *
 Wi
 
@@ -524,7 +524,7 @@ Wi
 Fa
 0  1e-07 3 10
 
-0101000
+0111000
 +15 0 +12 0 *
 Wi
 
@@ -552,7 +552,7 @@ Wi
 Fa
 0  1e-07 5 10
 
-0101000
+0111000
 +10 12 +7 0 *
 Ed
  1e-07 1 1 0
@@ -569,7 +569,7 @@ Wi
 Fa
 0  1e-07 4 0
 
-0101000
+0111000
 +4 0 *
 Sh
 
@@ -1192,7 +1192,7 @@ Wi
 Fa
 0  1e-07 1 0
 
-0101000
+0111000
 +8 0 *
 Wi
 
@@ -1201,7 +1201,7 @@ Wi
 Fa
 0  1e-07 2 0
 
-0101000
+0111000
 +6 0 *
 Wi
 
@@ -1210,7 +1210,7 @@ Wi
 Fa
 0  1e-07 3 0
 
-0101000
+0111000
 -4 0 *
 Sh
 
@@ -1573,7 +1573,7 @@ Wi
 Fa
 0  1e-07 1 0
 
-0101000
+0111000
 +17 0 *
 Wi
 
@@ -1603,7 +1603,7 @@ Wi
 Fa
 0  1e-07 2 4
 
-0101000
+0111000
 +15 0 +12 0 *
 Wi
 
@@ -1633,7 +1633,7 @@ Wi
 Fa
 0  1e-07 3 4
 
-0101000
+0111000
 +10 0 +7 0 *
 Ed
  1e-07 1 1 0
@@ -1650,7 +1650,7 @@ Wi
 Fa
 0  1e-07 4 0
 
-0101000
+0111000
 +4 0 *
 Sh
 
@@ -1905,7 +1905,7 @@ Wi
 Fa
 0  1e-07 1 0
 
-0101000
+0111000
 +22 6 *
 Ve
 1e-07
@@ -1968,7 +1968,7 @@ Wi
 Fa
 0  1e-07 3 7
 
-0101000
+0111000
 +15 0 +12 0 *
 Wi
 
@@ -1998,7 +1998,7 @@ Wi
 Fa
 0  1e-07 4 7
 
-0101000
+0111000
 +10 8 +7 0 *
 Ed
  1e-07 1 1 0
@@ -2015,7 +2015,7 @@ Wi
 Fa
 0  1e-07 5 0
 
-0101000
+0111000
 +4 0 *
 Sh
 

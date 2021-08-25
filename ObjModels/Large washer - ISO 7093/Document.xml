@@ -58,7 +58,7 @@
       <String value="Alex Neufeld"/>
     </Property>
     <Property name="LastModifiedDate" type="App::PropertyString" status="16777217">
-      <String value="2021-08-09T03:57:31Z"/>
+      <String value="2021-08-25T04:06:06Z"/>
     </Property>
     <Property name="License" type="App::PropertyString" status="1">
       <String value="LGPL-3.0-or-later"/>
@@ -95,23 +95,23 @@
   </Properties>
   <Objects Count="13" Dependencies="1">
     <ObjectDeps Name="Part" Count="3">
+      <Dep Name="Origin"/>
       <Dep Name="Spreadsheet"/>
       <Dep Name="Body"/>
-      <Dep Name="Origin"/>
     </ObjectDeps>
     <ObjectDeps Name="Origin" Count="0"/>
     <ObjectDeps Name="Body" Count="3">
-      <Dep Name="Cylinder"/>
       <Dep Name="Cylinder001"/>
+      <Dep Name="Cylinder"/>
       <Dep Name="Origin001"/>
     </ObjectDeps>
     <ObjectDeps Name="Origin001" Count="6">
-      <Dep Name="Z_Axis"/>
-      <Dep Name="XY_Plane"/>
-      <Dep Name="XZ_Plane"/>
-      <Dep Name="YZ_Plane"/>
       <Dep Name="X_Axis"/>
+      <Dep Name="XY_Plane"/>
       <Dep Name="Y_Axis"/>
+      <Dep Name="XZ_Plane"/>
+      <Dep Name="Z_Axis"/>
+      <Dep Name="YZ_Plane"/>
     </ObjectDeps>
     <ObjectDeps Name="X_Axis" Count="0"/>
     <ObjectDeps Name="Y_Axis" Count="0"/>
@@ -128,12 +128,12 @@
       <Dep Name="Body"/>
     </ObjectDeps>
     <ObjectDeps Name="Cylinder001" Count="4">
+      <Dep Name="Cylinder"/>
       <Dep Name="XY_Plane"/>
       <Dep Name="Spreadsheet"/>
-      <Dep Name="Cylinder"/>
       <Dep Name="Body"/>
     </ObjectDeps>
-    <Object type="App::Part" name="Part" id="1383" revision="689" Touched="1" />
+    <Object type="App::Part" name="Part" id="1383" revision="691" />
     <Object type="App::Origin" name="Origin" id="1384" revision="0" />
     <Object type="PartDesign::Body" name="Body" id="1385" revision="391" />
     <Object type="App::Origin" name="Origin001" id="1386" revision="0" />
@@ -236,8 +236,8 @@
         <Property name="Placement" type="App::PropertyPlacement" status="8388608">
           <PropertyPlacement Px="0" Py="0" Pz="0" Q0="0" Q1="0" Q2="0" Q3="1" A="0" Ox="0" Oy="0" Oz="1"/>
         </Property>
-        <Property name="Type" type="App::PropertyString" status="1">
-          <String value="Washer"/>
+        <Property name="Type" type="App::PropertyString">
+          <String value="Fasteners|Washers"/>
         </Property>
         <Property name="Uid" type="App::PropertyUUID">
           <Uuid value="3cac266c-f733-45e4-b9e3-24404270afc9"/>

@@ -459,7 +459,7 @@ This property is read-only, as the number depends on the parameters of the array
       <String value="Alex Neufeld"/>
     </Property>
     <Property name="LastModifiedDate" type="App::PropertyString" status="16777217">
-      <String value="2021-08-08T03:59:16Z"/>
+      <String value="2021-08-25T04:14:27Z"/>
     </Property>
     <Property name="License" type="App::PropertyString" status="1">
       <String value="All rights reserved"/>
@@ -497,20 +497,20 @@ This property is read-only, as the number depends on the parameters of the array
   <Objects Count="49" Dependencies="1">
     <ObjectDeps Name="Part" Count="7">
       <Dep Name="Body003"/>
-      <Dep Name="Spreadsheet"/>
-      <Dep Name="Body"/>
       <Dep Name="Body001"/>
       <Dep Name="Array"/>
-      <Dep Name="Origin"/>
+      <Dep Name="Spreadsheet"/>
       <Dep Name="Body002"/>
+      <Dep Name="Body"/>
+      <Dep Name="Origin"/>
     </ObjectDeps>
     <ObjectDeps Name="Origin" Count="6">
+      <Dep Name="Z_Axis"/>
       <Dep Name="XY_Plane"/>
       <Dep Name="YZ_Plane"/>
       <Dep Name="X_Axis"/>
-      <Dep Name="XZ_Plane"/>
       <Dep Name="Y_Axis"/>
-      <Dep Name="Z_Axis"/>
+      <Dep Name="XZ_Plane"/>
     </ObjectDeps>
     <ObjectDeps Name="X_Axis" Count="0"/>
     <ObjectDeps Name="Y_Axis" Count="0"/>
@@ -519,17 +519,17 @@ This property is read-only, as the number depends on the parameters of the array
     <ObjectDeps Name="XZ_Plane" Count="0"/>
     <ObjectDeps Name="YZ_Plane" Count="0"/>
     <ObjectDeps Name="Body" Count="3">
-      <Dep Name="Origin001"/>
-      <Dep Name="Sketch"/>
       <Dep Name="Revolution"/>
+      <Dep Name="Sketch"/>
+      <Dep Name="Origin001"/>
     </ObjectDeps>
     <ObjectDeps Name="Origin001" Count="6">
       <Dep Name="Y_Axis001"/>
-      <Dep Name="XY_Plane001"/>
+      <Dep Name="XZ_Plane001"/>
       <Dep Name="YZ_Plane001"/>
       <Dep Name="Z_Axis001"/>
       <Dep Name="X_Axis001"/>
-      <Dep Name="XZ_Plane001"/>
+      <Dep Name="XY_Plane001"/>
     </ObjectDeps>
     <ObjectDeps Name="X_Axis001" Count="0"/>
     <ObjectDeps Name="Y_Axis001" Count="0"/>
@@ -538,21 +538,21 @@ This property is read-only, as the number depends on the parameters of the array
     <ObjectDeps Name="XZ_Plane001" Count="0"/>
     <ObjectDeps Name="YZ_Plane001" Count="0"/>
     <ObjectDeps Name="Sketch" Count="2">
-      <Dep Name="Spreadsheet"/>
       <Dep Name="XZ_Plane001"/>
+      <Dep Name="Spreadsheet"/>
     </ObjectDeps>
     <ObjectDeps Name="Body001" Count="3">
-      <Dep Name="Spreadsheet"/>
       <Dep Name="Origin002"/>
       <Dep Name="Sphere"/>
+      <Dep Name="Spreadsheet"/>
     </ObjectDeps>
     <ObjectDeps Name="Origin002" Count="6">
-      <Dep Name="XY_Plane002"/>
-      <Dep Name="X_Axis002"/>
-      <Dep Name="YZ_Plane002"/>
-      <Dep Name="Y_Axis002"/>
       <Dep Name="XZ_Plane002"/>
+      <Dep Name="Y_Axis002"/>
+      <Dep Name="YZ_Plane002"/>
+      <Dep Name="XY_Plane002"/>
       <Dep Name="Z_Axis002"/>
+      <Dep Name="X_Axis002"/>
     </ObjectDeps>
     <ObjectDeps Name="X_Axis002" Count="0"/>
     <ObjectDeps Name="Y_Axis002" Count="0"/>
@@ -561,23 +561,23 @@ This property is read-only, as the number depends on the parameters of the array
     <ObjectDeps Name="XZ_Plane002" Count="0"/>
     <ObjectDeps Name="YZ_Plane002" Count="0"/>
     <ObjectDeps Name="Sphere" Count="3">
+      <Dep Name="Body001"/>
       <Dep Name="XY_Plane002"/>
       <Dep Name="Spreadsheet"/>
-      <Dep Name="Body001"/>
     </ObjectDeps>
     <ObjectDeps Name="Array" Count="1">
       <Dep Name="Body001"/>
     </ObjectDeps>
     <ObjectDeps Name="Revolution" Count="3">
-      <Dep Name="Body"/>
       <Dep Name="Sketch"/>
       <Dep Name="Z_Axis001"/>
+      <Dep Name="Body"/>
     </ObjectDeps>
     <ObjectDeps Name="X_Axis003" Count="0"/>
     <ObjectDeps Name="XZ_Plane003" Count="0"/>
     <ObjectDeps Name="Sketch001" Count="2">
-      <Dep Name="Spreadsheet"/>
       <Dep Name="XZ_Plane003"/>
+      <Dep Name="Spreadsheet"/>
     </ObjectDeps>
     <ObjectDeps Name="YZ_Plane003" Count="0"/>
     <ObjectDeps Name="Body002" Count="3">
@@ -588,31 +588,31 @@ This property is read-only, as the number depends on the parameters of the array
     <ObjectDeps Name="Z_Axis003" Count="0"/>
     <ObjectDeps Name="XY_Plane003" Count="0"/>
     <ObjectDeps Name="Origin003" Count="6">
-      <Dep Name="Z_Axis003"/>
-      <Dep Name="YZ_Plane003"/>
-      <Dep Name="XZ_Plane003"/>
-      <Dep Name="X_Axis003"/>
-      <Dep Name="Y_Axis003"/>
       <Dep Name="XY_Plane003"/>
+      <Dep Name="XZ_Plane003"/>
+      <Dep Name="Y_Axis003"/>
+      <Dep Name="X_Axis003"/>
+      <Dep Name="YZ_Plane003"/>
+      <Dep Name="Z_Axis003"/>
     </ObjectDeps>
     <ObjectDeps Name="Y_Axis003" Count="0"/>
     <ObjectDeps Name="Revolution001" Count="3">
       <Dep Name="Sketch001"/>
-      <Dep Name="Z_Axis003"/>
       <Dep Name="Body002"/>
+      <Dep Name="Z_Axis003"/>
     </ObjectDeps>
     <ObjectDeps Name="Body003" Count="3">
       <Dep Name="Pad"/>
-      <Dep Name="Sketch002"/>
       <Dep Name="Origin004"/>
+      <Dep Name="Sketch002"/>
     </ObjectDeps>
     <ObjectDeps Name="Origin004" Count="6">
-      <Dep Name="XZ_Plane004"/>
-      <Dep Name="Y_Axis004"/>
-      <Dep Name="X_Axis004"/>
       <Dep Name="YZ_Plane004"/>
-      <Dep Name="Z_Axis004"/>
+      <Dep Name="XZ_Plane004"/>
+      <Dep Name="X_Axis004"/>
+      <Dep Name="Y_Axis004"/>
       <Dep Name="XY_Plane004"/>
+      <Dep Name="Z_Axis004"/>
     </ObjectDeps>
     <ObjectDeps Name="X_Axis004" Count="0"/>
     <ObjectDeps Name="Y_Axis004" Count="0"/>
@@ -621,8 +621,8 @@ This property is read-only, as the number depends on the parameters of the array
     <ObjectDeps Name="XZ_Plane004" Count="0"/>
     <ObjectDeps Name="YZ_Plane004" Count="0"/>
     <ObjectDeps Name="Sketch002" Count="2">
-      <Dep Name="Spreadsheet"/>
       <Dep Name="XY_Plane004"/>
+      <Dep Name="Spreadsheet"/>
     </ObjectDeps>
     <ObjectDeps Name="Pad" Count="2">
       <Dep Name="Body003"/>
@@ -631,7 +631,7 @@ This property is read-only, as the number depends on the parameters of the array
     <ObjectDeps Name="Spreadsheet" Count="1">
       <Dep Name="Part"/>
     </ObjectDeps>
-    <Object type="App::Part" name="Part" id="4773" revision="81" />
+    <Object type="App::Part" name="Part" id="4773" revision="88" />
     <Object type="App::Origin" name="Origin" id="4774" revision="0" />
     <Object type="App::Line" name="X_Axis" id="4775" revision="0" />
     <Object type="App::Line" name="Y_Axis" id="4776" revision="0" />
@@ -723,7 +723,7 @@ This property is read-only, as the number depends on the parameters of the array
           </LinkList>
         </Property>
         <Property name="Id" type="App::PropertyString">
-          <String value=""/>
+          <String value="???"/>
         </Property>
         <Property name="Label" type="App::PropertyString" status="134217728">
           <String value="Radial Ball Bearing DIN625-1 608"/>
@@ -732,10 +732,10 @@ This property is read-only, as the number depends on the parameters of the array
           <String value=""/>
         </Property>
         <Property name="License" type="App::PropertyString">
-          <String value=""/>
+          <String value="LGPL-3.0-or-later"/>
         </Property>
         <Property name="LicenseURL" type="App::PropertyString">
-          <String value=""/>
+          <String value="https://www.gnu.org/licenses/lgpl-3.0-standalone.html"/>
         </Property>
         <Property name="Material" type="App::PropertyMap">
           <Map count="0">
@@ -807,7 +807,7 @@ This property is read-only, as the number depends on the parameters of the array
           </CustomEnumList>
         </Property>
         <Property name="Type" type="App::PropertyString">
-          <String value=""/>
+          <String value="Mechanical Components|Rotary Motion|Bearings"/>
         </Property>
         <Property name="Uid" type="App::PropertyUUID">
           <Uuid value="a063d4f2-3e98-4fbc-a443-79bb06a655e9"/>
@@ -1207,7 +1207,7 @@ Wi
 Fa
 0  1e-07 1 0
 
-0101000
+0111000
 +57 0 *
 Ve
 1.00000126e-07
@@ -1240,7 +1240,7 @@ Wi
 Fa
 0  1e-07 3 0
 
-0101000
+0111000
 +52 0 *
 Wi
 
@@ -1269,7 +1269,7 @@ Wi
 Fa
 0  1e-07 4 0
 
-0101000
+0111000
 +50 0 +47 0 *
 Ve
 1e-07
@@ -1303,7 +1303,7 @@ Wi
 Fa
 0  1e-07 5 0
 
-0101000
+0111000
 +42 0 *
 Ve
 1e-07
@@ -1335,7 +1335,7 @@ Wi
 Fa
 0  1e-07 6 0
 
-0101000
+0111000
 +37 0 *
 Wi
 
@@ -1363,7 +1363,7 @@ Wi
 Fa
 0  1e-07 7 0
 
-0101000
+0111000
 +35 0 +32 0 *
 Ve
 1e-07
@@ -1395,7 +1395,7 @@ Wi
 Fa
 0  1e-07 8 0
 
-0101000
+0111000
 +27 0 *
 Wi
 
@@ -1423,7 +1423,7 @@ Wi
 Fa
 0  1e-07 9 0
 
-0101000
+0111000
 +25 0 +22 0 *
 Ve
 1e-07
@@ -1457,7 +1457,7 @@ Wi
 Fa
 0  1e-07 10 0
 
-0101000
+0111000
 +17 0 *
 Ve
 1e-07
@@ -1490,7 +1490,7 @@ Wi
 Fa
 0  1e-07 11 0
 
-0101000
+0111000
 +12 0 *
 Wi
 
@@ -1519,7 +1519,7 @@ Wi
 Fa
 0  1e-07 12 0
 
-0101000
+0111000
 +10 0 +7 0 *
 Ed
  1e-07 1 1 0
@@ -1536,7 +1536,7 @@ Wi
 Fa
 0  1e-07 2 0
 
-0101000
+0111000
 +4 0 *
 Sh
 
@@ -2463,7 +2463,7 @@ Wi
 Fa
 0  1e-07 1 0
 
-0101000
+0111000
 +4 0 *
 Sh
 
@@ -2904,7 +2904,7 @@ Wi
 Fa
 0  1e-07 1 0
 
-0101000
+0111000
 +4 0 *
 Sh
 
@@ -3909,7 +3909,7 @@ Wi
 Fa
 0  1e-07 1 0
 
-0101000
+0111000
 +57 0 *
 Ve
 1.00000126e-07
@@ -3943,7 +3943,7 @@ Wi
 Fa
 0  1e-07 3 0
 
-0101000
+0111000
 +52 0 *
 Wi
 
@@ -3973,7 +3973,7 @@ Wi
 Fa
 0  1e-07 4 0
 
-0101000
+0111000
 +50 0 +47 0 *
 Ve
 1e-07
@@ -4007,7 +4007,7 @@ Wi
 Fa
 0  1e-07 5 0
 
-0101000
+0111000
 +42 0 *
 Ve
 1e-07
@@ -4040,7 +4040,7 @@ Wi
 Fa
 0  1e-07 6 0
 
-0101000
+0111000
 +37 0 *
 Wi
 
@@ -4069,7 +4069,7 @@ Wi
 Fa
 0  1e-07 7 0
 
-0101000
+0111000
 +35 0 +32 0 *
 Ve
 1e-07
@@ -4102,7 +4102,7 @@ Wi
 Fa
 0  1e-07 8 0
 
-0101000
+0111000
 +27 0 *
 Wi
 
@@ -4131,7 +4131,7 @@ Wi
 Fa
 0  1e-07 9 0
 
-0101000
+0111000
 +25 0 +22 0 *
 Ve
 1e-07
@@ -4165,7 +4165,7 @@ Wi
 Fa
 0  1e-07 10 0
 
-0101000
+0111000
 +17 0 *
 Ve
 1e-07
@@ -4199,7 +4199,7 @@ Wi
 Fa
 0  1e-07 11 0
 
-0101000
+0111000
 +12 0 *
 Wi
 
@@ -4229,7 +4229,7 @@ Wi
 Fa
 0  1e-07 12 0
 
-0101000
+0111000
 +10 0 +7 0 *
 Ed
  1e-07 1 1 0
@@ -4246,7 +4246,7 @@ Wi
 Fa
 0  1e-07 2 0
 
-0101000
+0111000
 +4 0 *
 Sh
 
@@ -5169,7 +5169,7 @@ Wi
 Fa
 0  1e-07 1 0
 
-0101000
+0111000
 +57 0 *
 Ve
 1.00000003e-07
@@ -5202,7 +5202,7 @@ Wi
 Fa
 0  1e-07 3 0
 
-0101000
+0111000
 +52 0 *
 Wi
 
@@ -5231,7 +5231,7 @@ Wi
 Fa
 0  1e-07 4 0
 
-0101000
+0111000
 +50 0 +47 0 *
 Ve
 1e-07
@@ -5265,7 +5265,7 @@ Wi
 Fa
 0  1e-07 5 0
 
-0101000
+0111000
 +42 0 *
 Ve
 1e-07
@@ -5297,7 +5297,7 @@ Wi
 Fa
 0  1e-07 6 0
 
-0101000
+0111000
 +37 0 *
 Wi
 
@@ -5325,7 +5325,7 @@ Wi
 Fa
 0  1e-07 7 0
 
-0101000
+0111000
 +35 0 +32 0 *
 Ve
 1e-07
@@ -5357,7 +5357,7 @@ Wi
 Fa
 0  1e-07 8 0
 
-0101000
+0111000
 +27 0 *
 Wi
 
@@ -5385,7 +5385,7 @@ Wi
 Fa
 0  1e-07 9 0
 
-0101000
+0111000
 +25 0 +22 0 *
 Ve
 1e-07
@@ -5419,7 +5419,7 @@ Wi
 Fa
 0  1e-07 10 0
 
-0101000
+0111000
 +17 0 *
 Ve
 1e-07
@@ -5452,7 +5452,7 @@ Wi
 Fa
 0  1e-07 11 0
 
-0101000
+0111000
 +12 0 *
 Wi
 
@@ -5481,7 +5481,7 @@ Wi
 Fa
 0  1e-07 12 0
 
-0101000
+0111000
 +10 0 +7 0 *
 Ed
  1e-07 1 1 0
@@ -5498,7 +5498,7 @@ Wi
 Fa
 0  1e-07 2 0
 
-0101000
+0111000
 +4 0 *
 Sh
 
@@ -6500,7 +6500,7 @@ Wi
 Fa
 0  1e-07 1 0
 
-0101000
+0111000
 +57 0 *
 Ve
 1.00000003e-07
@@ -6534,7 +6534,7 @@ Wi
 Fa
 0  1e-07 3 0
 
-0101000
+0111000
 +52 0 *
 Wi
 
@@ -6564,7 +6564,7 @@ Wi
 Fa
 0  1e-07 4 0
 
-0101000
+0111000
 +50 0 +47 0 *
 Ve
 1e-07
@@ -6598,7 +6598,7 @@ Wi
 Fa
 0  1e-07 5 0
 
-0101000
+0111000
 +42 0 *
 Ve
 1e-07
@@ -6631,7 +6631,7 @@ Wi
 Fa
 0  1e-07 6 0
 
-0101000
+0111000
 +37 0 *
 Wi
 
@@ -6660,7 +6660,7 @@ Wi
 Fa
 0  1e-07 7 0
 
-0101000
+0111000
 +35 0 +32 0 *
 Ve
 1e-07
@@ -6693,7 +6693,7 @@ Wi
 Fa
 0  1e-07 8 0
 
-0101000
+0111000
 +27 0 *
 Wi
 
@@ -6722,7 +6722,7 @@ Wi
 Fa
 0  1e-07 9 0
 
-0101000
+0111000
 +25 0 +22 0 *
 Ve
 1e-07
@@ -6756,7 +6756,7 @@ Wi
 Fa
 0  1e-07 10 0
 
-0101000
+0111000
 +17 0 *
 Ve
 1e-07
@@ -6790,7 +6790,7 @@ Wi
 Fa
 0  1e-07 11 0
 
-0101000
+0111000
 +12 0 *
 Wi
 
@@ -6820,7 +6820,7 @@ Wi
 Fa
 0  1e-07 12 0
 
-0101000
+0111000
 +10 0 +7 0 *
 Ed
  1e-07 1 1 0
@@ -6837,7 +6837,7 @@ Wi
 Fa
 0  1e-07 2 0
 
-0101000
+0111000
 +4 0 *
 Sh
 
@@ -7103,7 +7103,7 @@ Wi
 Fa
 0  1e-07 1 0
 
-0101000
+0111000
 +17 0 *
 Ve
 1e-07
@@ -7150,7 +7150,7 @@ Wi
 Fa
 0  1e-07 2 0
 
-0101000
+0111000
 +10 0 *
 Wi
 
@@ -7163,7 +7163,7 @@ Wi
 Fa
 0  1e-07 3 0
 
-0101000
+0111000
 +8 15 -7 15 *
 Wi
 
@@ -7176,7 +7176,7 @@ Wi
 Fa
 0  1e-07 4 0
 
-0101000
+0111000
 +5 15 -4 15 *
 Sh
 
@@ -7954,7 +7954,7 @@ Wi
 Fa
 0  1e-07 1 0
 
-0101000
+0111000
 +12 0 *
 Ve
 1e-07
@@ -7987,7 +7987,7 @@ Wi
 Fa
 0  1e-07 2 0
 
-0101000
+0111000
 +7 0 *
 Wi
 
@@ -8000,7 +8000,7 @@ Wi
 Fa
 0  1e-07 3 0
 
-0101000
+0111000
 +5 11 -4 11 *
 Sh
 

@@ -210,7 +210,7 @@
       <String value="Alex Neufeld"/>
     </Property>
     <Property name="LastModifiedDate" type="App::PropertyString" status="16777217">
-      <String value="2021-08-09T03:58:44Z"/>
+      <String value="2021-08-25T04:14:31Z"/>
     </Property>
     <Property name="License" type="App::PropertyString" status="1">
       <String value="All rights reserved"/>
@@ -247,15 +247,15 @@
   </Properties>
   <Objects Count="19" Dependencies="1">
     <ObjectDeps Name="Part" Count="3">
-      <Dep Name="Body"/>
-      <Dep Name="Origin"/>
       <Dep Name="Spreadsheet"/>
+      <Dep Name="Origin"/>
+      <Dep Name="Body"/>
     </ObjectDeps>
     <ObjectDeps Name="Origin" Count="6">
-      <Dep Name="X_Axis"/>
       <Dep Name="XY_Plane"/>
-      <Dep Name="Z_Axis"/>
+      <Dep Name="X_Axis"/>
       <Dep Name="YZ_Plane"/>
+      <Dep Name="Z_Axis"/>
       <Dep Name="Y_Axis"/>
       <Dep Name="XZ_Plane"/>
     </ObjectDeps>
@@ -266,16 +266,16 @@
     <ObjectDeps Name="XZ_Plane" Count="0"/>
     <ObjectDeps Name="YZ_Plane" Count="0"/>
     <ObjectDeps Name="Body" Count="3">
+      <Dep Name="Pad"/>
       <Dep Name="Sketch"/>
       <Dep Name="Origin001"/>
-      <Dep Name="Pad"/>
     </ObjectDeps>
     <ObjectDeps Name="Origin001" Count="6">
-      <Dep Name="Y_Axis001"/>
       <Dep Name="XZ_Plane001"/>
-      <Dep Name="YZ_Plane001"/>
       <Dep Name="X_Axis001"/>
       <Dep Name="Z_Axis001"/>
+      <Dep Name="Y_Axis001"/>
+      <Dep Name="YZ_Plane001"/>
       <Dep Name="XY_Plane001"/>
     </ObjectDeps>
     <ObjectDeps Name="X_Axis001" Count="0"/>
@@ -290,13 +290,13 @@
     </ObjectDeps>
     <ObjectDeps Name="Pad" Count="3">
       <Dep Name="Sketch"/>
-      <Dep Name="Body"/>
       <Dep Name="Part"/>
+      <Dep Name="Body"/>
     </ObjectDeps>
     <ObjectDeps Name="Spreadsheet" Count="1">
       <Dep Name="Part"/>
     </ObjectDeps>
-    <Object type="App::Part" name="Part" id="2227" revision="60" Touched="1" />
+    <Object type="App::Part" name="Part" id="2227" revision="62" />
     <Object type="App::Origin" name="Origin" id="2228" revision="0" />
     <Object type="App::Line" name="X_Axis" id="2229" revision="0" />
     <Object type="App::Line" name="Y_Axis" id="2230" revision="0" />
@@ -365,10 +365,10 @@
         <Property name="Length" type="App::PropertyLength" group="Parameters" attr="0" ro="0" hide="0" doc="" status="2162688">
           <Float value="1000"/>
         </Property>
-        <Property name="License" type="App::PropertyString" status="1">
+        <Property name="License" type="App::PropertyString">
           <String value="LGPL-3.0-or-later"/>
         </Property>
-        <Property name="LicenseURL" type="App::PropertyString" status="1">
+        <Property name="LicenseURL" type="App::PropertyString">
           <String value="https://www.gnu.org/licenses/lgpl-3.0-standalone.html"/>
         </Property>
         <Property name="Material" type="App::PropertyMap">
@@ -386,7 +386,7 @@
           <PropertyPlacement Px="0" Py="0" Pz="0" Q0="0" Q1="0" Q2="0" Q3="1" A="0" Ox="0" Oy="0" Oz="1"/>
         </Property>
         <Property name="Type" type="App::PropertyString">
-          <String value=""/>
+          <String value="Materials|U Channel"/>
         </Property>
         <Property name="Uid" type="App::PropertyUUID">
           <Uuid value="3eb32d33-a248-4a45-aede-8fb15406f728"/>
