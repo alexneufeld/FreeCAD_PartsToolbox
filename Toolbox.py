@@ -26,7 +26,12 @@
 
 import FreeCAD
 import os
-from PySide import QtGui, QtUiTools, QtCore
+# we're importing pyside whether our python environment
+# likes it or not >:)
+try:
+    from PySide import QtGui, QtUiTools, QtCore
+except:
+    from PySide2 import QtGui, QtUiTools, QtCore
 import shutil
 import yaml
 import defusedxml.ElementTree as tree
@@ -57,10 +62,9 @@ class ToolboxDock(QtGui.QDockWidget):
         self.setWidget(UI)
         # configure the UI with our data and functions
         # import object hierarchy from yaml
-        yamlData = yaml.safe_load(
-            open(os.path.join(__dir__, "PartsHierarchy.yaml")))
+        ObjHierarchy = readObjTypes()
         # recursive function to parse the nested list
-        populate_tree(UI.treeWidget, yamlData)
+        populate_tree(UI.treeWidget, ObjHierarchy)
         # disable ok button initially
         # (it can't do anything until the user selects a part to add)
         UI.buttonBox.button(QtGui.QDialogButtonBox.Ok).setEnabled(False)
@@ -78,8 +82,10 @@ class ToolboxDock(QtGui.QDockWidget):
 
 
 def OpenToolboxDock():
-    # start an instance of our custom dock
-    # this is what the GUI command actually does
+    '''
+    start an instance of our custom dock
+    this is what the GUI command actually does
+    '''
     # check if the dock already exists (and is just hidden)
     pe = FreeCAD.Gui.getMainWindow().findChild(QtGui.QWidget, 'ToolboxBrowser')
     # initialize if needed, otherwise just toggle visibility
@@ -90,25 +96,58 @@ def OpenToolboxDock():
         pe.setVisible(pe.isHidden())
 
 
+def readObjTypes():
+    data = []
+    for item in os.listdir(objpath):
+        catStr = getDataFromFCFolder(os.path.join(objpath, item))["Type"]
+        data.append((item, catStr.split("|")))
+    return data
+
+
 def populate_tree(top_level_obj, items):
-    for i in items:
-        # constructor takes parent as an argument
-        subobj = QtGui.QTreeWidgetItem(top_level_obj)
-        # part
-        if type(i) == str:
-            # setText(colum#, string)
-            subobj.setIcon(0, PartIcon)
-            subobj.setText(0, i)
-        # folder
-        elif type(i) == dict:
-            k = list(i.keys())[0]
+    '''
+    Fill the tree view widget with an organized hierarchy
+    of available parts
+    '''
+    for i, cats in items:
+        # repeatedly add categories
+        currentParent = top_level_obj
+        for cat in cats:
+            subobj = treeHasChild(cat, currentParent)
+            if not subobj:
+                subobj = QtGui.QTreeWidgetItem(top_level_obj)
             subobj.setIcon(0, FolderIcon)
-            subobj.setText(0, k)
-            populate_tree(subobj, i[k])
+            subobj.setText(0, cat)
+            currentParent = subobj
+        # add the object to the bottom level category
+        subobj = QtGui.QTreeWidgetItem(currentParent)
+        subobj.setIcon(0, PartIcon)
+        subobj.setText(0, i)
+        print(i)
+
+
+def treeHasChild(text, QTreeObj):
+    '''
+    If a QTreeWidget _OR_ a QTreeWidgetItem has a child
+    with specific text in column 0, return that child item.
+    Otherwise, return None.
+    '''
+    if type(QTreeObj) == QtGui.QTreeWidget:
+        x = QTreeObj.findItems(text, QtCore.Qt.MatchContains)
+        if x:
+            return x[0]
+    else:
+        for i in range(QTreeObj.childCount()):
+            child = QTreeObj.child(i)
+            if child.text(0) == text:
+                return child
+    return None
 
 
 def selectionChanged(OKButton, thumbnailBox, selectedTreeItem):
-    # this runs every time the user selects a different part in the tree view
+    '''
+    this runs every time the user selects a different part in the tree view
+    '''
     if selectedTreeItem:
         # if a category is selected, disable the add button:
         if selectedTreeItem.childCount() > 0:
@@ -243,7 +282,7 @@ def getDataFromFCFolder(folderPath):
     if partObj:
         proplist = list(partObj.iter(tag="Properties"))[0]
     else:
-        return None
+        raise ValueError(f"Document {folderPath} has no object named Part")
     mdata = {
         "Id": "",
         "Type": "",
@@ -277,21 +316,21 @@ def partMetaBrowser():
         if itemData:
             currentRow = UI.tableWidget.rowCount()
             UI.tableWidget.setRowCount(UI.tableWidget.rowCount()+1)
-            fnameItem = QtGui.QTableWidgetItem(PartIcon, f)
+            fileNameItem = QtGui.QTableWidgetItem(PartIcon, f)
             # set filename items to be non-editable
-            fnameItem.setFlags(QtCore.Qt.ItemIsEnabled)
-            UI.tableWidget.setItem(currentRow, 0, fnameItem)
+            fileNameItem.setFlags(QtCore.Qt.ItemIsEnabled)
+            UI.tableWidget.setItem(currentRow, 0, fileNameItem)
             datalist.update({f: {"Type": itemData["Type"], "Id": itemData["Id"],
                             "License": itemData["License"], "LicenseURL": itemData["LicenseURL"]}})
             for j, col in enumerate(tablecolumns[1:]):
                 item = QtGui.QTableWidgetItem(itemData[col])
                 UI.tableWidget.setItem(currentRow, j+1, item)
     UI.buttonBox.accepted.connect(
-        lambda: (updataMetadata(datalist, UI.tableWidget), UI.close()))
+        lambda: (updateMetadata(datalist, UI.tableWidget), UI.close()))
     UI.show()
 
 
-def updataMetadata(oldData, tableWidget):
+def updateMetadata(oldData, tableWidget):
     #tablecolumns = ["File Name", "Type", "ID", "License", "LicenseURL"]
     newData = {}
     for row in range(tableWidget.rowCount()):
@@ -305,11 +344,10 @@ def updataMetadata(oldData, tableWidget):
     for file in oldData.keys():
         if oldData[file] != newData[file]:
             print(f"Update {file}")
-            doc = FreeCAD.openDocument(os.path.join(objpath,file))
+            doc = FreeCAD.openDocument(
+                os.path.join(objpath, file), hidden=True)
             for key, val in newData[file].items():
-                setattr(doc.Part,key,val)
+                setattr(doc.Part, key, val)
             doc.save()
             doc.recompute()
             FreeCAD.closeDocument(doc.Name)
-    
-    
