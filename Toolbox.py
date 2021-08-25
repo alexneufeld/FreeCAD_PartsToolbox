@@ -115,7 +115,7 @@ def populate_tree(top_level_obj, items):
         for cat in cats:
             subobj = treeHasChild(cat, currentParent)
             if not subobj:
-                subobj = QtGui.QTreeWidgetItem(top_level_obj)
+                subobj = QtGui.QTreeWidgetItem(currentParent)
             subobj.setIcon(0, FolderIcon)
             subobj.setText(0, cat)
             currentParent = subobj
@@ -123,7 +123,6 @@ def populate_tree(top_level_obj, items):
         subobj = QtGui.QTreeWidgetItem(currentParent)
         subobj.setIcon(0, PartIcon)
         subobj.setText(0, i)
-        print(i)
 
 
 def treeHasChild(text, QTreeObj):
@@ -133,7 +132,7 @@ def treeHasChild(text, QTreeObj):
     Otherwise, return None.
     '''
     if type(QTreeObj) == QtGui.QTreeWidget:
-        x = QTreeObj.findItems(text, QtCore.Qt.MatchContains)
+        x = QTreeObj.findItems(text, QtCore.Qt.MatchFixedString)
         if x:
             return x[0]
     else:
@@ -155,16 +154,11 @@ def selectionChanged(OKButton, thumbnailBox, selectedTreeItem):
             thumbnailBox.setPixmap(None)
         else:
             OKButton.setEnabled(True)
-
             # update thumbnail
             imagePath = os.path.join(
                 objpath, selectedTreeItem.text(0), "thumbnails/Thumbnail.png")
-            try:
-                pixmap = QtGui.QPixmap(imagePath)
-                thumbnailBox.setPixmap(pixmap)
-            except Exception as E:
-                print(f"failed to set thumbnail - {E}")
-
+            pixmap = QtGui.QPixmap(imagePath)
+            thumbnailBox.setPixmap(pixmap)
     else:
         OKButton.setEnabled(True)
 
@@ -174,7 +168,12 @@ def InsertParamObjBind(partFileName):
     Given a part filename, add a copy of that part to the 
     active FreeCAD document
     """
-    doc, pathToDoc = verifySavedDoc()
+    try:
+        doc, pathToDoc = verifySavedDoc()
+    except NoOpenDocument:
+        FreeCAD.Console.PrintError(
+            "PartsToolbox Error: Active document not found or not saved to a file!\n")
+        return
     sourcePartPath = os.path.join(objpath, partFileName)
     partFilePath = os.path.join(
         pathToDoc, "ToolboxParts", partFileName)
@@ -192,8 +191,9 @@ def InsertParamObjBind(partFileName):
     elif hasattr(part_doc, "Body"):
         top_obj = part_doc.Body
     else:
-        raise Exception(
-            f"file {partFileName} has no suitable objects to copy!")
+        FreeCAD.Console.PrintError(
+            f"PartsToolbox Error: file {partFileName} has no suitable objects to copy!\n")
+        return
     # add a shapebinder and assign an object to link
     binder = doc.addObject('PartDesign::SubShapeBinder', 'ToolboxPart')
     binder.Support = top_obj
@@ -229,13 +229,20 @@ def verifySavedDoc():
     saved to disk. Otherwise, raise an exception
     """
     doc = FreeCAD.ActiveDocument
-    path_to_doc = os.path.dirname(doc.FileName)
     if not doc:
-        raise Exception("Can't add Part - No active document found!")
+        raise NoOpenDocument
+    path_to_doc = os.path.dirname(doc.FileName)
     if path_to_doc == "":
-        raise Exception(
-            "Can't add Part - Active Document must be saved to a file!")
+        raise NoOpenDocument
     return (doc, path_to_doc)
+
+
+class NoOpenDocument(Exception):
+    '''
+    Custom exception class,
+    for use when adding a part to the current document
+    '''
+    pass
 
 
 def copyFreecadDocument(docFilePath, destinationDir):
@@ -250,7 +257,6 @@ def copyFreecadDocument(docFilePath, destinationDir):
     # DocumentObject.FileName gets us the full path to the files
     # which is convenient
     for f in files:
-        print(f"copying {f} to {destinationDir}")
         # copy each file. handle both .FCStd and save-as-directory
         # file formats
         if not os.path.exists(os.path.join(destinationDir, os.path.basename(f))):
@@ -343,7 +349,7 @@ def updateMetadata(oldData, tableWidget):
         }})
     for file in oldData.keys():
         if oldData[file] != newData[file]:
-            print(f"Update {file}")
+            FreeCAD.Console.PrintMessage(f"PartsToolbox: Update {file}\n")
             doc = FreeCAD.openDocument(
                 os.path.join(objpath, file), hidden=True)
             for key, val in newData[file].items():

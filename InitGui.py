@@ -47,9 +47,7 @@ class FCToolboxAddCmd:
         }
 
     def IsActive(self):
-        if FreeCAD.ActiveDocument:
-            return True
-        return False
+        return True
 
     def Activated(self):
         import Toolbox
