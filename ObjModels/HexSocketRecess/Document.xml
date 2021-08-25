@@ -191,7 +191,7 @@
       <String value="Alex Neufeld"/>
     </Property>
     <Property name="LastModifiedDate" type="App::PropertyString" status="16777217">
-      <String value="2021-08-08T03:59:41Z"/>
+      <String value="2021-08-25T03:40:11Z"/>
     </Property>
     <Property name="License" type="App::PropertyString" status="1">
       <String value="LGPL-3.0-or-later"/>
@@ -226,22 +226,22 @@
       <Bool value="true"/>
     </Property>
   </Properties>
-  <Objects Count="13" Dependencies="1">
+  <Objects Count="15" Dependencies="1">
     <ObjectDeps Name="Body001" Count="6">
-      <Dep Name="Prism"/>
       <Dep Name="Sketch"/>
-      <Dep Name="Revolution"/>
-      <Dep Name="Origin002"/>
       <Dep Name="Groove"/>
+      <Dep Name="Origin002"/>
       <Dep Name="Sketch001"/>
+      <Dep Name="Revolution"/>
+      <Dep Name="Prism"/>
     </ObjectDeps>
     <ObjectDeps Name="Origin002" Count="6">
-      <Dep Name="X_Axis002"/>
       <Dep Name="XY_Plane002"/>
-      <Dep Name="Z_Axis002"/>
+      <Dep Name="XZ_Plane002"/>
       <Dep Name="YZ_Plane002"/>
       <Dep Name="Y_Axis002"/>
-      <Dep Name="XZ_Plane002"/>
+      <Dep Name="X_Axis002"/>
+      <Dep Name="Z_Axis002"/>
     </ObjectDeps>
     <ObjectDeps Name="X_Axis002" Count="0"/>
     <ObjectDeps Name="Y_Axis002" Count="0"/>
@@ -254,22 +254,27 @@
       <Dep Name="Body001"/>
     </ObjectDeps>
     <ObjectDeps Name="Sketch001" Count="2">
-      <Dep Name="Body001"/>
       <Dep Name="XZ_Plane002"/>
+      <Dep Name="Body001"/>
     </ObjectDeps>
     <ObjectDeps Name="Groove" Count="3">
-      <Dep Name="Prism"/>
       <Dep Name="Body001"/>
       <Dep Name="Sketch001"/>
+      <Dep Name="Prism"/>
     </ObjectDeps>
     <ObjectDeps Name="Sketch" Count="2">
-      <Dep Name="Body001"/>
       <Dep Name="XZ_Plane002"/>
+      <Dep Name="Body001"/>
     </ObjectDeps>
     <ObjectDeps Name="Revolution" Count="3">
       <Dep Name="Sketch"/>
-      <Dep Name="Body001"/>
       <Dep Name="Groove"/>
+      <Dep Name="Body001"/>
+    </ObjectDeps>
+    <ObjectDeps Name="Origin" Count="0"/>
+    <ObjectDeps Name="Part" Count="2">
+      <Dep Name="Body001"/>
+      <Dep Name="Origin"/>
     </ObjectDeps>
     <Object type="PartDesign::Body" name="Body001" id="4756" revision="339" />
     <Object type="App::Origin" name="Origin002" id="4757" revision="0" />
@@ -284,8 +289,10 @@
     <Object type="PartDesign::Groove" name="Groove" id="4766" revision="240" />
     <Object type="Sketcher::SketchObject" name="Sketch" id="4767" revision="65" />
     <Object type="PartDesign::Revolution" name="Revolution" id="4768" revision="32" />
+    <Object type="App::Origin" name="Origin" id="4769" revision="0" />
+    <Object type="App::Part" name="Part" id="4770" revision="11" />
   </Objects>
-  <ObjectData Count="13">
+  <ObjectData Count="15">
     <Object name="Body001" Extensions="True">
       <Extensions Count="1">
         <Extension type="App::OriginGroupExtension" name="OriginGroupExtension">
@@ -420,9 +427,9 @@ Curve2ds 18
  -0.6467748264015668 7 1.1e-16 5 0.64677482640156714 7
 1 0 0 1 0 
 Curves 22
-5 2.1650635094610964 1.2500000000000013 -6.6666666666666661 -0.86602540378443871 -0.5 0 9.8612159321677299e-17 -1.7080127018922197e-16 1 -0.5 0.86602540378443871 1.9722431864335462e-16 1.4433756729740639 2.4999999999999996
+5 2.1650635094610964 1.2500000000000013 -6.6666666666666661 -0.86602540378443871 -0.5 0 9.8612159321677312e-17 -1.70801270189222e-16 1 -0.5 0.86602540378443871 1.9722431864335467e-16 1.4433756729740639 2.4999999999999996
 1 1.4433756729740648 2.5 -10 0 0 1 
-5 2.1650635094610968 1.2500000000000007 -2.8867513459481282 -0.86602540378443871 -0.5 0 9.8612159321677299e-17 -1.7080127018922197e-16 1 -0.5 0.86602540378443871 1.9722431864335462e-16 2.4999999999999996 2.5
+5 2.1650635094610968 1.2500000000000007 -2.8867513459481282 -0.86602540378443871 -0.5 0 9.8612159321677312e-17 -1.70801270189222e-16 1 -0.5 0.86602540378443871 1.9722431864335467e-16 2.4999999999999996 2.5
 1 2.8867513459481291 0 -10 0 0 1 
 1 0.5 -16.377991532071853 2.2200000000000002e-15 0.86602540378443882 0.49999999999999983 0 
 5 3.8000000000000001e-16 2.5000000000000004 -6.6666666666666661 -1.5e-16 -1 0 0 0 1 -1 1.5e-16 0 1.4433756729740637 2.4999999999999991
@@ -525,7 +532,7 @@ Wi
 Fa
 0  1e-07 1 6
 
-0101000
+0111000
 +50 0 *
 Ve
 1e-07
@@ -625,7 +632,7 @@ Wi
 Fa
 0  1e-07 2 0
 
-0101000
+0111000
 +36 0 *
 Ve
 1.07941209e-07
@@ -656,7 +663,7 @@ Wi
 Fa
 0  1e-07 4 6
 
-0101000
+0111000
 +31 0 *
 Ve
 1e-07
@@ -741,7 +748,7 @@ Wi
 Fa
 0  1e-07 3 0
 
-0101000
+0111000
 +19 0 *
 Ed
  1e-07 1 1 0
@@ -757,7 +764,7 @@ Wi
 Fa
 0  1e-07 5 6
 
-0101000
+0111000
 +16 0 *
 Ed
  1e-07 1 1 0
@@ -773,7 +780,7 @@ Wi
 Fa
 0  1e-07 6 6
 
-0101000
+0111000
 +13 0 *
 Ed
  1e-07 1 1 0
@@ -789,7 +796,7 @@ Wi
 Fa
 0  1e-07 7 6
 
-0101000
+0111000
 +10 0 *
 Wi
 
@@ -798,7 +805,7 @@ Wi
 Fa
 0  1e-07 8 6
 
-0101000
+0111000
 +8 0 *
 Wi
 
@@ -807,7 +814,7 @@ Wi
 Fa
 0  1e-07 9 0
 
-0101000
+0111000
 +6 0 *
 Wi
 
@@ -816,7 +823,7 @@ Wi
 Fa
 0  1e-07 10 0
 
-0101000
+0111000
 +4 0 *
 Sh
 
@@ -1666,7 +1673,7 @@ Wi
 Fa
 0  1e-07 1 0
 
-0101000
+0111000
 +29 0 *
 Ve
 1.07941209e-07
@@ -1702,7 +1709,7 @@ Wi
 Fa
 0  1e-07 3 0
 
-0101000
+0111000
 +24 0 *
 Ve
 1.07941209e-07
@@ -1738,7 +1745,7 @@ Wi
 Fa
 0  1e-07 6 0
 
-0101000
+0111000
 +19 0 *
 Ve
 1.07941216e-07
@@ -1774,7 +1781,7 @@ Wi
 Fa
 0  1e-07 7 0
 
-0101000
+0111000
 +14 0 *
 Ve
 1.48135129e-07
@@ -1810,7 +1817,7 @@ Wi
 Fa
 0  1e-07 8 0
 
-0101000
+0111000
 +9 0 *
 Ed
  1.00000001e-07 1 1 0
@@ -1830,7 +1837,7 @@ Wi
 Fa
 0  1e-07 2 0
 
-0101000
+0111000
 +6 0 *
 Wi
 
@@ -1839,7 +1846,7 @@ Wi
 Fa
 0  1e-07 4 0
 
-0101000
+0111000
 +4 0 *
 Sh
 
@@ -2719,7 +2726,7 @@ Curve2ds 56
 1 2.8867513459481287 0 0 -1 
 1 0 0 0 -1 
 Curves 20
-5 2.1650635094610964 1.2500000000000013 3.3333333333333344 -0.86602540378443871 -0.5 0 9.8612159321677299e-17 -1.7080127018922197e-16 1 -0.5 0.86602540378443871 1.9722431864335462e-16 1.4433756729740639 2.4999999999999996
+5 2.1650635094610964 1.2500000000000013 3.3333333333333344 -0.86602540378443871 -0.5 0 9.8612159321677312e-17 -1.70801270189222e-16 1 -0.5 0.86602540378443871 1.9722431864335467e-16 1.4433756729740639 2.4999999999999996
 1 1.4433756729740648 2.5 0 0 0 1 
 1 2.8867513459481291 0 0 -0.5 0.86602540378443871 0 
 1 2.8867513459481291 0 0 0 0 1 
@@ -2833,7 +2840,7 @@ Wi
 Fa
 0  1e-07 1 4
 
-0101000
+0111000
 +45 0 *
 Ve
 1e-07
@@ -2941,7 +2948,7 @@ Wi
 Fa
 0  1e-07 2 0
 
-0101000
+0111000
 +31 0 *
 Ve
 1.07941209e-07
@@ -2977,7 +2984,7 @@ Wi
 Fa
 0  1e-07 3 4
 
-0101000
+0111000
 +26 0 *
 Ve
 1.07941209e-07
@@ -3051,7 +3058,7 @@ Wi
 Fa
 0  1e-07 4 0
 
-0101000
+0111000
 +17 0 *
 Ed
  1e-07 1 1 0
@@ -3069,7 +3076,7 @@ Wi
 Fa
 0  1e-07 6 4
 
-0101000
+0111000
 +14 0 *
 Ed
  1e-07 1 1 0
@@ -3087,7 +3094,7 @@ Wi
 Fa
 0  1e-07 9 4
 
-0101000
+0111000
 +11 0 *
 Ed
  1e-07 1 1 0
@@ -3105,7 +3112,7 @@ Wi
 Fa
 0  1e-07 10 4
 
-0101000
+0111000
 +8 0 *
 Wi
 
@@ -3114,7 +3121,7 @@ Wi
 Fa
 0  1e-07 11 4
 
-0101000
+0111000
 +6 0 *
 Wi
 
@@ -3123,7 +3130,7 @@ Wi
 Fa
 0  1e-07 12 0
 
-0101000
+0111000
 +4 0 *
 Sh
 
@@ -4126,9 +4133,9 @@ Curve2ds 60
 1 2.8867513459481287 0 0 -1 
 1 0 0 0 -1 
 Curves 22
-5 2.1650635094610964 1.2500000000000013 3.3333333333333344 -0.86602540378443871 -0.5 0 9.8612159321677299e-17 -1.7080127018922197e-16 1 -0.5 0.86602540378443871 1.9722431864335462e-16 1.4433756729740639 2.4999999999999996
+5 2.1650635094610964 1.2500000000000013 3.3333333333333344 -0.86602540378443871 -0.5 0 9.8612159321677312e-17 -1.70801270189222e-16 1 -0.5 0.86602540378443871 1.9722431864335467e-16 1.4433756729740639 2.4999999999999996
 1 1.4433756729740648 2.5 0 0 0 1 
-5 2.1650635094610968 1.2500000000000007 7.1132486540518718 -0.86602540378443871 -0.5 0 9.8612159321677299e-17 -1.7080127018922197e-16 1 -0.5 0.86602540378443871 1.9722431864335462e-16 2.4999999999999996 2.5
+5 2.1650635094610968 1.2500000000000007 7.1132486540518718 -0.86602540378443871 -0.5 0 9.8612159321677312e-17 -1.70801270189222e-16 1 -0.5 0.86602540378443871 1.9722431864335467e-16 2.4999999999999996 2.5
 1 2.8867513459481291 0 0 0 0 1 
 1 0.5 -6.377991532071853 0 0.86602540378443882 0.49999999999999983 0 
 5 3.8000000000000001e-16 2.5000000000000004 3.3333333333333344 -1.5e-16 -1 0 0 0 1 -1 1.5e-16 0 1.4433756729740637 2.4999999999999991
@@ -4253,7 +4260,7 @@ Wi
 Fa
 0  1e-07 1 6
 
-0101000
+0111000
 +50 0 *
 Ve
 1e-07
@@ -4361,7 +4368,7 @@ Wi
 Fa
 0  1e-07 2 0
 
-0101000
+0111000
 +36 0 *
 Ve
 1.07941209e-07
@@ -4395,7 +4402,7 @@ Wi
 Fa
 0  1e-07 3 6
 
-0101000
+0111000
 +31 0 *
 Ve
 1e-07
@@ -4491,7 +4498,7 @@ Wi
 Fa
 0  1e-07 4 0
 
-0101000
+0111000
 +19 0 *
 Ed
  1e-07 1 1 0
@@ -4509,7 +4516,7 @@ Wi
 Fa
 0  1e-07 5 6
 
-0101000
+0111000
 +16 0 *
 Ed
  1e-07 1 1 0
@@ -4527,7 +4534,7 @@ Wi
 Fa
 0  1e-07 8 6
 
-0101000
+0111000
 +13 0 *
 Ed
  1e-07 1 1 0
@@ -4545,7 +4552,7 @@ Wi
 Fa
 0  1e-07 9 6
 
-0101000
+0111000
 +10 0 *
 Wi
 
@@ -4554,7 +4561,7 @@ Wi
 Fa
 0  1e-07 10 6
 
-0101000
+0111000
 +8 0 *
 Wi
 
@@ -4563,7 +4570,7 @@ Wi
 Fa
 0  1e-07 11 0
 
-0101000
+0111000
 +6 0 *
 Wi
 
@@ -4572,7 +4579,7 @@ Wi
 Fa
 0  1e-07 18 0
 
-0101000
+0111000
 +4 0 *
 Sh
 
@@ -4674,6 +4681,109 @@ TShapes 0
         <Property name="_Siblings" type="App::PropertyLinkList" status="218103808">
           <LinkList count="0">
           </LinkList>
+        </Property>
+      </Properties>
+    </Object>
+    <Object name="Origin">
+      <Properties Count="8" TransientCount="2">
+        <_Property name="Group" type="App::PropertyLinkList" status="16"/>
+        <_Property name="_GroupTouched" type="App::PropertyBool" status="100663296"/>
+        <Property name="ExportMode" type="App::PropertyEnumeration" status="8">
+          <Integer value="0"/>
+        </Property>
+        <Property name="ExpressionEngine" type="App::PropertyExpressionEngine" status="67108864">
+          <ExpressionEngine count="0"></ExpressionEngine>
+        </Property>
+        <Property name="Label" type="App::PropertyString" status="134217728">
+          <String value="Origin"/>
+        </Property>
+        <Property name="Label2" type="App::PropertyString" status="128">
+          <String value=""/>
+        </Property>
+        <Property name="OriginFeatures" type="App::PropertyLinkList" status="201326592">
+          <LinkList count="0">
+          </LinkList>
+        </Property>
+        <Property name="Visibility" type="App::PropertyBool" status="648">
+          <Bool value="false"/>
+        </Property>
+        <Property name="_ExportChildren" type="App::PropertyLinkList" status="218104320">
+          <LinkList count="0">
+          </LinkList>
+        </Property>
+        <Property name="_GroupVersion" type="App::PropertyInteger" status="218103808">
+          <Integer value="1"/>
+        </Property>
+      </Properties>
+    </Object>
+    <Object name="Part" Extensions="True">
+      <Extensions Count="1">
+        <Extension type="App::OriginGroupExtension" name="OriginGroupExtension">
+        </Extension>
+      </Extensions>
+      <Properties Count="18" TransientCount="2">
+        <_Property name="_ElementMapVersion" type="App::PropertyString" status="234881024"/>
+        <_Property name="_GroupTouched" type="App::PropertyBool" status="100663296"/>
+        <Property name="ColoredElements" type="App::PropertyLinkSubHidden" status="83886080">
+          <LinkSub value="" count="0">
+          </LinkSub>
+        </Property>
+        <Property name="ExportMode" type="App::PropertyEnumeration">
+          <Integer value="1"/>
+        </Property>
+        <Property name="ExpressionEngine" type="App::PropertyExpressionEngine" status="67108864">
+          <ExpressionEngine count="0"></ExpressionEngine>
+        </Property>
+        <Property name="Group" type="App::PropertyLinkList">
+          <LinkList count="1">
+            <Link value="Body001"/>
+          </LinkList>
+        </Property>
+        <Property name="Id" type="App::PropertyString">
+          <String value="???"/>
+        </Property>
+        <Property name="Label" type="App::PropertyString" status="134217728">
+          <String value="Part"/>
+        </Property>
+        <Property name="Label2" type="App::PropertyString" status="128">
+          <String value=""/>
+        </Property>
+        <Property name="License" type="App::PropertyString">
+          <String value="LGPL-3.0-or-later"/>
+        </Property>
+        <Property name="LicenseURL" type="App::PropertyString">
+          <String value="https://www.gnu.org/licenses/lgpl-3.0-standalone.html"/>
+        </Property>
+        <Property name="Material" type="App::PropertyMap">
+          <Map count="0">
+          </Map>
+        </Property>
+        <Property name="Meta" type="App::PropertyMap">
+          <Map count="0">
+          </Map>
+        </Property>
+        <Property name="Origin" type="App::PropertyLink" status="67108864">
+          <Link value="Origin"/>
+        </Property>
+        <Property name="Placement" type="App::PropertyPlacement" status="8388608">
+          <PropertyPlacement Px="0" Py="0" Pz="0" Q0="0" Q1="0" Q2="0" Q3="1" A="0" Ox="0" Oy="0" Oz="1"/>
+        </Property>
+        <Property name="Type" type="App::PropertyString">
+          <String value="Standard Part"/>
+        </Property>
+        <Property name="Uid" type="App::PropertyUUID">
+          <Uuid value="69151b19-bb5c-4183-8c33-18912c12404b"/>
+        </Property>
+        <Property name="Visibility" type="App::PropertyBool" status="648">
+          <Bool value="true"/>
+        </Property>
+        <Property name="_ExportChildren" type="App::PropertyLinkList" status="218104320">
+          <LinkList count="1">
+            <Link value="Body001"/>
+          </LinkList>
+        </Property>
+        <Property name="_GroupVersion" type="App::PropertyInteger" status="218103808">
+          <Integer value="1"/>
         </Property>
       </Properties>
     </Object>
