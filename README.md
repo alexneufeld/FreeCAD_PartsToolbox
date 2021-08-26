@@ -1,13 +1,14 @@
-### FreeCAD Parts Toolbox ![](Icons/toolbox.png)
+## FreeCAD Parts Toolbox ![](Icons/PartsToolbox_Icon.svg)
 
-Copies standardized parts into your FreeCAD projects. 
-Conceptually similar to utilities with the same name 
-available for other closed-source CAD software
+[![Total alerts](https://img.shields.io/lgtm/alerts/github/alexneufeld/FreeCAD_PartsToolbox.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/shaise/FreeCAD_SheetMetal/alerts/) [![Language grade: Python](https://img.shields.io/lgtm/grade/python/github/alexneufeld/FreeCAD_PartsToolbox.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/shaise/FreeCAD_SheetMetal/context:python) 
+
+Copies standardized parts into your FreeCAD projects.
 
 ![](Resources/add_part_screencast.gif)
 
 ![](Resources/dockwidget.png)
-### Installing
+
+## Installing
 
 The library uses features of FreeCAD's expression engine that aren't available in the 0.19.1 release. Go grab a recent version of the Realthunder branch [here](https://github.com/realthunder/FreeCAD_assembly3/releases).  
 
@@ -18,9 +19,20 @@ cd ~/.FreeCAD/Mod
 git clone git@github.com:alexneufeld/FreeCAD_PartsToolbox.git
 ```
 
-You'll then have to use the [customization tool](https://wiki.freecadweb.org/Customize_Toolbars) to add the partsToolBox commands to a custom toolbar.
+this module will now be loaded every time FreeCAD starts up.
 
-### How it Works
+
+## Usage
+
+Once installed, some new [macros](https://wiki.freecadweb.org/Macros) will be available in the macro dialog.
+
+![](Resources/macro_dialog_with_new_macros.png)
+
+Select and run `PartsToolbox_ToggleBrowser.py`. A GUI panel opens, and you can select parts to add to the active FreeCAD document.
+
+![](Resources/toolbox_dock.png)
+
+## How it Works
 
 Parts are provided as `.FCStd` files. We use FreeCAD's existing 
 ability to create parametric objects to our advantage.
@@ -34,9 +46,12 @@ For a better understanding of how parametric parts are implemented here, take a 
 
 ![](Resources/object_import_structure.png)
 
-### Acknowledgements
+## License
+GPLv3 (see [LICENSE](LICENSE))
+
+## Acknowledgements
 
 Much of the dimensional data on objects provided by the toolbox
 is based on the [FreeCAD_FastenersWB](https://github.com/shaise/FreeCAD_FastenersWB) and [BOLTS](https://github.com/boltsparts/BOLTS) projects. 
 
-Toolbox icon: [Adib Sulthon](https://www.flaticon.com/authors/adib-sulthon) - [www.flaticon.com](https://www.flaticon.com/)
+This module also tentatively includes parts from the [STEMFIE](https://stemfie.org/) project. 
