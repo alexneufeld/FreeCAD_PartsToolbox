@@ -6,7 +6,6 @@ Copies standardized parts into your FreeCAD projects.
 
 ![](Resources/add_part_screencast.gif)
 
-![](Resources/dockwidget.png)
 
 ## Installing
 
