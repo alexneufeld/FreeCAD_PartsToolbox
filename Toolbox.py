@@ -26,14 +26,8 @@
 
 import FreeCAD
 import os
-# we're importing pyside whether our python environment
-# likes it or not >:)
-try:
-    from PySide import QtGui, QtUiTools, QtCore
-except:
-    from PySide2 import QtGui, QtUiTools, QtCore
+from PySide import QtGui, QtUiTools, QtCore
 import shutil
-import yaml
 import defusedxml.ElementTree as tree
 
 # make the directories that relevant files are stored in
@@ -43,12 +37,14 @@ iconPath = os.path.join(__dir__, "Icons")
 objpath = os.path.join(__dir__, "ObjModels")
 UIPath = os.path.join(__dir__, "UI")
 ThumbPath = os.path.join(__dir__, "Thumbnails")
+MacroPath = os.path.join(__dir__, "Macro")
 # set up some icons
 PartIcon = QtGui.QIcon(os.path.join(iconPath, "PartsToolbox_Part.svg"))
-FolderIcon = QtGui.QIcon(os.path.join(iconPath, "Group.svg"))
+FolderIcon = FreeCAD.Gui.getIcon("Group")
+# import user preferences
+UserParams = FreeCAD.ParamGet("User parameter:BaseApp/Preferences/Mod/PartsToolbox")
 # class that defines the dock widget
 # adapted from here: https://wiki.freecadweb.org/Macro_SplitToolboxDock
-
 
 class ToolboxDock(QtGui.QDockWidget):
     def __init__(self) -> None:
@@ -75,9 +71,6 @@ class ToolboxDock(QtGui.QDockWidget):
         ))
         UI.buttonBox.accepted.connect(
             lambda: InsertParamObjBind(UI.treeWidget.currentItem().text(0)))
-        # TODO filtered files will still appear, they just won't be selectable
-        # hide their rows to completely remove them
-        #UI.treeView.setRowHidden(row, parent, True)
         UI.show()
 
 

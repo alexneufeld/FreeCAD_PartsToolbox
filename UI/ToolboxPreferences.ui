@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Gui::Dialog::DlgSettingsDraft</class>
+ <widget class="QWidget" name="Gui::Dialog::DlgSettingsDraft">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>563</width>
+    <height>512</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>General</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout_2">
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>1</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="title">
+      <string>General</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>Default object import mode</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="Gui::PrefComboBox" name="prefDefaultImportType">
+          <property name="toolTip">
+           <string>Object type to use when importing</string>
+          </property>
+          <property name="editable">
+           <bool>false</bool>
+          </property>
+          <property name="currentText">
+           <string>Shapebinder</string>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <property name="prefEntry" stdset="0">
+           <string>DefaultImportType</string>
+          </property>
+          <property name="prefPath" stdset="0">
+           <string>Mod/PartsToolbox</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>Shapebinder</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Link</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Copy object</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="Gui::PrefCheckBox" name="prefUseBinderStyle">
+         <property name="toolTip">
+         <string>Show imported objects using shapebinder visual style when possible</string>
+         </property>
+         <property name="text">
+         <string>Use shapebinder style</string>
+         </property>
+         <property name="prefEntry" stdset="0">
+         <cstring>UseBinderStyle</cstring>
+         </property>
+         <property name="prefPath" stdset="0">
+         <cstring>Mod/PartsToolbox</cstring>
+         </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>Path to user parts folder</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+          <widget class="Gui::PrefLineEdit" name="prefUserObjPath">
+           <property name="toolTip">
+            <string>Path to a folder of custom parts. leave blank for None</string>
+           </property>
+           <property name="text">
+            <string notr="true"></string>
+           </property>
+           <property name="readOnly">
+            <bool>false</bool>
+           </property>
+           <property name="prefEntry" stdset="0">
+            <cstring>UserObjPath</cstring>
+           </property>
+           <property name="prefPath" stdset="0">
+            <cstring>Mod/PartsToolbox</cstring>
+           </property>
+          </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
+ <customwidgets>
+  <customwidget>
+   <class>Gui::PrefCheckBox</class>
+   <extends>QCheckBox</extends>
+   <header>Gui/PrefWidgets.h</header>
+  </customwidget>
+  <customwidget>
+   <class>Gui::PrefSpinBox</class>
+   <extends>QSpinBox</extends>
+   <header>Gui/PrefWidgets.h</header>
+  </customwidget>
+  <customwidget>
+   <class>Gui::PrefComboBox</class>
+   <extends>QComboBox</extends>
+   <header>Gui/PrefWidgets.h</header>
+  </customwidget>
+  <customwidget>
+   <class>Gui::PrefLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>Gui/PrefWidgets.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
