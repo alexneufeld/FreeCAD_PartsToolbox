@@ -1,6 +1,7 @@
 ## FreeCAD Parts Toolbox ![](Icons/PartsToolbox_Icon.svg)
 
-[![Total alerts](https://img.shields.io/lgtm/alerts/github/alexneufeld/FreeCAD_PartsToolbox.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/shaise/FreeCAD_SheetMetal/alerts/) [![Language grade: Python](https://img.shields.io/lgtm/grade/python/github/alexneufeld/FreeCAD_PartsToolbox.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/shaise/FreeCAD_SheetMetal/context:python) 
+[![Total alerts](https://img.shields.io/lgtm/alerts/github/alexneufeld/FreeCAD_PartsToolbox.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/alexneufeld/FreeCAD_PartsToolbox) 
+[![Language grade: Python](https://img.shields.io/lgtm/grade/python/github/alexneufeld/FreeCAD_PartsToolbox.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/alexneufeld/FreeCAD_PartsToolbox/context:python) 
 
 Copies standardized parts into your FreeCAD projects.
 
