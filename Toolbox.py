@@ -29,6 +29,7 @@ import os
 from PySide import QtGui, QtUiTools, QtCore
 import shutil
 import defusedxml.ElementTree as tree
+from zipfile import ZipFile
 
 # make the directories that relevant files are stored in
 # available to the rest of the workbench
@@ -59,9 +60,17 @@ class ToolboxDock(QtGui.QDockWidget):
         UI = QtUiTools.QUiLoader().load(UIFilePath)
         self.setWidget(UI)
         # configure the UI with our data and functions
-        # import object hierarchy from yaml
-        ObjHierarchy = readObjTypes()
-        # recursive function to parse the nested list
+        # import object hierarchy
+        ObjHierarchy = readObjTypes(objpath)
+        userpath = UserParams.GetString("UserObjPath")
+        if userpath:
+            # prefix user objects with the 'User' category so that they are
+            # placed in their own top level folder:
+            ObjHierarchy += [(x[0], ["User"]+x[1])
+                             for x in readObjTypes(userpath)]
+        # store locations of files for reference
+        objectpaths = {os.path.basename(x[0]).removesuffix(
+            ".FCStd"): x[0] for x in ObjHierarchy}
         populate_tree(UI.treeWidget, ObjHierarchy)
         # set the import mode to the users preferred default
         UI.comboBox.setCurrentIndex(UserParams.GetInt("DefaultImportType"))
@@ -74,7 +83,7 @@ class ToolboxDock(QtGui.QDockWidget):
                 QtGui.QDialogButtonBox.Ok), UI.label, UI.treeWidget.currentItem()
         ))
         UI.buttonBox.accepted.connect(
-            lambda: InsertParamObj(UI.treeWidget.currentItem().text(0),
+            lambda: InsertParamObj(objectpaths[UI.treeWidget.currentItem().text(0)],
                                    UI.comboBox.currentIndex()))
         UI.show()
 
@@ -94,11 +103,17 @@ def OpenToolboxDock():
         pe.setVisible(pe.isHidden())
 
 
-def readObjTypes():
+def readObjTypes(path):
+    """
+    given a path to a parts library part 'path', return the contents
+    of the property Part.Type, split into individual strings where
+    '|' is used as the delimiter 
+    """
     data = []
-    for item in os.listdir(objpath):
-        catStr = getDataFromFCFolder(os.path.join(objpath, item))["Type"]
-        data.append((item, catStr.split("|")))
+    for item in getFCFiles(path):
+        fullpath = os.path.join(path, item)
+        catStr = getDataFromFCFile(fullpath)["Type"]
+        data.append((fullpath, [x for x in catStr.split("|") if x != ""]))
     return data
 
 
@@ -120,7 +135,7 @@ def populate_tree(top_level_obj, items):
         # add the object to the bottom level category
         subobj = QtGui.QTreeWidgetItem(currentParent)
         subobj.setIcon(0, PartIcon)
-        subobj.setText(0, i)
+        subobj.setText(0, os.path.basename(i).removesuffix(".FCStd"))
 
 
 def treeHasChild(text, QTreeObj):
@@ -155,13 +170,14 @@ def selectionChanged(OKButton, thumbnailBox, selectedTreeItem):
             # update thumbnail
             imagePath = os.path.join(
                 objpath, selectedTreeItem.text(0), "thumbnails/Thumbnail.png")
+            # this fails silently if no thumbnail is found
             pixmap = QtGui.QPixmap(imagePath)
             thumbnailBox.setPixmap(pixmap)
     else:
         OKButton.setEnabled(True)
 
 
-def InsertParamObj(partFileName, importMode):
+def InsertParamObj(sourcePartPath, importMode):
     """
     Given a part filename, add a copy of that part to the 
     active FreeCAD document
@@ -172,14 +188,14 @@ def InsertParamObj(partFileName, importMode):
         FreeCAD.Console.PrintError(
             "PartsToolbox Error: Active document not found or not saved to a file!\n")
         return
-    sourcePartPath = os.path.join(objpath, partFileName)
+    partFileName = os.path.basename(sourcePartPath)
     partFilePath = os.path.join(
         pathToDoc, "ToolboxParts", partFileName)
     # place a "ToolboxParts" directory next to the open document:
     os.makedirs(os.path.dirname(partFilePath), exist_ok=True)
     # copy the parts document to the users project folder if it
     # isn't already there:
-    copyFreecadDocument(sourcePartPath, os.path.join(
+    copyFreeCADDocument(sourcePartPath, os.path.join(
         pathToDoc, "ToolboxParts"))
     # open the local copy of the part file so we can get an obj from it
     part_doc = FreeCAD.openDocument(partFilePath, hidden=True)
@@ -262,12 +278,12 @@ class NoOpenDocument(Exception):
     pass
 
 
-def copyFreecadDocument(docFilePath, destinationDir):
+def copyFreeCADDocument(docFilePath, destinationDir):
     """
     given a FreeCAD document saved to docFilePath, copy its file and
     any files it depends on to the directory destinationDir.
     """
-    # open th document, get its dependencies, then close it
+    # open the document, get its dependencies, then close it
     docObj = FreeCAD.openDocument(docFilePath, hidden=True)
     files = [docObj.FileName] + getDependenciesRecursive(docObj)
     FreeCAD.closeDocument(docObj.Name)
@@ -280,7 +296,7 @@ def copyFreecadDocument(docFilePath, destinationDir):
             # don't copy files that already exist
             if f.endswith(".FCStd"):
                 # .FCStd format
-                shutil.copyfile(f, destinationDir)
+                shutil.copy(f, destinationDir)
             else:
                 # directory format
                 shutil.copytree(f, os.path.join(
@@ -288,12 +304,17 @@ def copyFreecadDocument(docFilePath, destinationDir):
     return
 
 
-def getDataFromFCFolder(folderPath):
+def getDataFromFCFile(docPath):
     """
-    given a FreeCAD document folder, return metadata
-    of a parts library object stored there
+    given a FreeCAD document file, return metadata
+    of a parts library object stored there.
+    Handles directory and .FCStd formats
     """
-    doc = tree.parse(open(os.path.join(folderPath, "Document.xml")))
+    if os.path.isdir(docPath):  # save-as-folder mode
+        doc = tree.parse(open(os.path.join(docPath, "Document.xml")))
+    else:  # .FCStd file mode
+        with ZipFile(docPath, 'r') as zippedFCStd:
+            doc = tree.parse(zippedFCStd.open('Document.xml', 'r'))
     root = doc.getroot()
     # we have the xml data, let's get something useful out of it
     docObjs = list(root.iter(tag="ObjectData"))[0]
@@ -305,7 +326,7 @@ def getDataFromFCFolder(folderPath):
     if partObj:
         proplist = list(partObj.iter(tag="Properties"))[0]
     else:
-        raise ValueError(f"Document {folderPath} has no object named Part")
+        raise ValueError(f"Document {docPath} has no object named Part")
     mdata = {
         "Id": "",
         "Type": "",
@@ -335,7 +356,7 @@ def partMetaBrowser():
     datalist = {}
     UI.tableWidget.setHorizontalHeaderLabels(tablecolumns)
     for f in files:
-        itemData = getDataFromFCFolder(os.path.join(objpath, f))
+        itemData = getDataFromFCFile(os.path.join(objpath, f))
         if itemData:
             currentRow = UI.tableWidget.rowCount()
             UI.tableWidget.setRowCount(UI.tableWidget.rowCount()+1)
@@ -374,3 +395,19 @@ def updateMetadata(oldData, tableWidget):
             doc.recompute()
             doc.save()
             FreeCAD.closeDocument(doc.Name)
+
+
+def getFCFiles(folder):
+    """
+    get all FreeCAD documents stored in 'folder'. finds files saved 
+    as both .FCStd and directory format. Ignores FreeCAD backup files
+    """
+    freecadfiles = []
+    for x in os.listdir(folder):
+        if os.path.isfile(os.path.join(folder,x)):
+            if x.endswith(".FCStd"):
+                freecadfiles.append(x)
+        else:
+            if "Document.xml" in os.listdir(os.path.join(folder, x)):
+                freecadfiles.append(x)
+    return freecadfiles
