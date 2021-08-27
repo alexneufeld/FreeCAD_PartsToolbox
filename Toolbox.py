@@ -42,9 +42,11 @@ MacroPath = os.path.join(__dir__, "Macro")
 PartIcon = QtGui.QIcon(os.path.join(iconPath, "PartsToolbox_Part.svg"))
 FolderIcon = FreeCAD.Gui.getIcon("Group")
 # import user preferences
-UserParams = FreeCAD.ParamGet("User parameter:BaseApp/Preferences/Mod/PartsToolbox")
+UserParams = FreeCAD.ParamGet(
+    "User parameter:BaseApp/Preferences/Mod/PartsToolbox")
 # class that defines the dock widget
 # adapted from here: https://wiki.freecadweb.org/Macro_SplitToolboxDock
+
 
 class ToolboxDock(QtGui.QDockWidget):
     def __init__(self) -> None:
@@ -61,6 +63,8 @@ class ToolboxDock(QtGui.QDockWidget):
         ObjHierarchy = readObjTypes()
         # recursive function to parse the nested list
         populate_tree(UI.treeWidget, ObjHierarchy)
+        # set the import mode to the users preferred default
+        UI.comboBox.setCurrentIndex(UserParams.GetInt("DefaultImportType"))
         # disable ok button initially
         # (it can't do anything until the user selects a part to add)
         UI.buttonBox.button(QtGui.QDialogButtonBox.Ok).setEnabled(False)
@@ -70,7 +74,8 @@ class ToolboxDock(QtGui.QDockWidget):
                 QtGui.QDialogButtonBox.Ok), UI.label, UI.treeWidget.currentItem()
         ))
         UI.buttonBox.accepted.connect(
-            lambda: InsertParamObjBind(UI.treeWidget.currentItem().text(0)))
+            lambda: InsertParamObj(UI.treeWidget.currentItem().text(0),
+                                   UI.comboBox.currentIndex()))
         UI.show()
 
 
@@ -156,7 +161,7 @@ def selectionChanged(OKButton, thumbnailBox, selectedTreeItem):
         OKButton.setEnabled(True)
 
 
-def InsertParamObjBind(partFileName):
+def InsertParamObj(partFileName, importMode):
     """
     Given a part filename, add a copy of that part to the 
     active FreeCAD document
@@ -187,16 +192,35 @@ def InsertParamObjBind(partFileName):
         FreeCAD.Console.PrintError(
             f"PartsToolbox Error: file {partFileName} has no suitable objects to copy!\n")
         return
-    # add a shapebinder and assign an object to link
-    binder = doc.addObject('PartDesign::SubShapeBinder', 'ToolboxPart')
-    binder.Support = top_obj
-    # modify the shapebinders properties so it behaves correctly
-    binder.BindCopyOnChange = 'Enabled'
-    # binder renders transparent w. yellow lines if this is True.
-    binder.ViewObject.UseBinderStyle = False
-    # set label to mirror source objects label
-    # getExpression returns a tuple (propname, extressionStr)
-    binder.setExpression("Label", top_obj.getExpression("Label")[1])
+    if importMode == 0:  # shapeBinder mode
+        # add a shapebinder and assign an object to link
+        binder = doc.addObject('PartDesign::SubShapeBinder', 'ToolboxPart')
+        binder.Support = top_obj
+        # modify the shapebinders properties so it behaves correctly
+        binder.BindCopyOnChange = 'Enabled'
+        # binder renders transparent w. yellow lines if this is True.
+        binder.ViewObject.UseBinderStyle = UserParams.GetBool("UseBinderStyle")
+        # set label to mirror source objects label
+        # getExpression returns a tuple (propname, extressionStr)
+        objLabel = top_obj.getExpression("Label")
+        if objLabel:
+            binder.setExpression("Label", objLabel[1])
+    elif importMode == 1:  # regular App::Link mode
+        link = doc.addObject('App::Link')
+        link.LinkedObject = top_obj
+        link.LinkCopyOnChange = 'Enabled'
+        objLabel = top_obj.getExpression("Label")
+        if objLabel:
+            link.setExpression("Label", objLabel[1])
+    elif importMode == 2:  # simple copy mode
+        objlist = [top_obj] + top_obj.OutListRecursive
+        FreeCAD.Gui.Selection.clearSelection()
+        for x in objlist:
+            FreeCAD.Gui.Selection.addSelection(x)
+        FreeCAD.Gui.runCommand("Std_Copy")
+        FreeCAD.Gui.Selection.clearSelection()
+        FreeCAD.setActiveDocument(doc.Name)
+        FreeCAD.Gui.runCommand("Std_Paste", 0)
     # set the active document back to the users project:
     # NOTE: FreeCAD.setActiveDocument(x) != FreeCAD.Gui.setActiveDocument(x)
     FreeCAD.setActiveDocument(doc.Name)

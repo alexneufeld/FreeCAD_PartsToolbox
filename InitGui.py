@@ -23,19 +23,19 @@
 #
 # normally we would define an entire workbench here
 # since we just want one GUI command, this file has
-# less than ususal
+# less than usual
 
 import FreeCAD
 import os
 import Toolbox
 import shutil
 
-# command to add a standard part
-# note that defining a FreeCAD command like this requires some weird
-# workarounds - we have to import stuff inside methods
-
 
 class FCToolboxAddCmd:
+    """
+    command to add a standard part
+    """
+
     def __init__(self):
         # parse the ObjModels directory for available parts
         import Toolbox
