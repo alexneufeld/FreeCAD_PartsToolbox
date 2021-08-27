@@ -15,7 +15,7 @@ part.Group = [body, sheet]
 
 # set some sensible default part properties
 PartProperties = {
-	"Type": "Standard Part",
+	"Type": "",
 	"Id": "???", # set this to prompt the user to fill in their own part#
 	"License": "LGPL-3.0-or-later",
 	"LicenseURL": "https://www.gnu.org/licenses/lgpl-3.0-standalone.html",

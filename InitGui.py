@@ -66,16 +66,11 @@ FreeCAD.Gui.addCommand("ToolBox_AddObject", FCToolboxAddCmd())
 # setup preferences page
 FreeCAD.Gui.addPreferencePage(os.path.join(
     Toolbox.UIPath, 'ToolboxPreferences.ui'), 'Parts Toolbox')
-print("Loaded Parts Toolbox")
 FreeCAD.Gui.addIconPath(Toolbox.iconPath)
-# add the macros bundled with this module to the users
-# macro directory if necessary
+# add the macros bundled with this module to the users macro directory
 UserMacroDir = FreeCAD.ParamGet(
     "User parameter:BaseApp/Preferences/Macro").GetString("MacroPath")
 toolboxmacros = os.listdir(Toolbox.MacroPath)
-usermacros = os.listdir(UserMacroDir)
 for f in toolboxmacros:
-    if f not in usermacros:
-        shutil.copy(os.path.join(Toolbox.MacroPath, f), UserMacroDir)
-        FreeCAD.Console.PrintMessage(
-            f"PartsToolbox: Copied {f} to user macro directory\n")
+    shutil.copy(os.path.join(Toolbox.MacroPath, f), UserMacroDir)
+print("Loaded Parts Toolbox")
