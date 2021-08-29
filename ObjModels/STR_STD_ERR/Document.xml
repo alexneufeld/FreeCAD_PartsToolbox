@@ -216,7 +216,7 @@
       <String value="Alex Neufeld"/>
     </Property>
     <Property name="LastModifiedDate" type="App::PropertyString" status="16777217">
-      <String value="2021-08-25T04:06:14Z"/>
+      <String value="2021-08-29T03:23:47Z"/>
     </Property>
     <Property name="License" type="App::PropertyString" status="1">
       <String value="LGPL-3.0-or-later"/>
@@ -253,25 +253,25 @@
   </Properties>
   <Objects Count="15" Dependencies="1">
     <ObjectDeps Name="Part" Count="2">
-      <Dep Name="Body"/>
       <Dep Name="Origin"/>
+      <Dep Name="Body"/>
     </ObjectDeps>
     <ObjectDeps Name="Origin" Count="0"/>
     <ObjectDeps Name="Body" Count="6">
       <Dep Name="Pad"/>
       <Dep Name="Sketch"/>
-      <Dep Name="Pocket"/>
       <Dep Name="Sketch001"/>
+      <Dep Name="Pocket"/>
       <Dep Name="Origin001"/>
       <Dep Name="LinearPattern"/>
     </ObjectDeps>
     <ObjectDeps Name="Origin001" Count="6">
-      <Dep Name="Z_Axis"/>
-      <Dep Name="X_Axis"/>
-      <Dep Name="XY_Plane"/>
       <Dep Name="XZ_Plane"/>
-      <Dep Name="Y_Axis"/>
       <Dep Name="YZ_Plane"/>
+      <Dep Name="X_Axis"/>
+      <Dep Name="Z_Axis"/>
+      <Dep Name="Y_Axis"/>
+      <Dep Name="XY_Plane"/>
     </ObjectDeps>
     <ObjectDeps Name="X_Axis" Count="0"/>
     <ObjectDeps Name="Y_Axis" Count="0"/>
@@ -284,8 +284,8 @@
       <Dep Name="XY_Plane"/>
     </ObjectDeps>
     <ObjectDeps Name="Pad" Count="2">
-      <Dep Name="Sketch"/>
       <Dep Name="Body"/>
+      <Dep Name="Sketch"/>
     </ObjectDeps>
     <ObjectDeps Name="Sketch001" Count="1">
       <Dep Name="XY_Plane"/>
@@ -297,8 +297,8 @@
     </ObjectDeps>
     <ObjectDeps Name="LinearPattern" Count="4">
       <Dep Name="Part"/>
-      <Dep Name="X_Axis"/>
       <Dep Name="Body"/>
+      <Dep Name="X_Axis"/>
       <Dep Name="Pocket"/>
     </ObjectDeps>
     <Object type="App::Part" name="Part" id="3309" revision="164" />

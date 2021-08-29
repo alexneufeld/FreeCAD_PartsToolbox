@@ -4,5 +4,5 @@ You can use this macro as a custom command to add a toolbar
 to FreeCAD
 '''
 
-import Toolbox
-Toolbox.partMetaBrowser()
+from PTb_PartMetaBrowser import partMetaBrowser
+partMetaBrowser()

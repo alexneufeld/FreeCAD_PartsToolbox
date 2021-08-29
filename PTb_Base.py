@@ -20,24 +20,27 @@
 # *   USA                                                                   *
 # *                                                                         *
 # ***************************************************************************
-#
-# normally we would define an entire workbench here
-# since we just want one GUI command, this file has
-# less than usual
 
-import FreeCAD
+"""
+Useful objects to be imported by other parts of the PartsToolbox package
+
+Exports:
+ - objPath is the path to the folder of FreeCAD parts
+ - UIpath is the path to Qt UI xml files
+ - iconPath is the path to icons included in this addon
+ - UserParams holds FreeCAD user parameters related to the Parts Toolbox  
+"""
+
 import os
-import PTb_Base
-import shutil
+import FreeCAD
 
-# setup preferences page
-FreeCAD.Gui.addPreferencePage(os.path.join(
-    PTb_Base.UIPath, 'ToolboxPreferences.ui'), 'Parts Toolbox')
-FreeCAD.Gui.addIconPath(PTb_Base.iconPath)
-# add the macros bundled with this module to the users macro directory
-UserMacroDir = FreeCAD.ParamGet(
-    "User parameter:BaseApp/Preferences/Macro").GetString("MacroPath")
-Toolboxmacros = os.listdir(PTb_Base.MacroPath)
-for f in Toolboxmacros:
-    shutil.copy(os.path.join(PTb_Base.MacroPath, f), UserMacroDir)
-print("Loaded Parts Toolbox")
+# relevant directories
+__dir__ = os.path.dirname(__file__)
+print("dir is ", __dir__)
+objpath = os.path.join(__dir__, "ObjModels")
+UIPath = os.path.join(__dir__, "UI")
+MacroPath = os.path.join(__dir__, "Macro")
+iconPath = os.path.join(__dir__, "Icons")
+# import user preferences
+UserParams = FreeCAD.ParamGet(
+    "User parameter:BaseApp/Preferences/Mod/PartsToolbox")
