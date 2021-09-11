@@ -37,7 +37,6 @@ def getDependenciesRecursive(docObj):
     recursively get dependencies of a given document object
     """
     dependencies = docObj.OutList[:]
-    print(f"document {docObj.Name} depends on {dependencies}")
     full_list = []
     for item in dependencies:
         full_list.append(item.FileName)
@@ -75,7 +74,6 @@ def copyFreeCADDocument(docFilePath, destinationDir):
     # open the document, get its dependencies, then close it
     docObj = FreeCAD.openDocument(docFilePath, hidden=True)
     files = [docObj.FileName] + getDependenciesRecursive(docObj)
-    print("dependant files are ",files)
     FreeCAD.closeDocument(docObj.Name)
     # DocumentObject.FileName gets us the full path to the files
     # which is convenient

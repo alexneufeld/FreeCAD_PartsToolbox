@@ -27,11 +27,13 @@ DocProperties = {
 	"CreatedBy": "FreeCAD PartToolBox authors",
 	"License": "LGPL-3.0-or-later",
 	"LicenseURL": "https://www.gnu.org/licenses/lgpl-3.0-standalone.html",
+	"SplitXML": False,
 }
 for key,val in DocProperties.items():
 	setattr(Doc,key,val)
 for key,val in PartProperties.items():
 	setattr(part,key,val)
+	#part.setPropertyStatus(key,"CopyOnChange")
 
 # done - recompute
 Doc.recompute()

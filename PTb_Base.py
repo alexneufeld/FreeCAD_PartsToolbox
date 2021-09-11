@@ -36,7 +36,6 @@ import FreeCAD
 
 # relevant directories
 __dir__ = os.path.dirname(__file__)
-print("dir is ", __dir__)
 objpath = os.path.join(__dir__, "ObjModels")
 UIPath = os.path.join(__dir__, "UI")
 MacroPath = os.path.join(__dir__, "Macro")
